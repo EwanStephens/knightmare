@@ -189,19 +189,11 @@ export default function ChessBoard() {
       }))
     );
 
-    setGameState({
-      ...gameState,
-      board: newBoard,
-      currentWord: newWord,
-      selectedSquare: position,
-      previousSquares: newPreviousSquares,
-      message: '',
-    });
-  };
-
-  const handleSubmit = () => {
+    // Check if word matches target
     const level = levels[currentLevel];
-    if (gameState.currentWord === level.targetWord) {
+    let message = '';
+    if (newWord === level.targetWord) {
+      message = level.congratsMessage;
       if (currentLevel < levels.length - 1) {
         // Move to next level
         setTimeout(() => {
@@ -215,14 +207,16 @@ export default function ChessBoard() {
           });
         }, 2000);
       }
-      setGameState({
-        ...gameState,
-        message: level.congratsMessage,
-        selectedSquare: null,
-      });
-    } else {
-      setGameState(clearGameBoard('Invalid word! Try again.'));
     }
+
+    setGameState({
+      ...gameState,
+      board: newBoard,
+      currentWord: newWord,
+      selectedSquare: position,
+      previousSquares: newPreviousSquares,
+      message: message,
+    });
   };
 
   const handleCancel = () => {
@@ -272,20 +266,14 @@ export default function ChessBoard() {
 
       <div className="flex flex-col items-center gap-4">
         <div className="text-xl font-bold">
-          Current Word: {gameState.currentWord}
+          {gameState.currentWord}
         </div>
         <div className="flex gap-4">
-          <button
-            onClick={handleSubmit}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-            Submit
-          </button>
           <button
             onClick={handleCancel}
             className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
           >
-            Cancel
+            Clear
           </button>
         </div>
         {gameState.message && (
