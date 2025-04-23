@@ -39,7 +39,7 @@ const tutorialSetup = () => {
 export default function ChessBoard() {
   const [gameState, setGameState] = useState<GameState>({
     board: tutorialSetup(),
-    currentWord: [],
+    currentWord: '',
     selectedSquare: null,
     previousSquares: [],
     message: '',
@@ -48,80 +48,78 @@ export default function ChessBoard() {
   const handleSquareClick = (position: string) => {
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
-    
-    // If no square is selected and clicked square has a piece
-    if (!gameState.selectedSquare && square.piece) {
-      // Select the square and show legal moves
-      const legalMoves = getLegalMoves(square.piece, { row, col }, gameState.board);
-      const newBoard = gameState.board.map(row =>
-        row.map(sq => ({
-          ...sq,
-          isSelected: sq.position === position,
-          isLegalMove: legalMoves.some(
-            move => positionToAlgebraic(move.row, move.col) === sq.position
-          ),
-        }))
-      );
 
-      setGameState({
+    // Helper function for illegal moves
+    const handleIllegalMove = () => {
+      return {
         ...gameState,
-        board: newBoard,
-        selectedSquare: position,
-        message: '',
-        currentWord: [...gameState.currentWord, square.piece.letter],
-      });
+        board: gameState.board.map(row =>
+          row.map(sq => ({
+            ...sq,
+            isSelected: false,
+            isLegalMove: false,
+          }))
+        ),
+        selectedSquare: null,
+        currentWord: '',
+        message: 'Invalid move!',
+      };
+    };
+
+    // Must select a square with a piece
+    if (!square.piece) {
+      setGameState(handleIllegalMove());
+      return;
     }
-    // If a square is already selected
-    else if (gameState.selectedSquare) {
-      const prevPos = algebraicToPosition(gameState.selectedSquare);
-      const prevSquare = gameState.board[prevPos.row][prevPos.col];
 
-      // Check if the move is legal
-      if (square.isLegalMove) {
-        // Add the captured piece's letter to the current word
-        const newWord = [...gameState.currentWord, square.piece!.letter];
-
-        // Reset board highlights
-        const newBoard = gameState.board.map(row =>
-          row.map(sq => ({
-            ...sq,
-            isSelected: false,
-            isLegalMove: false,
-            isHighlighted: gameState.previousSquares.includes(sq.position),
-          }))
-        );
-
-        setGameState({
-          ...gameState,
-          board: newBoard,
-          currentWord: newWord,
-          selectedSquare: null,
-          previousSquares: [...gameState.previousSquares, prevSquare.position, square.position],
-        });
-      } else {
-        // Reset selection if move is illegal
-        const newBoard = gameState.board.map(row =>
-          row.map(sq => ({
-            ...sq,
-            isSelected: false,
-            isLegalMove: false,
-          }))
-        );
-
-        setGameState({
-          ...gameState,
-          board: newBoard,
-          selectedSquare: null,
-          currentWord: [],
-          message: 'Invalid move!',
-        });
+    // If a square is already selected, check if new square is a legal move
+    if (gameState.selectedSquare) {
+      if (!square.isLegalMove) {
+        setGameState(handleIllegalMove());
+        return;
       }
     }
+
+    // Get previous square if one was selected
+    const prevSquare = gameState.selectedSquare 
+      ? gameState.board[algebraicToPosition(gameState.selectedSquare).row][algebraicToPosition(gameState.selectedSquare).col]
+      : null;
+
+    // Calculate new previous squares
+    const newPreviousSquares = prevSquare
+      ? [...gameState.previousSquares, prevSquare.position, square.position]
+      : [...gameState.previousSquares, square.position];
+
+    // Add new letter to word
+    const newWord = gameState.currentWord + square.piece.letter;
+
+    // Calculate legal moves from new square
+    const legalMoves = getLegalMoves(square.piece, { row, col }, gameState.board);
+
+    // Update board state
+    const newBoard = gameState.board.map(row =>
+      row.map(sq => ({
+        ...sq,
+        isSelected: sq.position === position,
+        isLegalMove: legalMoves.some(
+          move => positionToAlgebraic(move.row, move.col) === sq.position
+        ),
+        isHighlighted: newPreviousSquares.includes(sq.position),
+      }))
+    );
+
+    setGameState({
+      ...gameState,
+      board: newBoard,
+      currentWord: newWord,
+      selectedSquare: position,
+      previousSquares: newPreviousSquares,
+      message: '',
+    });
   };
 
   const handleSubmit = () => {
-    const word = gameState.currentWord.join('');
-    if (word === 'BOAT') {
+    if (gameState.currentWord === 'BOAT') {
       setGameState({
         ...gameState,
         message: 'Congratulations! You found the word BOAT!',
@@ -130,7 +128,7 @@ export default function ChessBoard() {
       setGameState({
         ...gameState,
         message: 'Invalid word! Try again.',
-        currentWord: [],
+        currentWord: '',
         previousSquares: [],
         board: gameState.board.map(row =>
           row.map(sq => ({
@@ -145,7 +143,7 @@ export default function ChessBoard() {
   const handleCancel = () => {
     setGameState({
       ...gameState,
-      currentWord: [],
+      currentWord: '',
       previousSquares: [],
       message: '',
       board: gameState.board.map(row =>
@@ -194,7 +192,7 @@ export default function ChessBoard() {
 
       <div className="flex flex-col items-center gap-4">
         <div className="text-xl font-bold">
-          Current Word: {gameState.currentWord.join('')}
+          Current Word: {gameState.currentWord}
         </div>
         <div className="flex gap-4">
           <button
