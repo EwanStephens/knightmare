@@ -150,7 +150,7 @@ export default function ChessBoard() {
             >
               {square.piece && (
                 <>
-                  <div className={`text-2xl ${square.piece.color === 'white' ? 'text-white' : 'text-black'}`}>
+                  <div className={`text-6xl ${square.piece.color === 'white' ? 'text-white' : 'text-black'}`}>
                     {getPieceSymbol(square.piece.type)}
                   </div>
                   <div className={`absolute top-0 right-1 text-sm font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-gray-700' : 'text-gray-300'}`}>
