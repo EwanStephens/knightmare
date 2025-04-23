@@ -19,6 +19,8 @@ export const isValidChessMove = (
   piece: ChessPiece,
   start: Position,
   end: Position,
+  board: Square[][],
+  previousSquares: string[] = []
 ): boolean => {
   const rowDiff = end.row - start.row;
   const colDiff = end.col - start.col;
@@ -27,9 +29,30 @@ export const isValidChessMove = (
     case 'pawn':
       // White pawns move up (negative row diff), black pawns move down (positive row diff)
       const correctDirection = piece.color === 'white' ? rowDiff < 0 : rowDiff > 0;
-      // Pawns can move diagonally for captures or forward one square
-      return (correctDirection && Math.abs(colDiff) === 1 && Math.abs(rowDiff) === 1) || // Diagonal capture
-             (correctDirection && colDiff === 0 && Math.abs(rowDiff) === 1); // Forward move
+      
+      // Forward move
+      if (colDiff === 0 && Math.abs(rowDiff) === 1) {
+        // Check if there's a piece in the target square that hasn't been captured
+        const targetSquare = board[end.row][end.col];
+        const targetPos = positionToAlgebraic(end.row, end.col);
+        if (targetSquare.piece && !previousSquares.includes(targetPos)) {
+          return false;
+        }
+        return correctDirection;
+      }
+      
+      // Diagonal move (only if there's a piece to capture)
+      if (Math.abs(colDiff) === 1 && Math.abs(rowDiff) === 1) {
+        const targetSquare = board[end.row][end.col];
+        const targetPos = positionToAlgebraic(end.row, end.col);
+        // Must have a piece that hasn't been captured and is of opposite color
+        if (!targetSquare.piece || previousSquares.includes(targetPos)) {
+          return false;
+        }
+        return correctDirection && targetSquare.piece.color !== piece.color;
+      }
+      
+      return false;
 
     case 'knight':
       return (
@@ -102,7 +125,7 @@ export const isValidChessCapture = (
   const targetSquare = board[end.row][end.col];
 
   // Must be a valid chess move first
-  if (!isValidChessMove(piece, start, end)) {
+  if (!isValidChessMove(piece, start, end, board, previousSquares)) {
     return false;
   }
 
@@ -134,7 +157,7 @@ export const getLegalMoves = (
     for (let col = 0; col < 5; col++) {
       const targetPos = { row, col };
       // Check if it's a valid chess move and the path is clear
-      if (isValidChessMove(piece, position, targetPos) && 
+      if (isValidChessMove(piece, position, targetPos, board, previousSquares) && 
           isPathClear(position, targetPos, board, previousSquares)) {
         legalMoves.push(targetPos);
       }
