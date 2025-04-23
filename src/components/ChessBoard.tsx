@@ -62,6 +62,32 @@ const secondLevelSetup = () => {
   return board;
 };
 
+// Set up the third level
+const thirdLevelSetup = () => {
+  const board = createEmptyBoard();
+  
+  // Place the pieces for the third level
+  const pieces: [string, ChessPiece][] = [
+    ['d2', { type: 'knight', color: 'black', letter: 'I' }],
+    ['b3', { type: 'pawn', color: 'white', letter: 'L' }],
+    ['c4', { type: 'knight', color: 'black', letter: 'L' }],
+    ['b2', { type: 'pawn', color: 'white', letter: 'U' }],
+    ['a3', { type: 'knight', color: 'black', letter: 'M' }],
+    ['b1', { type: 'pawn', color: 'white', letter: 'I' }],
+    ['a2', { type: 'knight', color: 'black', letter: 'N' }],
+    ['b4', { type: 'pawn', color: 'white', letter: 'A' }],
+    ['c5', { type: 'knight', color: 'black', letter: 'T' }],
+    ['d3', { type: 'pawn', color: 'white', letter: 'E' }]
+  ];
+
+  pieces.forEach(([position, piece]) => {
+    const { row, col } = algebraicToPosition(position);
+    board[row][col].piece = piece;
+  });
+
+  return board;
+};
+
 interface Level {
   board: Square[][];
   targetWord: string;
@@ -77,7 +103,12 @@ const levels: Level[] = [
   {
     board: secondLevelSetup(),
     targetWord: 'CHECKMATE',
-    congratsMessage: 'Congratulations! You found the word CHECKMATE!',
+    congratsMessage: 'Congratulations! You found the word CHECKMATE! Moving to level 3...',
+  },
+  {
+    board: thirdLevelSetup(),
+    targetWord: 'ILLUMINATE',
+    congratsMessage: 'Congratulations! You found the word ILLUMINATE!',
   },
 ];
 
