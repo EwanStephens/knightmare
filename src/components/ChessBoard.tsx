@@ -252,7 +252,7 @@ export default function ChessBoard() {
                   <div className="relative z-10">
                     {getPieceComponent(square.piece.type, square.piece.color)}
                   </div>
-                  <div className={`absolute top-0 right-1 text-sm font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
+                  <div className={`absolute top-0.5 right-1 text-lg font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
                     {square.piece.letter}
                   </div>
                 </>
@@ -300,7 +300,7 @@ function getPieceComponent(type: ChessPiece['type'], color: ChessPiece['color'])
     king: color === 'white' ? 'k' : 'l',
   };
   return (
-    <div style={{ fontFamily: 'Chess7' }} className="text-6xl">
+    <div style={{ fontFamily: 'Chess7' }} className="text-5xl">
       {symbols[type]}
     </div>
   );
