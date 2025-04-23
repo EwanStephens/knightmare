@@ -69,6 +69,7 @@ const thirdLevelSetup = () => {
   
   // Place the pieces for the third level
   const pieces: [string, ChessPiece][] = [
+    // Solution pieces
     ['d2', { type: 'knight', color: 'black', letter: 'I' }],
     ['b3', { type: 'pawn', color: 'white', letter: 'L' }],
     ['c4', { type: 'knight', color: 'black', letter: 'L' }],
@@ -78,7 +79,14 @@ const thirdLevelSetup = () => {
     ['a2', { type: 'knight', color: 'black', letter: 'N' }],
     ['b4', { type: 'pawn', color: 'white', letter: 'A' }],
     ['c5', { type: 'knight', color: 'black', letter: 'T' }],
-    ['d3', { type: 'pawn', color: 'white', letter: 'E' }]
+    ['d3', { type: 'pawn', color: 'white', letter: 'E' }],
+    // Dummy pieces
+    ['e1', { type: 'bishop', color: 'black', letter: 'R' }],
+    ['e2', { type: 'pawn', color: 'white', letter: 'S' }],
+    ['d4', { type: 'bishop', color: 'black', letter: 'P' }],
+    ['e4', { type: 'pawn', color: 'white', letter: 'O' }],
+    ['d5', { type: 'rook', color: 'black', letter: 'D' }],
+    ['e5', { type: 'knight', color: 'white', letter: 'F' }]
   ];
 
   pieces.forEach(([position, piece]) => {
