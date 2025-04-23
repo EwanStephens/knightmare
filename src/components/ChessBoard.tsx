@@ -242,33 +242,25 @@ export default function ChessBoard() {
               `}
             >
               {square.isLegalMove && !square.piece && (
-                <div className="absolute w-4 h-4 rounded-full bg-[rgba(20,85,30,0.5)]" />
+                <div className="absolute w-6 h-6 rounded-full bg-[rgba(50,50,50,0.4)]" />
               )}
               {square.isLegalMove && square.piece && (
                 <svg className="absolute w-full h-full pointer-events-none" viewBox="0 0 100 100">
                   <path
-                    d="M 0 35 A 35 35 0 0 1 35 0"
-                    fill="none"
-                    stroke="rgba(20,85,30,0.5)"
-                    strokeWidth="3"
+                    d="M 0 35 A 35 35 0 0 1 35 0 L 0 0 Z"
+                    fill="rgba(50,50,50,0.4)"
                   />
                   <path
-                    d="M 65 0 A 35 35 0 0 1 100 35"
-                    fill="none"
-                    stroke="rgba(20,85,30,0.5)"
-                    strokeWidth="3"
+                    d="M 65 0 A 35 35 0 0 1 100 35 L 100 0 Z"
+                    fill="rgba(50,50,50,0.4)"
                   />
                   <path
-                    d="M 0 65 A 35 35 0 0 0 35 100"
-                    fill="none"
-                    stroke="rgba(20,85,30,0.5)"
-                    strokeWidth="3"
+                    d="M 0 65 A 35 35 0 0 0 35 100 L 0 100 Z"
+                    fill="rgba(50,50,50,0.4)"
                   />
                   <path
-                    d="M 65 100 A 35 35 0 0 0 100 65"
-                    fill="none"
-                    stroke="rgba(20,85,30,0.5)"
-                    strokeWidth="3"
+                    d="M 65 100 A 35 35 0 0 0 100 65 L 100 100 Z"
+                    fill="rgba(50,50,50,0.4)"
                   />
                 </svg>
               )}
