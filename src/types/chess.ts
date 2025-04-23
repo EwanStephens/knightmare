@@ -18,7 +18,7 @@ export interface Square {
 
 export interface GameState {
   board: Square[][];
-  currentWord: string[];
+  currentWord: string;
   selectedSquare: string | null;
   previousSquares: string[];
   message: string;
