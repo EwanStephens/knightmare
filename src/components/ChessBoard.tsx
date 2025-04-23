@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ChessPiece, GameState, Position, Square } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import '@/styles/chess.css';
+import chessPieces from '../../public/img/chesspieces/standard';
 
 const createEmptyBoard = (): Square[][] => Array(5)
   .fill(null)
@@ -287,17 +288,14 @@ export default function ChessBoard() {
 }
 
 function getPieceComponent(type: ChessPiece['type'], color: ChessPiece['color']) {
-  const symbols: Record<ChessPiece['type'], string> = {
-    pawn: color === 'white' ? 'p' : 'o',
-    knight: color === 'white' ? 'n' : 'm',
-    bishop: color === 'white' ? 'b' : 'v',
-    rook: color === 'white' ? 'r' : 't',
-    queen: color === 'white' ? 'q' : 'w',
-    king: color === 'white' ? 'k' : 'l',
+  const pieceMap = {
+    pawn: 'P',
+    knight: 'N',
+    bishop: 'B',
+    rook: 'R',
+    queen: 'Q',
+    king: 'K'
   };
-  return (
-    <div style={{ fontFamily: 'Chess7' }} className="text-5xl">
-      {symbols[type]}
-    </div>
-  );
+  const pieceKey = `${color === 'white' ? 'w' : 'b'}${pieceMap[type]}`;
+  return chessPieces[pieceKey as keyof typeof chessPieces];
 } 
