@@ -25,6 +25,11 @@ export const isValidChessMove = (
   const rowDiff = end.row - start.row;
   const colDiff = end.col - start.col;
 
+  // Pieces can't move to their current square
+  if (rowDiff === 0 && colDiff === 0) {
+    return false;
+  }
+
   switch (piece.type) {
     case 'pawn':
       // White pawns move up (negative row diff), black pawns move down (positive row diff)
