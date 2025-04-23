@@ -159,7 +159,7 @@ export default function ChessBoard() {
         return;
       }
 
-      if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board)) {
+      if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
         setGameState(handleIllegalMove());
         return;
       }
@@ -176,7 +176,7 @@ export default function ChessBoard() {
     const newWord = gameState.currentWord + (square.piece?.letter || '');
 
     // Calculate legal moves from new square
-    const legalMoves = getLegalMoves(square.piece!, { row, col }, gameState.board);
+    const legalMoves = getLegalMoves(square.piece!, { row, col }, gameState.board, newPreviousSquares);
 
     // Update board state
     const newBoard = gameState.board.map(row =>

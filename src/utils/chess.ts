@@ -58,11 +58,46 @@ export const isValidChessMove = (
   }
 };
 
+const isPathClear = (
+  start: Position,
+  end: Position,
+  board: Square[][],
+  previousSquares: string[]
+): boolean => {
+  const rowDiff = end.row - start.row;
+  const colDiff = end.col - start.col;
+  const rowStep = rowDiff === 0 ? 0 : rowDiff > 0 ? 1 : -1;
+  const colStep = colDiff === 0 ? 0 : colDiff > 0 ? 1 : -1;
+  
+  // For knights, we don't need to check the path
+  if (Math.abs(rowDiff) === 2 && Math.abs(colDiff) === 1 || 
+      Math.abs(rowDiff) === 1 && Math.abs(colDiff) === 2) {
+    return true;
+  }
+
+  // Check each square along the path (excluding start and end squares)
+  let currentRow = start.row + rowStep;
+  let currentCol = start.col + colStep;
+  
+  while (currentRow !== end.row || currentCol !== end.col) {
+    // If the square has a piece and hasn't been captured (not in previousSquares)
+    const algebraicPos = positionToAlgebraic(currentRow, currentCol);
+    if (board[currentRow][currentCol].piece && !previousSquares.includes(algebraicPos)) {
+      return false;
+    }
+    currentRow += rowStep;
+    currentCol += colStep;
+  }
+  
+  return true;
+};
+
 export const isValidChessCapture = (
   piece: ChessPiece,
   start: Position,
   end: Position,
-  board: Square[][]
+  board: Square[][],
+  previousSquares: string[] = []
 ): boolean => {
   const targetSquare = board[end.row][end.col];
 
@@ -82,13 +117,15 @@ export const isValidChessCapture = (
     return Math.abs(colDiff) === 1;
   }
 
-  return true;
+  // Check if the path to the target is clear
+  return isPathClear(start, end, board, previousSquares);
 };
 
 export const getLegalMoves = (
   piece: ChessPiece,
   position: Position,
-  board: Square[][]
+  board: Square[][],
+  previousSquares: string[] = []
 ): Position[] => {
   const legalMoves: Position[] = [];
 
@@ -96,8 +133,9 @@ export const getLegalMoves = (
   for (let row = 0; row < 5; row++) {
     for (let col = 0; col < 5; col++) {
       const targetPos = { row, col };
-      // For highlighting, we want to show all legal moves
-      if (isValidChessMove(piece, position, targetPos)) {
+      // Check if it's a valid chess move and the path is clear
+      if (isValidChessMove(piece, position, targetPos) && 
+          isPathClear(position, targetPos, board, previousSquares)) {
         legalMoves.push(targetPos);
       }
     }
