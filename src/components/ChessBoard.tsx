@@ -3,7 +3,7 @@ import { ChessPiece, GameState, Position, Square } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import '@/styles/chess.css';
 
-const initialBoard: Square[][] = Array(5)
+const createEmptyBoard = (): Square[][] => Array(5)
   .fill(null)
   .map((_, row) =>
     Array(5)
@@ -19,7 +19,7 @@ const initialBoard: Square[][] = Array(5)
 
 // Set up the tutorial level
 const tutorialSetup = () => {
-  const board = JSON.parse(JSON.stringify(initialBoard));
+  const board = createEmptyBoard();
   
   // Place the pieces for the tutorial level
   const pieces: [string, ChessPiece][] = [
@@ -37,9 +37,54 @@ const tutorialSetup = () => {
   return board;
 };
 
-export default function ChessBoard() {
-  const [gameState, setGameState] = useState<GameState>({
+// Set up the second level
+const secondLevelSetup = () => {
+  const board = createEmptyBoard();
+  
+  // Place the pieces for the second level
+  const pieces: [string, ChessPiece][] = [
+    ['c4', { type: 'knight', color: 'black', letter: 'C' }],
+    ['d2', { type: 'pawn', color: 'white', letter: 'H' }],
+    ['c3', { type: 'bishop', color: 'black', letter: 'E' }],
+    ['e5', { type: 'queen', color: 'white', letter: 'C' }],
+    ['b5', { type: 'knight', color: 'black', letter: 'K' }],
+    ['a3', { type: 'knight', color: 'white', letter: 'M' }],
+    ['c2', { type: 'rook', color: 'black', letter: 'A' }],
+    ['b2', { type: 'knight', color: 'white', letter: 'T' }],
+    ['a4', { type: 'rook', color: 'black', letter: 'E' }],
+  ];
+
+  pieces.forEach(([position, piece]) => {
+    const { row, col } = algebraicToPosition(position);
+    board[row][col].piece = piece;
+  });
+
+  return board;
+};
+
+interface Level {
+  board: Square[][];
+  targetWord: string;
+  congratsMessage: string;
+}
+
+const levels: Level[] = [
+  {
     board: tutorialSetup(),
+    targetWord: 'BOAT',
+    congratsMessage: 'Congratulations! You found the word BOAT! Moving to level 2...',
+  },
+  {
+    board: secondLevelSetup(),
+    targetWord: 'CHECKMATE',
+    congratsMessage: 'Congratulations! You found the word CHECKMATE!',
+  },
+];
+
+export default function ChessBoard() {
+  const [currentLevel, setCurrentLevel] = useState(0);
+  const [gameState, setGameState] = useState<GameState>({
+    board: levels[0].board,
     currentWord: '',
     selectedSquare: null,
     previousSquares: [],
@@ -124,10 +169,24 @@ export default function ChessBoard() {
   };
 
   const handleSubmit = () => {
-    if (gameState.currentWord === 'BOAT') {
+    const level = levels[currentLevel];
+    if (gameState.currentWord === level.targetWord) {
+      if (currentLevel < levels.length - 1) {
+        // Move to next level
+        setTimeout(() => {
+          setCurrentLevel(currentLevel + 1);
+          setGameState({
+            board: levels[currentLevel + 1].board,
+            currentWord: '',
+            selectedSquare: null,
+            previousSquares: [],
+            message: '',
+          });
+        }, 2000);
+      }
       setGameState({
         ...gameState,
-        message: 'Congratulations! You found the word BOAT!',
+        message: level.congratsMessage,
         selectedSquare: null,
       });
     } else {
