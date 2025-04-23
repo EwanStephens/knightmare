@@ -68,6 +68,7 @@ export default function ChessBoard() {
         board: newBoard,
         selectedSquare: position,
         message: '',
+        currentWord: [...gameState.currentWord, square.piece.letter],
       });
     }
     // If a square is already selected
@@ -77,12 +78,8 @@ export default function ChessBoard() {
 
       // Check if the move is legal
       if (square.isLegalMove) {
-        // Add letters to current word
-        const newWord = [
-          ...gameState.currentWord,
-          prevSquare.piece!.letter,
-          square.piece!.letter,
-        ];
+        // Add the captured piece's letter to the current word
+        const newWord = [...gameState.currentWord, square.piece!.letter];
 
         // Reset board highlights
         const newBoard = gameState.board.map(row =>
@@ -115,6 +112,7 @@ export default function ChessBoard() {
           ...gameState,
           board: newBoard,
           selectedSquare: null,
+          currentWord: [],
           message: 'Invalid move!',
         });
       }
