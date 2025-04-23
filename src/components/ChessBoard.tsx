@@ -249,12 +249,20 @@ export default function ChessBoard() {
             >
               {square.piece && (
                 <>
-                  <div className="relative z-10">
-                    {getPieceComponent(square.piece.type, square.piece.color)}
-                  </div>
-                  <div className={`absolute top-0.5 right-1 text-lg font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
-                    {square.piece.letter}
-                  </div>
+                  {square.isHighlighted ? (
+                    <div className="text-4xl font-bold text-[#769656]">
+                      {square.piece.letter}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="relative z-10">
+                        {getPieceComponent(square.piece.type, square.piece.color)}
+                      </div>
+                      <div className={`absolute top-0.5 right-1 text-lg font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
+                        {square.piece.letter}
+                      </div>
+                    </>
+                  )}
                 </>
               )}
             </div>
