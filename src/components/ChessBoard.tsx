@@ -226,6 +226,9 @@ export default function ChessBoard() {
 
   return (
     <div className="flex flex-col items-center gap-8 p-8">
+      <div className="text-2xl font-bold mb-4">
+        Find a {levels[currentLevel].targetWord.length} letter word
+      </div>
       <div className="grid grid-cols-5 gap-1 bg-gray-200 p-2">
         {gameState.board.map((row, rowIndex) =>
           row.map((square, colIndex) => (
@@ -288,8 +291,12 @@ export default function ChessBoard() {
       </div>
 
       <div className="flex flex-col items-center gap-4">
-        <div className="text-xl font-bold">
-          {gameState.currentWord}
+        <div className="flex gap-2 text-4xl font-mono">
+          {Array.from(levels[currentLevel].targetWord).map((_, index) => (
+            <span key={index} className="w-8 text-center border-b-4 border-gray-400">
+              {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
+            </span>
+          ))}
         </div>
         <div className="flex gap-4">
           <button
