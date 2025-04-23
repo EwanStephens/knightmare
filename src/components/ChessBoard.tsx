@@ -73,22 +73,14 @@ export default function ChessBoard() {
     }
 
     // If a square is already selected, check if new square is a legal move
+    let newPreviousSquares: string[] = [];
     if (gameState.selectedSquare) {
       if (!square.isLegalMove) {
         setGameState(handleIllegalMove());
         return;
       }
+      newPreviousSquares = [...gameState.previousSquares, gameState.selectedSquare];
     }
-
-    // Get previous square if one was selected
-    const prevSquare = gameState.selectedSquare 
-      ? gameState.board[algebraicToPosition(gameState.selectedSquare).row][algebraicToPosition(gameState.selectedSquare).col]
-      : null;
-
-    // Calculate new previous squares
-    const newPreviousSquares = prevSquare
-      ? [...gameState.previousSquares, prevSquare.position, square.position]
-      : [...gameState.previousSquares, square.position];
 
     // Add new letter to word
     const newWord = gameState.currentWord + square.piece.letter;
