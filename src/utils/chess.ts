@@ -19,28 +19,17 @@ export const isValidChessMove = (
   piece: ChessPiece,
   start: Position,
   end: Position,
-  board: Square[][]
 ): boolean => {
   const rowDiff = end.row - start.row;
   const colDiff = end.col - start.col;
-  const targetSquare = board[end.row][end.col];
-
-  // Can't capture same color
-  if (targetSquare.piece?.color === piece.color) {
-    return false;
-  }
-
-  // Must capture a piece of the opposite color
-  if (!targetSquare.piece || targetSquare.piece.color === piece.color) {
-    return false;
-  }
 
   switch (piece.type) {
     case 'pawn':
       // White pawns move up (negative row diff), black pawns move down (positive row diff)
       const correctDirection = piece.color === 'white' ? rowDiff < 0 : rowDiff > 0;
-      // Pawns can only capture diagonally
-      return correctDirection && Math.abs(colDiff) === 1 && Math.abs(rowDiff) === 1;
+      // Pawns can move diagonally for captures or forward one square
+      return (correctDirection && Math.abs(colDiff) === 1 && Math.abs(rowDiff) === 1) || // Diagonal capture
+             (correctDirection && colDiff === 0 && Math.abs(rowDiff) === 1); // Forward move
 
     case 'knight':
       return (
@@ -69,6 +58,33 @@ export const isValidChessMove = (
   }
 };
 
+export const isValidChessCapture = (
+  piece: ChessPiece,
+  start: Position,
+  end: Position,
+  board: Square[][]
+): boolean => {
+  const targetSquare = board[end.row][end.col];
+
+  // Must be a valid chess move first
+  if (!isValidChessMove(piece, start, end)) {
+    return false;
+  }
+
+  // Must capture a piece of the opposite color
+  if (!targetSquare.piece || targetSquare.piece.color === piece.color) {
+    return false;
+  }
+
+  // For pawns, captures must be diagonal
+  if (piece.type === 'pawn') {
+    const colDiff = end.col - start.col;
+    return Math.abs(colDiff) === 1;
+  }
+
+  return true;
+};
+
 export const getLegalMoves = (
   piece: ChessPiece,
   position: Position,
@@ -80,7 +96,8 @@ export const getLegalMoves = (
   for (let row = 0; row < 5; row++) {
     for (let col = 0; col < 5; col++) {
       const targetPos = { row, col };
-      if (isValidChessMove(piece, position, targetPos, board)) {
+      // For highlighting, we want to show all legal moves
+      if (isValidChessMove(piece, position, targetPos)) {
         legalMoves.push(targetPos);
       }
     }

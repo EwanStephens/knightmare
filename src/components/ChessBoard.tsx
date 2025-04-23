@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChessPiece, GameState, Position, Square } from '@/types/chess';
-import { algebraicToPosition, getLegalMoves, positionToAlgebraic } from '@/utils/chess';
+import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import '@/styles/chess.css';
 
 const initialBoard: Square[][] = Array(5)
@@ -71,27 +71,35 @@ export default function ChessBoard() {
     // Helper function for illegal moves
     const handleIllegalMove = () => clearGameBoard('Invalid move!');
 
-    // Must select a square with a piece
-    if (!square.piece) {
-      setGameState(handleIllegalMove());
-      return;
-    }
-
-    // If a square is already selected, check if new square is a legal move
+    // If a square is already selected, check if new square is a legal capture
     let newPreviousSquares: string[] = [];
     if (gameState.selectedSquare) {
-      if (!square.isLegalMove) {
+      const startPos = algebraicToPosition(gameState.selectedSquare);
+      const startSquare = gameState.board[startPos.row][startPos.col];
+      
+      if (!startSquare.piece) {
+        setGameState(handleIllegalMove());
+        return;
+      }
+
+      if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board)) {
         setGameState(handleIllegalMove());
         return;
       }
       newPreviousSquares = [...gameState.previousSquares, gameState.selectedSquare];
+    } else {
+      // Must select a square with a piece for the first selection
+      if (!square.piece) {
+        setGameState(handleIllegalMove());
+        return;
+      }
     }
 
     // Add new letter to word
-    const newWord = gameState.currentWord + square.piece.letter;
+    const newWord = gameState.currentWord + (square.piece?.letter || '');
 
     // Calculate legal moves from new square
-    const legalMoves = getLegalMoves(square.piece, { row, col }, gameState.board);
+    const legalMoves = getLegalMoves(square.piece!, { row, col }, gameState.board);
 
     // Update board state
     const newBoard = gameState.board.map(row =>
