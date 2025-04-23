@@ -171,19 +171,20 @@ export default function ChessBoard() {
               onClick={() => handleSquareClick(square.position)}
               className={`
                 w-16 h-16 flex items-center justify-center relative
-                ${square.piece ? 'bg-white' : 'bg-gray-100'}
+                ${(rowIndex + colIndex) % 2 === 0 ? 'bg-gray-300' : 'bg-gray-700'}
+                ${square.piece ? 'hover:bg-opacity-90' : ''}
                 ${square.isSelected ? 'ring-2 ring-blue-500' : ''}
                 ${square.isLegalMove ? 'ring-2 ring-green-500' : ''}
                 ${square.isHighlighted ? 'bg-yellow-200' : ''}
-                cursor-pointer hover:bg-gray-50
+                cursor-pointer
               `}
             >
               {square.piece && (
                 <>
-                  <div className={`text-2xl ${square.piece.color === 'white' ? 'text-gray-700' : 'text-gray-900'}`}>
+                  <div className={`text-2xl ${square.piece.color === 'white' ? 'text-white' : 'text-black'}`}>
                     {getPieceSymbol(square.piece.type)}
                   </div>
-                  <div className="absolute top-0 right-1 text-sm font-bold">
+                  <div className={`absolute top-0 right-1 text-sm font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-gray-700' : 'text-gray-300'}`}>
                     {square.piece.letter}
                   </div>
                 </>
