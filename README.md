@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Knightmare
+
+A unique word game that combines chess mechanics with word building. Players must capture pieces using legal chess moves to construct valid English words.
+
+## Tutorial Level
+
+The game starts with a tutorial level where players need to spell the word "BOAT" by making the following moves:
+1. White pawn on a2 captures black knight on b3 (B + O)
+2. White bishop on d2 captures black rook on e1 (A + T)
+
+## Game Rules
+
+- The game is played on a 5x5 chess board
+- Each occupied square contains both a chess piece and a letter
+- To build words, players must:
+  - Select squares in sequence
+  - Make only legal chess moves
+  - Capture pieces of the opposite color
+  - Create valid English words of 3 or more letters
+- Pawns can only capture diagonally
+  - White pawns move up the board
+  - Black pawns move down the board
+
+## Technical Details
+
+Built with:
+- Next.js 15.3
+- React
+- TypeScript
+- Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/EwanStephens/knightmare.git
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   ```bash
+   cd knightmare
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Interactive 5x5 chess board
+- Visual highlighting of:
+  - Selected pieces (blue)
+  - Legal moves (green)
+  - Previous moves in current word (yellow)
+- Real-time word building display
+- Submit and Cancel buttons for word management
+- Clear feedback for invalid moves or words
