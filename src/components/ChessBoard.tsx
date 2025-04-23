@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ChessPiece, GameState, Position, Square } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic } from '@/utils/chess';
+import '@/styles/chess.css';
 
 const initialBoard: Square[][] = Array(5)
   .fill(null)
@@ -140,7 +141,7 @@ export default function ChessBoard() {
               onClick={() => handleSquareClick(square.position)}
               className={`
                 w-16 h-16 flex items-center justify-center relative
-                ${(rowIndex + colIndex) % 2 === 0 ? 'bg-gray-300' : 'bg-gray-700'}
+                ${(rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]'}
                 ${square.piece ? 'hover:bg-opacity-90' : ''}
                 ${square.isSelected ? 'ring-2 ring-blue-500' : ''}
                 ${square.isLegalMove ? 'ring-2 ring-green-500' : ''}
@@ -150,10 +151,10 @@ export default function ChessBoard() {
             >
               {square.piece && (
                 <>
-                  <div className={`text-6xl ${square.piece.color === 'white' ? 'text-white' : 'text-black'}`}>
-                    {getPieceSymbol(square.piece.type)}
+                  <div className="relative z-10">
+                    {getPieceComponent(square.piece.type, square.piece.color)}
                   </div>
-                  <div className={`absolute top-0 right-1 text-sm font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-gray-700' : 'text-gray-300'}`}>
+                  <div className={`absolute top-0 right-1 text-sm font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
                     {square.piece.letter}
                   </div>
                 </>
@@ -191,14 +192,18 @@ export default function ChessBoard() {
   );
 }
 
-function getPieceSymbol(type: ChessPiece['type']): string {
+function getPieceComponent(type: ChessPiece['type'], color: ChessPiece['color']) {
   const symbols: Record<ChessPiece['type'], string> = {
-    pawn: '♟',
-    knight: '♞',
-    bishop: '♝',
-    rook: '♜',
-    queen: '♛',
-    king: '♚',
+    pawn: color === 'white' ? 'p' : 'o',
+    knight: color === 'white' ? 'n' : 'm',
+    bishop: color === 'white' ? 'b' : 'v',
+    rook: color === 'white' ? 'r' : 't',
+    queen: color === 'white' ? 'q' : 'w',
+    king: color === 'white' ? 'k' : 'l',
   };
-  return symbols[type];
+  return (
+    <div style={{ fontFamily: 'Chess7' }} className="text-6xl">
+      {symbols[type]}
+    </div>
+  );
 } 
