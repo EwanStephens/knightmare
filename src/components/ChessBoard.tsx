@@ -237,11 +237,41 @@ export default function ChessBoard() {
                 ${(rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]'}
                 ${square.piece ? 'hover:bg-opacity-90' : ''}
                 ${square.isSelected ? 'ring-2 ring-blue-500' : ''}
-                ${square.isLegalMove ? 'ring-2 ring-green-500' : ''}
                 ${square.isHighlighted ? 'bg-yellow-200' : ''}
                 cursor-pointer
               `}
             >
+              {square.isLegalMove && !square.piece && (
+                <div className="absolute w-4 h-4 rounded-full bg-[rgba(20,85,30,0.5)]" />
+              )}
+              {square.isLegalMove && square.piece && (
+                <svg className="absolute w-full h-full pointer-events-none" viewBox="0 0 100 100">
+                  <path
+                    d="M 0 35 A 35 35 0 0 1 35 0"
+                    fill="none"
+                    stroke="rgba(20,85,30,0.5)"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M 65 0 A 35 35 0 0 1 100 35"
+                    fill="none"
+                    stroke="rgba(20,85,30,0.5)"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M 0 65 A 35 35 0 0 0 35 100"
+                    fill="none"
+                    stroke="rgba(20,85,30,0.5)"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M 65 100 A 35 35 0 0 0 100 65"
+                    fill="none"
+                    stroke="rgba(20,85,30,0.5)"
+                    strokeWidth="3"
+                  />
+                </svg>
+              )}
               {square.piece && (
                 <>
                   {square.isHighlighted ? (
