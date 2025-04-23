@@ -45,26 +45,30 @@ export default function ChessBoard() {
     message: '',
   });
 
+  const clearGameBoard = (message: string) => {
+    return {
+      ...gameState,
+      board: gameState.board.map(row =>
+        row.map(sq => ({
+          ...sq,
+          isSelected: false,
+          isLegalMove: false,
+          isHighlighted: false,
+        }))
+      ),
+      selectedSquare: null,
+      currentWord: '',
+      previousSquares: [],
+      message,
+    };
+  };
+
   const handleSquareClick = (position: string) => {
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
 
     // Helper function for illegal moves
-    const handleIllegalMove = () => {
-      return {
-        ...gameState,
-        board: gameState.board.map(row =>
-          row.map(sq => ({
-            ...sq,
-            isSelected: false,
-            isLegalMove: false,
-          }))
-        ),
-        selectedSquare: null,
-        currentWord: '',
-        message: 'Invalid move!',
-      };
-    };
+    const handleIllegalMove = () => clearGameBoard('Invalid move!');
 
     // Must select a square with a piece
     if (!square.piece) {
@@ -115,38 +119,15 @@ export default function ChessBoard() {
       setGameState({
         ...gameState,
         message: 'Congratulations! You found the word BOAT!',
+        selectedSquare: null,
       });
     } else {
-      setGameState({
-        ...gameState,
-        message: 'Invalid word! Try again.',
-        currentWord: '',
-        previousSquares: [],
-        board: gameState.board.map(row =>
-          row.map(sq => ({
-            ...sq,
-            isHighlighted: false,
-          }))
-        ),
-      });
+      setGameState(clearGameBoard('Invalid word! Try again.'));
     }
   };
 
   const handleCancel = () => {
-    setGameState({
-      ...gameState,
-      currentWord: '',
-      previousSquares: [],
-      message: '',
-      board: gameState.board.map(row =>
-        row.map(sq => ({
-          ...sq,
-          isHighlighted: false,
-          isSelected: false,
-          isLegalMove: false,
-        }))
-      ),
-    });
+    setGameState(clearGameBoard(''));
   };
 
   return (
