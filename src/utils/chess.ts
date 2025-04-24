@@ -30,6 +30,21 @@ export const isValidChessMove = (
     return false;
   }
 
+  // Check if target square is a previously captured square
+  const targetPos = positionToAlgebraic(end.row, end.col);
+  if (previousSquares.includes(targetPos)) {
+    return false;
+  }
+
+  // Check if target square has a piece that hasn't been captured
+  const targetSquare = board[end.row][end.col];
+  if (targetSquare.piece) {
+    // Can only move to a square with a piece if it's of the opposite color
+    if (targetSquare.piece.color === piece.color) {
+      return false;
+    }
+  }
+
   switch (piece.type) {
     case 'pawn':
       // White pawns move up (negative row diff), black pawns move down (positive row diff)
@@ -37,10 +52,8 @@ export const isValidChessMove = (
       
       // Forward move
       if (colDiff === 0 && Math.abs(rowDiff) === 1) {
-        // Check if there's a piece in the target square that hasn't been captured
-        const targetSquare = board[end.row][end.col];
-        const targetPos = positionToAlgebraic(end.row, end.col);
-        if (targetSquare.piece && !previousSquares.includes(targetPos)) {
+        // Forward moves cannot capture
+        if (targetSquare.piece) {
           return false;
         }
         return correctDirection;
@@ -48,10 +61,8 @@ export const isValidChessMove = (
       
       // Diagonal move (only if there's a piece to capture)
       if (Math.abs(colDiff) === 1 && Math.abs(rowDiff) === 1) {
-        const targetSquare = board[end.row][end.col];
-        const targetPos = positionToAlgebraic(end.row, end.col);
         // Must have a piece that hasn't been captured and is of opposite color
-        if (!targetSquare.piece || previousSquares.includes(targetPos)) {
+        if (!targetSquare.piece) {
           return false;
         }
         return correctDirection && targetSquare.piece.color !== piece.color;
