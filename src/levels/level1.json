@@ -1,0 +1,9 @@
+{
+  "pieces": [
+    { "position": "a2", "type": "pawn", "color": "white", "letter": "B" },
+    { "position": "b3", "type": "knight", "color": "black", "letter": "O" },
+    { "position": "d2", "type": "bishop", "color": "white", "letter": "A" },
+    { "position": "e1", "type": "rook", "color": "black", "letter": "T" }
+  ],
+  "targetWords": ["BOAT"]
+} 

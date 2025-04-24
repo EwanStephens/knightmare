@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { ChessPiece, GameState, Position, Square } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
+import { loadLevel } from '@/utils/levelLoader';
+import { LoadedLevel } from '@/types/level';
 import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 
@@ -122,14 +124,32 @@ const levels: Level[] = [
 ];
 
 export default function ChessBoard() {
-  const [currentLevel, setCurrentLevel] = useState(0);
+  const [currentLevel, setCurrentLevel] = useState(1);
+  const [levelData, setLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
-    board: levels[0].board,
+    board: [],
     currentWord: '',
     selectedSquare: null,
     previousSquares: [],
     message: '',
   });
+
+  useEffect(() => {
+    const initializeLevel = async () => {
+      const loadedLevel = await loadLevel(currentLevel);
+      setLevelData(loadedLevel);
+      setGameState(prevState => ({
+        ...prevState,
+        board: loadedLevel.board,
+        currentWord: '',
+        selectedSquare: null,
+        previousSquares: [],
+        message: '',
+      }));
+    };
+
+    initializeLevel();
+  }, [currentLevel]);
 
   const clearGameBoard = (message: string) => {
     return {
@@ -150,6 +170,8 @@ export default function ChessBoard() {
   };
 
   const handleSquareClick = (position: string) => {
+    if (!levelData) return;
+
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
 
@@ -199,21 +221,13 @@ export default function ChessBoard() {
     );
 
     // Check if word matches target
-    const level = levels[currentLevel];
     let message = '';
-    if (newWord === level.targetWord) {
-      message = level.congratsMessage;
-      if (currentLevel < levels.length - 1) {
+    if (newWord === levelData.targetWord) {
+      message = levelData.congratsMessage;
+      if (currentLevel < 3) { // Hardcoded max level for now
         // Move to next level
         setTimeout(() => {
           setCurrentLevel(currentLevel + 1);
-          setGameState({
-            board: levels[currentLevel + 1].board,
-            currentWord: '',
-            selectedSquare: null,
-            previousSquares: [],
-            message: '',
-          });
         }, 2000);
       }
     }
@@ -232,10 +246,14 @@ export default function ChessBoard() {
     setGameState(clearGameBoard(''));
   };
 
+  if (!levelData) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="flex flex-col items-center gap-8 p-8">
       <div className="text-2xl font-bold mb-4">
-        Find a {levels[currentLevel].targetWord.length} letter word
+        Find a {levelData.targetWord.length} letter word
       </div>
       <div className="grid grid-cols-5 gap-1 bg-gray-200 p-2">
         {gameState.board.map((row, rowIndex) =>
@@ -300,7 +318,7 @@ export default function ChessBoard() {
 
       <div className="flex flex-col items-center gap-4">
         <div className="flex gap-2 text-4xl font-mono">
-          {Array.from(levels[currentLevel].targetWord).map((_, index) => (
+          {Array.from(levelData.targetWord).map((_, index) => (
             <span key={index} className="w-8 text-center border-b-4 border-gray-400">
               {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
             </span>
