@@ -224,7 +224,7 @@ export default function ChessBoard() {
     let message = '';
     if (newWord === levelData.targetWord) {
       message = levelData.congratsMessage;
-      if (currentLevel < 3) { // Hardcoded max level for now
+      if (currentLevel < 4) { // Updated max level to 4
         // Move to next level
         setTimeout(() => {
           setCurrentLevel(currentLevel + 1);
