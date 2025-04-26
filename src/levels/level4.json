@@ -60,6 +60,24 @@
       "type": "queen",
       "color": "black",
       "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
     }
   ]
 } 
