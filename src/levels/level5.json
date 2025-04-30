@@ -1,0 +1,83 @@
+{
+  "targetWords": ["RAINBOWS"],
+  "pieces": [
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    }
+  ]
+} 

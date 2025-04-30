@@ -20,7 +20,7 @@ export const loadLevel = async (levelNumber: number): Promise<LoadedLevel> => {
   const targetWord = levelData.targetWords[0];
   
   // Create the congratulation message
-  const isLastLevel = levelNumber === 4; // Updated to reflect level 4 as the last level
+  const isLastLevel = levelNumber === 5; // Updated to reflect level 5 as the last level
   const congratsMessage = isLastLevel
     ? `Congratulations! You found the word ${targetWord}!`
     : `Congratulations! You found the word ${targetWord}! Moving to level ${levelNumber + 1}...`;

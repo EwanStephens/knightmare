@@ -122,7 +122,7 @@ export default function ChessBoard() {
     if (newWord === levelData.targetWord) {
       message = levelData.congratsMessage;
       // Only advance to next level if not on the last level
-      if (currentLevel < 4) {
+      if (currentLevel < 5) {
         setTimeout(() => {
           setCurrentLevel(currentLevel + 1);
         }, 2000);
@@ -160,10 +160,10 @@ export default function ChessBoard() {
               onClick={() => handleSquareClick(square.position)}
               className={`
                 w-16 h-16 flex items-center justify-center relative
-                ${(rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]'}
-                ${square.piece ? 'hover:bg-opacity-90' : ''}
-                ${square.isSelected ? 'ring-2 ring-blue-500' : ''}
                 ${square.isHighlighted ? 'bg-yellow-200' : ''}
+                ${square.isSelected ? 'bg-[#94A3B8]' : ''}
+                ${!square.isHighlighted && !square.isSelected ? (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
+                ${square.piece ? 'hover:bg-opacity-90' : ''}
                 cursor-pointer
               `}
             >
