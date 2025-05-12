@@ -231,12 +231,25 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
           </div>
 
           <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] mx-auto overflow-hidden">
-            <div className="flex flex-wrap gap-2 justify-center text-2xl sm:text-3xl md:text-4xl font-mono w-full">
-              {Array.from(levelData.targetWord).map((_, index) => (
-                <span key={index} className="min-w-[1.5rem] sm:min-w-[2rem] text-center border-b-4 border-gray-400">
-                  {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
-                </span>
-              ))}
+            <div className="flex whitespace-nowrap justify-center items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono w-full overflow-visible">
+              {Array.from(levelData.targetWord).map((_, index) => {
+                // Dynamically calculate sizes based on word length
+                const letterWidth = Math.max(100 / levelData.targetWord.length, 6);
+                
+                return (
+                  <span 
+                    key={index} 
+                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1"
+                    style={{ 
+                      width: `${letterWidth}%`, 
+                      minWidth: '1rem',
+                      maxWidth: '2.5rem' 
+                    }}
+                  >
+                    {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
+                  </span>
+                );
+              })}
             </div>
             <div className="flex gap-4 mt-2 sm:mt-4">
               <button
