@@ -165,7 +165,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
             Find a {levelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
-          <div className="w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[70vmin] aspect-square mx-auto">
+          <div className="w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] aspect-square mx-auto">
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
                 row.map((square, colIndex) => (
@@ -213,11 +213,11 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
                         ) : (
                           <>
                             <div className="absolute inset-0 flex items-center justify-center z-10">
-                              <div className="w-[85%] h-[85%] sm:w-[90%] sm:h-[90%]">
+                              <div className="w-[75%] h-[75%] sm:w-[80%] sm:h-[80%]">
                                 {getPieceComponent(square.piece.type, square.piece.color)}
                               </div>
                             </div>
-                            <div className={`absolute top-0 right-0 mt-0.5 mr-0.5 sm:mt-1 sm:mr-1 z-20 text-xs sm:text-sm md:text-base lg:text-lg font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
+                            <div className={`absolute top-0 right-0 mt-0.5 mr-0.5 sm:mt-1 sm:mr-1 z-20 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
                               {square.piece.letter}
                             </div>
                           </>
@@ -230,7 +230,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[70vmin] mx-auto overflow-hidden">
+          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] mx-auto overflow-hidden">
             <div className="flex flex-wrap gap-2 justify-center text-2xl sm:text-3xl md:text-4xl font-mono w-full">
               {Array.from(levelData.targetWord).map((_, index) => (
                 <span key={index} className="min-w-[1.5rem] sm:min-w-[2rem] text-center border-b-4 border-gray-400">
