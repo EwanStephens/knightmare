@@ -157,90 +157,95 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
   }
 
   return (
-    <div className="flex flex-col items-center gap-8 p-8">
-      <div className="text-2xl font-bold mb-4">
-        Find a {levelData.targetWord.length} letter word
-      </div>
-      <div className="grid grid-cols-5 gap-1 bg-gray-200 p-2">
-        {gameState.board.map((row, rowIndex) =>
-          row.map((square, colIndex) => (
-            <div
-              key={square.position}
-              onClick={() => handleSquareClick(square.position)}
-              className={`
-                w-16 h-16 flex items-center justify-center relative
-                ${square.isHighlighted ? 'bg-yellow-200' : ''}
-                ${square.isSelected ? 'bg-[#94A3B8]' : ''}
-                ${!square.isHighlighted && !square.isSelected ? (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
-                ${square.piece ? 'hover:bg-opacity-90' : ''}
-                cursor-pointer
-              `}
-            >
-              {square.isLegalMove && !square.piece && (
-                <div className="absolute w-6 h-6 rounded-full bg-[rgba(50,50,50,0.4)]" />
-              )}
-              {square.isLegalMove && square.piece && (
-                <svg className="absolute w-full h-full pointer-events-none" viewBox="0 0 100 100">
-                  <path
-                    d="M 0 35 A 35 35 0 0 1 35 0 L 0 0 Z"
-                    fill="rgba(50,50,50,0.4)"
-                  />
-                  <path
-                    d="M 65 0 A 35 35 0 0 1 100 35 L 100 0 Z"
-                    fill="rgba(50,50,50,0.4)"
-                  />
-                  <path
-                    d="M 0 65 A 35 35 0 0 0 35 100 L 0 100 Z"
-                    fill="rgba(50,50,50,0.4)"
-                  />
-                  <path
-                    d="M 65 100 A 35 35 0 0 0 100 65 L 100 100 Z"
-                    fill="rgba(50,50,50,0.4)"
-                  />
-                </svg>
-              )}
-              {square.piece && (
-                <>
-                  {square.isHighlighted ? (
-                    <div className="text-4xl font-bold text-[#769656]">
-                      {square.piece.letter}
-                    </div>
-                  ) : (
+    <div className="relative w-full flex flex-col items-center">
+      {/* Main content, blurred when modal is open */}
+      <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
+        <div className="flex flex-col items-center gap-8 p-8">
+          <div className="text-2xl font-bold mb-4">
+            Find a {levelData.targetWord.length} letter word
+          </div>
+          <div className="grid grid-cols-5 gap-1 bg-gray-200 p-2">
+            {gameState.board.map((row, rowIndex) =>
+              row.map((square, colIndex) => (
+                <div
+                  key={square.position}
+                  onClick={() => handleSquareClick(square.position)}
+                  className={`
+                    w-16 h-16 flex items-center justify-center relative
+                    ${square.isHighlighted ? 'bg-yellow-200' : ''}
+                    ${square.isSelected ? 'bg-[#94A3B8]' : ''}
+                    ${!square.isHighlighted && !square.isSelected ? (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
+                    ${square.piece ? 'hover:bg-opacity-90' : ''}
+                    cursor-pointer
+                  `}
+                >
+                  {square.isLegalMove && !square.piece && (
+                    <div className="absolute w-6 h-6 rounded-full bg-[rgba(50,50,50,0.4)]" />
+                  )}
+                  {square.isLegalMove && square.piece && (
+                    <svg className="absolute w-full h-full pointer-events-none" viewBox="0 0 100 100">
+                      <path
+                        d="M 0 35 A 35 35 0 0 1 35 0 L 0 0 Z"
+                        fill="rgba(50,50,50,0.4)"
+                      />
+                      <path
+                        d="M 65 0 A 35 35 0 0 1 100 35 L 100 0 Z"
+                        fill="rgba(50,50,50,0.4)"
+                      />
+                      <path
+                        d="M 0 65 A 35 35 0 0 0 35 100 L 0 100 Z"
+                        fill="rgba(50,50,50,0.4)"
+                      />
+                      <path
+                        d="M 65 100 A 35 35 0 0 0 100 65 L 100 100 Z"
+                        fill="rgba(50,50,50,0.4)"
+                      />
+                    </svg>
+                  )}
+                  {square.piece && (
                     <>
-                      <div className="relative z-10">
-                        {getPieceComponent(square.piece.type, square.piece.color)}
-                      </div>
-                      <div className={`absolute top-0.5 right-1 text-lg font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
-                        {square.piece.letter}
-                      </div>
+                      {square.isHighlighted ? (
+                        <div className="text-4xl font-bold text-[#769656]">
+                          {square.piece.letter}
+                        </div>
+                      ) : (
+                        <>
+                          <div className="relative z-10">
+                            {getPieceComponent(square.piece.type, square.piece.color)}
+                          </div>
+                          <div className={`absolute top-0.5 right-1 text-lg font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
+                            {square.piece.letter}
+                          </div>
+                        </>
+                      )}
                     </>
                   )}
-                </>
-              )}
-            </div>
-          ))
-        )}
-      </div>
+                </div>
+              ))
+            )}
+          </div>
 
-      <div className="flex flex-col items-center gap-4">
-        <div className="flex gap-2 text-4xl font-mono">
-          {Array.from(levelData.targetWord).map((_, index) => (
-            <span key={index} className="w-8 text-center border-b-4 border-gray-400">
-              {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
-            </span>
-          ))}
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex gap-2 text-4xl font-mono">
+              {Array.from(levelData.targetWord).map((_, index) => (
+                <span key={index} className="w-8 text-center border-b-4 border-gray-400">
+                  {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-4">
+              <button
+                onClick={handleCancel}
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+              >
+                Clear
+              </button>
+            </div>
+            {gameState.message && !showCompleteModal && !gameState.message.includes('Congratulations') && (
+              <div className="text-lg text-red-600">{gameState.message}</div>
+            )}
+          </div>
         </div>
-        <div className="flex gap-4">
-          <button
-            onClick={handleCancel}
-            className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-          >
-            Clear
-          </button>
-        </div>
-        {gameState.message && !showCompleteModal && !gameState.message.includes('Congratulations') && (
-          <div className="text-lg text-red-600">{gameState.message}</div>
-        )}
       </div>
       {/* Completion Modal */}
       {showCompleteModal && (
