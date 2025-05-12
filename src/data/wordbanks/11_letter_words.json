@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "cooperation", "negotiation", "interaction", "opportunity", "improvement",
     "advertising", "alternative", "appointment", "comfortable", "circulation",
     "examination", "mathematics", "competitive", "performance", "electronics",
@@ -8,5 +8,6 @@
     "association", "interesting", "achievement", "perspective", "development",
     "educational", "competition", "engineering", "preparation", "personality",
     "composition", "consequence", "celebration", "environment", "appropriate"
-  ]
+  ],
+  "used_words": []
 }

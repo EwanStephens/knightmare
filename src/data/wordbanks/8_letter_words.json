@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "domestic", "function", "midnight", "attitude", "daughter",
     "hardware", "children", "designer", "customer", "engineer",
     "building", "heritage", "category", "airplane", "original",
@@ -20,5 +20,6 @@
     "computer", "contract", "forecast", "identify", "national",
     "learning", "consider", "decision", "identity", "platform",
     "cultural", "actually", "entrance"
-  ]
+  ],
+  "used_words": []
 }

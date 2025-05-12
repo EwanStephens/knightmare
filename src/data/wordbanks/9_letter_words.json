@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "essential", "otherwise", "happiness", "criticism", "lifestyle",
     "establish", "guarantee", "paragraph", "equipment", "agreement",
     "christmas", "excellent", "furniture", "expensive", "classroom",
@@ -16,5 +16,6 @@
     "breakfast", "beautiful", "authority", "objective", "chocolate",
     "potential", "newspaper", "everybody", "challenge", "available",
     "marketing", "lightning", "container", "component", "interface"
-  ]
+  ],
+  "used_words": []
 }

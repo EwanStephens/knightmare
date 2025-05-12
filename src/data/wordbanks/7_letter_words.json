@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "observe", "between", "healthy", "teacher", "company",
     "general", "deliver", "promise", "kitchen", "feeling",
     "dynamic", "captain", "release", "present", "science",
@@ -21,5 +21,6 @@
     "request", "chapter", "element", "justice", "machine",
     "brother", "measure", "thought", "quarter", "evening",
     "address", "leading", "pattern", "display"
-  ]
+  ],
+  "used_words": []
 }

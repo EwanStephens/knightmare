@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "determination", "participating", "accessibility", "technological", "grandchildren",
     "certification", "administrator", "configuration", "entertainment", "sophisticated",
     "extraordinary", "concentration", "demonstration", "unfortunately", "mediterranean",
@@ -7,5 +7,6 @@
     "investigation", "qualification", "advertisement", "functionality", "vulnerability",
     "disappearance", "embarrassment", "establishment", "communication", "collaboration",
     "environmental", "understanding"
-  ]
+  ],
+  "used_words": []
 }

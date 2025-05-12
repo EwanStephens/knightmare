@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "department", "additional", "atmosphere", "investment", "evaluation",
     "management", "experience", "population", "mechanical", "accessible",
     "incredible", "complexity", "operations", "enterprise", "permission",
@@ -20,5 +20,6 @@
     "distribute", "collection", "principles", "accomplish", "mysterious",
     "equivalent", "psychology", "background", "individual", "attractive",
     "motivation"
-  ]
+  ],
+  "used_words": []
 }

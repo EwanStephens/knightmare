@@ -1,5 +1,5 @@
 {
-  "words": [
+  "unused_words": [
     "action", "gather", "coffee", "spring", "change",
     "camera", "pretty", "follow", "father", "common",
     "button", "around", "museum", "always", "cancel",
@@ -20,5 +20,6 @@
     "dragon", "ladder", "enough", "flower", "doctor",
     "answer", "delete", "leader", "memory", "person",
     "reason", "create", "sister", "garden"
-  ]
+  ],
+  "used_words": []
 }
