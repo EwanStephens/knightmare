@@ -1,7 +1,199 @@
 import { ChessPiece, PieceType, Position, Square } from '@/types/chess';
-// import { isValidChessMove, getSquaresOnPath } from '@/utils/chess';
+import { isValidChessMove, positionToAlgebraic, algebraicToPosition, getLegalMoves, getSquaresOnPath } from '@/utils/chess';
+
+const PIECE_TYPES: PieceType[] = ['pawn', 'knight', 'bishop', 'rook', 'queen'];
+const PIECE_COLORS: ('white' | 'black')[] = ['white', 'black'];
+
+// English letter frequency (approximate, for extra letters)
+const LETTER_FREQUENCY = [
+  { letter: 'E', weight: 12.7 }, { letter: 'T', weight: 9.1 }, { letter: 'A', weight: 8.2 },
+  { letter: 'O', weight: 7.5 }, { letter: 'I', weight: 7.0 }, { letter: 'N', weight: 6.7 },
+  { letter: 'S', weight: 6.3 }, { letter: 'H', weight: 6.1 }, { letter: 'R', weight: 6.0 },
+  { letter: 'D', weight: 4.3 }, { letter: 'L', weight: 4.0 }, { letter: 'C', weight: 2.8 },
+  { letter: 'U', weight: 2.8 }, { letter: 'M', weight: 2.4 }, { letter: 'W', weight: 2.4 },
+  { letter: 'F', weight: 2.2 }, { letter: 'G', weight: 2.0 }, { letter: 'Y', weight: 2.0 },
+  { letter: 'P', weight: 1.9 }, { letter: 'B', weight: 1.5 }, { letter: 'V', weight: 1.0 },
+  { letter: 'K', weight: 0.8 }, { letter: 'J', weight: 0.2 }, { letter: 'X', weight: 0.2 },
+  { letter: 'Q', weight: 0.1 }, { letter: 'Z', weight: 0.1 }
+];
+
+function randomWeightedLetter(): string {
+  const total = LETTER_FREQUENCY.reduce((sum, l) => sum + l.weight, 0);
+  let r = Math.random() * total;
+  for (const l of LETTER_FREQUENCY) {
+    if (r < l.weight) return l.letter;
+    r -= l.weight;
+  }
+  return 'E'; // fallback
+}
+
+function randomPieceType(): PieceType {
+  return PIECE_TYPES[Math.floor(Math.random() * PIECE_TYPES.length)];
+}
+
+function oppositePieceColor(color: 'white' | 'black'): 'white' | 'black' {
+  return color === 'white' ? 'black' : 'white';
+}
+
+function randomBoardPosition(): Position {
+  return { row: Math.floor(Math.random() * 5), col: Math.floor(Math.random() * 5) };
+}
+
+function createEmptyBoard(): Square[][] {
+  const board: Square[][] = [];
+  for (let row = 0; row < 5; row++) {
+    const rowArr: Square[] = [];
+    for (let col = 0; col < 5; col++) {
+      rowArr.push({
+        piece: null,
+        position: positionToAlgebraic(row, col),
+        isHighlighted: false,
+        isSelected: false,
+        isLegalMove: false,
+      });
+    }
+    board.push(rowArr);
+  }
+  return board;
+}
+
+function dumpBoard(board: Square[][]): string {
+  let out = '';
+  for (let row = 0; row < 5; row++) {
+    let line = '';
+    for (let col = 0; col < 5; col++) {
+      const sq = board[row][col];
+      if (sq.piece) {
+        line += `${sq.piece.letter}${sq.piece.type[0].toUpperCase()}${sq.piece.color[0].toUpperCase()} `;
+      } else {
+        line += ' .  ';
+      }
+    }
+    out += line.trimEnd() + '\n';
+  }
+  return out;
+}
 
 export async function generateBoard(targetWord: string, extraLetters: number): Promise<Square[][]> {
-  // TODO: Implement board generation logic
-  throw new Error('Not implemented');
+  let attempts = 0;
+  while (attempts < 10) {
+    attempts++;
+    console.log(`[BoardGenerator] Attempt ${attempts} to generate board for word: ${targetWord}`);
+    const board = createEmptyBoard();
+    const previousSquares: string[] = [];
+    let success = true;
+
+    // 1. Pick a random starting square
+    let start: Position = randomBoardPosition();
+    let startSquare = board[start.row][start.col];
+    let startPieceType = randomPieceType();
+    let startColor: 'white' | 'black' = PIECE_COLORS[Math.floor(Math.random() * 2)];
+    startSquare.piece = {
+      type: startPieceType,
+      color: startColor,
+      letter: targetWord[0].toUpperCase(),
+    };
+    previousSquares.push(startSquare.position);
+
+    let currentPos = start;
+    let currentColor = startColor;
+    let currentPieceType = startPieceType;
+
+    for (let i = 1; i < targetWord.length; i++) {
+      // 2. Find legal moves for current piece
+      const currentPiece = board[currentPos.row][currentPos.col].piece!;
+      const legalMoves = getLegalMoves(
+        currentPiece,
+        currentPos,
+        board,
+        previousSquares
+      ).filter(pos => {
+        const posAlg = positionToAlgebraic(pos.row, pos.col);
+        return !previousSquares.includes(posAlg);
+      });
+      if (legalMoves.length === 0) {
+        console.warn(`[BoardGenerator] No legal moves for piece at ${positionToAlgebraic(currentPos.row, currentPos.col)}. Restarting...`);
+        console.log('[BoardGenerator] Current board state:\n' + dumpBoard(board));
+        success = false;
+        break;
+      }
+      // 3. Pick a random legal move
+      const nextPos = legalMoves[Math.floor(Math.random() * legalMoves.length)];
+      // 4. If bishop/rook/queen, add squares on path
+      if (['bishop', 'rook', 'queen'].includes(currentPiece.type)) {
+        const onPath = getSquaresOnPath(currentPos, nextPos);
+        for (const sq of onPath) {
+          const sqAlg = positionToAlgebraic(sq.row, sq.col);
+          if (!previousSquares.includes(sqAlg)) previousSquares.push(sqAlg);
+        }
+      }
+      // 5. Find a piece of the opposite color with at least one legal move
+      const nextColor = oppositePieceColor(currentColor);
+      let foundPiece = false;
+      let pieceTries = 0;
+      let nextPieceType: PieceType = 'pawn';
+      let nextPiece: ChessPiece | null = null;
+      const pieceTypesShuffled = PIECE_TYPES.slice().sort(() => Math.random() - 0.5);
+      for (const pt of pieceTypesShuffled) {
+        const candidate: ChessPiece = {
+          type: pt,
+          color: nextColor,
+          letter: targetWord[i].toUpperCase(),
+        };
+        // Temporarily place the piece
+        board[nextPos.row][nextPos.col].piece = candidate;
+        const moves = getLegalMoves(candidate, nextPos, board, previousSquares);
+        // Remove the piece after checking
+        board[nextPos.row][nextPos.col].piece = null;
+        if (moves.length > 0) {
+          nextPieceType = pt;
+          nextPiece = candidate;
+          foundPiece = true;
+          break;
+        }
+        pieceTries++;
+      }
+      if (!foundPiece) {
+        console.warn(`[BoardGenerator] No valid piece for next square at ${positionToAlgebraic(nextPos.row, nextPos.col)} after trying all types. Restarting...`);
+        console.log('[BoardGenerator] Current board state:\n' + dumpBoard(board));
+        success = false;
+        break;
+      }
+      // 6. Place the piece and update state
+      board[nextPos.row][nextPos.col].piece = nextPiece;
+      previousSquares.push(positionToAlgebraic(nextPos.row, nextPos.col));
+      currentPos = nextPos;
+      currentColor = nextColor;
+      currentPieceType = nextPieceType;
+    }
+    if (!success) continue;
+
+    // 7. Fill in extra letters
+    let emptySquares: Position[] = [];
+    for (let row = 0; row < 5; row++) {
+      for (let col = 0; col < 5; col++) {
+        const alg = positionToAlgebraic(row, col);
+        if (!previousSquares.includes(alg)) {
+          emptySquares.push({ row, col });
+        }
+      }
+    }
+    // Shuffle and pick extraLetters
+    emptySquares = emptySquares.sort(() => Math.random() - 0.5);
+    for (let i = 0; i < Math.min(extraLetters, emptySquares.length); i++) {
+      const pos = emptySquares[i];
+      const pieceType = randomPieceType();
+      const color = PIECE_COLORS[Math.floor(Math.random() * 2)];
+      const letter = randomWeightedLetter();
+      board[pos.row][pos.col].piece = {
+        type: pieceType,
+        color,
+        letter,
+      };
+    }
+    console.log('[BoardGenerator] Board successfully generated.');
+    console.log('[BoardGenerator] Final board state:\n' + dumpBoard(board));
+    return board;
+  }
+  throw new Error('[BoardGenerator] Failed to generate a valid board after 10 attempts.');
 } 

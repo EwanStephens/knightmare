@@ -97,7 +97,7 @@ export const isValidChessMove = (
   }
 };
 
-const getSquaresOnPath = (start: Position, end: Position): Position[] => {
+export const getSquaresOnPath = (start: Position, end: Position): Position[] => {
   const rowDiff = end.row - start.row;
   const colDiff = end.col - start.col;
   const rowStep = rowDiff === 0 ? 0 : rowDiff > 0 ? 1 : -1;
