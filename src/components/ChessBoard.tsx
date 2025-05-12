@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { ChessPiece, GameState, Position, Square } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import { loadLevel } from '@/utils/levelLoader';
@@ -37,6 +38,8 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
     previousSquares: [],
     message: '',
   });
+  const [showCompleteModal, setShowCompleteModal] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const initializeLevel = async () => {
@@ -126,14 +129,13 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
 
     // Check if word matches target
     let message = '';
+    let completed = false;
     if (newWord === levelData.targetWord) {
-      message = levelData.congratsMessage;
-      // Only advance to next level if not on the last level (20)
-      if (currentLevel < 20) {
-        setTimeout(() => {
-          setCurrentLevel(currentLevel + 1);
-        }, 2000);
-      }
+      message = `Congratulations! You found the word ${levelData.targetWord}!`;
+      completed = true;
+      setTimeout(() => {
+        setShowCompleteModal(true);
+      }, 200);
     }
 
     setGameState({
@@ -236,12 +238,37 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
             Clear
           </button>
         </div>
-        {gameState.message && (
-          <div className={`text-lg ${gameState.message.includes('Congratulations') ? 'text-green-600' : 'text-red-600'}`}>
-            {gameState.message}
-          </div>
+        {gameState.message && !showCompleteModal && !gameState.message.includes('Congratulations') && (
+          <div className="text-lg text-red-600">{gameState.message}</div>
         )}
       </div>
+      {/* Completion Modal */}
+      {showCompleteModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center gap-6 min-w-[320px]">
+            <div className="text-2xl font-bold text-green-700">Congratulations! You found the word {levelData.targetWord}!</div>
+            <div className="flex gap-4">
+              <button
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+                onClick={() => router.push('/')}
+              >
+                Home
+              </button>
+              {currentLevel < 20 && (
+                <button
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  onClick={() => {
+                    setShowCompleteModal(false);
+                    router.push(`/play/${currentLevel + 1}`);
+                  }}
+                >
+                  Next Level
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
