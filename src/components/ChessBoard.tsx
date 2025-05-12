@@ -121,8 +121,8 @@ export default function ChessBoard() {
     let message = '';
     if (newWord === levelData.targetWord) {
       message = levelData.congratsMessage;
-      // Only advance to next level if not on the last level
-      if (currentLevel < 5) {
+      // Only advance to next level if not on the last level (20)
+      if (currentLevel < 20) {
         setTimeout(() => {
           setCurrentLevel(currentLevel + 1);
         }, 2000);

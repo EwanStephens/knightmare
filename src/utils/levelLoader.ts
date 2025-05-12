@@ -4,7 +4,7 @@ import { createEmptyBoard } from './board';
 
 export const loadLevel = async (levelNumber: number): Promise<LoadedLevel> => {
   // Load the level file
-  const levelData: Level = await import(`../levels/level${levelNumber}.json`).then(m => m.default);
+  const levelData: Level = await import(`../levels/level_${levelNumber}.json`).then(m => m.default);
   
   // Create an empty board
   const board = createEmptyBoard();
@@ -20,7 +20,7 @@ export const loadLevel = async (levelNumber: number): Promise<LoadedLevel> => {
   const targetWord = levelData.targetWords[0];
   
   // Create the congratulation message
-  const isLastLevel = levelNumber === 5; // Updated to reflect level 5 as the last level
+  const isLastLevel = levelNumber === 20; // Updated to reflect level 5 as the last level
   const congratsMessage = isLastLevel
     ? `Congratulations! You found the word ${targetWord}!`
     : `Congratulations! You found the word ${targetWord}! Moving to level ${levelNumber + 1}...`;
