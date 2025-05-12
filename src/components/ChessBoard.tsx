@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { ChessPiece, GameState, Position, Square } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
@@ -20,8 +22,13 @@ const createEmptyBoard = (): Square[][] => Array(5)
       }))
   );
 
-export default function ChessBoard() {
-  const [currentLevel, setCurrentLevel] = useState(1);
+// Add prop type
+interface ChessBoardProps {
+  initialLevel?: number;
+}
+
+export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
+  const [currentLevel, setCurrentLevel] = useState(initialLevel);
   const [levelData, setLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
     board: [],
