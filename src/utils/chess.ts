@@ -186,4 +186,29 @@ export const getLegalMoves = (
   }
 
   return legalMoves;
+};
+
+export const getLegalCaptures = (
+  piece: ChessPiece,
+  position: Position,
+  board: Square[][],
+  previousSquares: string[] = []
+): Position[] => {
+  const legalCaptures: Position[] = [];
+
+  // Check all squares on the board
+  for (let row = 0; row < 5; row++) {
+    for (let col = 0; col < 5; col++) {
+      const targetPos = { row, col };
+      // Check if it's a valid chess capture and the path is clear
+      if (
+        isValidChessCapture(piece, position, targetPos, board, previousSquares) &&
+        isPathClear(position, targetPos, board, previousSquares)
+      ) {
+        legalCaptures.push(targetPos);
+      }
+    }
+  }
+
+  return legalCaptures;
 }; 
