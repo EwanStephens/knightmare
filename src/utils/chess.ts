@@ -211,4 +211,18 @@ export const getLegalCaptures = (
   }
 
   return legalCaptures;
+};
+
+export const getLegalCaptureSquares = (
+  piece: ChessPiece,
+  position: Position,
+  board: Square[][],
+  previousSquares: string[] = []
+): Position[] => {
+  const moves = getLegalMoves(piece, position, board, previousSquares);
+  if (piece.type === 'pawn') {
+    // Only diagonal moves for pawns
+    return moves.filter(move => Math.abs(move.col - position.col) === 1 && Math.abs(move.row - position.row) === 1);
+  }
+  return moves;
 }; 

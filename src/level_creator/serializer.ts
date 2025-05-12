@@ -1,4 +1,4 @@
-import { Square } from '@/types/chess';
+import { Square } from '../types/chess';
 import fs from 'fs/promises';
 
 export async function serializeLevel(board: Square[][], words: string[], filename: string): Promise<void> {

@@ -19,24 +19,20 @@ async function main() {
   console.log(`[Level Creator] Starting with word length ${wordLength} and ${extraLetters} extra letters.`);
 
   // 1. Pick a target word
-  // TODO: Implement getAndUseRandomWord
-  // const targetWord = await getAndUseRandomWord(wordLength);
-  // console.log(`[Level Creator] Picked target word: ${targetWord}`);
+  const targetWord = await getAndUseRandomWord(wordLength);
+  console.log(`[Level Creator] Picked target word: ${targetWord}`);
 
   // 2. Generate the board
-  // TODO: Implement generateBoard
-  // const board = await generateBoard(targetWord, extraLetters);
-  // console.log('[Level Creator] Board generated.');
+  const board = await generateBoard(targetWord, extraLetters);
+  console.log('[Level Creator] Board generated.');
 
   // 3. Validate and find longest words
-  // TODO: Implement findLongestWords
-  // const longestWords = await findLongestWords(board);
-  // console.log(`[Level Creator] Longest words found: ${longestWords.join(', ')}`);
+  const longestWords = await findLongestWords(board);
+  console.log(`[Level Creator] Longest words found: ${longestWords.join(', ')}`);
 
   // 4. Serialize to JSON
-  // TODO: Implement serializeLevel
-  // await serializeLevel(board, longestWords, `src/levels/level_${targetWord}.json`);
-  // console.log('[Level Creator] Level serialized to JSON.');
+  await serializeLevel(board, longestWords, `src/levels/level_${targetWord.toLowerCase()}.json`);
+  console.log('[Level Creator] Level serialized to JSON.');
 }
 
 main().catch(err => {

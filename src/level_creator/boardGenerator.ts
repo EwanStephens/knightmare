@@ -1,5 +1,5 @@
-import { ChessPiece, PieceType, Position, Square } from '@/types/chess';
-import { isValidChessMove, positionToAlgebraic, algebraicToPosition, getLegalMoves, getSquaresOnPath } from '@/utils/chess';
+import { ChessPiece, PieceType, Position, Square } from '../types/chess';
+import { isValidChessMove, positionToAlgebraic, algebraicToPosition, getLegalMoves, getSquaresOnPath, getLegalCaptureSquares } from '../utils/chess';
 
 const PIECE_TYPES: PieceType[] = ['pawn', 'knight', 'bishop', 'rook', 'queen'];
 const PIECE_COLORS: ('white' | 'black')[] = ['white', 'black'];
@@ -102,7 +102,7 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
     for (let i = 1; i < targetWord.length; i++) {
       // 2. Find legal moves for current piece
       const currentPiece = board[currentPos.row][currentPos.col].piece!;
-      const legalMoves = getLegalMoves(
+      const legalMoves = getLegalCaptureSquares(
         currentPiece,
         currentPos,
         board,
