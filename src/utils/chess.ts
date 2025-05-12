@@ -97,38 +97,43 @@ export const isValidChessMove = (
   }
 };
 
+const getSquaresOnPath = (start: Position, end: Position): Position[] => {
+  const rowDiff = end.row - start.row;
+  const colDiff = end.col - start.col;
+  const rowStep = rowDiff === 0 ? 0 : rowDiff > 0 ? 1 : -1;
+  const colStep = colDiff === 0 ? 0 : colDiff > 0 ? 1 : -1;
+  
+  // For knights, there are no squares in between
+  if (Math.abs(rowDiff) === 2 && Math.abs(colDiff) === 1 || 
+      Math.abs(rowDiff) === 1 && Math.abs(colDiff) === 2) {
+    return [];
+  }
+
+  const squares: Position[] = [];
+  let currentRow = start.row + rowStep;
+  let currentCol = start.col + colStep;
+  
+  while (currentRow !== end.row || currentCol !== end.col) {
+    squares.push({ row: currentRow, col: currentCol });
+    currentRow += rowStep;
+    currentCol += colStep;
+  }
+  
+  return squares;
+};
+
 const isPathClear = (
   start: Position,
   end: Position,
   board: Square[][],
   previousSquares: string[]
 ): boolean => {
-  const rowDiff = end.row - start.row;
-  const colDiff = end.col - start.col;
-  const rowStep = rowDiff === 0 ? 0 : rowDiff > 0 ? 1 : -1;
-  const colStep = colDiff === 0 ? 0 : colDiff > 0 ? 1 : -1;
+  const squaresOnPath = getSquaresOnPath(start, end);
   
-  // For knights, we don't need to check the path
-  if (Math.abs(rowDiff) === 2 && Math.abs(colDiff) === 1 || 
-      Math.abs(rowDiff) === 1 && Math.abs(colDiff) === 2) {
-    return true;
-  }
-
-  // Check each square along the path (excluding start and end squares)
-  let currentRow = start.row + rowStep;
-  let currentCol = start.col + colStep;
-  
-  while (currentRow !== end.row || currentCol !== end.col) {
-    // If the square has a piece and hasn't been captured (not in previousSquares)
-    const algebraicPos = positionToAlgebraic(currentRow, currentCol);
-    if (board[currentRow][currentCol].piece && !previousSquares.includes(algebraicPos)) {
-      return false;
-    }
-    currentRow += rowStep;
-    currentCol += colStep;
-  }
-  
-  return true;
+  return squaresOnPath.every(square => {
+    const algebraicPos = positionToAlgebraic(square.row, square.col);
+    return !board[square.row][square.col].piece || previousSquares.includes(algebraicPos);
+  });
 };
 
 export const isValidChessCapture = (
