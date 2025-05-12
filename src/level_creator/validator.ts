@@ -51,7 +51,7 @@ async function loadWords(): Promise<string[]> {
   return content.split(/\r?\n/).map(w => w.trim().toLowerCase()).filter(w => w.length >= 3);
 }
 
-export async function findLongestWords(board: Square[][]): Promise<string[]> {
+export async function findLongestWords(board: Square[][], targetWord: string): Promise<string[]> {
   console.log('[Validator] Loading word list and building trie...');
   const words = await loadWords();
   const trie = buildTrie(words);
@@ -88,9 +88,17 @@ export async function findLongestWords(board: Square[][]): Promise<string[]> {
 
   // Sort found words by length (desc), then alphabetically
   const sorted = Array.from(foundWords).sort((a, b) => b.length - a.length || a.localeCompare(b));
+  const maxLen = sorted.length > 0 ? sorted[0].length : 0;
+  const longest = sorted.filter(w => w.length === maxLen);
   for (let i = 0; i < Math.min(10, sorted.length); i++) {
     longestWords.push(sorted[i]);
   }
   console.log(`[Validator] Longest words found: ${longestWords.join(', ')}`);
+
+  // Ensure the target word is the longest or joint longest
+  if (!longest.some(w => w === targetWord.toLowerCase())) {
+    throw new Error(`[Validator] Target word '${targetWord}' is not the longest or joint longest word found! Longest found: ${longest.join(', ')}`);
+  }
+
   return longestWords;
 } 
