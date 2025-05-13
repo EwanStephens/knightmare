@@ -23,6 +23,7 @@ const initialTutorialState: TutorialState = {
   completedStepIds: [],
   isModalOpen: true,
   showIntroScreen: true,
+  highlightedPosition: null,
 };
 
 const TutorialContext = createContext<TutorialContextType | null>(null);
@@ -51,10 +52,20 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
   const goToNextStep = () => {
     if (!currentStep || !currentStep.nextStepId) return;
     
+    // Find the next step
+    const nextStep = currentLevel?.tutorialSteps.find(step => step.id === currentStep.nextStepId);
+    
+    // Check if we need to highlight a piece
+    let highlightPosition = null;
+    if (nextStep?.triggerData?.position) {
+      highlightPosition = nextStep.triggerData.position;
+    }
+    
     setTutorialState(prev => ({
       ...prev,
       currentStepId: currentStep.nextStepId || null,
       completedStepIds: [...prev.completedStepIds, currentStep.id],
+      highlightedPosition: highlightPosition,
     }));
   };
 
@@ -70,11 +81,15 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
       );
       
       if (afterClearStep) {
+        // Check if we need to highlight a position
+        const highlightPosition = afterClearStep.triggerData?.position || null;
+        
         setTutorialState(prev => ({
           ...prev,
           currentStepId: afterClearStep.id,
           completedStepIds: [...prev.completedStepIds, afterClearStep.id],
           isModalOpen: true,
+          highlightedPosition: highlightPosition,
         }));
       }
       return;
@@ -93,11 +108,13 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
           currentStepId: completeStep.id,
           completedStepIds: [...prev.completedStepIds, completeStep.id],
           isModalOpen: true,
+          highlightedPosition: null,
         }));
       }
       return;
     }
     
+    // If we're selecting a position that was highlighted, find the matching step
     const matchingStep = currentLevel.tutorialSteps.find(step => 
       step.trigger === 'select-piece' && 
       step.triggerData?.position === position &&
@@ -105,12 +122,32 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
     );
     
     if (matchingStep) {
+      // If this step has a next step that should highlight something, get that position
+      const nextStepId = matchingStep.nextStepId;
+      let nextHighlightPosition = null;
+      
+      if (nextStepId) {
+        const nextStep = currentLevel.tutorialSteps.find(step => step.id === nextStepId);
+        if (nextStep?.triggerData?.position) {
+          nextHighlightPosition = nextStep.triggerData.position;
+        }
+      }
+      
       setTutorialState(prev => ({
         ...prev,
         currentStepId: matchingStep.id,
         completedStepIds: [...prev.completedStepIds, matchingStep.id],
         isModalOpen: true,
+        highlightedPosition: nextHighlightPosition,
       }));
+    } else {
+      // Just clear the highlighted position if we selected something else
+      if (tutorialState.highlightedPosition) {
+        setTutorialState(prev => ({
+          ...prev,
+          highlightedPosition: null,
+        }));
+      }
     }
   };
 
@@ -125,6 +162,7 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
         completedStepIds: [],
         isModalOpen: true,
         showIntroScreen: false,
+        highlightedPosition: null,
       });
     }
   };
@@ -148,13 +186,21 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const startTutorial = () => {
-    setTutorialState(prev => ({
-      ...prev,
-      showIntroScreen: false,
+    const firstLevel = tutorialLevels[0];
+    // Find the first step that has a position to highlight
+    const startingStep = firstLevel.tutorialSteps.find(
+      step => step.id === firstLevel.startingStepId
+    );
+    const highlightPosition = startingStep?.triggerData?.position || null;
+    
+    setTutorialState({
       currentLevelIndex: 0,
-      currentStepId: tutorialLevels[0].startingStepId,
+      currentStepId: firstLevel.startingStepId,
+      completedStepIds: [],
       isModalOpen: true,
-    }));
+      showIntroScreen: false,
+      highlightedPosition: highlightPosition,
+    });
   };
 
   return (

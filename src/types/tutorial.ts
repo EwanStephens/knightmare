@@ -31,4 +31,5 @@ export type TutorialState = {
   completedStepIds: string[];
   isModalOpen: boolean;
   showIntroScreen: boolean;
+  highlightedPosition: string | null;
 }; 

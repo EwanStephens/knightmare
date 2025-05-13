@@ -17,12 +17,14 @@ export const tutorialLevels: TutorialLevel[] = [
         text: "Welcome to Knightmare! In this game, you'll use chess pieces to build words. The goal for each level is shown at the top of the screen.",
         target: ".level-title",
         trigger: "load",
-        nextStepId: "level1-select-rook"
+        nextStepId: "level1-select-rook",
+        triggerData: { position: "a2" }
       },
       {
         id: "level1-select-rook",
-        text: "Let's start by selecting the white rook at position a2.",
+        text: "Let's start by selecting the white rook.",
         trigger: "load",
+        triggerData: { position: "a2" },
         nextStepId: null
       },
       {
@@ -36,12 +38,14 @@ export const tutorialLevels: TutorialLevel[] = [
         id: "level1-rook-moves",
         text: "Rooks move horizontally and vertically on the board. The highlighted squares show where your piece can move.",
         trigger: "load",
-        nextStepId: "level1-select-bishop"
+        nextStepId: "level1-select-bishop",
+        triggerData: { position: "c2" }
       },
       {
         id: "level1-select-bishop",
-        text: "Now, capture the black bishop at position c2.",
+        text: "Now, capture the black bishop.",
         trigger: "load",
+        triggerData: { position: "c2" },
         nextStepId: null
       },
       {
@@ -55,12 +59,14 @@ export const tutorialLevels: TutorialLevel[] = [
         id: "level1-bishop-moves",
         text: "Bishops move diagonally across the board.",
         trigger: "load",
-        nextStepId: "level1-select-queen"
+        nextStepId: "level1-select-queen",
+        triggerData: { position: "d3" }
       },
       {
         id: "level1-select-queen",
         text: "Can you figure out which piece to capture next? Remember, black pieces must capture white pieces.",
         trigger: "load",
+        triggerData: { position: "d3" },
         nextStepId: null
       },
       {
@@ -74,6 +80,7 @@ export const tutorialLevels: TutorialLevel[] = [
         id: "level1-select-pawn",
         text: "Now try to find the final piece to complete the word BOAT.",
         trigger: "load",
+        triggerData: { position: "e3" },
         nextStepId: null
       }
     ],
@@ -102,8 +109,9 @@ export const tutorialLevels: TutorialLevel[] = [
       },
       {
         id: "level2-try-bishop",
-        text: "Let's try selecting the black bishop with the letter 'U' at position e4 first.",
+        text: "Let's try selecting the black bishop with the letter 'U'.",
         trigger: "load",
+        triggerData: { position: "e4" },
         nextStepId: null
       },
       {
@@ -115,8 +123,9 @@ export const tutorialLevels: TutorialLevel[] = [
       },
       {
         id: "level2-after-clear",
-        text: "Let's try selecting the black knight with the letter 'C' at position c4 instead.",
+        text: "Let's try selecting the black knight with the letter 'C' instead.",
         trigger: "load",
+        triggerData: { position: "c4" },
         nextStepId: null
       },
       {

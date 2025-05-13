@@ -10,6 +10,7 @@ import { positionToAlgebraic } from '@/utils/chess';
 export default function TutorialChessBoard() {
   const { currentLevel, handlePieceSelect, advanceToNextLevel, tutorialState } = useTutorial();
   const [tutorialLevel, setTutorialLevel] = useState<LoadedLevel | null>(null);
+  const { highlightedPosition } = tutorialState;
 
   // Create a level from tutorial data
   useEffect(() => {
@@ -92,6 +93,7 @@ export default function TutorialChessBoard() {
       tutorialLevel={tutorialLevel}
       onPieceSelected={handlePieceSelected}
       onLevelComplete={handleLevelComplete}
+      highlightedPosition={highlightedPosition}
     />
   );
 } 

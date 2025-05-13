@@ -30,6 +30,7 @@ interface ChessBoardProps {
   tutorialLevel?: LoadedLevel;
   onPieceSelected?: (position: string) => void;
   onLevelComplete?: () => void;
+  highlightedPosition?: string | null;
 }
 
 export default function ChessBoard({ 
@@ -37,7 +38,8 @@ export default function ChessBoard({
   tutorialMode = false,
   tutorialLevel,
   onPieceSelected,
-  onLevelComplete
+  onLevelComplete,
+  highlightedPosition
 }: ChessBoardProps) {
   const [currentLevel, setCurrentLevel] = useState(initialLevel);
   const [levelData, setLevelData] = useState<LoadedLevel | null>(null);
@@ -215,7 +217,7 @@ export default function ChessBoard({
       {/* Main content, blurred when modal is open */}
       <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
         <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4">
-          <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4">
+          <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4 level-title">
             Find a {levelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
@@ -229,6 +231,7 @@ export default function ChessBoard({
                     className={`
                       w-[15vw] max-w-36 aspect-square flex items-center justify-center relative
                       transition-colors duration-200
+                      ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
                       ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
                       ${square.isHighlighted ? 'bg-yellow-200' : ''}
                       ${square.isSelected ? 'bg-[#94A3B8]' : ''}
@@ -238,6 +241,11 @@ export default function ChessBoard({
                       cursor-pointer
                     `}
                   >
+                    {tutorialMode && highlightedPosition === square.position && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
+                      </div>
+                    )}
                     {square.isLegalMove && !square.piece && (
                       <div className="absolute w-1/4 h-1/4 rounded-full bg-[rgba(50,50,50,0.4)]" />
                     )}
