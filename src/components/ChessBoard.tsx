@@ -240,6 +240,10 @@ export default function ChessBoard({
                       ${square.piece ? 'hover:bg-opacity-90' : ''}
                       cursor-pointer
                     `}
+                    style={{ 
+                      // Set a CSS variable that can be used to scale the letter size
+                      "--square-size": "100%" 
+                    } as React.CSSProperties}
                   >
                     {tutorialMode && highlightedPosition === square.position && (
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -272,17 +276,31 @@ export default function ChessBoard({
                     {square.piece && (
                       <>
                         {square.isHighlighted ? (
-                          <div className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-[#769656] z-20">
+                          <div 
+                            className="font-bold text-[#769656] z-20 flex items-center justify-center"
+                            style={{
+                              fontSize: "calc(var(--square-size) * 2)",
+                              width: "100%",
+                              height: "100%"
+                            }}
+                          >
                             {square.piece.letter}
                           </div>
                         ) : (
                           <>
                             <div className="absolute inset-0 flex items-center justify-center z-10">
-                              <div className="w-[75%] h-[75%] sm:w-[80%] sm:h-[80%]">
+                              <div className="w-[75%] h-[75%]">
                                 {getPieceComponent(square.piece.type, square.piece.color)}
                               </div>
                             </div>
-                            <div className={`absolute top-0 right-0 mt-0.5 mr-0.5 sm:mt-1 sm:mr-1 z-20 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
+                            <div 
+                              className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
+                              style={{
+                                fontSize: "calc(var(--square-size) * 1)",
+                                marginTop: "calc(var(--square-size) * 0.03)",
+                                marginRight: "calc(var(--square-size) * 0.03)"
+                              }}
+                            >
                               {square.piece.letter}
                             </div>
                           </>
