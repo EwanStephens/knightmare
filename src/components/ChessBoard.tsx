@@ -231,7 +231,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
           </div>
 
           <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] mx-auto overflow-hidden">
-            <div className="flex whitespace-nowrap justify-center items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono w-full overflow-visible">
+            <div className="flex whitespace-nowrap justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono w-full overflow-visible">
               {Array.from(levelData.targetWord).map((_, index) => {
                 // Dynamically calculate sizes based on word length
                 const letterWidth = Math.max(100 / levelData.targetWord.length, 6);
