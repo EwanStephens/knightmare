@@ -39,6 +39,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
     message: '',
   });
   const [showCompleteModal, setShowCompleteModal] = useState(false);
+  const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -82,9 +83,6 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
 
-    // Helper function for illegal moves
-    const handleIllegalMove = () => clearGameBoard('Invalid move!');
-
     // If a square is already selected, check if new square is a legal capture
     let newPreviousSquares: string[] = [];
     if (gameState.selectedSquare) {
@@ -92,20 +90,34 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
       const startSquare = gameState.board[startPos.row][startPos.col];
       
       if (!startSquare.piece) {
-        setGameState(handleIllegalMove());
-        return;
+        return; // Ignore if somehow the selected square has no piece
       }
 
+      // Check if the clicked square is a legal move
+      const legalMoves = getLegalMoves(startSquare.piece, startPos, gameState.board, gameState.previousSquares);
+      const isLegalMove = legalMoves.some(move => move.row === row && move.col === col);
+      if (!isLegalMove) {
+        return; // Silently ignore if not a legal move
+      }
+
+      // Check if it's a legal capture
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
-        setGameState(handleIllegalMove());
+        // Show error message and flash the square red
+        setIllegalMoveSquare(position);
+        setTimeout(() => setIllegalMoveSquare(null), 200); // Remove the flash after 500ms
+        
+        setGameState({
+          ...gameState,
+          message: "Illegal move. You must capture a piece of the opposite color."
+        });
         return;
       }
+      
       newPreviousSquares = [...gameState.previousSquares, gameState.selectedSquare];
     } else {
       // Must select a square with a piece for the first selection
       if (!square.piece) {
-        setGameState(handleIllegalMove());
-        return;
+        return; // Silently ignore if first selection has no piece
       }
     }
 
@@ -174,9 +186,12 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
                     onClick={() => handleSquareClick(square.position)}
                     className={`
                       w-[15vw] max-w-36 aspect-square flex items-center justify-center relative
+                      transition-colors duration-200
+                      ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
                       ${square.isHighlighted ? 'bg-yellow-200' : ''}
                       ${square.isSelected ? 'bg-[#94A3B8]' : ''}
-                      ${!square.isHighlighted && !square.isSelected ? (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
+                      ${!square.isHighlighted && !square.isSelected && illegalMoveSquare !== square.position ? 
+                        (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
                       ${square.piece ? 'hover:bg-opacity-90' : ''}
                       cursor-pointer
                     `}
