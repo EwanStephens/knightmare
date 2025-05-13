@@ -229,7 +229,7 @@ export default function ChessBoard({
                     key={square.position}
                     onClick={() => handleSquareClick(square.position)}
                     className={`
-                      w-[15vw] max-w-36 aspect-square flex items-center justify-center relative
+                      w-[min(15vw,8vh)] max-w-24 max-h-24 aspect-square flex items-center justify-center relative
                       transition-colors duration-200
                       ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
                       ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
