@@ -239,14 +239,14 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
                 return (
                   <span 
                     key={index} 
-                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1"
+                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-end h-[1.5em]"
                     style={{ 
                       width: `${letterWidth}%`, 
                       minWidth: '1rem',
                       maxWidth: '2.5rem' 
                     }}
                   >
-                    {index < gameState.currentWord.length ? gameState.currentWord[index] : ''}
+                    {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
                   </span>
                 );
               })}
