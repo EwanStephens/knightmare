@@ -26,9 +26,19 @@ const createEmptyBoard = (): Square[][] => Array(5)
 // Add prop type
 interface ChessBoardProps {
   initialLevel?: number;
+  tutorialMode?: boolean;
+  tutorialLevel?: LoadedLevel;
+  onPieceSelected?: (position: string) => void;
+  onLevelComplete?: () => void;
 }
 
-export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
+export default function ChessBoard({ 
+  initialLevel = 1, 
+  tutorialMode = false,
+  tutorialLevel,
+  onPieceSelected,
+  onLevelComplete
+}: ChessBoardProps) {
   const [currentLevel, setCurrentLevel] = useState(initialLevel);
   const [levelData, setLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -44,6 +54,21 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
 
   useEffect(() => {
     const initializeLevel = async () => {
+      // If in tutorial mode, use the provided level data
+      if (tutorialMode && tutorialLevel) {
+        setLevelData(tutorialLevel);
+        setGameState(prevState => ({
+          ...prevState,
+          board: tutorialLevel.board,
+          currentWord: '',
+          selectedSquare: null,
+          previousSquares: [],
+          message: '',
+        }));
+        return;
+      }
+
+      // Otherwise load the level normally
       const loadedLevel = await loadLevel(currentLevel);
       setLevelData(loadedLevel);
       setGameState(prevState => ({
@@ -57,7 +82,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
     };
 
     initializeLevel();
-  }, [currentLevel]);
+  }, [currentLevel, tutorialMode, tutorialLevel]);
 
   const clearGameBoard = (message: string) => {
     return {
@@ -83,6 +108,11 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
 
+    // In tutorial mode, notify when a piece is selected
+    if (tutorialMode && onPieceSelected && square.piece) {
+      onPieceSelected(position);
+    }
+
     // If a square is already selected, check if new square is a legal capture
     let newPreviousSquares: string[] = [];
     if (gameState.selectedSquare) {
@@ -104,7 +134,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
         // Show error message and flash the square red
         setIllegalMoveSquare(position);
-        setTimeout(() => setIllegalMoveSquare(null), 200); // Remove the flash after 500ms
+        setTimeout(() => setIllegalMoveSquare(null), 200); // Remove the flash after 200ms
         
         setGameState({
           ...gameState,
@@ -143,11 +173,17 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
     let message = '';
     let completed = false;
     if (newWord === levelData.targetWord) {
-      message = `Congratulations! You found the word ${levelData.targetWord}!`;
+      message = levelData.congratsMessage || `Congratulations! You found the word ${levelData.targetWord}!`;
       completed = true;
-      setTimeout(() => {
-        setShowCompleteModal(true);
-      }, 200);
+      
+      // If in tutorial mode, call the completion callback before showing modal
+      if (tutorialMode && onLevelComplete) {
+        onLevelComplete();
+      } else {
+        setTimeout(() => {
+          setShowCompleteModal(true);
+        }, 200);
+      }
     }
 
     setGameState({
@@ -161,7 +197,13 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
   };
 
   const handleCancel = () => {
-    setGameState(clearGameBoard(''));
+    const newState = clearGameBoard('');
+    setGameState(newState);
+    
+    // Notify tutorial system of clear action in tutorial mode
+    if (tutorialMode && onPieceSelected) {
+      onPieceSelected('clear');
+    }
   };
 
   if (!levelData) {
