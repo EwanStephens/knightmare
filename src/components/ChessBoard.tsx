@@ -165,7 +165,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
             Find a {levelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
-          <div className="w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] aspect-square mx-auto">
+          <div className="w-full aspect-square mx-auto">
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
                 row.map((square, colIndex) => (
@@ -173,7 +173,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
                     key={square.position}
                     onClick={() => handleSquareClick(square.position)}
                     className={`
-                      w-full h-full aspect-square flex items-center justify-center relative
+                      w-[15vw] max-w-36 aspect-square flex items-center justify-center relative
                       ${square.isHighlighted ? 'bg-yellow-200' : ''}
                       ${square.isSelected ? 'bg-[#94A3B8]' : ''}
                       ${!square.isHighlighted && !square.isSelected ? (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
@@ -207,7 +207,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
                     {square.piece && (
                       <>
                         {square.isHighlighted ? (
-                          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#769656] z-20">
+                          <div className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-[#769656] z-20">
                             {square.piece.letter}
                           </div>
                         ) : (
@@ -217,7 +217,7 @@ export default function ChessBoard({ initialLevel = 1 }: ChessBoardProps) {
                                 {getPieceComponent(square.piece.type, square.piece.color)}
                               </div>
                             </div>
-                            <div className={`absolute top-0 right-0 mt-0.5 mr-0.5 sm:mt-1 sm:mr-1 z-20 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
+                            <div className={`absolute top-0 right-0 mt-0.5 mr-0.5 sm:mt-1 sm:mr-1 z-20 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}>
                               {square.piece.letter}
                             </div>
                           </>
