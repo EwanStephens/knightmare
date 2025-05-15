@@ -240,10 +240,6 @@ export default function ChessBoard({
                       ${square.piece ? 'hover:bg-opacity-90' : ''}
                       cursor-pointer
                     `}
-                    style={{ 
-                      // Set a CSS variable that can be used to scale the letter size
-                      "--square-size": "100%" 
-                    } as React.CSSProperties}
                   >
                     {tutorialMode && highlightedPosition === square.position && (
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -279,7 +275,7 @@ export default function ChessBoard({
                           <div 
                             className="font-bold text-[#769656] z-20 flex items-center justify-center"
                             style={{
-                              fontSize: "calc(var(--square-size) * 2)",
+                              fontSize: "max(24px, min(8vw, 4vh))",
                               width: "100%",
                               height: "100%"
                             }}
@@ -296,9 +292,9 @@ export default function ChessBoard({
                             <div 
                               className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
                               style={{
-                                fontSize: "calc(var(--square-size) * 1)",
-                                marginTop: "calc(var(--square-size) * 0.03)",
-                                marginRight: "calc(var(--square-size) * 0.03)"
+                                fontSize: "max(14px, min(4vw, 2vh))",
+                                top: "max(2px, min(1vw, 0.5vh))",
+                                right: "max(2px, min(1vw, 0.5vh))"
                               }}
                             >
                               {square.piece.letter}
@@ -317,10 +313,8 @@ export default function ChessBoard({
             <div 
               className="flex whitespace-nowrap justify-center items-center font-mono w-full overflow-visible relative"
               style={{ 
-                // Container for the letters - creating a reference size
-                "--answer-container-width": "100%",
-                height: "2.5rem"
-              } as React.CSSProperties}
+                height: "min(10vh, 15vw)"
+              }}
             >
               {Array.from(levelData.targetWord).map((_, index) => {
                 // Dynamically calculate sizes based on word length
@@ -333,11 +327,11 @@ export default function ChessBoard({
                     style={{ 
                       width: `${letterWidth}%`, 
                       minWidth: '1rem',
-                      maxWidth: '2.5rem',
+                      maxWidth: '3rem',
                       height: '100%',
-                      fontSize: 'calc(var(--answer-container-width) * 20   / var(--word-length))',
-                      '--word-length': levelData.targetWord.length
-                    } as React.CSSProperties}
+                      // Calculate font size based on viewport with minimum size guarantee
+                      fontSize: `max(20px, min(${Math.min(12, 60/levelData.targetWord.length)}vw, ${Math.min(6, 30/levelData.targetWord.length)}vh))`
+                    }}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
                   </span>
