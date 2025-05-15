@@ -7,6 +7,7 @@ import { useTutorial } from '@/contexts/TutorialContext';
 import { LoadedLevel } from '@/types/level';
 import { createBoardFromTutorial } from '@/utils/tutorialLoader';
 import CompletionModal from './CompletionModal';
+import { markTutorialCompleted } from '@/utils/gameState';
 
 export default function TutorialChessBoard() {
   const router = useRouter();
@@ -35,6 +36,11 @@ export default function TutorialChessBoard() {
   const handleLevelComplete = () => {
     // Show the completion modal immediately
     setShowCompleteModal(true);
+    
+    // If this is the last tutorial level, mark the tutorial as completed
+    if (currentLevel?.levelNumber === 3) {
+      markTutorialCompleted();
+    }
   };
 
   // Handle next level navigation

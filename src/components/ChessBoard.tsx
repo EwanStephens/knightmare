@@ -9,6 +9,7 @@ import { LoadedLevel } from '@/types/level';
 import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
+import { updateLevelOnCompletion } from '@/utils/gameState';
 
 const createEmptyBoard = (): Square[][] => Array(5)
   .fill(null)
@@ -186,6 +187,9 @@ export default function ChessBoard({
         // Only show the modal in non-tutorial mode
         setTimeout(() => {
           setShowCompleteModal(true);
+          
+          // Update game state in localStorage for completed level
+          updateLevelOnCompletion(currentLevel);
         }, 200);
       }
     }

@@ -1,4 +1,8 @@
+'use client';
+
+import { useEffect } from 'react';
 import ChessBoard from '@/components/ChessBoard';
+import { setCurrentLevel } from '@/utils/gameState';
 
 interface PlayLevelPageProps {
   params: { level: string };
@@ -6,6 +10,12 @@ interface PlayLevelPageProps {
 
 export default function PlayLevelPage({ params }: PlayLevelPageProps) {
   const level = parseInt(params.level, 10);
+  
+  useEffect(() => {
+    // Update current level in localStorage when visiting this page directly
+    setCurrentLevel(level);
+  }, [level]);
+  
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
       <h1 className="text-2xl font-bold mb-4">Level {level}</h1>

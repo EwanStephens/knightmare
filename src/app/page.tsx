@@ -1,32 +1,77 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { isTutorialCompleted, getCurrentLevel, markTutorialSkipped } from '@/utils/gameState';
 
 export default function Home() {
   const router = useRouter();
+  const [showTutorialPrompt, setShowTutorialPrompt] = useState(false);
+  
+  // Check if tutorial should be shown on first load
+  useEffect(() => {
+    if (!isTutorialCompleted()) {
+      setShowTutorialPrompt(true);
+    }
+  }, []);
+
+  const handleStartGame = () => {
+    const currentLevel = getCurrentLevel();
+    router.push(`/play/${currentLevel}`);
+  };
+
+  const handleSkipTutorial = () => {
+    markTutorialSkipped();
+    setShowTutorialPrompt(false);
+  };
+
+  const handleStartTutorial = () => {
+    router.push('/tutorial/1');
+  };
+  
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
       <h1 className="text-4xl font-bold mb-8">Knightmare</h1>
-      <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col gap-4 items-center">
-        <button
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg text-xl font-semibold hover:bg-blue-700 w-64"
-          onClick={() => router.push('/play/1')}
-        >
-          Start
-        </button>
-        <button
-          className="px-6 py-3 bg-green-600 text-white rounded-lg text-xl font-semibold hover:bg-green-700 w-64"
-          onClick={() => router.push('/level-picker')}
-        >
-          Choose level
-        </button>
-        <button
-          className="px-6 py-3 bg-gray-400 text-white rounded-lg text-xl font-semibold hover:bg-gray-500 w-64"
-          onClick={() => router.push('/tutorial')}
-        >
-          Tutorial
-        </button>
-      </div>
+      
+      {showTutorialPrompt ? (
+        <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col gap-4 items-center">
+          <h2 className="text-2xl font-semibold mb-2">Would you like to try the tutorial?</h2>
+          <p className="text-gray-700 mb-4">Learn how to play Knightmare with our guided tutorial.</p>
+          <button
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg text-xl font-semibold hover:bg-blue-700 w-64"
+            onClick={handleStartTutorial}
+          >
+            Start Tutorial
+          </button>
+          <button
+            className="px-6 py-3 bg-gray-400 text-white rounded-lg text-xl font-semibold hover:bg-gray-500 w-64"
+            onClick={handleSkipTutorial}
+          >
+            Skip Tutorial
+          </button>
+        </div>
+      ) : (
+        <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col gap-4 items-center">
+          <button
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg text-xl font-semibold hover:bg-blue-700 w-64"
+            onClick={handleStartGame}
+          >
+            Play
+          </button>
+          <button
+            className="px-6 py-3 bg-green-600 text-white rounded-lg text-xl font-semibold hover:bg-green-700 w-64"
+            onClick={() => router.push('/level-picker')}
+          >
+            Choose level
+          </button>
+          <button
+            className="px-6 py-3 bg-gray-400 text-white rounded-lg text-xl font-semibold hover:bg-gray-500 w-64"
+            onClick={() => router.push('/tutorial')}
+          >
+            Tutorial
+          </button>
+        </div>
+      )}
     </main>
   );
 }
