@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { TutorialLevel, TutorialState, TutorialStep } from '@/types/tutorial';
-import { tutorialLevels } from '@/data/tutorialData';
+import { loadTutorialLevel } from '@/utils/tutorialLoader';
 
 type TutorialContextType = {
   tutorialState: TutorialState;
@@ -28,10 +28,35 @@ const initialTutorialState: TutorialState = {
 
 const TutorialContext = createContext<TutorialContextType | null>(null);
 
-export const TutorialProvider = ({ children }: { children: ReactNode }) => {
-  const [tutorialState, setTutorialState] = useState<TutorialState>(initialTutorialState);
+type TutorialProviderProps = {
+  children: ReactNode;
+  initialLevel?: number;
+};
 
-  const currentLevel = tutorialState.currentLevelIndex < tutorialLevels.length
+export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProviderProps) => {
+  const [tutorialLevels, setTutorialLevels] = useState<TutorialLevel[]>([]);
+  const [tutorialState, setTutorialState] = useState<TutorialState>({
+    ...initialTutorialState,
+    currentLevelIndex: initialLevel - 1,
+  });
+
+  // Load tutorial levels
+  useEffect(() => {
+    const loadLevels = async () => {
+      try {
+        const level1 = await loadTutorialLevel(1);
+        const level2 = await loadTutorialLevel(2);
+        const level3 = await loadTutorialLevel(3);
+        setTutorialLevels([level1, level2, level3]);
+      } catch (error) {
+        console.error("Failed to load tutorial levels:", error);
+      }
+    };
+    
+    loadLevels();
+  }, []);
+
+  const currentLevel = tutorialState.currentLevelIndex < tutorialLevels.length && tutorialLevels.length > 0
     ? tutorialLevels[tutorialState.currentLevelIndex]
     : null;
 
@@ -41,13 +66,15 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
 
   // Initialize the tutorial with the first level and step
   useEffect(() => {
-    if (currentLevel && !tutorialState.currentStepId) {
+    if (currentLevel && !tutorialState.currentStepId && tutorialLevels.length > 0) {
       setTutorialState(prev => ({
         ...prev,
         currentStepId: currentLevel.startingStepId,
+        // Don't show intro screen when navigating directly to a level
+        showIntroScreen: initialLevel === 1 ? prev.showIntroScreen : false,
       }));
     }
-  }, [currentLevel, tutorialState.currentStepId]);
+  }, [currentLevel, tutorialState.currentStepId, tutorialLevels.length, initialLevel]);
 
   const goToNextStep = () => {
     if (!currentStep || !currentStep.nextStepId) return;
@@ -58,9 +85,19 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
     // Check if we need to highlight a piece
     let highlightPosition = null;
     if (nextStep?.triggerData?.position) {
-      highlightPosition = nextStep.triggerData.position;
+      // For level 1, don't highlight the queen (d3) or pawn (e3)
+      const shouldHighlight = !(
+        currentLevel?.levelNumber === 1 && 
+        (nextStep.triggerData.position === 'd3' || nextStep.triggerData.position === 'e3')
+      );
+      
+      // Only highlight if we should
+      if (shouldHighlight) {
+        highlightPosition = nextStep.triggerData.position;
+      }
     }
     
+    // Only set highlightedPosition if the intro is finished
     setTutorialState(prev => ({
       ...prev,
       currentStepId: currentStep.nextStepId || null,
@@ -168,7 +205,10 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const resetTutorial = () => {
-    setTutorialState(initialTutorialState);
+    setTutorialState({
+      ...initialTutorialState,
+      currentLevelIndex: initialLevel - 1,
+    });
   };
 
   const closeModal = () => {
@@ -186,12 +226,9 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const startTutorial = () => {
+    if (tutorialLevels.length === 0) return;
+    
     const firstLevel = tutorialLevels[0];
-    // Find the first step that has a position to highlight
-    const startingStep = firstLevel.tutorialSteps.find(
-      step => step.id === firstLevel.startingStepId
-    );
-    const highlightPosition = startingStep?.triggerData?.position || null;
     
     setTutorialState({
       currentLevelIndex: 0,
@@ -199,7 +236,7 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
       completedStepIds: [],
       isModalOpen: true,
       showIntroScreen: false,
-      highlightedPosition: highlightPosition,
+      highlightedPosition: null, // Don't highlight on first step
     });
   };
 

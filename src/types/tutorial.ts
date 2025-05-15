@@ -10,6 +10,7 @@ export type TutorialStep = {
     pieceType?: string; // Like 'rook', 'pawn'
   };
   nextStepId?: string | null; // Next step or null if this is the last step in a sequence
+  position?: 'top' | 'bottom'; // Position of the modal
 };
 
 export type TutorialLevel = {
@@ -23,6 +24,7 @@ export type TutorialLevel = {
   }[];
   tutorialSteps: TutorialStep[];
   startingStepId: string;
+  congratsMessage?: string;
 };
 
 export type TutorialState = {

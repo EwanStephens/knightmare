@@ -1,0 +1,31 @@
+{
+  "levelNumber": 3,
+  "targetWord": "FINISH",
+  "initialBoardSetup": [
+    { "position": "b1", "pieceType": "rook", "pieceColor": "black", "letter": "I" },
+    { "position": "b4", "pieceType": "knight", "pieceColor": "white", "letter": "F" },
+    { "position": "c2", "pieceType": "queen", "pieceColor": "black", "letter": "I" },
+    { "position": "c3", "pieceType": "pawn", "pieceColor": "black", "letter": "H" },
+    { "position": "d1", "pieceType": "knight", "pieceColor": "white", "letter": "S" },
+    { "position": "d3", "pieceType": "bishop", "pieceColor": "white", "letter": "N" },
+    { "position": "d5", "pieceType": "rook", "pieceColor": "black", "letter": "U" }
+  ],
+  "tutorialSteps": [
+    {
+      "id": "level3-intro",
+      "text": "Let's see if you can solve this one yourself!",
+      "trigger": "load",
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level3-complete",
+      "text": "Congratulations on completing the tutorial!",
+      "trigger": "load",
+      "nextStepId": null,
+      "position": "top"
+    }
+  ],
+  "startingStepId": "level3-intro",
+  "congratsMessage": "Congratulations! You found the word FINISH! You've completed the tutorial and are ready to take on the real levels."
+} 

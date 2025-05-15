@@ -1,0 +1,95 @@
+{
+  "levelNumber": 1,
+  "targetWord": "BOAT",
+  "initialBoardSetup": [
+    { "position": "a2", "pieceType": "rook", "pieceColor": "white", "letter": "B" },
+    { "position": "c2", "pieceType": "bishop", "pieceColor": "black", "letter": "O" },
+    { "position": "d3", "pieceType": "queen", "pieceColor": "white", "letter": "A" },
+    { "position": "e3", "pieceType": "pawn", "pieceColor": "black", "letter": "T" }
+  ],
+  "tutorialSteps": [
+    {
+      "id": "level1-intro",
+      "text": "Welcome to Knightmare! In this game, you'll use chess pieces to build words. The goal for each level is shown at the top of the screen.",
+      "target": ".level-title",
+      "trigger": "load",
+      "nextStepId": "level1-select-rook",
+      "position": "bottom",
+      "triggerData": null
+    },
+    {
+      "id": "level1-select-rook",
+      "text": "Let's start by selecting the white rook.",
+      "trigger": "load",
+      "triggerData": { "position": "a2" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level1-rook-selected",
+      "text": "Great job! Notice how the letter 'B' appears at the bottom of the screen. As you select pieces, their letters will form your word.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "a2" },
+      "nextStepId": "level1-rook-moves",
+      "position": "top"
+    },
+    {
+      "id": "level1-rook-moves",
+      "text": "Rooks move horizontally and vertically on the board. The highlighted squares show where your piece can move.",
+      "trigger": "load",
+      "nextStepId": "level1-select-bishop",
+      "position": "top",
+      "triggerData": null
+    },
+    {
+      "id": "level1-select-bishop",
+      "text": "Now, capture the black bishop.",
+      "trigger": "load",
+      "triggerData": { "position": "c2" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level1-bishop-captured",
+      "text": "Perfect! This was a legal capture because white pieces must capture black pieces. Notice how your word is now 'BO'.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "c2" },
+      "nextStepId": "level1-bishop-moves",
+      "position": "top"
+    },
+    {
+      "id": "level1-bishop-moves",
+      "text": "Bishops move diagonally across the board.",
+      "trigger": "load",
+      "nextStepId": "level1-select-queen",
+      "position": "top",
+      "triggerData": null
+    },
+    {
+      "id": "level1-select-queen",
+      "text": "Can you figure out which piece to capture next? Remember, black pieces must capture white pieces.",
+      "trigger": "load",
+      "nextStepId": null,
+      "position": "top",
+      "triggerData": null
+    },
+    {
+      "id": "level1-queen-captured",
+      "text": "Well done! You captured the white queen. Queens are very powerful - they can move horizontally, vertically, or diagonally.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "d3" },
+      "nextStepId": "level1-select-pawn",
+      "position": "top"
+    },
+    {
+      "id": "level1-select-pawn",
+      "text": "Now try to find the final piece to complete the word.",
+      "trigger": "load",
+      "nextStepId": null,
+      "position": "top",
+      "triggerData": null
+    }
+  ],
+  "startingStepId": "level1-intro",
+  "congratsMessage": "Congratulations! You found the word BOAT!"
+} 

@@ -1,0 +1,81 @@
+{
+  "levelNumber": 2,
+  "targetWord": "CHECK",
+  "initialBoardSetup": [
+    { "position": "a2", "pieceType": "queen", "pieceColor": "black", "letter": "K" },
+    { "position": "b2", "pieceType": "pawn", "pieceColor": "white", "letter": "H" },
+    { "position": "b5", "pieceType": "pawn", "pieceColor": "black", "letter": "A" },
+    { "position": "c3", "pieceType": "pawn", "pieceColor": "black", "letter": "E" },
+    { "position": "c4", "pieceType": "knight", "pieceColor": "black", "letter": "C" },
+    { "position": "d2", "pieceType": "rook", "pieceColor": "white", "letter": "C" },
+    { "position": "e4", "pieceType": "bishop", "pieceColor": "black", "letter": "U" }
+  ],
+  "tutorialSteps": [
+    {
+      "id": "level2-intro",
+      "text": "In this level, the target word is 5 letters, but there are 7 pieces on the board. Not all pieces will be used in the solution - you need to figure out which ones to include.",
+      "trigger": "load",
+      "nextStepId": "level2-try-bishop",
+      "position": "bottom",
+      "triggerData": null
+    },
+    {
+      "id": "level2-try-bishop",
+      "text": "Let's try selecting the black bishop with the letter 'U'.",
+      "trigger": "load",
+      "triggerData": { "position": "e4" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level2-bishop-selected",
+      "text": "Uh oh, there are no pieces that the black bishop can capture, so this can't be the right first letter. Let's clear our answer using the Clear button and try again.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "e4" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level2-after-clear",
+      "text": "Let's try selecting the black knight with the letter 'C' instead.",
+      "trigger": "load",
+      "triggerData": { "position": "c4" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level2-knight-selected",
+      "text": "Knights move in an L-shape: 2 squares in one direction and then 1 square perpendicular to that direction. Notice there are 2 legal captures. Try to figure out which one to make.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "c4" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level2-pawn-captured",
+      "text": "Great! Pawns capture diagonally. White pawns move up the board. Now, try to figure out which piece to capture next.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "b2" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level2-black-pawn-captured",
+      "text": "Good choice! Black pawns move down the board. Keep trying to figure out the next piece to capture.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "c3" },
+      "nextStepId": null,
+      "position": "top"
+    },
+    {
+      "id": "level2-rook-captured",
+      "text": "Nice move! Since the white pawn (H) has already been captured, that square is now empty, and the rook is free to capture the black queen to complete the word.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "d2" },
+      "nextStepId": null,
+      "position": "top"
+    }
+  ],
+  "startingStepId": "level2-intro",
+  "congratsMessage": "Congratulations! You found the word CHECK!"
+} 

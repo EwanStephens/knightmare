@@ -181,7 +181,8 @@ export default function ChessBoard({
       // If in tutorial mode, call the completion callback before showing modal
       if (tutorialMode && onLevelComplete) {
         onLevelComplete();
-      } else {
+      } else if (!tutorialMode) {
+        // Only show the modal in non-tutorial mode
         setTimeout(() => {
           setShowCompleteModal(true);
         }, 200);

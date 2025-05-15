@@ -1,80 +1,59 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import ChessBoard from './ChessBoard';
 import { useTutorial } from '@/contexts/TutorialContext';
 import { LoadedLevel } from '@/types/level';
-import { Square } from '@/types/chess';
-import { positionToAlgebraic } from '@/utils/chess';
+import { createBoardFromTutorial } from '@/utils/tutorialLoader';
 
 export default function TutorialChessBoard() {
+  const router = useRouter();
   const { currentLevel, handlePieceSelect, advanceToNextLevel, tutorialState } = useTutorial();
   const [tutorialLevel, setTutorialLevel] = useState<LoadedLevel | null>(null);
+  const [showCompleteModal, setShowCompleteModal] = useState(false);
   const { highlightedPosition } = tutorialState;
 
   // Create a level from tutorial data
   useEffect(() => {
     if (!currentLevel) return;
 
-    const createBoardFromTutorial = () => {
-      // Create empty 5x5 board
-      const emptyBoard: Square[][] = Array(5)
-        .fill(null)
-        .map((_, row) =>
-          Array(5)
-            .fill(null)
-            .map((_, col) => ({
-              piece: null,
-              position: positionToAlgebraic(row, col),
-              isHighlighted: false,
-              isSelected: false,
-              isLegalMove: false,
-            }))
-        );
-
-      // Place pieces according to tutorial data
-      currentLevel.initialBoardSetup.forEach(piece => {
-        const { row, col } = {
-          row: 5 - parseInt(piece.position.charAt(1)), // Convert rank to row (0-4)
-          col: piece.position.charCodeAt(0) - 97, // Convert file ('a'-'e') to col (0-4)
-        };
-
-        if (row >= 0 && row < 5 && col >= 0 && col < 5) {
-          emptyBoard[row][col].piece = {
-            type: piece.pieceType as any,
-            color: piece.pieceColor,
-            letter: piece.letter,
-          };
-        }
-      });
-
-      // Create loaded level object with tutorial data
-      const level: LoadedLevel = {
-        board: emptyBoard,
-        targetWord: currentLevel.targetWord,
-        congratsMessage: currentLevel.levelNumber === 3 
-          ? "Congratulations on completing the tutorial!" 
-          : `Congratulations! You found the word ${currentLevel.targetWord}!`,
-      };
-
-      setTutorialLevel(level);
+    const board = createBoardFromTutorial(currentLevel);
+    
+    // Create loaded level object with tutorial data
+    const level: LoadedLevel = {
+      board,
+      targetWord: currentLevel.targetWord,
+      congratsMessage: currentLevel.congratsMessage || `Congratulations! You found the word ${currentLevel.targetWord}!`,
     };
 
-    createBoardFromTutorial();
+    setTutorialLevel(level);
   }, [currentLevel]);
 
   // Handle level completion callback from ChessBoard
   const handleLevelComplete = () => {
     // Check if this is the final level (level 3)
-    if (tutorialState.currentLevelIndex === 2) {
+    if (currentLevel?.levelNumber === 3) {
       // We're at the final level, set the completion message
       handlePieceSelect('complete'); // Trigger any completion-related steps
     }
     
-    // After a short delay, show the completion modal and advance
-    setTimeout(() => {
-      advanceToNextLevel();
-    }, 1500);
+    // Show the completion modal
+    setShowCompleteModal(true);
+  };
+
+  // Handle next level navigation
+  const handleNextLevel = () => {
+    setShowCompleteModal(false);
+    const nextLevel = currentLevel!.levelNumber + 1;
+    
+    if (nextLevel <= 3) {
+      // Navigate to the next tutorial level
+      router.push(`/tutorial/${nextLevel}`);
+    } else {
+      // If all tutorial levels are completed, go back to home
+      router.push('/');
+    }
   };
 
   // Notify the tutorial system about piece selection
@@ -87,13 +66,41 @@ export default function TutorialChessBoard() {
   }
 
   return (
-    <ChessBoard 
-      initialLevel={currentLevel?.levelNumber || 1} 
-      tutorialMode={true}
-      tutorialLevel={tutorialLevel}
-      onPieceSelected={handlePieceSelected}
-      onLevelComplete={handleLevelComplete}
-      highlightedPosition={highlightedPosition}
-    />
+    <>
+      <ChessBoard 
+        initialLevel={currentLevel?.levelNumber || 1} 
+        tutorialMode={true}
+        tutorialLevel={tutorialLevel}
+        onPieceSelected={handlePieceSelected}
+        onLevelComplete={handleLevelComplete}
+        highlightedPosition={highlightedPosition}
+      />
+      
+      {/* Custom completion modal for tutorial levels */}
+      {showCompleteModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="fixed inset-0 bg-black bg-opacity-30" onClick={() => {}} />
+          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center gap-6 min-w-[320px] z-10">
+            <div className="text-2xl font-bold text-green-700">{tutorialLevel.congratsMessage}</div>
+            <div className="flex gap-4">
+              <button
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+                onClick={() => router.push('/')}
+              >
+                Home
+              </button>
+              {currentLevel?.levelNumber && currentLevel.levelNumber < 3 && (
+                <button
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  onClick={handleNextLevel}
+                >
+                  Next Level
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 } 
