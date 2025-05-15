@@ -17,7 +17,8 @@
       "trigger": "load",
       "nextStepId": "level2-try-bishop",
       "position": "bottom",
-      "triggerData": null
+      "triggerData": null,
+      "target": ".level-title"
     },
     {
       "id": "level2-try-bishop",
@@ -33,7 +34,26 @@
       "trigger": "select-piece",
       "triggerData": { "position": "e4", "currentWord": "U" },
       "nextStepId": null,
-      "position": "top"
+      "position": "top",
+      "target": ":contains('Clear')"
+    },
+    {
+      "id": "level2-pawn-a-selected",
+      "text": "The black pawn with 'A' doesn't have any pieces it can capture, so this can't be the first letter of our word. Use the Clear button to try again.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "b5", "currentWord": "A" },
+      "nextStepId": null,
+      "position": "top",
+      "target": ":contains('Clear')"
+    },
+    {
+      "id": "level2-cc-selected",
+      "text": "You've captured the white rook after the black knight, giving you 'CC'. This doesn't look like the start of a valid word. Use the Clear button to try again.",
+      "trigger": "select-piece",
+      "triggerData": { "position": "d2", "currentWord": "CC" },
+      "nextStepId": null,
+      "position": "top",
+      "target": ":contains('Clear')"
     },
     {
       "id": "level2-after-clear",

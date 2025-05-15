@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTutorial } from '@/contexts/TutorialContext';
 
 export default function TutorialModal() {
@@ -13,6 +13,85 @@ export default function TutorialModal() {
   } = useTutorial();
   
   const { isModalOpen, showIntroScreen } = tutorialState;
+  const highlightRef = useRef<HTMLDivElement | null>(null);
+
+  // Effect to handle target highlighting
+  useEffect(() => {
+    if (!currentStep?.target || !isModalOpen) return;
+
+    // Try to find the element using the selector
+    let targetElements;
+    
+    // Handle the special case for buttons with specific text
+    if (currentStep.target.includes(':contains(')) {
+      const textMatch = currentStep.target.match(/:contains\(['"]([^'"]+)['"]\)/);
+      if (textMatch && textMatch[1]) {
+        const buttonText = textMatch[1];
+        const allButtons = document.querySelectorAll('button');
+        targetElements = Array.from(allButtons).filter(button => 
+          button.textContent?.trim() === buttonText
+        );
+      }
+    } else {
+      // Regular CSS selector
+      targetElements = document.querySelectorAll(currentStep.target);
+    }
+    
+    if (targetElements && targetElements.length > 0) {
+      const targetElement = targetElements[0] as HTMLElement;
+      
+      // Create a highlight overlay
+      if (!highlightRef.current) {
+        const highlightDiv = document.createElement('div');
+        highlightDiv.style.position = 'absolute';
+        highlightDiv.style.zIndex = '40';
+        highlightDiv.style.pointerEvents = 'none';
+        highlightDiv.style.border = '2px solid #FFDF00';
+        highlightDiv.style.borderRadius = '4px';
+        highlightDiv.style.animation = 'pulse 1.5s infinite';
+        document.body.appendChild(highlightDiv);
+        
+        // Add the animation style
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 223, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 223, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 223, 0, 0); }
+          }
+        `;
+        document.head.appendChild(style);
+        
+        highlightRef.current = highlightDiv;
+      }
+      
+      // Position the highlight
+      const rect = targetElement.getBoundingClientRect();
+      const highlight = highlightRef.current;
+      highlight.style.left = `${rect.left - 4}px`;
+      highlight.style.top = `${rect.top - 4}px`;
+      highlight.style.width = `${rect.width + 8}px`;
+      highlight.style.height = `${rect.height + 8}px`;
+      highlight.style.display = 'block';
+    }
+    
+    return () => {
+      // Clean up highlight on unmount or when target changes
+      if (highlightRef.current) {
+        highlightRef.current.style.display = 'none';
+      }
+    };
+  }, [currentStep, isModalOpen]);
+
+  // Clean up highlight on component unmount
+  useEffect(() => {
+    return () => {
+      if (highlightRef.current) {
+        highlightRef.current.remove();
+        highlightRef.current = null;
+      }
+    };
+  }, []);
 
   // Intro screen content
   if (showIntroScreen) {
