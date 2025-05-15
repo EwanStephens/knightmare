@@ -41,8 +41,17 @@ Knightmare is a word-building puzzle game that combines chess mechanics with wor
 
 3. Visual Feedback System
    - Blue (#94A3B8): Selected pieces
-   - Green (corner indicators): Legal moves
+   - Green corner indicators: Legal moves
    - Yellow: Previous moves in current word
+   - Red flash: Illegal moves
+   - Yellow pulsing highlight: Tutorial guidance
+
+4. Tutorial System
+   - Three progressive tutorial levels
+   - Interactive guided experience
+   - Popup modals explaining game mechanics
+   - Highlighted pieces to direct player actions
+   - Special feedback for tutorial-specific actions
 
 ### User Interface Elements
 - Responsive chess board with square cells
@@ -50,33 +59,53 @@ Knightmare is a word-building puzzle game that combines chess mechanics with wor
 - Clear button to reset the current attempt
 - Success modal on completion
 - Top bar with navigation elements
+- Level picker for jumping to specific levels
+- Tutorial mode with guided instructions
 
 ## Responsive Design Implementation
 
 ### Chessboard
-- Uses `aspect-square` to maintain perfect squares
-- Chess squares use viewport-relative sizing (`w-[15vw]`) with `max-w-36` constraint
-- Uses a responsive grid system with tailored gap sizes (`gap-0.5 sm:gap-1`)
+- Fully responsive board that adapts to viewport size
+- Chess squares using aspect ratio for consistent proportions
+- Dynamic sizing with minimum thresholds for small screens
+- Viewport-based scaling (vw/vh) with absolute minimums
 
 ### Chess Pieces
-- SVG chess pieces from standard.js with viewBox for proper scaling
-- Pieces scale proportionally with their containers using relative sizing
-- Letters positioned in the top-right corner of each square with z-index control
+- SVG chess pieces with proportional scaling
+- Responsive letter sizes using min/max/clamp for proper sizing
+- Font sizing with viewport units and minimum guaranteed size
+- Optimized positioning for all screen sizes
 
 ### Answer Display
-- Uses consistent height with `h-[1.5em]` and flex alignment
-- Letter sizes scale responsively based on viewport and word length
-- Non-breaking space placeholder ensures consistent positioning
+- Responsive container with dynamic height
+- Font sizes that scale with viewport while adjusting for word length
+- Minimum threshold sizes to ensure readability
+- Balanced spacing that reduces on smaller screens
 
-### Breakpoints
-- Implements specialized sizing and spacing at sm (640px), md (768px), lg (1024px) breakpoints
-- Text elements scale progressively with viewport size
+## Illegal Move Handling
+- First piece selection: Ignores clicks on empty squares
+- Subsequent moves:
+  - Ignores clicks on squares that aren't legal moves
+  - Shows specific error message for legal moves that don't capture opposite color
+  - Provides visual feedback with a red flash on the invalid square
+  - Preserves current word progress when showing errors
 
 ## Level System
 - Game includes multiple puzzle levels
 - Each level has a specific target word to solve
 - Board configuration is designed for the target word
 - Success modal provides navigation to next level
+- Level generator script for creating new challenges
+
+## Tutorial System
+- Comprehensive onboarding for new players
+- Progressive instruction across three levels:
+  1. **Level 1 (BOAT)**: Basic movement and captures
+  2. **Level 2 (CHECK)**: Advanced concepts with unused pieces
+  3. **Level 3 (FINISH)**: Self-guided challenge
+- Highlighting system to guide piece selection
+- Modal popups with contextual instructions
+- Special handlers for tutorial-specific actions like board clearing
 
 ## Development Setup
 ```bash
@@ -92,25 +121,27 @@ Server runs at http://localhost:3000
 ### Components
 - `ChessBoard.tsx`: Main game component
 - `TopBar.tsx`: Navigation header
+- `TutorialChessBoard.tsx`: Tutorial-specific chess board
+- `TutorialModal.tsx`: Tutorial instruction popups
+
+### Contexts
+- `TutorialContext.tsx`: Manages tutorial state and progression
 
 ### Utils
 - `chess.ts`: Chess move validation logic
 - `levelLoader.ts`: Level loading functionality
-- `pieceWrapper.tsx`: (Removed during refactoring)
+- `board.ts`: Board creation and manipulation
+
+### Types
+- `chess.ts`: Types for chess pieces and board state
+- `level.ts`: Types for level data structure
+- `tutorial.ts`: Types for tutorial system
+
+### Data
+- `tutorialData.ts`: Data for tutorial levels and instructions
 
 ### Assets
-- `standard.js`: SVG chess piece definitions with viewBox and responsive styling
-
-## Styling
-- Uses Tailwind CSS for responsive design
-- Custom Chess7 font for special chess symbols
-- Responsive text sizing across breakpoints 
-- Blur effect on background when success modal appears
-
-## Example Gameplay (Tutorial)
-Target word: "BOAT"
-1. Move 1: White pawn (a2) captures black knight (b3) to get "B" + "O"
-2. Move 2: White bishop (d2) captures black rook (e1) to get "A" + "T"
+- `standard.js`: SVG chess piece definitions with responsive styling
 
 ## LLM-Specific Guidelines
 
@@ -124,11 +155,11 @@ When validating moves, check:
 ### Word Building Logic
 1. Track letters from each captured piece
 2. Concatenate letters in the order of capture
-3. Validate against English dictionary
-4. Minimum word length: 3 letters
+3. Validate against target word
+4. Provide appropriate feedback for completion
 
 ### State Management Considerations
 1. Board state must be updated after each move
 2. Previous moves in current word sequence must be tracked
 3. Visual feedback must be updated in real-time
-4. Invalid moves/words must trigger appropriate error messages 
+4. Invalid moves must trigger appropriate error messages and visual cues 
