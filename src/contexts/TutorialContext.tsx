@@ -101,6 +101,8 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
   const handlePieceSelect = (position: string, currentWord = '') => {
     if (!currentLevel) return;
     
+    console.log(`Tutorial piece selected: position=${position}, currentWord=${currentWord}`);
+    
     // Update current word in state
     setTutorialState(prev => ({
       ...prev,
@@ -137,12 +139,22 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
       // Skip steps we've already completed
       if (tutorialState.completedStepIds.includes(step.id)) return false;
       
-      // Check if this step matches our current situation (position + word progress)
-      return step.triggerData?.position === position && 
+      // For piece selection events, we need to match:
+      // 1. The step must have a trigger of 'select-piece'
+      // 2. The position must match 
+      // 3. The currentWord must match if specified
+      const matches = step.trigger === 'select-piece' &&
+             step.triggerData?.position === position && 
              (!step.triggerData?.currentWord || step.triggerData.currentWord === currentWord);
+             
+      console.log(`Checking step ${step.id}: trigger=${step.trigger}, position=${step.triggerData?.position}, requiredWord=${step.triggerData?.currentWord}, matches=${matches}`);
+      
+      return matches;
     });
     
     if (matchingStep) {
+      console.log(`Found matching step: ${matchingStep.id}`);
+      
       // If this step has a next step that should highlight something, get that position
       const nextStepId = matchingStep.nextStepId;
       let nextHighlightPosition = null;
@@ -162,6 +174,8 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
         highlightedPosition: nextHighlightPosition,
       }));
     } else {
+      console.log(`No matching step found for position=${position}, currentWord=${currentWord}`);
+      
       // Just clear the highlighted position if we selected something else
       if (tutorialState.highlightedPosition) {
         setTutorialState(prev => ({

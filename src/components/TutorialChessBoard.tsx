@@ -44,6 +44,7 @@ export default function TutorialChessBoard() {
 
   // Notify the tutorial system about piece selection
   const handlePieceSelected = (position: string, currentWord: string) => {
+    console.log(`TutorialChessBoard passing to context: position=${position}, currentWord=${currentWord}`);
     handlePieceSelect(position, currentWord);
   };
 
