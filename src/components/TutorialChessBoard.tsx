@@ -6,6 +6,7 @@ import ChessBoard from './ChessBoard';
 import { useTutorial } from '@/contexts/TutorialContext';
 import { LoadedLevel } from '@/types/level';
 import { createBoardFromTutorial } from '@/utils/tutorialLoader';
+import CompletionModal from './CompletionModal';
 
 export default function TutorialChessBoard() {
   const router = useRouter();
@@ -37,64 +38,48 @@ export default function TutorialChessBoard() {
   };
 
   // Handle next level navigation
-  const handleNextLevel = () => {
+  const handleCloseModal = () => {
     setShowCompleteModal(false);
-    const nextLevel = currentLevel!.levelNumber + 1;
-    
-    if (nextLevel <= 3) {
-      // Navigate to the next tutorial level
-      router.push(`/tutorial/${nextLevel}`);
-    } else {
-      // If all tutorial levels are completed, go back to home
-      router.push('/');
-    }
   };
 
   // Notify the tutorial system about piece selection
-  const handlePieceSelected = (position: string) => {
-    handlePieceSelect(position);
+  const handlePieceSelected = (position: string, currentWord: string) => {
+    handlePieceSelect(position, currentWord);
   };
 
   if (!tutorialLevel) {
     return <div className="flex items-center justify-center h-64">Loading tutorial...</div>;
   }
+  
+  // Calculate the next tutorial level path
+  const nextPath = currentLevel?.levelNumber && currentLevel.levelNumber < 3 
+    ? `/tutorial/${currentLevel.levelNumber + 1}` 
+    : undefined;
 
   return (
-    <>
-      <ChessBoard 
-        initialLevel={currentLevel?.levelNumber || 1} 
-        tutorialMode={true}
-        tutorialLevel={tutorialLevel}
-        onPieceSelected={handlePieceSelected}
-        onLevelComplete={handleLevelComplete}
-        highlightedPosition={highlightedPosition}
-      />
+    <div className="relative w-full flex flex-col items-center">
+      {/* Main content, blurred when modal is open */}
+      <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
+        <ChessBoard 
+          initialLevel={currentLevel?.levelNumber || 1} 
+          tutorialMode={true}
+          tutorialLevel={tutorialLevel}
+          onPieceSelected={handlePieceSelected}
+          onLevelComplete={handleLevelComplete}
+          highlightedPosition={highlightedPosition}
+        />
+      </div>
       
-      {/* Custom completion modal for tutorial levels */}
-      {showCompleteModal && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="fixed inset-0 bg-black bg-opacity-30" onClick={() => {}} />
-          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center gap-6 min-w-[320px] z-10">
-            <div className="text-2xl font-bold text-green-700">{tutorialLevel.congratsMessage}</div>
-            <div className="flex gap-4">
-              <button
-                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-                onClick={() => router.push('/')}
-              >
-                Home
-              </button>
-              {currentLevel?.levelNumber && currentLevel.levelNumber < 3 && (
-                <button
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                  onClick={handleNextLevel}
-                >
-                  Next Level
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+      {/* Use the shared CompletionModal component */}
+      <CompletionModal 
+        isOpen={showCompleteModal}
+        onClose={handleCloseModal}
+        congratsMessage={tutorialLevel.congratsMessage}
+        targetWord={tutorialLevel.targetWord}
+        currentLevel={currentLevel?.levelNumber || 1}
+        nextPath={nextPath}
+        isTutorial={true}
+      />
+    </div>
   );
 } 

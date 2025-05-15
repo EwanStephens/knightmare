@@ -29,7 +29,7 @@
       "id": "level1-rook-selected",
       "text": "Great job! Notice how the letter 'B' appears at the bottom of the screen. As you select pieces, their letters will form your word.",
       "trigger": "select-piece",
-      "triggerData": { "position": "a2" },
+      "triggerData": { "position": "a2", "currentWord": "B" },
       "nextStepId": "level1-rook-moves",
       "position": "top"
     },
@@ -53,7 +53,7 @@
       "id": "level1-bishop-captured",
       "text": "Perfect! This was a legal capture because white pieces must capture black pieces. Notice how your word is now 'BO'.",
       "trigger": "select-piece",
-      "triggerData": { "position": "c2" },
+      "triggerData": { "position": "c2", "currentWord": "BO" },
       "nextStepId": "level1-bishop-moves",
       "position": "top"
     },
@@ -77,7 +77,7 @@
       "id": "level1-queen-captured",
       "text": "Well done! You captured the white queen. Queens are very powerful - they can move horizontally, vertically, or diagonally.",
       "trigger": "select-piece",
-      "triggerData": { "position": "d3" },
+      "triggerData": { "position": "d3", "currentWord": "BOA" },
       "nextStepId": "level1-select-pawn",
       "position": "top"
     },

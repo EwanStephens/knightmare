@@ -9,7 +9,7 @@ type TutorialContextType = {
   currentLevel: TutorialLevel | null;
   currentStep: TutorialStep | null;
   goToNextStep: () => void;
-  handlePieceSelect: (position: string) => void;
+  handlePieceSelect: (position: string, currentWord?: string) => void;
   advanceToNextLevel: () => void;
   resetTutorial: () => void;
   closeModal: () => void;
@@ -24,6 +24,7 @@ const initialTutorialState: TutorialState = {
   isModalOpen: true,
   showIntroScreen: true,
   highlightedPosition: null,
+  currentWord: '',
 };
 
 const TutorialContext = createContext<TutorialContextType | null>(null);
@@ -72,6 +73,7 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
         currentStepId: currentLevel.startingStepId,
         // Don't show intro screen when navigating directly to a level
         showIntroScreen: initialLevel === 1 ? prev.showIntroScreen : false,
+        currentWord: '',
       }));
     }
   }, [currentLevel, tutorialState.currentStepId, tutorialLevels.length, initialLevel]);
@@ -96,8 +98,14 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
     }));
   };
 
-  const handlePieceSelect = (position: string) => {
+  const handlePieceSelect = (position: string, currentWord = '') => {
     if (!currentLevel) return;
+    
+    // Update current word in state
+    setTutorialState(prev => ({
+      ...prev,
+      currentWord: currentWord,
+    }));
     
     // Handle special actions
     if (position === 'clear') {
@@ -117,17 +125,22 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
           completedStepIds: [...prev.completedStepIds, afterClearStep.id],
           isModalOpen: true,
           highlightedPosition: highlightPosition,
+          currentWord: '',
         }));
       }
       return;
     }
     
-    // If we're selecting a position that was highlighted, find the matching step
-    const matchingStep = currentLevel.tutorialSteps.find(step => 
-      step.trigger === 'select-piece' && 
-      step.triggerData?.position === position &&
-      !tutorialState.completedStepIds.includes(step.id)
-    );
+    // Find a matching step based on the position and current word progress
+    // Instead of hardcoding the conditions, we'll use the triggerData from the step
+    const matchingStep = currentLevel.tutorialSteps.find(step => {
+      // Skip steps we've already completed
+      if (tutorialState.completedStepIds.includes(step.id)) return false;
+      
+      // Check if this step matches our current situation (position + word progress)
+      return step.triggerData?.position === position && 
+             (!step.triggerData?.currentWord || step.triggerData.currentWord === currentWord);
+    });
     
     if (matchingStep) {
       // If this step has a next step that should highlight something, get that position
@@ -171,6 +184,7 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
         isModalOpen: true,
         showIntroScreen: false,
         highlightedPosition: null,
+        currentWord: '',
       });
     }
   };
@@ -208,6 +222,7 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
       isModalOpen: true,
       showIntroScreen: false,
       highlightedPosition: null, // Don't highlight on first step
+      currentWord: '',
     });
   };
 

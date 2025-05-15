@@ -8,6 +8,7 @@ import { loadLevel } from '@/utils/levelLoader';
 import { LoadedLevel } from '@/types/level';
 import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
+import CompletionModal from './CompletionModal';
 
 const createEmptyBoard = (): Square[][] => Array(5)
   .fill(null)
@@ -28,7 +29,7 @@ interface ChessBoardProps {
   initialLevel?: number;
   tutorialMode?: boolean;
   tutorialLevel?: LoadedLevel;
-  onPieceSelected?: (position: string) => void;
+  onPieceSelected?: (position: string, word: string) => void;
   onLevelComplete?: () => void;
   highlightedPosition?: string | null;
 }
@@ -112,7 +113,7 @@ export default function ChessBoard({
 
     // In tutorial mode, notify when a piece is selected
     if (tutorialMode && onPieceSelected && square.piece) {
-      onPieceSelected(position);
+      onPieceSelected(position, gameState.currentWord + (square.piece?.letter || ''));
     }
 
     // If a square is already selected, check if new square is a legal capture
@@ -205,7 +206,7 @@ export default function ChessBoard({
     
     // Notify tutorial system of clear action in tutorial mode
     if (tutorialMode && onPieceSelected) {
-      onPieceSelected('clear');
+      onPieceSelected('clear', '');
     }
   };
 
@@ -354,33 +355,16 @@ export default function ChessBoard({
           </div>
         </div>
       </div>
-      {/* Completion Modal */}
-      {showCompleteModal && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center gap-6 min-w-[320px]">
-            <div className="text-2xl font-bold text-green-700">Congratulations! You found the word {levelData.targetWord}!</div>
-            <div className="flex gap-4">
-              <button
-                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-                onClick={() => router.push('/')}
-              >
-                Home
-              </button>
-              {currentLevel < 20 && (
-                <button
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                  onClick={() => {
-                    setShowCompleteModal(false);
-                    router.push(`/play/${currentLevel + 1}`);
-                  }}
-                >
-                  Next Level
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Completion Modal using the shared component */}
+      <CompletionModal 
+        isOpen={showCompleteModal}
+        onClose={() => setShowCompleteModal(false)}
+        congratsMessage={levelData.congratsMessage}
+        targetWord={levelData.targetWord}
+        currentLevel={currentLevel}
+        nextPath={tutorialMode ? undefined : `/play/${currentLevel + 1}`}
+        isTutorial={tutorialMode}
+      />
     </div>
   );
 }

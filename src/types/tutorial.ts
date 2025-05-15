@@ -8,6 +8,7 @@ export type TutorialStep = {
   triggerData?: {
     position?: string; // Position like 'a2'
     pieceType?: string; // Like 'rook', 'pawn'
+    currentWord?: string; // Current word progress like 'B', 'BO', etc.
   };
   nextStepId?: string | null; // Next step or null if this is the last step in a sequence
   position?: 'top' | 'bottom'; // Position of the modal
@@ -34,4 +35,5 @@ export type TutorialState = {
   isModalOpen: boolean;
   showIntroScreen: boolean;
   highlightedPosition: string | null;
+  currentWord: string; // Track the current word being built
 }; 

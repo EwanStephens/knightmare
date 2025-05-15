@@ -31,7 +31,7 @@
       "id": "level2-bishop-selected",
       "text": "Uh oh, there are no pieces that the black bishop can capture, so this can't be the right first letter. Let's clear our answer using the Clear button and try again.",
       "trigger": "select-piece",
-      "triggerData": { "position": "e4" },
+      "triggerData": { "position": "e4", "currentWord": "U" },
       "nextStepId": null,
       "position": "top"
     },
@@ -47,7 +47,7 @@
       "id": "level2-knight-selected",
       "text": "Knights move in an L-shape: 2 squares in one direction and then 1 square perpendicular to that direction. Notice there are 2 legal captures. Try to figure out which one to make.",
       "trigger": "select-piece",
-      "triggerData": { "position": "c4" },
+      "triggerData": { "position": "c4", "currentWord": "C" },
       "nextStepId": null,
       "position": "top"
     },
@@ -55,7 +55,7 @@
       "id": "level2-pawn-captured",
       "text": "Great! Pawns capture diagonally. White pawns move up the board. Now, try to figure out which piece to capture next.",
       "trigger": "select-piece",
-      "triggerData": { "position": "b2" },
+      "triggerData": { "position": "b2", "currentWord": "CH" },
       "nextStepId": null,
       "position": "top"
     },
@@ -63,7 +63,7 @@
       "id": "level2-black-pawn-captured",
       "text": "Good choice! Black pawns move down the board. Keep trying to figure out the next piece to capture.",
       "trigger": "select-piece",
-      "triggerData": { "position": "c3" },
+      "triggerData": { "position": "c3", "currentWord": "CHE" },
       "nextStepId": null,
       "position": "top"
     },
@@ -71,7 +71,7 @@
       "id": "level2-rook-captured",
       "text": "Nice move! Since the white pawn (H) has already been captured, that square is now empty, and the rook is free to capture the black queen to complete the word.",
       "trigger": "select-piece",
-      "triggerData": { "position": "d2" },
+      "triggerData": { "position": "d2", "currentWord": "CHEC" },
       "nextStepId": null,
       "position": "top"
     }
