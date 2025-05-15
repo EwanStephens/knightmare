@@ -313,7 +313,7 @@ export default function ChessBoard({
             <div 
               className="flex whitespace-nowrap justify-center items-center font-mono w-full overflow-visible relative"
               style={{ 
-                height: "min(10vh, 15vw)"
+                height: "max(50px, min(6vh, 8vw))"
               }}
             >
               {Array.from(levelData.targetWord).map((_, index) => {
@@ -323,12 +323,13 @@ export default function ChessBoard({
                 return (
                   <span 
                     key={index} 
-                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-end"
+                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center"
                     style={{ 
                       width: `${letterWidth}%`, 
                       minWidth: '1rem',
                       maxWidth: '3rem',
-                      height: '100%',
+                      height: '80%',
+                      minHeight: '40px',
                       // Calculate font size based on viewport with minimum size guarantee
                       fontSize: `max(20px, min(${Math.min(12, 60/levelData.targetWord.length)}vw, ${Math.min(6, 30/levelData.targetWord.length)}vh))`
                     }}
@@ -338,7 +339,7 @@ export default function ChessBoard({
                 );
               })}
             </div>
-            <div className="flex gap-4 mt-2 sm:mt-4">
+            <div className="flex gap-4 mt-1 sm:mt-2">
               <button
                 onClick={handleCancel}
                 className="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600"
