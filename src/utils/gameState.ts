@@ -59,7 +59,7 @@ export const getCurrentLevel = (): number => {
   try {
     const level = parseInt(storedLevel, 10);
     return isNaN(level) ? 1 : level;
-  } catch (e) {
+  } catch {
     return 1;
   }
 };

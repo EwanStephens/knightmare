@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { ChessPiece, GameState, Position, Square } from '@/types/chess';
+import { ChessPiece, GameState } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import { loadLevel } from '@/utils/levelLoader';
 import { LoadedLevel } from '@/types/level';
@@ -10,20 +9,6 @@ import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
 import { updateLevelOnCompletion } from '@/utils/gameState';
-
-const createEmptyBoard = (): Square[][] => Array(5)
-  .fill(null)
-  .map((_, row) =>
-    Array(5)
-      .fill(null)
-      .map((_, col) => ({
-        piece: null,
-        position: positionToAlgebraic(row, col),
-        isHighlighted: false,
-        isSelected: false,
-        isLegalMove: false,
-      }))
-  );
 
 // Add prop type
 interface ChessBoardProps {
@@ -43,7 +28,7 @@ export default function ChessBoard({
   onLevelComplete,
   highlightedPosition
 }: ChessBoardProps) {
-  const [currentLevel, setCurrentLevel] = useState(initialLevel);
+  const [currentLevel] = useState(initialLevel);
   const [levelData, setLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
     board: [],
@@ -54,7 +39,6 @@ export default function ChessBoard({
   });
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
-  const router = useRouter();
 
   useEffect(() => {
     const initializeLevel = async () => {
@@ -175,10 +159,8 @@ export default function ChessBoard({
 
     // Check if word matches target
     let message = '';
-    let completed = false;
     if (newWord === levelData.targetWord) {
       message = levelData.congratsMessage || `Congratulations! You found the word ${levelData.targetWord}!`;
-      completed = true;
       
       // If in tutorial mode, call the completion callback before showing modal
       if (tutorialMode && onLevelComplete) {

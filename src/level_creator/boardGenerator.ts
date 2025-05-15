@@ -1,5 +1,5 @@
 import { ChessPiece, PieceType, Position, Square } from '../types/chess';
-import { isValidChessMove, positionToAlgebraic, algebraicToPosition, getLegalMoves, getSquaresOnPath, getLegalCaptureSquares } from '../utils/chess';
+import { positionToAlgebraic, getLegalMoves, getSquaresOnPath, getLegalCaptureSquares } from '../utils/chess';
 
 const PIECE_TYPES: PieceType[] = ['pawn', 'knight', 'bishop', 'rook', 'queen'];
 const PIECE_COLORS: ('white' | 'black')[] = ['white', 'black'];
@@ -84,10 +84,10 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
     let success = true;
 
     // 1. Pick a random starting square
-    let start: Position = randomBoardPosition();
-    let startSquare = board[start.row][start.col];
-    let startPieceType = randomPieceType();
-    let startColor: 'white' | 'black' = PIECE_COLORS[Math.floor(Math.random() * 2)];
+    const start: Position = randomBoardPosition();
+    const startSquare = board[start.row][start.col];
+    const startPieceType = randomPieceType();
+    const startColor: 'white' | 'black' = PIECE_COLORS[Math.floor(Math.random() * 2)];
     startSquare.piece = {
       type: startPieceType,
       color: startColor,
@@ -97,7 +97,6 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
 
     let currentPos = start;
     let currentColor = startColor;
-    let currentPieceType = startPieceType;
 
     for (let i = 1; i < targetWord.length; i++) {
       // 2. Find legal moves for current piece
@@ -130,8 +129,6 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
       // 5. Find a piece of the opposite color with at least one legal move
       const nextColor = oppositePieceColor(currentColor);
       let foundPiece = false;
-      let pieceTries = 0;
-      let nextPieceType: PieceType = 'pawn';
       let nextPiece: ChessPiece | null = null;
       const pieceTypesShuffled = PIECE_TYPES.slice().sort(() => Math.random() - 0.5);
       for (const pt of pieceTypesShuffled) {
@@ -146,12 +143,10 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
         // Remove the piece after checking
         board[nextPos.row][nextPos.col].piece = null;
         if (moves.length > 0) {
-          nextPieceType = pt;
           nextPiece = candidate;
           foundPiece = true;
           break;
         }
-        pieceTries++;
       }
       if (!foundPiece) {
         console.warn(`[BoardGenerator] No valid piece for next square at ${positionToAlgebraic(nextPos.row, nextPos.col)} after trying all types. Restarting...`);
@@ -164,7 +159,6 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
       previousSquares.push(positionToAlgebraic(nextPos.row, nextPos.col));
       currentPos = nextPos;
       currentColor = nextColor;
-      currentPieceType = nextPieceType;
     }
     if (!success) continue;
 

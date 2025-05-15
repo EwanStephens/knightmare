@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import ChessBoard from './ChessBoard';
 import { useTutorial } from '@/contexts/TutorialContext';
 import { LoadedLevel } from '@/types/level';
@@ -10,7 +9,6 @@ import CompletionModal from './CompletionModal';
 import { markTutorialCompleted } from '@/utils/gameState';
 
 export default function TutorialChessBoard() {
-  const router = useRouter();
   const { currentLevel, handlePieceSelect, tutorialState } = useTutorial();
   const [tutorialLevel, setTutorialLevel] = useState<LoadedLevel | null>(null);
   const [showCompleteModal, setShowCompleteModal] = useState(false);

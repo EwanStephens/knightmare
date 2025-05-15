@@ -1,4 +1,4 @@
-import { ChessPiece, PieceType, Position, Square } from '@/types/chess';
+import { ChessPiece, Position, Square } from '@/types/chess';
 
 export const positionToAlgebraic = (row: number, col: number): string => {
   const file = String.fromCharCode(97 + col); // 'a' through 'e'

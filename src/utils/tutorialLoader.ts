@@ -1,5 +1,5 @@
 import { TutorialLevel } from '@/types/tutorial';
-import { Square } from '@/types/chess';
+import { Square, ChessPiece } from '@/types/chess';
 import { positionToAlgebraic } from '@/utils/chess';
 
 /**
@@ -43,7 +43,7 @@ export function createBoardFromTutorial(tutorialLevel: TutorialLevel): Square[][
 
     if (row >= 0 && row < 5 && col >= 0 && col < 5) {
       emptyBoard[row][col].piece = {
-        type: piece.pieceType as any,
+        type: piece.pieceType as ChessPiece['type'],
         color: piece.pieceColor,
         letter: piece.letter,
       };

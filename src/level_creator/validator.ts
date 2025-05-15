@@ -1,5 +1,5 @@
 import { Square, Position } from '../types/chess';
-import { getLegalCaptures, algebraicToPosition, positionToAlgebraic } from '../utils/chess';
+import { getLegalCaptures, positionToAlgebraic } from '../utils/chess';
 import fs from 'fs/promises';
 import path from 'path';
 

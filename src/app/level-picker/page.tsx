@@ -38,9 +38,7 @@ export default function LevelPicker() {
             >
               {level}
               {isCompleted && (
-                <span className="material-symbols-outlined text-sm ml-1">
-                  check_circle
-                </span>
+                <span className="text-sm ml-1">✓</span>
               )}
             </button>
           );

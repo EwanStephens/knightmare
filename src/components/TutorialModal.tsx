@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTutorial } from '@/contexts/TutorialContext';
 
 export default function TutorialModal() {
