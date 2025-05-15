@@ -221,7 +221,7 @@ export default function ChessBoard({
             Find a {levelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
-          <div className="w-full aspect-square mx-auto">
+          <div className="aspect-square mx-auto w-[min(75vw,40vh)] min-w-50 min-h-50 max-w-120 max-h-120">
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
                 row.map((square, colIndex) => (
@@ -229,7 +229,7 @@ export default function ChessBoard({
                     key={square.position}
                     onClick={() => handleSquareClick(square.position)}
                     className={`
-                      w-[min(15vw,8vh)] max-w-24 max-h-24 aspect-square flex items-center justify-center relative
+                      aspect-square flex items-center justify-center relative
                       transition-colors duration-200
                       ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
                       ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
@@ -313,8 +313,15 @@ export default function ChessBoard({
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] mx-auto overflow-hidden">
-            <div className="flex whitespace-nowrap justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono w-full overflow-visible">
+          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] mx-auto overflow-hidden">
+            <div 
+              className="flex whitespace-nowrap justify-center items-center font-mono w-full overflow-visible relative"
+              style={{ 
+                // Container for the letters - creating a reference size
+                "--answer-container-width": "100%",
+                height: "2.5rem"
+              } as React.CSSProperties}
+            >
               {Array.from(levelData.targetWord).map((_, index) => {
                 // Dynamically calculate sizes based on word length
                 const letterWidth = Math.max(100 / levelData.targetWord.length, 6);
@@ -322,12 +329,15 @@ export default function ChessBoard({
                 return (
                   <span 
                     key={index} 
-                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-end h-[1.5em]"
+                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-end"
                     style={{ 
                       width: `${letterWidth}%`, 
                       minWidth: '1rem',
-                      maxWidth: '2.5rem' 
-                    }}
+                      maxWidth: '2.5rem',
+                      height: '100%',
+                      fontSize: 'calc(var(--answer-container-width) * 20   / var(--word-length))',
+                      '--word-length': levelData.targetWord.length
+                    } as React.CSSProperties}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
                   </span>
