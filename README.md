@@ -37,6 +37,14 @@ The game includes a comprehensive 3-level tutorial:
 2. **Level 2 (CHECK)**: More advanced word building with unused pieces
 3. **Level 3 (FINISH)**: Challenge level to test skills learned
 
+Each tutorial level features:
+- Dedicated URL paths (/tutorial/1, /tutorial/2, /tutorial/3)
+- Contextual popup instructions at top or bottom of screen 
+- Intelligent step progression based on player actions
+- UI element highlighting for guidance (pieces, buttons, etc.)
+- Completion modals between levels with blurred background
+- Progressive guidance that adapts to player actions
+
 ## Technical Details
 
 Built with:

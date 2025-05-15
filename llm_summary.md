@@ -47,11 +47,15 @@ Knightmare is a word-building puzzle game that combines chess mechanics with wor
    - Yellow pulsing highlight: Tutorial guidance
 
 4. Tutorial System
-   - Three progressive tutorial levels
-   - Interactive guided experience
-   - Popup modals explaining game mechanics
-   - Highlighted pieces to direct player actions
-   - Special feedback for tutorial-specific actions
+   - Three progressive tutorial levels with dedicated URLs (/tutorial/1, /tutorial/2, /tutorial/3)
+   - JSON-based configuration for each tutorial level
+   - Interactive guided experience with contextual popups
+   - Positioned tutorial popups (top/bottom of screen)
+   - Intelligent step triggering based on piece selection and current word
+   - Highlighted UI elements (chess pieces, buttons, etc.)
+   - Completion modals between tutorial levels
+   - Blurred background effect during level completion
+   - Special feedback for tutorial-specific actions like board clearing
 
 ### User Interface Elements
 - Responsive chess board with square cells
@@ -99,13 +103,26 @@ Knightmare is a word-building puzzle game that combines chess mechanics with wor
 
 ## Tutorial System
 - Comprehensive onboarding for new players
-- Progressive instruction across three levels:
+- Progressive instruction across three levels accessed via dedicated URLs:
   1. **Level 1 (BOAT)**: Basic movement and captures
   2. **Level 2 (CHECK)**: Advanced concepts with unused pieces
   3. **Level 3 (FINISH)**: Self-guided challenge
-- Highlighting system to guide piece selection
-- Modal popups with contextual instructions
-- Special handlers for tutorial-specific actions like board clearing
+- JSON-based tutorial configuration similar to regular levels
+- Contextual highlighting system for UI elements:
+  - Chess pieces
+  - Clear button
+  - Target word length display
+- Modals that can be positioned at the top or bottom of the screen
+- Intelligent step triggering based on both:
+  - Selected piece position
+  - Current word progress
+- Reusable completion modal component with blurred background effect
+- Simplified naming convention ("Knightmare Tutorial")
+- Step triggers for various player actions:
+  - First piece selection
+  - Captures
+  - Board clearing
+  - Special situations (like redundant letters "CC")
 
 ## Development Setup
 ```bash
@@ -123,6 +140,7 @@ Server runs at http://localhost:3000
 - `TopBar.tsx`: Navigation header
 - `TutorialChessBoard.tsx`: Tutorial-specific chess board
 - `TutorialModal.tsx`: Tutorial instruction popups
+- `CompletionModal.tsx`: Reusable level completion modal
 
 ### Contexts
 - `TutorialContext.tsx`: Manages tutorial state and progression
@@ -130,6 +148,7 @@ Server runs at http://localhost:3000
 ### Utils
 - `chess.ts`: Chess move validation logic
 - `levelLoader.ts`: Level loading functionality
+- `tutorialLoader.ts`: Tutorial level loading functionality
 - `board.ts`: Board creation and manipulation
 
 ### Types
@@ -138,7 +157,7 @@ Server runs at http://localhost:3000
 - `tutorial.ts`: Types for tutorial system
 
 ### Data
-- `tutorialData.ts`: Data for tutorial levels and instructions
+- `src/tutorials/*.json`: JSON files for each tutorial level
 
 ### Assets
 - `standard.js`: SVG chess piece definitions with responsive styling
