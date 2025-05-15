@@ -9,7 +9,7 @@ import { createBoardFromTutorial } from '@/utils/tutorialLoader';
 
 export default function TutorialChessBoard() {
   const router = useRouter();
-  const { currentLevel, handlePieceSelect, advanceToNextLevel, tutorialState } = useTutorial();
+  const { currentLevel, handlePieceSelect, tutorialState } = useTutorial();
   const [tutorialLevel, setTutorialLevel] = useState<LoadedLevel | null>(null);
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const { highlightedPosition } = tutorialState;
@@ -32,13 +32,7 @@ export default function TutorialChessBoard() {
 
   // Handle level completion callback from ChessBoard
   const handleLevelComplete = () => {
-    // Check if this is the final level (level 3)
-    if (currentLevel?.levelNumber === 3) {
-      // We're at the final level, set the completion message
-      handlePieceSelect('complete'); // Trigger any completion-related steps
-    }
-    
-    // Show the completion modal
+    // Show the completion modal immediately
     setShowCompleteModal(true);
   };
 

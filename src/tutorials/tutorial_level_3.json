@@ -17,13 +17,6 @@
       "trigger": "load",
       "nextStepId": null,
       "position": "top"
-    },
-    {
-      "id": "level3-complete",
-      "text": "Congratulations on completing the tutorial!",
-      "trigger": "load",
-      "nextStepId": null,
-      "position": "top"
     }
   ],
   "startingStepId": "level3-intro",

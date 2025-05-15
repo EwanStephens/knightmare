@@ -85,19 +85,9 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
     // Check if we need to highlight a piece
     let highlightPosition = null;
     if (nextStep?.triggerData?.position) {
-      // For level 1, don't highlight the queen (d3) or pawn (e3)
-      const shouldHighlight = !(
-        currentLevel?.levelNumber === 1 && 
-        (nextStep.triggerData.position === 'd3' || nextStep.triggerData.position === 'e3')
-      );
-      
-      // Only highlight if we should
-      if (shouldHighlight) {
-        highlightPosition = nextStep.triggerData.position;
-      }
+      highlightPosition = nextStep.triggerData.position;
     }
     
-    // Only set highlightedPosition if the intro is finished
     setTutorialState(prev => ({
       ...prev,
       currentStepId: currentStep.nextStepId || null,
@@ -127,25 +117,6 @@ export const TutorialProvider = ({ children, initialLevel = 1 }: TutorialProvide
           completedStepIds: [...prev.completedStepIds, afterClearStep.id],
           isModalOpen: true,
           highlightedPosition: highlightPosition,
-        }));
-      }
-      return;
-    }
-    
-    if (position === 'complete') {
-      // Find level completion step
-      const completeStep = currentLevel.tutorialSteps.find(step =>
-        step.id === 'level3-complete' &&
-        !tutorialState.completedStepIds.includes(step.id)
-      );
-      
-      if (completeStep) {
-        setTutorialState(prev => ({
-          ...prev,
-          currentStepId: completeStep.id,
-          completedStepIds: [...prev.completedStepIds, completeStep.id],
-          isModalOpen: true,
-          highlightedPosition: null,
         }));
       }
       return;
