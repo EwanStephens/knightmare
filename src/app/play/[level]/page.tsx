@@ -3,13 +3,11 @@
 import { useEffect } from 'react';
 import ChessBoard from '@/components/ChessBoard';
 import { setCurrentLevel } from '@/utils/gameState';
+import { useParams } from 'next/navigation';
 
-interface PlayLevelPageProps {
-  params: { level: string };
-}
-
-export default function PlayLevelPage({ params }: PlayLevelPageProps) {
-  const level = parseInt(params.level, 10);
+export default function PlayLevelPage() {
+  const params = useParams();
+  const level = parseInt(params.level as string, 10);
   
   useEffect(() => {
     // Update current level in localStorage when visiting this page directly
