@@ -22,14 +22,14 @@ export default function TutorialLevelPage() {
   }, [levelNumber, router]);
 
   if (!isValidLevel) {
-    return <div className="min-h-screen flex items-center justify-center">Redirecting...</div>;
+    return <main className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800"><p className="dark:text-white">Redirecting...</p></main>;
   }
 
   return (
     <TutorialProvider initialLevel={levelNumber}>
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-        <h1 className="text-3xl font-bold mb-8">Knightmare Tutorial</h1>
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
+        <h1 className="text-3xl font-bold mb-8 dark:text-white">Knightmare Tutorial</h1>
+        <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg w-full max-w-4xl">
           <TutorialChessBoard />
         </div>
         <TutorialModal />

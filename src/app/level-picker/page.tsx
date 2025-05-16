@@ -21,9 +21,9 @@ export default function LevelPicker() {
   };
   
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <h1 className="text-3xl font-bold mb-8">Choose a Level</h1>
-      <div className="bg-white p-8 rounded-lg shadow-lg flex flex-wrap gap-4 justify-center">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
+      <h1 className="text-3xl font-bold mb-8 dark:text-white">Choose a Level</h1>
+      <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-wrap gap-4 justify-center">
         {levels.map(level => {
           const isCompleted = completedLevels.includes(level);
           return (

@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+It is not valid to fix an issue with a font by replacing the font with SVG. You should fix the issue at the source instead of working around the issue 

@@ -15,9 +15,9 @@ export default function PlayLevelPage() {
   }, [level]);
   
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <h1 className="text-2xl font-bold mb-4">Level {level}</h1>
-      <div className="bg-white p-8 rounded-lg shadow-lg">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
+      <h1 className="text-2xl font-bold mb-4 dark:text-white">Level {level}</h1>
+      <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
         <ChessBoard initialLevel={level}/>
       </div>
     </main>

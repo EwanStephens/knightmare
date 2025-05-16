@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
-        <style>{`.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }`}</style>
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=block" 
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}>
         <TopBar />
         {children}
       </body>
