@@ -33,10 +33,20 @@ export default function RootLayout({
           rel="stylesheet" 
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=block" 
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Check for dark mode preference on initial load
+              if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+              } else {
+                document.documentElement.classList.remove('dark')
+              }
+            `,
+          }}
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16 text-gray-900 dark:text-gray-100`}>
         <TopBar />
         {children}
       </body>

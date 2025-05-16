@@ -10,15 +10,25 @@ export default function TopBar() {
     // Check if dark mode is enabled when component mounts
     const isDark = document.documentElement.classList.contains('dark');
     setIsDarkMode(isDark);
+    
+    // Also check the system preference and apply it on first load
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDark) {
+      document.documentElement.classList.add('dark');
+      setIsDarkMode(true);
+    }
   }, []);
 
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
+    
     if (newMode) {
       document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
     }
+    
     setIsDarkMode(newMode);
   };
 
