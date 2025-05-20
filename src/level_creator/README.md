@@ -27,29 +27,37 @@ This directory contains the modular code for generating chess-based word puzzle 
    npm install
    ```
 
-2. **Run the level creator script** from the project root in one of two modes:
+2. **Run the level creator script** from the project root using options:
+
+   - You must specify **exactly one** of `--word-length` or `--word`.
+   - `--extra-letters` is optional and defaults to 0.
+   - `--test` is optional and prevents wordbank/file writes (dry run).
 
    **A. By word length (random from wordbank):**
    ```sh
-   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts <wordLength> <extraLetters>
+   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word-length <number> [--extra-letters <number>] [--test]
    ```
-   - `wordLength`: Number of letters in the target word (e.g., 6)
-   - `extraLetters`: Number of additional random letters to add to the board (e.g., 3)
+   - `--word-length <number>`: Number of letters in the target word (e.g., 6)
+   - `--extra-letters <number>`: Number of additional random letters to add to the board (default: 0)
+   - `--test`: If present, does not update the wordbank or serialize the puzzle
 
    **B. By explicit target word:**
    ```sh
-   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word <targetWord> <extraLetters>
+   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word <targetWord> [--extra-letters <number>] [--test]
    ```
-   - `targetWord`: The word to use as the puzzle's solution
-   - `extraLetters`: Number of additional random letters to add to the board
+   - `--word <targetWord>`: The word to use as the puzzle's solution
+   - `--extra-letters <number>`: Number of additional random letters to add to the board (default: 0)
+   - `--test`: If present, does not update the wordbank or serialize the puzzle
 
-   Example:
+   **Examples:**
    ```sh
-   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts 6 3
-   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word CHESS 2
+   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word-length 6
+   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word-length 5 --extra-letters 2
+   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word CHESS
+   npx ts-node --compiler-options '{"module":"CommonJS"}' scripts/create_level.ts --word CHESS --extra-letters 2 --test
    ```
 
-3. **Output**: The generated puzzle will be saved in `src/puzzles/<wordLength>_letter/puzzle_<wordLength>-<extraLetters>-<nanoid>.json` where `<nanoid>` is a unique 7-character ID.
+3. **Output**: The generated puzzle will be saved in `src/puzzles/<wordLength>_letter/puzzle_<wordLength>-<extraLetters>-<nanoid>.json` where `<nanoid>` is a unique 7-character ID. (Not applicable in --test mode)
 
 ## Notes
 - The script ensures the target word is the longest (or joint longest) word on the board.

@@ -5,8 +5,10 @@ import { serializeLevel } from '../src/level_creator/serializer';
 import path from 'path';
 import fs from 'fs/promises';
 import { generatePuzzleId, getPuzzlePathFromId, checkPuzzleIdExists } from '../src/utils/puzzleUtils';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
-export async function createLevelWithTargetWord(targetWord: string, extraLetters: number, fromWordbank: boolean) {
+export async function createLevelWithTargetWord(targetWord: string, extraLetters: number, fromWordbank: boolean, testMode = false) {
   try {
     console.log(`[Level Creator] Starting with target word '${targetWord}' (length ${targetWord.length}) and ${extraLetters} extra letters.`);
 
@@ -19,9 +21,9 @@ export async function createLevelWithTargetWord(targetWord: string, extraLetters
       legalCaptures = result.legalCaptures;
       console.log('[Level Creator] Board generated.');
     } catch (err) {
-      // Move word back to unused if fromWordbank
-      if (fromWordbank) await moveWordBackToUnused(targetWord.length, targetWord);
-      console.error(`[Level Creator] Board generation failed: ${err}.` + (fromWordbank ? ' Target word moved back to unused.' : ''));
+      // Move word back to unused if fromWordbank and not testMode
+      if (fromWordbank && !testMode) await moveWordBackToUnused(targetWord.length, targetWord);
+      console.error(`[Level Creator] Board generation failed: ${err}.` + (fromWordbank && !testMode ? ' Target word moved back to unused.' : ''));
       return { success: false, error: err };
     }
 
@@ -31,89 +33,132 @@ export async function createLevelWithTargetWord(targetWord: string, extraLetters
 
     // 3. Handle validation result
     if (!validation.isValid) {
-      // Save to interesting directory
-      const interestingDir = path.join(__dirname, '../src/interesting');
-      await fs.mkdir(interestingDir, { recursive: true });
-      const filename = path.join(interestingDir, `failed_${targetWord}_${Date.now()}.json`);
-      await serializeLevel(board, validation.longestWords, filename, {
-        targetPath,
-        legalCaptures,
-        reason: validation.reason,
-        numTargetWordPaths: validation.numTargetWordPaths,
-      } as any);
-      // Move word back to unused if fromWordbank
-      if (fromWordbank) await moveWordBackToUnused(targetWord.length, targetWord);
-      console.error(`[Level Creator] Validation failed: ${validation.reason}. Puzzle saved to ${filename}.` + (fromWordbank ? ' Target word moved back to unused.' : ''));
+      if (!testMode) {
+        // Save to interesting directory
+        const interestingDir = path.join(__dirname, '../src/interesting');
+        await fs.mkdir(interestingDir, { recursive: true });
+        const filename = path.join(interestingDir, `failed_${targetWord}_${Date.now()}.json`);
+        await serializeLevel(board, validation.longestWords, filename, {
+          targetPath,
+          legalCaptures,
+          reason: validation.reason,
+          numTargetWordPaths: validation.numTargetWordPaths,
+        } as any);
+      }
+      // Move word back to unused if fromWordbank and not testMode
+      if (fromWordbank && !testMode) await moveWordBackToUnused(targetWord.length, targetWord);
+      console.error(`[Level Creator] Validation failed: ${validation.reason}.` + (!testMode ? ' Puzzle saved.' : ' (test mode, not saved)') + (fromWordbank && !testMode ? ' Target word moved back to unused.' : ''));
       return { success: false, error: validation.reason };
     }
 
     // 4. Output to puzzles directory with new ID logic
-    const puzzleId = await generatePuzzleId(targetWord.length, extraLetters, checkPuzzleIdExists);
-    const puzzlePath = getPuzzlePathFromId(puzzleId);
-    const puzzlesDir = path.dirname(puzzlePath);
-    await fs.mkdir(puzzlesDir, { recursive: true });
-    await serializeLevel(board, validation.longestWords, puzzlePath, { targetPath, legalCaptures });
-    console.log(`[Level Creator] Level serialized to ${puzzlePath}`);
-    return { success: true, puzzleId };
+    if (!testMode) {
+      const puzzleId = await generatePuzzleId(targetWord.length, extraLetters, checkPuzzleIdExists);
+      const puzzlePath = getPuzzlePathFromId(puzzleId);
+      const puzzlesDir = path.dirname(puzzlePath);
+      await fs.mkdir(puzzlesDir, { recursive: true });
+      await serializeLevel(board, validation.longestWords, puzzlePath, { targetPath, legalCaptures });
+      console.log(`[Level Creator] Level serialized to ${puzzlePath}`);
+      return { success: true, puzzleId };
+    } else {
+      console.log('[Level Creator] Test mode: not serializing puzzle or updating wordbank.');
+      return { success: true, test: true };
+    }
   } catch (err) {
     console.error('[Level Creator] Error:', err);
     return { success: false, error: err };
   }
 }
 
-export async function createLevelWithWordLength(wordLength: number, extraLetters: number) {
+export async function createLevelWithWordLength(wordLength: number, extraLetters: number, testMode = false) {
   try {
-    const targetWord = await getAndUseRandomWord(wordLength);
-    return await createLevelWithTargetWord(targetWord, extraLetters, true);
+    let targetWord;
+    if (!testMode) {
+      targetWord = await getAndUseRandomWord(wordLength);
+    } else {
+      // In test mode, pick a word but don't update the wordbank
+      const filePath = path.join(__dirname, `../src/data/wordbanks/${wordLength}_letter_words.json`);
+      const fileContent = await fs.readFile(filePath, 'utf-8');
+      const wordbank = JSON.parse(fileContent);
+      if (!wordbank.unused_words || wordbank.unused_words.length === 0) {
+        throw new Error(`No unused words available for length ${wordLength}`);
+      }
+      targetWord = wordbank.unused_words[Math.floor(Math.random() * wordbank.unused_words.length)];
+    }
+    return await createLevelWithTargetWord(targetWord, extraLetters, !testMode, testMode);
   } catch (err) {
     console.error('[Level Creator] Error picking word from wordbank:', err);
     return { success: false, error: err };
   }
 }
 
-// CLI usage
+// CLI usage with yargs
 if (require.main === module) {
-  const args = process.argv.slice(2);
-  let wordLength: number | undefined;
-  let extraLetters: number | undefined;
-  let explicitTargetWord: string | undefined;
+  const argv = yargs(hideBin(process.argv))
+    .usage('Usage: $0 [options]')
+    .option('word', {
+      type: 'string',
+      describe: 'Explicit target word to use for the puzzle',
+      conflicts: 'wordLength',
+    })
+    .option('word-length', {
+      type: 'number',
+      describe: 'Length of the word to pick from the wordbank',
+      conflicts: 'word',
+    })
+    .option('extra-letters', {
+      type: 'number',
+      describe: 'Number of additional random letters to add to the board',
+      default: 0,
+    })
+    .option('test', {
+      type: 'boolean',
+      describe: 'Test mode (no wordbank or file writes)',
+      default: false,
+    })
+    .check(argv => {
+      if ((argv.word && argv.wordLength) || (!argv.word && !argv.wordLength)) {
+        throw new Error('You must specify exactly one of --word or --word-length.');
+      }
+      if (argv.wordLength && (typeof argv.wordLength !== 'number' || isNaN(argv.wordLength))) {
+        throw new Error('--word-length must be a number.');
+      }
+      if (typeof argv.extraLetters !== 'number' || isNaN(argv.extraLetters) || argv.extraLetters < 0) {
+        throw new Error('--extra-letters must be a non-negative number.');
+      }
+      return true;
+    })
+    .help('h')
+    .alias('h', 'help')
+    .parseSync();
 
-  if (args[0] === '--word') {
-    // Mode: --word <targetWord> <extraLetters>
-    if (args.length !== 3) {
-      console.error('Usage: ts-node scripts/create_level.ts --word <targetWord> <extraLetters>');
-      process.exit(1);
-    }
-    explicitTargetWord = args[1];
-    extraLetters = parseInt(args[2], 10);
-    if (!explicitTargetWord || isNaN(extraLetters)) {
-      console.error('Usage: ts-node scripts/create_level.ts --word <targetWord> <extraLetters>');
-      process.exit(1);
-    }
-    createLevelWithTargetWord(explicitTargetWord, extraLetters, false).then(result => {
+  if (argv.word) {
+    // Mode: --word <targetWord>
+    const explicitTargetWord = argv.word;
+    const extraLetters = argv.extraLetters as number;
+    createLevelWithTargetWord(explicitTargetWord, extraLetters, false, argv.test).then(result => {
       if (result.success) {
-        console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
+        if (argv.test) {
+          console.log(`[Level Creator] Test mode complete.`);
+        } else {
+          console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
+        }
       } else {
         console.error(`[Level Creator] Failed: ${result.error}`);
         process.exit(1);
       }
     });
-  } else {
-    // Mode: <wordLength> <extraLetters>
-    if (args.length !== 2) {
-      console.error('Usage: ts-node scripts/create_level.ts <wordLength> <extraLetters>');
-      console.error('   or: ts-node scripts/create_level.ts --word <targetWord> <extraLetters>');
-      process.exit(1);
-    }
-    wordLength = parseInt(args[0], 10);
-    extraLetters = parseInt(args[1], 10);
-    if (isNaN(wordLength) || isNaN(extraLetters)) {
-      console.error('Both arguments must be numbers.');
-      process.exit(1);
-    }
-    createLevelWithWordLength(wordLength, extraLetters).then(result => {
+  } else if (argv.wordLength) {
+    // Mode: --word-length <wordLength>
+    const wordLength = argv.wordLength as number;
+    const extraLetters = argv.extraLetters as number;
+    createLevelWithWordLength(wordLength, extraLetters, argv.test).then(result => {
       if (result.success) {
-        console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
+        if (argv.test) {
+          console.log(`[Level Creator] Test mode complete.`);
+        } else {
+          console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
+        }
       } else {
         console.error(`[Level Creator] Failed: ${result.error}`);
         process.exit(1);

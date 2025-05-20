@@ -147,7 +147,7 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
         };
         // Temporarily place the piece
         board[nextPos.row][nextPos.col].piece = candidate;
-        const moves = getLegalMoves(candidate, nextPos, board, previousSquares);
+        const moves = getLegalCaptureSquares(candidate, nextPos, board, previousSquares);
         // Remove the piece after checking
         board[nextPos.row][nextPos.col].piece = null;
         if (moves.length > 0) {
