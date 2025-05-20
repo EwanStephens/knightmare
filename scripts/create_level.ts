@@ -1,4 +1,4 @@
-import { getAndUseRandomWord, moveWordBackToUnused } from '../src/level_creator/wordbankManager';
+import { getAndUseRandomWord, moveWordBackToUnused } from '../src/utils/wordbankManager';
 import { generateBoard, GeneratedBoardResult } from '../src/level_creator/boardGenerator';
 import { findLongestWords, ValidationResult } from '../src/level_creator/validator';
 import { serializeLevel } from '../src/level_creator/serializer';

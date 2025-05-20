@@ -249,7 +249,6 @@
     "vote",
     "rule",
     "told",
-    "door",
     "cool",
     "java",
     "pass",
@@ -832,7 +831,8 @@
     "knit",
     "pike",
     "bent",
-    "deaf"
+    "deaf",
+    "door"
   ],
   "used_words": [
     "doll",

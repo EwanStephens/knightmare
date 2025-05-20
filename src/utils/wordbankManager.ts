@@ -43,4 +43,18 @@ export async function moveWordBackToUnused(length: number, word: string): Promis
   // Add to unused_words if not present
   if (!wordbank.unused_words.includes(word)) wordbank.unused_words.push(word);
   await fs.writeFile(filePath, JSON.stringify(wordbank, null, 2), 'utf-8');
+}
+
+export async function getNumUnusedWords(length: number): Promise<number> {
+  const filePath = getWordbankFilename(length);
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const wordbank: Wordbank = JSON.parse(fileContent);
+  return wordbank.unused_words.length;
+}
+
+export async function getNumUsedWords(length: number): Promise<number> {
+  const filePath = getWordbankFilename(length);
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const wordbank: Wordbank = JSON.parse(fileContent);
+  return wordbank.used_words.length;
 } 
