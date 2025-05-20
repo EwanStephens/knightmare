@@ -4,15 +4,16 @@ import { findLongestWords, ValidationResult } from '../src/level_creator/validat
 import { serializeLevel } from '../src/level_creator/serializer';
 import fs from 'fs/promises';
 import path from 'path';
+import { generatePuzzleId, getPuzzlePathFromId } from '../src/utils/puzzleUtils';
 
-async function getNextLevelNumber(): Promise<number> {
-  const levelsDir = path.join(__dirname, '../src/levels');
-  const files = await fs.readdir(levelsDir);
-  const numbers = files
-    .map(f => /^level_(\d+)\.json$/.exec(f))
-    .filter(Boolean)
-    .map(match => parseInt(match![1], 10));
-  return numbers.length ? Math.max(...numbers) + 1 : 1;
+async function checkExists(id: string): Promise<boolean> {
+  const puzzlePath = getPuzzlePathFromId(id);
+  try {
+    await fs.access(puzzlePath);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 async function main() {
@@ -70,10 +71,14 @@ async function main() {
     console.error(`[Level Creator] Validation failed: ${validation.reason}. Puzzle saved to ${filename}. Target word moved back to unused.`);
     process.exit(1);
   }
-  // TODO: Update to use new puzzle directory/ID logic
-  const nextLevelNum = await getNextLevelNumber();
-  await serializeLevel(board, validation.longestWords, `src/levels/level_${nextLevelNum}.json`, { targetPath, legalCaptures });
-  console.log('[Level Creator] Level serialized to JSON.');
+
+  // 5. Output to puzzles directory with new ID logic
+  const puzzleId = await generatePuzzleId(wordLength, extraLetters, checkExists);
+  const puzzlePath = getPuzzlePathFromId(puzzleId);
+  const puzzlesDir = path.dirname(puzzlePath);
+  await fs.mkdir(puzzlesDir, { recursive: true });
+  await serializeLevel(board, validation.longestWords, puzzlePath, { targetPath, legalCaptures });
+  console.log(`[Level Creator] Level serialized to ${puzzlePath}`);
 }
 
 main().catch(err => {
