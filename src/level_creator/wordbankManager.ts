@@ -31,4 +31,16 @@ export async function getAndUseRandomWord(length: number): Promise<string> {
   await fs.writeFile(filePath, JSON.stringify(wordbank, null, 2), 'utf-8');
 
   return word;
+}
+
+export async function moveWordBackToUnused(length: number, word: string): Promise<void> {
+  const filePath = getWordbankFilename(length);
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const wordbank: Wordbank = JSON.parse(fileContent);
+  // Remove from used_words if present
+  const usedIdx = wordbank.used_words.indexOf(word);
+  if (usedIdx !== -1) wordbank.used_words.splice(usedIdx, 1);
+  // Add to unused_words if not present
+  if (!wordbank.unused_words.includes(word)) wordbank.unused_words.push(word);
+  await fs.writeFile(filePath, JSON.stringify(wordbank, null, 2), 'utf-8');
 } 

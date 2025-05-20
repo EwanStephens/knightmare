@@ -8,6 +8,13 @@ interface TrieNode {
   isWord: boolean;
 }
 
+export interface ValidationResult {
+  longestWords: string[];
+  isValid: boolean;
+  reason?: string;
+  numTargetWordPaths?: number;
+}
+
 function insertWord(root: TrieNode, word: string) {
   let node = root;
   for (const char of word) {
@@ -51,7 +58,7 @@ async function loadWords(): Promise<string[]> {
   return content.split(/\r?\n/).map(w => w.trim().toLowerCase()).filter(w => w.length >= 3);
 }
 
-export async function findLongestWords(board: Square[][], targetWord: string): Promise<string[]> {
+export async function findLongestWords(board: Square[][], targetWord: string): Promise<ValidationResult> {
   console.log('[Validator] Loading word list and building trie...');
   const words = await loadWords();
   const trie = buildTrie(words);
@@ -102,15 +109,27 @@ export async function findLongestWords(board: Square[][], targetWord: string): P
   }
   console.log(`[Validator] Longest words found: ${longestWords.join(', ')}`);
 
-  // Ensure the target word is the uniquely longest word
+  // Validation logic
   if (longest.length !== 1 || longest[0] !== targetWord.toLowerCase()) {
-    throw new Error(`[Validator] Target word '${targetWord}' is not the unique longest word found! Longest found: ${longest.join(', ')}`);
+    return {
+      longestWords,
+      isValid: false,
+      reason: `[Validator] Target word '${targetWord}' is not the unique longest word found! Longest found: ${longest.join(', ')}`,
+      numTargetWordPaths: targetWordPaths.length,
+    };
   }
-
-  // Ensure there is only one path to form the target word
   if (targetWordPaths.length !== 1) {
-    throw new Error(`[Validator] Target word '${targetWord}' can be formed in ${targetWordPaths.length} ways (should be unique).`);
+    return {
+      longestWords,
+      isValid: false,
+      reason: `[Validator] Target word '${targetWord}' can be formed in ${targetWordPaths.length} ways (should be unique).`,
+      numTargetWordPaths: targetWordPaths.length,
+    };
   }
 
-  return longestWords;
+  return {
+    longestWords,
+    isValid: true,
+    numTargetWordPaths: 1,
+  };
 } 
