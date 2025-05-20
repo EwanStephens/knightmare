@@ -6,15 +6,11 @@ import path from 'path';
 import fs from 'fs/promises';
 import { generatePuzzleId, getPuzzlePathFromId, checkPuzzleIdExists } from '../src/utils/puzzleUtils';
 
-export async function createLevel(wordLength: number, extraLetters: number) {
+export async function createLevelWithTargetWord(targetWord: string, extraLetters: number, fromWordbank: boolean) {
   try {
-    console.log(`[Level Creator] Starting with word length ${wordLength} and ${extraLetters} extra letters.`);
+    console.log(`[Level Creator] Starting with target word '${targetWord}' (length ${targetWord.length}) and ${extraLetters} extra letters.`);
 
-    // 1. Pick a target word
-    const targetWord = await getAndUseRandomWord(wordLength);
-    console.log(`[Level Creator] Picked target word: ${targetWord}`);
-
-    // 2. Generate the board (with error handling)
+    // 1. Generate the board (with error handling)
     let board, targetPath, legalCaptures;
     try {
       const result: GeneratedBoardResult = await generateBoard(targetWord, extraLetters);
@@ -23,17 +19,17 @@ export async function createLevel(wordLength: number, extraLetters: number) {
       legalCaptures = result.legalCaptures;
       console.log('[Level Creator] Board generated.');
     } catch (err) {
-      // Move word back to unused if board generation fails
-      await moveWordBackToUnused(wordLength, targetWord);
-      console.error(`[Level Creator] Board generation failed: ${err}. Target word moved back to unused.`);
+      // Move word back to unused if fromWordbank
+      if (fromWordbank) await moveWordBackToUnused(targetWord.length, targetWord);
+      console.error(`[Level Creator] Board generation failed: ${err}.` + (fromWordbank ? ' Target word moved back to unused.' : ''));
       return { success: false, error: err };
     }
 
-    // 3. Validate and find longest words
+    // 2. Validate and find longest words
     const validation: ValidationResult = await findLongestWords(board, targetWord);
     console.log(`[Level Creator] Longest words found: ${validation.longestWords.join(', ')}`);
 
-    // 4. Handle validation result
+    // 3. Handle validation result
     if (!validation.isValid) {
       // Save to interesting directory
       const interestingDir = path.join(__dirname, '../src/interesting');
@@ -45,14 +41,14 @@ export async function createLevel(wordLength: number, extraLetters: number) {
         reason: validation.reason,
         numTargetWordPaths: validation.numTargetWordPaths,
       } as any);
-      // Move word back to unused
-      await moveWordBackToUnused(wordLength, targetWord);
-      console.error(`[Level Creator] Validation failed: ${validation.reason}. Puzzle saved to ${filename}. Target word moved back to unused.`);
+      // Move word back to unused if fromWordbank
+      if (fromWordbank) await moveWordBackToUnused(targetWord.length, targetWord);
+      console.error(`[Level Creator] Validation failed: ${validation.reason}. Puzzle saved to ${filename}.` + (fromWordbank ? ' Target word moved back to unused.' : ''));
       return { success: false, error: validation.reason };
     }
 
-    // 5. Output to puzzles directory with new ID logic
-    const puzzleId = await generatePuzzleId(wordLength, extraLetters, checkPuzzleIdExists);
+    // 4. Output to puzzles directory with new ID logic
+    const puzzleId = await generatePuzzleId(targetWord.length, extraLetters, checkPuzzleIdExists);
     const puzzlePath = getPuzzlePathFromId(puzzleId);
     const puzzlesDir = path.dirname(puzzlePath);
     await fs.mkdir(puzzlesDir, { recursive: true });
@@ -65,25 +61,63 @@ export async function createLevel(wordLength: number, extraLetters: number) {
   }
 }
 
+export async function createLevelWithWordLength(wordLength: number, extraLetters: number) {
+  try {
+    const targetWord = await getAndUseRandomWord(wordLength);
+    return await createLevelWithTargetWord(targetWord, extraLetters, true);
+  } catch (err) {
+    console.error('[Level Creator] Error picking word from wordbank:', err);
+    return { success: false, error: err };
+  }
+}
+
 // CLI usage
 if (require.main === module) {
-  const [,, wordLengthArg, extraLettersArg] = process.argv;
-  if (!wordLengthArg || !extraLettersArg) {
-    console.error('Usage: ts-node scripts/create_level.ts <wordLength> <extraLetters>');
-    process.exit(1);
-  }
-  const wordLength = parseInt(wordLengthArg, 10);
-  const extraLetters = parseInt(extraLettersArg, 10);
-  if (isNaN(wordLength) || isNaN(extraLetters)) {
-    console.error('Both arguments must be numbers.');
-    process.exit(1);
-  }
-  createLevel(wordLength, extraLetters).then(result => {
-    if (result.success) {
-      console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
-    } else {
-      console.error(`[Level Creator] Failed: ${result.error}`);
+  const args = process.argv.slice(2);
+  let wordLength: number | undefined;
+  let extraLetters: number | undefined;
+  let explicitTargetWord: string | undefined;
+
+  if (args[0] === '--word') {
+    // Mode: --word <targetWord> <extraLetters>
+    if (args.length !== 3) {
+      console.error('Usage: ts-node scripts/create_level.ts --word <targetWord> <extraLetters>');
       process.exit(1);
     }
-  });
+    explicitTargetWord = args[1];
+    extraLetters = parseInt(args[2], 10);
+    if (!explicitTargetWord || isNaN(extraLetters)) {
+      console.error('Usage: ts-node scripts/create_level.ts --word <targetWord> <extraLetters>');
+      process.exit(1);
+    }
+    createLevelWithTargetWord(explicitTargetWord, extraLetters, false).then(result => {
+      if (result.success) {
+        console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
+      } else {
+        console.error(`[Level Creator] Failed: ${result.error}`);
+        process.exit(1);
+      }
+    });
+  } else {
+    // Mode: <wordLength> <extraLetters>
+    if (args.length !== 2) {
+      console.error('Usage: ts-node scripts/create_level.ts <wordLength> <extraLetters>');
+      console.error('   or: ts-node scripts/create_level.ts --word <targetWord> <extraLetters>');
+      process.exit(1);
+    }
+    wordLength = parseInt(args[0], 10);
+    extraLetters = parseInt(args[1], 10);
+    if (isNaN(wordLength) || isNaN(extraLetters)) {
+      console.error('Both arguments must be numbers.');
+      process.exit(1);
+    }
+    createLevelWithWordLength(wordLength, extraLetters).then(result => {
+      if (result.success) {
+        console.log(`[Level Creator] Success! Puzzle ID: ${result.puzzleId}`);
+      } else {
+        console.error(`[Level Creator] Failed: ${result.error}`);
+        process.exit(1);
+      }
+    });
+  }
 } 
