@@ -21,6 +21,7 @@ SOWPODS_PATH = os.path.join(ENGLISH_WORDS_DIR, 'sowpods.txt')
 # Log files
 LOG_PLURALS = os.path.join(ENGLISH_WORDS_DIR, 'merge_filtered_plurals.txt')
 LOG_NOT_SCRABBLE = os.path.join(ENGLISH_WORDS_DIR, 'merge_filtered_not_scrabble.txt')
+LOG_ADDED = os.path.join(ENGLISH_WORDS_DIR, 'merge_added_words.txt')
 
 # Load SOWPODS as lowercase set
 with open(SOWPODS_PATH, 'r') as f:
@@ -50,6 +51,7 @@ with open(LOG_PLURALS, 'w') as log_plurals, open(LOG_NOT_SCRABBLE, 'w') as log_n
         filtered_by_length[len(word)].add(word)
 
 # Merge into new wordbanks
+added_by_length = defaultdict(list)
 for length, words in filtered_by_length.items():
     out_path = os.path.join(NEW_WORDBANKS_DIR, f'{length}_letter_words.json')
     if not os.path.exists(out_path):
@@ -59,8 +61,22 @@ for length, words in filtered_by_length.items():
     # Add only words not already present
     existing = set(data['unused_words'])
     new_words = sorted(existing.union(words))
+    actually_added = sorted(words - existing)
+    if actually_added:
+        added_by_length[length].extend(actually_added)
     data['unused_words'] = new_words
     with open(out_path, 'w') as f:
         json.dump(data, f, indent=2)
+
+# Write log of all additions
+def write_additions_log():
+    with open(LOG_ADDED, 'w') as f:
+        for length in sorted(added_by_length.keys()):
+            f.write(f"--- {length} letter words ---\n")
+            for word in added_by_length[length]:
+                f.write(word + '\n')
+            f.write('\n')
+
+write_additions_log()
 
 print('Merged original wordbanks into new wordbanks, filtered and deduplicated.') 
