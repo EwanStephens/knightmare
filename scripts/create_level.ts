@@ -1,5 +1,5 @@
 import { getAndUseRandomWord } from '../src/level_creator/wordbankManager';
-import { generateBoard } from '../src/level_creator/boardGenerator';
+import { generateBoard, GeneratedBoardResult } from '../src/level_creator/boardGenerator';
 import { findLongestWords } from '../src/level_creator/validator';
 import { serializeLevel } from '../src/level_creator/serializer';
 import fs from 'fs/promises';
@@ -35,7 +35,7 @@ async function main() {
   console.log(`[Level Creator] Picked target word: ${targetWord}`);
 
   // 2. Generate the board
-  const board = await generateBoard(targetWord, extraLetters);
+  const { board, targetPath, legalCaptures }: GeneratedBoardResult = await generateBoard(targetWord, extraLetters);
   console.log('[Level Creator] Board generated.');
 
   // 3. Validate and find longest words
@@ -44,7 +44,7 @@ async function main() {
 
   // 4. Serialize to JSON
   const nextLevelNum = await getNextLevelNumber();
-  await serializeLevel(board, longestWords, `src/levels/level_${nextLevelNum}.json`);
+  await serializeLevel(board, longestWords, `src/levels/level_${nextLevelNum}.json`, { targetPath, legalCaptures });
   console.log('[Level Creator] Level serialized to JSON.');
 }
 

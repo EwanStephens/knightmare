@@ -74,13 +74,20 @@ function dumpBoard(board: Square[][]): string {
   return out;
 }
 
-export async function generateBoard(targetWord: string, extraLetters: number): Promise<Square[][]> {
+export interface GeneratedBoardResult {
+  board: Square[][];
+  targetPath: string[]; // algebraic positions in order for the target word
+  legalCaptures: Record<string, number>; // position -> number of legal captures
+}
+
+export async function generateBoard(targetWord: string, extraLetters: number): Promise<GeneratedBoardResult> {
   let attempts = 0;
   while (attempts < 10) {
     attempts++;
     console.log(`[BoardGenerator] Attempt ${attempts} to generate board for word: ${targetWord}`);
     const board = createEmptyBoard();
     const previousSquares: string[] = [];
+    const targetPath: string[] = [];
     let success = true;
 
     // 1. Pick a random starting square
@@ -94,6 +101,7 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
       letter: targetWord[0].toUpperCase(),
     };
     previousSquares.push(startSquare.position);
+    targetPath.push(startSquare.position);
 
     let currentPos = start;
     let currentColor = startColor;
@@ -157,6 +165,7 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
       // 6. Place the piece and update state
       board[nextPos.row][nextPos.col].piece = nextPiece;
       previousSquares.push(positionToAlgebraic(nextPos.row, nextPos.col));
+      targetPath.push(positionToAlgebraic(nextPos.row, nextPos.col));
       currentPos = nextPos;
       currentColor = nextColor;
     }
@@ -187,7 +196,29 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
     }
     console.log('[BoardGenerator] Board successfully generated.');
     console.log('[BoardGenerator] Final board state:\n' + dumpBoard(board));
-    return board;
+
+    // Calculate legal captures for each square with a piece
+    const legalCaptures: Record<string, number> = {};
+    for (let row = 0; row < 5; row++) {
+      for (let col = 0; col < 5; col++) {
+        const sq = board[row][col];
+        if (sq.piece) {
+          const captures = getLegalCaptureSquares(
+            sq.piece,
+            { row, col },
+            board,
+            []
+          );
+          legalCaptures[sq.position] = captures.length;
+        }
+      }
+    }
+
+    return {
+      board,
+      targetPath,
+      legalCaptures,
+    };
   }
   throw new Error('[BoardGenerator] Failed to generate a valid board after 10 attempts.');
 } 
