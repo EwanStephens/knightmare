@@ -555,9 +555,7 @@
     "dawn",
     "carl",
     "coat",
-    "doll",
     "reed",
-    "mice",
     "temp",
     "vast",
     "wrap",
@@ -789,7 +787,6 @@
     "lazy",
     "carb",
     "worm",
-    "deaf",
     "blah",
     "mime",
     "keen",
@@ -834,7 +831,11 @@
     "yarn",
     "knit",
     "pike",
-    "bent"
+    "bent",
+    "deaf"
   ],
-  "used_words": []
+  "used_words": [
+    "doll",
+    "mice"
+  ]
 }

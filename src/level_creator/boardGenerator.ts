@@ -1,5 +1,5 @@
 import { ChessPiece, PieceType, Position, Square } from '../types/chess';
-import { positionToAlgebraic, getLegalMoves, getSquaresOnPath, getLegalCaptureSquares } from '../utils/chess';
+import { positionToAlgebraic, getLegalMoves, getSquaresOnPath, getLegalCaptureSquares, getLegalCaptures } from '../utils/chess';
 
 const PIECE_TYPES: PieceType[] = ['pawn', 'knight', 'bishop', 'rook', 'queen'];
 const PIECE_COLORS: ('white' | 'black')[] = ['white', 'black'];
@@ -196,14 +196,13 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
     }
     console.log('[BoardGenerator] Board successfully generated.');
     console.log('[BoardGenerator] Final board state:\n' + dumpBoard(board));
-
     // Calculate legal captures for each square with a piece
     const legalCaptures: Record<string, number> = {};
     for (let row = 0; row < 5; row++) {
       for (let col = 0; col < 5; col++) {
         const sq = board[row][col];
         if (sq.piece) {
-          const captures = getLegalCaptureSquares(
+          const captures = getLegalCaptures(
             sq.piece,
             { row, col },
             board,
@@ -213,6 +212,13 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
         }
       }
     }
+    // Log the target path
+    console.log('[BoardGenerator] Target path:', targetPath.join(' -> '));
+    // Log the number of legal captures for each square
+    console.log('[BoardGenerator] Legal captures per square:');
+    Object.entries(legalCaptures).forEach(([pos, count]) => {
+      console.log(`  ${pos}: ${count}`);
+    });
 
     return {
       board,
