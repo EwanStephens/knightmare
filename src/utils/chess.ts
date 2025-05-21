@@ -213,16 +213,32 @@ export const getLegalCaptures = (
   return legalCaptures;
 };
 
-export const getLegalCaptureSquares = (
+export const getPotentialEmptyCaptureSquares = (
   piece: ChessPiece,
   position: Position,
   board: Square[][],
   previousSquares: string[] = []
 ): Position[] => {
-  const moves = getLegalMoves(piece, position, board, previousSquares);
   if (piece.type === 'pawn') {
-    // Only diagonal moves for pawns
-    return moves.filter(move => Math.abs(move.col - position.col) === 1 && Math.abs(move.row - position.row) === 1);
+    const results: Position[] = [];
+    const dir = piece.color === 'white' ? -1 : 1; // white moves up, black moves down
+    const diagonals = [
+      { row: position.row + dir, col: position.col - 1 },
+      { row: position.row + dir, col: position.col + 1 },
+    ];
+    for (const diag of diagonals) {
+      if (
+        diag.row >= 0 && diag.row < 5 &&
+        diag.col >= 0 && diag.col < 5 &&
+        !board[diag.row][diag.col].piece
+      ) {
+        results.push({ row: diag.row, col: diag.col });
+      }
+    }
+    return results;
+  } else {
+    return getLegalMoves(piece, position, board, previousSquares).filter(
+      pos => !board[pos.row][pos.col].piece
+    );
   }
-  return moves;
 }; 
