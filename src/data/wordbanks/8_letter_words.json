@@ -513,7 +513,6 @@
     "periodic",
     "personal",
     "petition",
-    "pharmacy",
     "physical",
     "pipeline",
     "planning",
@@ -784,5 +783,7 @@
     "wrapping",
     "yourself"
   ],
-  "used_words": []
+  "used_words": [
+    "pharmacy"
+  ]
 }

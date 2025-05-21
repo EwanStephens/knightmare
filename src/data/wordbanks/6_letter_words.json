@@ -740,7 +740,6 @@
     "relief",
     "reload",
     "remain",
-    "remark",
     "remedy",
     "remind",
     "remote",
@@ -1031,5 +1030,7 @@
     "yellow",
     "zoning"
   ],
-  "used_words": []
+  "used_words": [
+    "remark"
+  ]
 }

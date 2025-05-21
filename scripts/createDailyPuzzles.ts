@@ -68,9 +68,9 @@ async function createAndAssignPuzzle(calendar: any, dateStr: string, type: 'shor
 async function main() {
   const [,, startDateStr, endDateStr] = process.argv;
   if (!startDateStr || !endDateStr) {
-    console.error('Usage: ts-node scripts/createDailyPuzzles.ts <start-date> <end-date>');
+    console.error('Usage: npx ts-node --compiler-options "{\"module\":\"CommonJS\"}" scripts/createDailyPuzzles.ts <start-date> <end-date>');
     console.error('  <start-date> and <end-date> must be in YYYY-MM-DD format.');
-    console.error('  Example: ts-node scripts/createDailyPuzzles.ts 2025-06-01 2025-06-07');
+    console.error('  Example: npx ts-node --compiler-options "{\"module\":\"CommonJS\"}" scripts/createDailyPuzzles.ts 2025-06-01 2025-06-01');
     process.exit(1);
   }
   const startDate = parseDate(startDateStr);
