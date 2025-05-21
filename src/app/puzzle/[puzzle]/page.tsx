@@ -33,7 +33,13 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
 
   // Prepare props for ChessBoard
   const targetWord = puzzleData.targetWords[0];
-  const congratsMessage = `Congratulations! You found the word ${targetWord}!`;
+  let congratsMessage = `Congratulations! You found the word ${targetWord}!`;
+  // If this is today's long puzzle, add extra congrats
+  const today = new Date().toISOString().slice(0, 10);
+  const daily = getDailyPuzzlesForDate(today);
+  if (daily && daily.long === puzzleId) {
+    congratsMessage += ' You completed all the daily puzzles! See you tomorrow.';
+  }
   // ...construct board as in levelLoader.ts if needed...
 
   return (

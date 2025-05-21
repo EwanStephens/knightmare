@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect } from 'react';
 import { getDailyPuzzlesForDate } from '@/utils/calendar';
-import { redirect } from 'next/navigation';
+import { getDailyPuzzleProgress } from '@/utils/gameState';
+import { useRouter } from 'next/navigation';
 
 function getTodayString() {
   const today = new Date();
@@ -7,11 +11,27 @@ function getTodayString() {
 }
 
 export default function DailyRedirectPage() {
-  const today = getTodayString();
-  const puzzles = getDailyPuzzlesForDate(today);
-  if (!puzzles || !puzzles.short) {
-    // Optionally render a fallback or error page
-    return <div className="min-h-screen flex items-center justify-center">No daily puzzle found for today.</div>;
-  }
-  redirect(`/puzzle/${puzzles.short}`);
+  const router = useRouter();
+  useEffect(() => {
+    const today = getTodayString();
+    const puzzles = getDailyPuzzlesForDate(today);
+    if (!puzzles) {
+      router.replace('/');
+      return;
+    }
+    const progress = getDailyPuzzleProgress(today);
+    let target = puzzles.short;
+    if (progress.short) {
+      target = puzzles.medium;
+      if (progress.medium) {
+        target = puzzles.long;
+      }
+    }
+    if (progress.short && progress.medium && progress.long) {
+      // All done, go to long for congrats
+      target = puzzles.long;
+    }
+    router.replace(`/puzzle/${target}`);
+  }, [router]);
+  return <div className="min-h-screen flex items-center justify-center">Redirecting to your daily puzzle...</div>;
 } 
