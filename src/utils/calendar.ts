@@ -1,13 +1,9 @@
-import calendarDataRaw from '@/data/calendar/calendar.json';
+import calendarData from '@/data/calendar/calendar.json';
 
 export interface DailyPuzzles {
   short: string;
   medium: string;
   long: string;
-}
-
-interface CalendarDates {
-  [date: string]: DailyPuzzles;
 }
 
 interface CalendarPuzzleInfo {
@@ -16,25 +12,19 @@ interface CalendarPuzzleInfo {
   type: 'short' | 'medium' | 'long';
 }
 
-interface CalendarPuzzles {
-  [puzzleId: string]: CalendarPuzzleInfo;
-}
-
 interface CalendarData {
-  dates: CalendarDates;
-  puzzles: CalendarPuzzles;
+  dates: { [date: string]: DailyPuzzles };
+  puzzles: { [puzzleId: string]: CalendarPuzzleInfo };
 }
-
-const calendarData = calendarDataRaw as CalendarData;
 
 export function getDailyPuzzlesForDate(date: string): DailyPuzzles | null {
-  return calendarData.dates[date] || null;
+  return (calendarData as CalendarData).dates[date] || null;
 }
 
 export function getDateForPuzzleId(puzzleId: string): string | null {
-  return calendarData.puzzles[puzzleId]?.date || null;
+  return (calendarData as CalendarData).puzzles[puzzleId]?.date || null;
 }
 
 export function getPuzzleTypeForId(puzzleId: string): 'short' | 'medium' | 'long' | null {
-  return calendarData.puzzles[puzzleId]?.type || null;
+  return (calendarData as CalendarData).puzzles[puzzleId]?.type || null;
 } 
