@@ -541,7 +541,6 @@
     "southwest",
     "specially",
     "specialty",
-    "specified",
     "spiritual",
     "spokesman",
     "sponsored",
@@ -626,5 +625,7 @@
     "wrestling",
     "yesterday"
   ],
-  "used_words": []
+  "used_words": [
+    "specified"
+  ]
 }
