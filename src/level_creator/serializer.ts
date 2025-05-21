@@ -26,7 +26,17 @@ export async function serializeLevel(
       }
     }
   }
-  const data: any = {
+  const data: {
+    pieces: {
+      position: string;
+      type: string;
+      color: string;
+      letter: string;
+    }[];
+    targetWords: string[];
+    targetPath?: string[];
+    legalCaptures?: Record<string, number>;
+  } = {
     pieces,
     targetWords: words.map(w => w.toUpperCase()),
   };
