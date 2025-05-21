@@ -1,6 +1,8 @@
 import path from 'path';
 import { customAlphabet } from 'nanoid';
 import fs from 'fs/promises';
+import { LoadedLevel } from '@/types/level';
+import { createEmptyBoard } from './board';
 
 const NANOID_LENGTH = 7;
 const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', NANOID_LENGTH);
@@ -33,4 +35,18 @@ export async function checkPuzzleIdExists(id: string): Promise<boolean> {
   } catch {
     return false;
   }
+}
+
+export async function loadPuzzleById(puzzleId: string): Promise<LoadedLevel> {
+  const puzzlePath = getPuzzlePathFromId(puzzleId);
+  const puzzleData = await import(`../../${puzzlePath}`).then(m => m.default);
+  const board = createEmptyBoard();
+  puzzleData.pieces.forEach((piece: any) => {
+    const { position, ...pieceData } = piece;
+    const { row, col } = require('./chess').algebraicToPosition(position);
+    board[row][col].piece = pieceData;
+  });
+  const targetWord = puzzleData.targetWords[0];
+  const congratsMessage = `Congratulations! You found the word ${targetWord}!`;
+  return { board, targetWord, congratsMessage };
 } 

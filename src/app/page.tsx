@@ -70,6 +70,12 @@ export default function Home() {
           >
             Tutorial
           </button>
+          <button
+            className="px-6 py-3 bg-yellow-500 text-white rounded-lg text-xl font-semibold hover:bg-yellow-600 w-64"
+            onClick={() => router.push('/play/daily')}
+          >
+            Daily Puzzles
+          </button>
         </div>
       )}
     </main>

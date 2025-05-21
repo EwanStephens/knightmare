@@ -5,6 +5,7 @@
 const TUTORIAL_COMPLETED_KEY = 'knightmare_tutorial_completed';
 const COMPLETED_LEVELS_KEY = 'knightmare_completed_levels';
 const CURRENT_LEVEL_KEY = 'knightmare_current_level';
+const DAILY_PUZZLE_PROGRESS_KEY = 'knightmare_daily_puzzle_progress';
 
 // Check if running on client side
 const isBrowser = typeof window !== 'undefined';
@@ -78,4 +79,40 @@ export const updateLevelOnCompletion = (level: number): void => {
   if (level < 20) {
     setCurrentLevel(level + 1);
   }
-}; 
+};
+
+// Daily puzzle progress
+export interface DailyPuzzleProgress {
+  short?: boolean;
+  medium?: boolean;
+  long?: boolean;
+}
+
+export function getDailyPuzzleProgress(date: string): DailyPuzzleProgress {
+  if (!isBrowser) return {};
+  const stored = localStorage.getItem(DAILY_PUZZLE_PROGRESS_KEY);
+  if (!stored) return {};
+  try {
+    const allProgress: { [date: string]: DailyPuzzleProgress } = JSON.parse(stored);
+    return allProgress[date] || {};
+  } catch {
+    return {};
+  }
+}
+
+export function setDailyPuzzleProgress(date: string, progress: DailyPuzzleProgress): void {
+  if (!isBrowser) return;
+  const stored = localStorage.getItem(DAILY_PUZZLE_PROGRESS_KEY);
+  let allProgress: { [date: string]: DailyPuzzleProgress } = {};
+  if (stored) {
+    try {
+      allProgress = JSON.parse(stored);
+    } catch {}
+  }
+  allProgress[date] = { ...allProgress[date], ...progress };
+  localStorage.setItem(DAILY_PUZZLE_PROGRESS_KEY, JSON.stringify(allProgress));
+}
+
+export function isDailyPuzzleCompleted(date: string, type: 'short' | 'medium' | 'long'): boolean {
+  return !!getDailyPuzzleProgress(date)[type];
+} 
