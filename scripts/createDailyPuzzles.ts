@@ -57,7 +57,7 @@ async function createAndAssignPuzzle(calendar: any, dateStr: string, type: 'shor
         calendar.puzzles[String(result.puzzleId)] = { date: dateStr, length: wordLength, type };
         return;
       }
-      console.warn(`[DailyPuzzles] Attempt ${attempt} failed for ${type} puzzle on ${dateStr}`);
+      console.warn(`[DailyPuzzles] Attempt ${attempt} failed for ${type} puzzle on ${dateStr}. Error: ${result.error}`);
     } catch (e) {
       console.warn(`[DailyPuzzles] Attempt ${attempt} error for ${type} puzzle on ${dateStr}:`, e);
     }
@@ -69,6 +69,8 @@ async function main() {
   const [,, startDateStr, endDateStr] = process.argv;
   if (!startDateStr || !endDateStr) {
     console.error('Usage: ts-node scripts/createDailyPuzzles.ts <start-date> <end-date>');
+    console.error('  <start-date> and <end-date> must be in YYYY-MM-DD format.');
+    console.error('  Example: ts-node scripts/createDailyPuzzles.ts 2025-06-01 2025-06-07');
     process.exit(1);
   }
   const startDate = parseDate(startDateStr);
@@ -88,13 +90,8 @@ async function main() {
     if (!calendar.dates[dateStr]) calendar.dates[dateStr] = {};
     await createAndAssignPuzzle(calendar, dateStr, 'short', [5, 6]);
     await createAndAssignPuzzle(calendar, dateStr, 'medium', [7, 8]);
-    // Find all lengths 9+
-    const longOptions = [];
-    for (let l = 9; l <= 15; l++) { // Assume max word length 15
-      if (await getNumUnusedWords(l) > 0) longOptions.push(l);
-    }
-    if (longOptions.length === 0) throw new Error('No unused words available for long puzzle');
-    await createAndAssignPuzzle(calendar, dateStr, 'long', longOptions);
+    // Long puzzle: just use [9,10,11,12,13,14,15] as options
+    await createAndAssignPuzzle(calendar, dateStr, 'long', [9, 10, 11, 12, 13, 14, 15]);
     // Save after each day
     await fs.mkdir(path.dirname(calendarPath), { recursive: true });
     await fs.writeFile(calendarPath, JSON.stringify(calendar, null, 2), 'utf-8');
