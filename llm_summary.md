@@ -211,4 +211,19 @@ When validating moves, check:
 1. Board state must be updated after each move
 2. Previous moves in current word sequence must be tracked
 3. Visual feedback must be updated in real-time
-4. Invalid moves must trigger appropriate error messages and visual cues 
+4. Invalid moves must trigger appropriate error messages and visual cues
+
+## Level Creator CLI (2025 Update)
+- Now uses yargs for robust argument parsing
+- Usage:
+  - `--word-length <number>`: Pick a word of this length from the wordbank
+  - `--word <targetWord>`: Use an explicit target word
+  - `--extra-letters <number>`: (Optional, default 0) Add extra random letters
+  - `--test`: (Optional) Dry run, no wordbank or file writes
+- Exactly one of `--word-length` or `--word` must be specified
+- No positional arguments are used
+
+## Board Generation & Pawn Logic
+- Board generator now uses `getPotentialEmptyCaptureSquares` for pathfinding and piece placement
+- Pawn logic is now correct for both white and black pawns (diagonal, forward, and edge cases)
+- Unit tests for chess utilities expanded and improved 
