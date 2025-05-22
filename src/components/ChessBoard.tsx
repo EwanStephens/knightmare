@@ -260,36 +260,43 @@ export default function ChessBoard({
       setHighlightedHintSquare(firstLetterSquare);
       setHintStep(HintStep.FirstLetter);
     } else if (hintStep === HintStep.FirstLetter && revealPath) {
-      setHintStep(HintStep.Reveal);
-      setIsRevealing(true);
-      setHighlightedHintSquare(null); // Clear first letter hint
-      setCrossedOutSquares([]); // Clear crossed out squares
-      // Animate reveal, starting with first letter highlighted
-      let i = 0;
-      setRevealedPath([]);
-      setHighlightedHintSquare(revealPath[0]);
-      const revealNext = () => {
-        setRevealedPath(path => {
-          const newPath = [...path, revealPath[i]];
-          // Highlight the next square as yellow for the next step
-          if (i + 1 < revealPath.length) {
-            setHighlightedHintSquare(revealPath[i + 1]);
+      handleCancel(); // Clear board state before reveal
+      setTimeout(() => {
+        setHintStep(HintStep.Reveal);
+        setIsRevealing(true);
+        setHighlightedHintSquare(null); // Clear first letter hint
+        setCrossedOutSquares([]); // Clear crossed out squares
+        // Animate reveal, starting with first letter highlighted
+        let i = 0;
+        setRevealedPath([]);
+        setHighlightedHintSquare(revealPath[0]);
+        const revealNext = () => {
+          setRevealedPath(path => {
+            const newPath = [...path, revealPath[i]];
+            // Highlight the next square as yellow for the next step
+            if (i + 1 < revealPath.length) {
+              setHighlightedHintSquare(revealPath[i + 1]);
+            } else {
+              setHighlightedHintSquare(null);
+            }
+            return newPath;
+          });
+          i++;
+          if (i < revealPath.length) {
+            setTimeout(revealNext, 650); // Slower reveal
           } else {
-            setHighlightedHintSquare(null);
+            // Mark puzzle as solved in localStorage if not tutorial
+            if (!tutorialMode && puzzleId) {
+              markPuzzleSolved(puzzleId);
+            }
+            setTimeout(() => {
+              setShowCompleteModal(true);
+              setIsRevealing(false);
+            }, 1800); // Slower final delay
           }
-          return newPath;
-        });
-        i++;
-        if (i < revealPath.length) {
-          setTimeout(revealNext, 400);
-        } else {
-          setTimeout(() => {
-            setShowCompleteModal(true);
-            setIsRevealing(false);
-          }, 1200);
-        }
-      };
-      setTimeout(revealNext, 400);
+        };
+        setTimeout(revealNext, 650);
+      }, 0);
     }
   };
 
