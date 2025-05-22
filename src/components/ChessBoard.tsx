@@ -220,6 +220,37 @@ export default function ChessBoard({
     }
   };
 
+  // Factored out replay logic
+  const handleReplay = () => {
+    if (!gameLevelData) return;
+    setShowCompleteModal(false);
+    setGameState(prevState => ({
+      ...prevState,
+      board: gameLevelData.board.map(row =>
+        row.map(sq => ({
+          ...sq,
+          isSelected: false,
+          isLegalMove: false,
+          isHighlighted: false,
+        }))
+      ),
+      selectedSquare: null,
+      currentWord: '',
+      previousSquares: [],
+      message: '',
+    }));
+    // Notify tutorial system of clear action in tutorial mode
+    if (tutorialMode && onPieceSelected) {
+      onPieceSelected('clear', '');
+    }
+    // Clear all hint/reveal state
+    setHintStep(HintStep.None);
+    setCrossedOutSquares([]);
+    setHighlightedHintSquare(null);
+    setRevealedPath([]);
+    setIsRevealing(false);
+  };
+
   // Handle hint/reveal button click
   const handleHintClick = async () => {
     if (hintStep === HintStep.None && hintSquares) {
@@ -233,10 +264,21 @@ export default function ChessBoard({
       setIsRevealing(true);
       setHighlightedHintSquare(null); // Clear first letter hint
       setCrossedOutSquares([]); // Clear crossed out squares
-      // Animate reveal
+      // Animate reveal, starting with first letter highlighted
       let i = 0;
+      setRevealedPath([]);
+      setHighlightedHintSquare(revealPath[0]);
       const revealNext = () => {
-        setRevealedPath(path => [...path, revealPath[i]]);
+        setRevealedPath(path => {
+          const newPath = [...path, revealPath[i]];
+          // Highlight the next square as yellow for the next step
+          if (i + 1 < revealPath.length) {
+            setHighlightedHintSquare(revealPath[i + 1]);
+          } else {
+            setHighlightedHintSquare(null);
+          }
+          return newPath;
+        });
         i++;
         if (i < revealPath.length) {
           setTimeout(revealNext, 400);
@@ -247,7 +289,6 @@ export default function ChessBoard({
           }, 1200);
         }
       };
-      setRevealedPath([]);
       setTimeout(revealNext, 400);
     }
   };
@@ -284,6 +325,8 @@ export default function ChessBoard({
                   const revealIndex = revealedPath.indexOf(square.position);
                   const isRevealCurrent = isReveal && revealIndex === revealedPath.length - 1;
                   const isRevealPrev = isReveal && revealIndex !== revealedPath.length - 1;
+                  // For first letter hint: show piece+letter with yellow ring/pulse, not just letter
+                  // Only show just the letter if part of revealed path (i.e. after reveal starts)
                   return (
                     <div
                       key={square.position}
@@ -292,8 +335,7 @@ export default function ChessBoard({
                         aspect-square flex items-center justify-center relative
                         transition-colors duration-200
                         ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
-                        ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
-                        ${isHintHighlight ? 'ring-4 ring-yellow-400 z-10' : ''}
+                        ${(isHintHighlight && !isReveal) ? 'ring-4 ring-yellow-400 z-10' : ''}
                         ${isRevealCurrent ? 'bg-[#94A3B8]' : ''}
                         ${isRevealPrev ? 'bg-yellow-200' : ''}
                         ${square.isHighlighted && !isRevealPrev ? 'bg-yellow-200' : ''}
@@ -313,11 +355,11 @@ export default function ChessBoard({
                           </svg>
                         </div>
                       )}
-                      {(tutorialMode && highlightedPosition === square.position) || isHintHighlight ? (
+                      {((tutorialMode && highlightedPosition === square.position) || (isHintHighlight && !isReveal)) && (
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                           <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
                         </div>
-                      ) : null}
+                      )}
                       {square.isLegalMove && !square.piece && (
                         <div className="absolute w-1/4 h-1/4 rounded-full bg-[rgba(50,50,50,0.4)]" />
                       )}
@@ -343,7 +385,8 @@ export default function ChessBoard({
                       )}
                       {square.piece && (
                         <>
-                          {(isHintHighlight || isRevealPrev) ? (
+                          {/* Show just the letter if part of revealed path or if square.isHighlighted (clicked path), else show piece+letter */}
+                          {(isRevealPrev || (square.isHighlighted && !isRevealCurrent)) ? (
                             <div 
                               className="font-bold text-[#769656] z-20 flex items-center justify-center"
                               style={{
@@ -428,7 +471,7 @@ export default function ChessBoard({
                     ${hintStep === HintStep.Reveal ? 'bg-green-600 text-white hover:bg-green-700' : ''}
                     ${isRevealing ? 'opacity-60 cursor-not-allowed' : ''}`}
                 >
-                  {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal Answer' : 'Revealing...'}
+                  {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal' : 'Revealing...'}
                 </button>
               )}
             </div>
@@ -445,34 +488,7 @@ export default function ChessBoard({
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
         {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
-        onReplay={() => {
-          setShowCompleteModal(false);
-          setGameState(prevState => ({
-            ...prevState,
-            board: gameLevelData.board.map(row =>
-              row.map(sq => ({
-                ...sq,
-                isSelected: false,
-                isLegalMove: false,
-                isHighlighted: false,
-              }))
-            ),
-            selectedSquare: null,
-            currentWord: '',
-            previousSquares: [],
-            message: '',
-          }));
-          // Notify tutorial system of clear action in tutorial mode
-          if (tutorialMode && onPieceSelected) {
-            onPieceSelected('clear', '');
-          }
-          // Clear all hint/reveal state
-          setHintStep(HintStep.None);
-          setCrossedOutSquares([]);
-          setHighlightedHintSquare(null);
-          setRevealedPath([]);
-          setIsRevealing(false);
-        }}
+        onReplay={handleReplay}
       />
     </div>
   );
