@@ -309,7 +309,6 @@
     "excuse",
     "exempt",
     "exotic",
-    "expand",
     "expect",
     "expert",
     "export",
@@ -1031,6 +1030,7 @@
     "zoning"
   ],
   "used_words": [
-    "remark"
+    "remark",
+    "expand"
   ]
 }

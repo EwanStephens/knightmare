@@ -181,7 +181,6 @@
     "detective",
     "determine",
     "developed",
-    "developer",
     "deviation",
     "diagnosis",
     "different",
@@ -454,7 +453,6 @@
     "promising",
     "promoting",
     "promotion",
-    "protected",
     "prototype",
     "providing",
     "provision",
@@ -510,7 +508,6 @@
     "reviewing",
     "riverside",
     "sacrifice",
-    "salvation",
     "satellite",
     "satisfied",
     "scheduled",
@@ -623,9 +620,12 @@
     "workplace",
     "worldwide",
     "wrestling",
-    "yesterday"
+    "yesterday",
+    "developer"
   ],
   "used_words": [
-    "specified"
+    "specified",
+    "protected",
+    "salvation"
   ]
 }

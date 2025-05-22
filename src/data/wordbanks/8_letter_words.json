@@ -51,7 +51,6 @@
     "approval",
     "approved",
     "aquarium",
-    "archived",
     "argument",
     "arranged",
     "arrested",
@@ -221,7 +220,6 @@
     "distance",
     "distinct",
     "district",
-    "dividend",
     "division",
     "doctrine",
     "document",
@@ -784,6 +782,8 @@
     "yourself"
   ],
   "used_words": [
-    "pharmacy"
+    "pharmacy",
+    "dividend",
+    "archived"
   ]
 }

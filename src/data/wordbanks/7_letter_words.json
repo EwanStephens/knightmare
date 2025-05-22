@@ -137,7 +137,6 @@
     "ceiling",
     "central",
     "century",
-    "ceramic",
     "certain",
     "chamber",
     "changed",
@@ -972,7 +971,8 @@
     "wrapped",
     "writing",
     "written",
-    "younger"
+    "younger",
+    "ceramic"
   ],
   "used_words": []
 }

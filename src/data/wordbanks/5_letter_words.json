@@ -620,7 +620,6 @@
     "bunch",
     "omega",
     "civic",
-    "saver",
     "grill",
     "grain",
     "wanna",
@@ -776,7 +775,6 @@
     "disco",
     "minus",
     "shade",
-    "digit",
     "lyric",
     "grave",
     "devon",
@@ -924,7 +922,10 @@
     "marsh",
     "theta",
     "stake",
-    "arbor"
+    "arbor",
+    "saver"
   ],
-  "used_words": []
+  "used_words": [
+    "digit"
+  ]
 }

@@ -4,6 +4,16 @@
       "short": "6-2-MZ9btd4",
       "medium": "8-4-Qn1dCzI",
       "long": "9-8-C167J3T"
+    },
+    "2025-05-21": {
+      "short": "6-3-IV9mmhO",
+      "medium": "8-4-QyoYYwb",
+      "long": "9-8-gYNaD8h"
+    },
+    "2025-05-23": {
+      "short": "5-3-fzsrgtk",
+      "medium": "8-6-SL1BHif",
+      "long": "9-8-7gVb2nX"
     }
   },
   "puzzles": {
@@ -19,6 +29,36 @@
     },
     "9-8-C167J3T": {
       "date": "2025-05-22",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-IV9mmhO": {
+      "date": "2025-05-21",
+      "length": 6,
+      "type": "short"
+    },
+    "8-4-QyoYYwb": {
+      "date": "2025-05-21",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-gYNaD8h": {
+      "date": "2025-05-21",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-fzsrgtk": {
+      "date": "2025-05-23",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-SL1BHif": {
+      "date": "2025-05-23",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-7gVb2nX": {
+      "date": "2025-05-23",
       "length": 9,
       "type": "long"
     }
