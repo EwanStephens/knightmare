@@ -1,0 +1,9 @@
+---
+description: Use this rule when you are asked to create a pull request
+globs: 
+alwaysApply: false
+---
+When asked to create a pull request:
+- Use the github MCP tool in preference to the CLI
+- Assume that the feature branch has already been created and all code has been pushed
+- Check the name of the feature branch if you're not sure what it is before creating the pull request
