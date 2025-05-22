@@ -1,7 +1,7 @@
-# Knightmare - LLM Agent Summary
+# SpellCheck - LLM Agent Summary
 
 ## Project Overview
-Knightmare is a word-building puzzle game that combines chess mechanics with word creation. The game is built using Next.js 15.3, React, TypeScript, and Tailwind CSS.
+SpellCheck is a word-building puzzle game that combines chess mechanics with word creation. The game is built using Next.js 15.3, React, TypeScript, and Tailwind CSS.
 
 ## Recent Improvements (2025)
 - **Puzzle Completion Tracking:** Solved puzzle IDs are tracked in localStorage for instant lookup and progress persistence.
@@ -104,8 +104,8 @@ Knightmare is a word-building puzzle game that combines chess mechanics with wor
 
 ## Development Setup
 ```bash
-git clone https://github.com/EwanStephens/knightmare.git
-cd knightmare
+git clone https://github.com/EwanStephens/spellcheck.git
+cd spellcheck
 npm install
 npm run dev
 ```
