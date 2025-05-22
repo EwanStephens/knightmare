@@ -10,7 +10,7 @@
   "tutorialSteps": [
     {
       "id": "level1-intro",
-      "text": "Welcome to Spell Check! In this game, you'll use chess pieces to build words. The goal for each level is shown at the top of the screen.",
+      "text": "Welcome to SpellCheck! In this game, you'll use chess pieces to build words. The goal for each level is shown at the top of the screen.",
       "target": ".level-title",
       "trigger": "load",
       "nextStepId": "level1-select-rook",
