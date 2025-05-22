@@ -82,42 +82,6 @@ export const updateLevelOnCompletion = (level: number): void => {
   }
 };
 
-// Daily puzzle progress
-export interface DailyPuzzleProgress {
-  short?: boolean;
-  medium?: boolean;
-  long?: boolean;
-}
-
-export function getDailyPuzzleProgress(date: string): DailyPuzzleProgress {
-  if (!isBrowser) return {};
-  const stored = localStorage.getItem(DAILY_PUZZLE_PROGRESS_KEY);
-  if (!stored) return {};
-  try {
-    const allProgress: { [date: string]: DailyPuzzleProgress } = JSON.parse(stored);
-    return allProgress[date] || {};
-  } catch {
-    return {};
-  }
-}
-
-export function setDailyPuzzleProgress(date: string, progress: DailyPuzzleProgress): void {
-  if (!isBrowser) return;
-  const stored = localStorage.getItem(DAILY_PUZZLE_PROGRESS_KEY);
-  let allProgress: { [date: string]: DailyPuzzleProgress } = {};
-  if (stored) {
-    try {
-      allProgress = JSON.parse(stored);
-    } catch {}
-  }
-  allProgress[date] = { ...allProgress[date], ...progress };
-  localStorage.setItem(DAILY_PUZZLE_PROGRESS_KEY, JSON.stringify(allProgress));
-}
-
-export function isDailyPuzzleCompleted(date: string, type: 'short' | 'medium' | 'long'): boolean {
-  return !!getDailyPuzzleProgress(date)[type];
-}
-
 // Solved puzzle IDs (for daily/unique puzzles)
 export const getSolvedPuzzleIds = (): Set<string> => {
   if (!isBrowser) return new Set();

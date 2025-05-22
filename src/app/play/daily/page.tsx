@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { getDailyPuzzlesForDate } from '@/utils/calendar';
-import { getDailyPuzzleProgress } from '@/utils/gameState';
+import { getSolvedPuzzleIds } from '@/utils/gameState';
 import { useRouter } from 'next/navigation';
 
 function getTodayString() {
@@ -19,17 +19,17 @@ export default function DailyRedirectPage() {
       router.replace('/');
       return;
     }
-    const progress = getDailyPuzzleProgress(today);
+    const solved = getSolvedPuzzleIds();
     let target = puzzles.short;
-    if (progress.short) {
+    if (!solved.has(puzzles.short)) {
+      target = puzzles.short;
+    } else if (!solved.has(puzzles.medium)) {
       target = puzzles.medium;
-      if (progress.medium) {
-        target = puzzles.long;
-      }
-    }
-    if (progress.short && progress.medium && progress.long) {
-      // All done, go to long for congrats
+    } else if (!solved.has(puzzles.long)) {
       target = puzzles.long;
+    } else {
+      // All done, go to long for congrats, with modal pre-loaded
+      target = `${puzzles.long}?showComplete=1`;
     }
     router.replace(`/puzzle/${target}`);
   }, [router]);
