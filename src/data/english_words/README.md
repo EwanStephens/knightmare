@@ -1,6 +1,6 @@
 # English Word Lists
 
-This directory contains several English word lists used for validation, wordbank generation, and gameplay logic in Knightmare. Each file is sourced from a reputable open-source or public domain project.
+This directory contains several English word lists used for validation, wordbank generation, and gameplay logic in SpellCheck. Each file is sourced from a reputable open-source or public domain project.
 
 ## File Descriptions
 

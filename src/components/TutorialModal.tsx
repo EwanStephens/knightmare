@@ -99,9 +99,9 @@ export default function TutorialModal() {
       <div className={`fixed inset-0 z-50 flex items-center justify-center ${isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
         <div className="fixed inset-0 bg-black bg-opacity-30 dark:bg-opacity-50" onClick={() => {}} />
         <div className="bg-white dark:bg-gray-700 rounded-lg p-6 max-w-md w-full mx-4 z-10 shadow-xl dark:text-white">
-          <h2 className="text-2xl font-bold mb-4">Welcome to Knightmare!</h2>
+          <h2 className="text-2xl font-bold mb-4">Welcome to SpellCheck!</h2>
           <p className="mb-6">
-            Knightmare is a word-building puzzle game that combines chess mechanics with word creation. 
+            SpellCheck is a word-building puzzle game that combines chess mechanics with word creation. 
             Capture pieces using legal chess moves to build the target word.
           </p>
           <div className="flex justify-end">
