@@ -25,11 +25,8 @@ export default function DailyRedirectPage() {
       target = puzzles.short;
     } else if (!solved.has(puzzles.medium)) {
       target = puzzles.medium;
-    } else if (!solved.has(puzzles.long)) {
-      target = puzzles.long;
     } else {
-      // All done, go to long for congrats, with modal pre-loaded
-      target = `${puzzles.long}?showComplete=1`;
+      target = puzzles.long;
     }
     router.replace(`/puzzle/${target}`);
   }, [router]);

@@ -6,6 +6,8 @@ import ChessBoard from '@/components/ChessBoard';
 import { createEmptyBoard } from '@/utils/board';
 import { algebraicToPosition } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
+import { isPuzzleSolved } from '@/utils/gameState';
+import { useEffect, useState } from 'react';
 
 function getPuzzlePathFromId(id: string): string {
   const [wordLength] = id.split('-');
@@ -58,6 +60,14 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
     congratsMessage,
   };
 
+  // Only check solved status on client
+  const [showCompleteModalInitially, setShowCompleteModalInitially] = useState(false);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setShowCompleteModalInitially(isPuzzleSolved(puzzleId));
+    }
+  }, [puzzleId]);
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
       <h1 className="text-2xl font-bold mb-4 dark:text-white">Daily Puzzle</h1>
@@ -67,6 +77,7 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
           nextPuzzleId={nextPuzzleId}
           congratsMessage={congratsMessage}
           puzzleId={puzzleId}
+          showCompleteModalInitially={showCompleteModalInitially}
         />
       </div>
       {/* TODO: Add Next button if nextPuzzleId exists, and handle navigation client-side */}

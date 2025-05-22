@@ -20,6 +20,7 @@ interface ChessBoardProps {
   nextPuzzleId?: string | null;
   congratsMessage?: string;
   puzzleId?: string;
+  showCompleteModalInitially?: boolean;
 }
 
 export default function ChessBoard({ 
@@ -31,7 +32,8 @@ export default function ChessBoard({
   highlightedPosition,
   nextPuzzleId,
   congratsMessage,
-  puzzleId
+  puzzleId,
+  showCompleteModalInitially = false
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -41,7 +43,7 @@ export default function ChessBoard({
     previousSquares: [],
     message: '',
   });
-  const [showCompleteModal, setShowCompleteModal] = useState(false);
+  const [showCompleteModal, setShowCompleteModal] = useState(showCompleteModalInitially);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
 
   useEffect(() => {
