@@ -292,7 +292,7 @@ export default function ChessBoard({
       }
     };
     if (revealPath.length > 0) {
-      revealNext();
+      setTimeout(revealNext, 500);
     }
   };
 
@@ -351,6 +351,7 @@ export default function ChessBoard({
                       className={`
                         aspect-square flex items-center justify-center relative
                         transition-colors duration-200
+                        ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
                         ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
                         ${(isHintHighlight && !isReveal) ? 'ring-4 ring-yellow-400 z-10' : ''}
                         ${isRevealCurrent ? 'bg-[#94A3B8]' : ''}
