@@ -6,16 +6,18 @@ A unique word game that combines chess mechanics with word building. Players mus
 
 - Interactive 5x5 chess board
 - Comprehensive 3-level interactive tutorial
+- Daily puzzle calendar with progress tracking
 - Visual highlighting of:
   - Selected pieces (blue)
   - Legal moves (green corners)
   - Previous moves in current word (yellow)
   - Tutorial guidance (yellow pulsing highlight)
 - Real-time word building display
-- Responsive design that works across all device sizes
+- Responsive design for all device sizes
 - Visual feedback for illegal moves
 - Progressive level system
-- Level picker for jumping to specific challenges
+- Persistent puzzle completion tracking (localStorage)
+- Seamless client/server integration for puzzle data
 
 ## Game Rules
 
@@ -30,6 +32,13 @@ A unique word game that combines chess mechanics with word building. Players mus
   - White pawns move up the board
   - Black pawns move down the board
 
+## Daily Puzzle Calendar
+
+- Each day features three puzzles: short, medium, and long
+- Progress is tracked per puzzle; solved puzzles are remembered in your browser
+- The daily page automatically redirects to the next unsolved puzzle for today
+- See [src/data/calendar/README.md](src/data/calendar/README.md) for calendar details
+
 ## Interactive Tutorial
 
 The game includes a comprehensive 3-level tutorial:
@@ -39,7 +48,7 @@ The game includes a comprehensive 3-level tutorial:
 
 Each tutorial level features:
 - Dedicated URL paths (/tutorial/1, /tutorial/2, /tutorial/3)
-- Contextual popup instructions at top or bottom of screen 
+- Contextual popup instructions at top or bottom of screen
 - Intelligent step progression based on player actions
 - UI element highlighting for guidance (pieces, buttons, etc.)
 - Completion modals between levels with blurred background
@@ -82,4 +91,8 @@ Built with:
 
 ## Level Creation
 
-For information on creating custom levels, see [level_creator/README.md](level_creator/README.md).
+For information on creating custom levels, see [src/level_creator/README.md](src/level_creator/README.md).
+
+## Daily Puzzle Generation
+
+See [src/data/calendar/README.md](src/data/calendar/README.md) for how daily puzzles are generated and managed.
