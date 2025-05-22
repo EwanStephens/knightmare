@@ -6,6 +6,7 @@ import ChessBoard from '@/components/ChessBoard';
 import { createEmptyBoard } from '@/utils/board';
 import { algebraicToPosition } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
+import { ChessPiece } from '@/types/chess';
 
 function getPuzzlePathFromId(id: string): string {
   const [wordLength] = id.split('-');
@@ -83,7 +84,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
   puzzleData.pieces.forEach((piece: { position: string; type: string; color: string; letter: string }) => {
     const { position, ...pieceData } = piece;
     const { row, col } = algebraicToPosition(position);
-    board[row][col].piece = pieceData as import('@/types/chess').ChessPiece;
+    board[row][col].piece = pieceData as ChessPiece;
   });
 
   const levelData: LoadedLevel = {
