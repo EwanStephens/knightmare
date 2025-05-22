@@ -7,7 +7,7 @@ import { LoadedLevel } from '@/types/level';
 import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
-import { markPuzzleSolved } from '@/utils/gameState';
+import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
 
 // Add prop type
 interface ChessBoardProps {
@@ -74,7 +74,6 @@ export default function ChessBoard({
 
   useEffect(() => {
     if (puzzleId && typeof window !== 'undefined') {
-      const { isPuzzleSolved } = require('@/utils/gameState');
       if (isPuzzleSolved(puzzleId)) {
         setShowCompleteModal(true);
       }
