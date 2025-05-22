@@ -2,8 +2,8 @@
 // Utility functions for managing persistent game state using localStorage
 
 // Storage keys
-const TUTORIAL_COMPLETED_KEY = 'knightmare_tutorial_completed';
-const SOLVED_PUZZLE_IDS_KEY = 'knightmare_solved_puzzle_ids';
+const TUTORIAL_COMPLETED_KEY = 'spellcheck_tutorial_completed';
+const SOLVED_PUZZLE_IDS_KEY = 'spellcheck_solved_puzzle_ids';
 
 // Check if running on client side
 const isBrowser = typeof window !== 'undefined';

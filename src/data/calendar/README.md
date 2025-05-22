@@ -1,6 +1,6 @@
-# Knightmare Daily Puzzle Calendar
+# Spell Check Daily Puzzle Calendar
 
-This directory contains the `calendar.json` file, which tracks the mapping between dates and daily puzzles for the Knightmare game.
+This directory contains the `calendar.json` file, which tracks the mapping between dates and daily puzzles for the Spell Check game.
 
 ## calendar.json Structure
 

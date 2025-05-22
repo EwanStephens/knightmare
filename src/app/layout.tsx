@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Knightmare",
+  title: "Spell Check",
   description: "A word-building chess puzzle game",
 };
 
