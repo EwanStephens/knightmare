@@ -62,6 +62,9 @@ Built with:
 - TypeScript
 - Tailwind CSS
 
+### Analytics & Performance Monitoring
+This app integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. Metrics are collected via the `@vercel/analytics` and `@vercel/speed-insights` packages, which are included in the root layout. No manual setup is required beyond deploying to Vercel—insights are available in your Vercel dashboard.
+
 ## Getting Started
 
 1. Clone the repository:

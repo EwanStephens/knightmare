@@ -181,4 +181,8 @@ When validating moves, check:
 - It passes `nextPuzzleId` and a custom `congratsMessage` to the `ChessBoard` client component.
 - `ChessBoard` displays the puzzle and, upon completion, shows the `CompletionModal`.
 - `CompletionModal` uses the `nextPath` prop (from `nextPuzzleId`) to handle client-side navigation to the next puzzle, if available.
-- This architecture keeps puzzle logic and data loading on the server, while UI and navigation are handled on the client for a seamless user experience. 
+- This architecture keeps puzzle logic and data loading on the server, while UI and navigation are handled on the client for a seamless user experience.
+
+## Analytics & Performance Monitoring
+
+Spell Check integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard. 
