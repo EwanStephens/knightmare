@@ -9,6 +9,14 @@ import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
 import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
 
+// Add enum for hint step
+enum HintStep {
+  None = 0,
+  CrossOut = 1,
+  FirstLetter = 2,
+  Reveal = 3
+}
+
 // Add prop type
 interface ChessBoardProps {
   levelData?: LoadedLevel; // Required for non-tutorial mode
@@ -49,7 +57,7 @@ export default function ChessBoard({
   });
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
-  const [hintStep, setHintStep] = useState(0); // 0: none, 1: hintSquares, 2: firstLetter, 3: reveal
+  const [hintStep, setHintStep] = useState<HintStep>(HintStep.None);
   const [crossedOutSquares, setCrossedOutSquares] = useState<string[]>([]);
   const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
   const [revealedPath, setRevealedPath] = useState<string[]>([]);
@@ -214,15 +222,17 @@ export default function ChessBoard({
 
   // Handle hint/reveal button click
   const handleHintClick = async () => {
-    if (hintStep === 0 && hintSquares) {
+    if (hintStep === HintStep.None && hintSquares) {
       setCrossedOutSquares(hintSquares);
-      setHintStep(1);
-    } else if (hintStep === 1 && firstLetterSquare) {
+      setHintStep(HintStep.CrossOut);
+    } else if (hintStep === HintStep.CrossOut && firstLetterSquare) {
       setHighlightedHintSquare(firstLetterSquare);
-      setHintStep(2);
-    } else if (hintStep === 2 && revealPath) {
-      setHintStep(3);
+      setHintStep(HintStep.FirstLetter);
+    } else if (hintStep === HintStep.FirstLetter && revealPath) {
+      setHintStep(HintStep.Reveal);
       setIsRevealing(true);
+      setHighlightedHintSquare(null); // Clear first letter hint
+      setCrossedOutSquares([]); // Clear crossed out squares
       // Animate reveal
       let i = 0;
       const revealNext = () => {
@@ -244,7 +254,7 @@ export default function ChessBoard({
 
   // Reset hint state when board changes (e.g. on replay)
   useEffect(() => {
-    setHintStep(0);
+    setHintStep(HintStep.None);
     setCrossedOutSquares([]);
     setHighlightedHintSquare(null);
     setRevealedPath([]);
@@ -303,11 +313,11 @@ export default function ChessBoard({
                           </svg>
                         </div>
                       )}
-                      {tutorialMode && highlightedPosition === square.position && (
+                      {(tutorialMode && highlightedPosition === square.position) || isHintHighlight ? (
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                           <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
                         </div>
-                      )}
+                      ) : null}
                       {square.isLegalMove && !square.piece && (
                         <div className="absolute w-1/4 h-1/4 rounded-full bg-[rgba(50,50,50,0.4)]" />
                       )}
@@ -414,11 +424,11 @@ export default function ChessBoard({
                   onClick={handleHintClick}
                   disabled={isRevealing}
                   className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg rounded transition-colors duration-200
-                    ${hintStep < 2 ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-yellow-500 text-black hover:bg-yellow-600'}
-                    ${hintStep === 3 ? 'bg-green-600 text-white hover:bg-green-700' : ''}
+                    ${hintStep < HintStep.FirstLetter ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-yellow-500 text-black hover:bg-yellow-600'}
+                    ${hintStep === HintStep.Reveal ? 'bg-green-600 text-white hover:bg-green-700' : ''}
                     ${isRevealing ? 'opacity-60 cursor-not-allowed' : ''}`}
                 >
-                  {hintStep < 2 ? 'Hint' : hintStep === 2 ? 'Reveal Answer' : 'Revealing...'}
+                  {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal Answer' : 'Revealing...'}
                 </button>
               )}
             </div>
@@ -456,6 +466,12 @@ export default function ChessBoard({
           if (tutorialMode && onPieceSelected) {
             onPieceSelected('clear', '');
           }
+          // Clear all hint/reveal state
+          setHintStep(HintStep.None);
+          setCrossedOutSquares([]);
+          setHighlightedHintSquare(null);
+          setRevealedPath([]);
+          setIsRevealing(false);
         }}
       />
     </div>
