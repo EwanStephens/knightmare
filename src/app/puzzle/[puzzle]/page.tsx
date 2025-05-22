@@ -38,7 +38,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
     hintSquares = await getUnusedHintSquares(puzzleId);
     firstLetterSquare = await getFirstLetterHintSquare(puzzleId);
     revealPath = await getRevealAnswerPath(puzzleId);
-  } catch (e) {
+  } catch {
     // If hints fail, just don't show them
     hintSquares = null;
     firstLetterSquare = null;

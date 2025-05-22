@@ -1,6 +1,11 @@
 import { LETTER_FREQUENCY } from './letterFrequency';
 import fs from 'fs';
 import path from 'path';
+import { ChessPiece } from '@/types/chess';
+
+interface PuzzlePiece extends ChessPiece {
+  position: string;
+}
 
 function getPuzzlePathFromId(puzzleId: string): string {
   const [wordLength] = puzzleId.split('-');
@@ -18,7 +23,7 @@ export async function getUnusedHintSquares(puzzleId: string): Promise<string[]> 
   const puzzleData = JSON.parse(fs.readFileSync(puzzlePath, 'utf-8'));
   const targetPath: string[] = puzzleData.targetPath;
   const legalCaptures: Record<string, number> = puzzleData.legalCaptures || {};
-  const allSquares: { position: string; letter: string }[] = puzzleData.pieces.map((p: any) => ({ position: p.position, letter: p.letter }));
+  const allSquares: { position: string; letter: string }[] = (puzzleData.pieces as PuzzlePiece[]).map((p) => ({ position: p.position, letter: p.letter }));
   const unusedSquares = allSquares.filter(sq => !targetPath.includes(sq.position));
 
   // Sort unused squares by legalCaptures desc, then by letter frequency, then by order in file
