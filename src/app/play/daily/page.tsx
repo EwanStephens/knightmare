@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 function getTodayString() {
   const today = new Date();
-  return today.toISOString().slice(0, 10);
+  return today.toLocaleDateString('en-CA');
 }
 
 export default function DailyRedirectPage() {

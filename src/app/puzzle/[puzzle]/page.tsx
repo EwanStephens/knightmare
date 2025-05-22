@@ -48,7 +48,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
   // Find the next puzzle in the daily sequence (if any)
   const puzzleDate = getDateForPuzzleId(puzzleId);
   const puzzleType = getPuzzleTypeForId(puzzleId);
-  const todayStr = new Date().toISOString().slice(0, 10);
+  const todayStr = new Date().toLocaleDateString('en-CA');
 
   let header = '';
   let isFuture = false;
