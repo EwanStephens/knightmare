@@ -357,6 +357,28 @@ export default function ChessBoard({
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
         {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
+        onReplay={() => {
+          setShowCompleteModal(false);
+          setGameState(prevState => ({
+            ...prevState,
+            board: gameLevelData.board.map(row =>
+              row.map(sq => ({
+                ...sq,
+                isSelected: false,
+                isLegalMove: false,
+                isHighlighted: false,
+              }))
+            ),
+            selectedSquare: null,
+            currentWord: '',
+            previousSquares: [],
+            message: '',
+          }));
+          // Notify tutorial system of clear action in tutorial mode
+          if (tutorialMode && onPieceSelected) {
+            onPieceSelected('clear', '');
+          }
+        }}
       />
     </div>
   );
