@@ -12,11 +12,6 @@ export default function TopBar() {
             home
           </span>
         </Link>
-        <Link href="/play/daily" aria-label="Daily Puzzles">
-          <span className="material-symbols-outlined text-yellow-600 dark:text-yellow-400" style={{ fontSize: '28px' }}>
-            calendar_month
-          </span>
-        </Link>
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ export default function Home() {
             Start Tutorial
           </button>
           <button
-            className="px-6 py-3 bg-gray-400 text-white rounded-lg text-xl font-semibold hover:bg-gray-500 w-64"
+            className="px-6 py-3 bg-green-600 text-white rounded-lg text-xl font-semibold hover:bg-green-700 w-64"
             onClick={handleSkipTutorial}
           >
             Skip Tutorial
@@ -53,13 +53,13 @@ export default function Home() {
       ) : (
         <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col gap-4 items-center">
           <button
-            className="px-6 py-3 bg-yellow-500 text-white rounded-lg text-xl font-semibold hover:bg-yellow-600 w-64"
+            className="px-6 py-3 bg-green-600 text-white rounded-lg text-xl font-semibold hover:bg-green-700 w-64"
             onClick={() => router.push('/play/daily')}
           >
-            Daily Puzzles
+            Daily
           </button>
           <button
-            className="px-6 py-3 bg-gray-400 text-white rounded-lg text-xl font-semibold hover:bg-gray-500 w-64"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg text-xl font-semibold hover:bg-blue-700 w-64"
             onClick={() => router.push('/tutorial')}
           >
             Tutorial
