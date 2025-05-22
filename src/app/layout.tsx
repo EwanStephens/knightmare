@@ -5,6 +5,7 @@ import React from "react";
 import TopBar from "@/components/TopBar";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}>
         <TopBar />
+        <GoogleAnalytics gaId="G-SFZLXFGSDV" />
         {children}
         <Analytics />
         <SpeedInsights />
