@@ -63,4 +63,12 @@ This directory contains the modular code for generating chess-based word puzzle 
 - The script ensures the target word is the longest (or joint longest) word on the board.
 - If board generation or validation fails, the word is returned to the unused list (if it was from the wordbank).
 - All modules are written in TypeScript and use only relative imports for compatibility with `ts-node`.
-- Utility functions in `puzzleUtils.ts` allow for programmatic puzzle ID and path management. 
+- Utility functions in `puzzleUtils.ts` allow for programmatic puzzle ID and path management.
+
+## Daily Puzzle Flow and Integration
+
+- The server component for the puzzle page (`src/app/puzzle/[puzzle]/page.tsx`) loads puzzle data and determines the next puzzle in the daily sequence (if any).
+- It passes `nextPuzzleId` and a custom `congratsMessage` as props to the `ChessBoard` client component.
+- `ChessBoard` displays the puzzle and, upon completion, shows the `CompletionModal`.
+- `CompletionModal` uses the `nextPath` prop (derived from `nextPuzzleId`) to handle client-side navigation to the next puzzle, if available.
+- This ensures all puzzle logic and data loading remain on the server, while UI and navigation are handled on the client. 

@@ -227,3 +227,10 @@ When validating moves, check:
 - Board generator now uses `getPotentialEmptyCaptureSquares` for pathfinding and piece placement
 - Pawn logic is now correct for both white and black pawns (diagonal, forward, and edge cases)
 - Unit tests for chess utilities expanded and improved 
+
+## Daily Puzzle Page Server/Client Split (2025 Update)
+- The puzzle page (`src/app/puzzle/[puzzle]/page.tsx`) is a server component that loads puzzle data and determines the next puzzle in the daily sequence.
+- It passes `nextPuzzleId` and a custom `congratsMessage` to the `ChessBoard` client component.
+- `ChessBoard` displays the puzzle and, upon completion, shows the `CompletionModal`.
+- `CompletionModal` uses the `nextPath` prop (from `nextPuzzleId`) to handle client-side navigation to the next puzzle, if available.
+- This architecture keeps puzzle logic and data loading on the server, while UI and navigation are handled on the client for a seamless user experience. 
