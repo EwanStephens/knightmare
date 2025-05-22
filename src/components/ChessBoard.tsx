@@ -356,9 +356,7 @@ export default function ChessBoard({
         onClose={() => setShowCompleteModal(false)}
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
-        currentLevel={0}
-        nextPath={nextPuzzleId ? `/puzzle/${nextPuzzleId}` : undefined}
-        isTutorial={tutorialMode}
+        {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
       />
     </div>
   );
