@@ -260,12 +260,17 @@ export default function ChessBoard({
       setHighlightedHintSquare(firstLetterSquare);
       setHintStep(HintStep.FirstLetter);
     } else if (hintStep === HintStep.FirstLetter && revealPath) {
+      setHighlightedHintSquare(null); // Clear first letter hint before reveal
       handleCancel(); // Clear board state before reveal
       setTimeout(() => {
         setHintStep(HintStep.Reveal);
         setIsRevealing(true);
-        setHighlightedHintSquare(null); // Clear first letter hint
         setCrossedOutSquares([]); // Clear crossed out squares
+        // Fill out the target word below the board
+        setGameState(prevState => ({
+          ...prevState,
+          currentWord: gameLevelData?.targetWord || '',
+        }));
         // Animate reveal, starting with first letter highlighted
         let i = 0;
         setRevealedPath([]);
@@ -465,7 +470,8 @@ export default function ChessBoard({
             <div className="flex gap-4 mt-1 sm:mt-2">
               <button
                 onClick={handleCancel}
-                className="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600"
+                disabled={isRevealing}
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600${isRevealing ? ' opacity-60 cursor-not-allowed' : ''}`}
               >
                 Clear
               </button>
