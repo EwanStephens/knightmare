@@ -119,31 +119,28 @@ export default function ChessBoard({
         return; // Ignore if somehow the selected square has no piece
       }
 
-      // Check if the clicked square is a legal move
-      const legalMoves = getLegalMoves(startSquare.piece, startPos, gameState.board, gameState.previousSquares);
-      const isLegalMove = legalMoves.some(move => move.row === row && move.col === col);
-      if (!isLegalMove) {
-        return; // Silently ignore if not a legal move
-      }
-
       // Check if it's a legal capture
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
-        // Show error message and flash the square red
         setIllegalMoveSquare(position);
-        setTimeout(() => setIllegalMoveSquare(null), 200); // Remove the flash after 200ms
-        
+        setTimeout(() => setIllegalMoveSquare(null), 200);
         setGameState({
           ...gameState,
           message: "Illegal move. You must capture a piece of the opposite color."
         });
         return;
       }
-      
+
       newPreviousSquares = [...gameState.previousSquares, gameState.selectedSquare];
     } else {
-      // Must select a square with a piece for the first selection
+      // First selection: must be a square with a piece
       if (!square.piece) {
-        return; // Silently ignore if first selection has no piece
+        setIllegalMoveSquare(position);
+        setTimeout(() => setIllegalMoveSquare(null), 200);
+        setGameState({
+          ...gameState,
+          message: "Illegal move. You must start by selecting a square containing a piece."
+        });
+        return;
       }
     }
 
@@ -177,7 +174,6 @@ export default function ChessBoard({
       if (!tutorialMode && puzzleId) {
         markPuzzleSolved(puzzleId);
       }
-      // Show modal for non-tutorial mode
       if (!tutorialMode) {
         setTimeout(() => {
           setShowCompleteModal(true);
