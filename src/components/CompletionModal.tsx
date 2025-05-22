@@ -9,6 +9,7 @@ interface CompletionModalProps {
   targetWord: string;
   nextPath?: string;
   onReplay?: () => void;
+  allowReplays?: boolean;
 }
 
 export default function CompletionModal({
@@ -17,7 +18,8 @@ export default function CompletionModal({
   congratsMessage,
   targetWord,
   nextPath,
-  onReplay
+  onReplay,
+  allowReplays = true,
 }: CompletionModalProps) {
   const router = useRouter();
   
@@ -62,12 +64,14 @@ export default function CompletionModal({
               Next Level
             </button>
           )}
-          <button
-            className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition-colors duration-200"
-            onClick={handleReplay}
-          >
-            Play Again
-          </button> 
+          {allowReplays && (
+            <button
+              className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition-colors duration-200"
+              onClick={handleReplay}
+            >
+              Play Again
+            </button>
+          )}
         </div>
       </div>
     </div>
