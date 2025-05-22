@@ -64,7 +64,8 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
       <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
         <ChessBoard
           levelData={levelData}
-          onLevelComplete={undefined} // TODO: handle next puzzle navigation client-side
+          nextPuzzleId={nextPuzzleId}
+          congratsMessage={congratsMessage}
         />
       </div>
       {/* TODO: Add Next button if nextPuzzleId exists, and handle navigation client-side */}

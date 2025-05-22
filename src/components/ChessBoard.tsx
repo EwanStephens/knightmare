@@ -18,6 +18,8 @@ interface ChessBoardProps {
   onPieceSelected?: (position: string, word: string) => void;
   onLevelComplete?: () => void;
   highlightedPosition?: string | null;
+  nextPuzzleId?: string | null;
+  congratsMessage?: string;
 }
 
 export default function ChessBoard({ 
@@ -26,7 +28,9 @@ export default function ChessBoard({
   tutorialLevel,
   onPieceSelected,
   onLevelComplete,
-  highlightedPosition
+  highlightedPosition,
+  nextPuzzleId,
+  congratsMessage
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -155,7 +159,7 @@ export default function ChessBoard({
     // Check if word matches target
     let message = '';
     if (newWord === gameLevelData.targetWord) {
-      message = gameLevelData.congratsMessage || `Congratulations! You found the word ${gameLevelData.targetWord}!`;
+      message = congratsMessage || gameLevelData.congratsMessage || `Congratulations! You found the word ${gameLevelData.targetWord}!`;
       
       // If in tutorial mode, call the completion callback before showing modal
       if (tutorialMode && onLevelComplete) {
@@ -163,7 +167,6 @@ export default function ChessBoard({
       } else if (!tutorialMode) {
         setTimeout(() => {
           setShowCompleteModal(true);
-          // Optionally update localStorage or game state for completed puzzle here
         }, 200);
       }
     }
@@ -337,10 +340,10 @@ export default function ChessBoard({
       <CompletionModal 
         isOpen={showCompleteModal}
         onClose={() => setShowCompleteModal(false)}
-        congratsMessage={gameLevelData.congratsMessage}
+        congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
         currentLevel={0}
-        nextPath={undefined}
+        nextPath={nextPuzzleId ? `/puzzle/${nextPuzzleId}` : undefined}
         isTutorial={tutorialMode}
       />
     </div>
