@@ -15,11 +15,6 @@ export default function Home() {
     }
   }, []);
 
-  const handleStartGame = () => {
-    const currentLevel = getCurrentLevel();
-    router.push(`/play/${currentLevel}`);
-  };
-
   const handleSkipTutorial = () => {
     markTutorialSkipped();
     setShowTutorialPrompt(false);

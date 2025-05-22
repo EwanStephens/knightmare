@@ -52,7 +52,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
       <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
         <h1 className="text-2xl font-bold mb-4 dark:text-white">This puzzle is from the future!</h1>
         <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg text-lg text-center">
-          <p>Whoa there, time traveler. This puzzle hasn't been released yet. Please be patient and try again on the correct day. The chessboard of destiny awaits, but not just yet.</p>
+          <p>Whoa there, time traveler. This puzzle hasn&apos;t been released yet. Please be patient and try again on the correct day. The chessboard of destiny awaits, but not just yet.</p>
         </div>
       </main>
     );

@@ -5,7 +5,6 @@
 const TUTORIAL_COMPLETED_KEY = 'knightmare_tutorial_completed';
 const COMPLETED_LEVELS_KEY = 'knightmare_completed_levels';
 const CURRENT_LEVEL_KEY = 'knightmare_current_level';
-const DAILY_PUZZLE_PROGRESS_KEY = 'knightmare_daily_puzzle_progress';
 const SOLVED_PUZZLE_IDS_KEY = 'knightmare_solved_puzzle_ids';
 
 // Check if running on client side
