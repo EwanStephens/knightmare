@@ -12,7 +12,11 @@ function parseDate(dateStr: string): Date {
 }
 
 function formatDate(date: Date): string {
-  return date.toISOString().slice(0, 10);
+  // Format as YYYY-MM-DD in UTC
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 function randomWeightedChoice<T>(items: T[], weights: number[]): T {
@@ -85,14 +89,16 @@ async function main() {
     calendar = { dates: {} as Record<string, any>, puzzles: {} as Record<string, any> };
   }
 
-  for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+  for (
+    let d = new Date(Date.UTC(startDate.getUTCFullYear(), startDate.getUTCMonth(), startDate.getUTCDate()));
+    d <= endDate;
+    d = new Date(d.getTime() + 24 * 60 * 60 * 1000)
+  ) {
     const dateStr = formatDate(d);
     if (!calendar.dates[dateStr]) calendar.dates[dateStr] = {};
     await createAndAssignPuzzle(calendar, dateStr, 'short', [5, 6]);
     await createAndAssignPuzzle(calendar, dateStr, 'medium', [7, 8]);
-    // Long puzzle: just use [9,10,11,12,13,14,15] as options
     await createAndAssignPuzzle(calendar, dateStr, 'long', [9, 10, 11, 12, 13, 14, 15]);
-    // Save after each day
     await fs.mkdir(path.dirname(calendarPath), { recursive: true });
     await fs.writeFile(calendarPath, JSON.stringify(calendar, null, 2), 'utf-8');
     console.log(`[DailyPuzzles] Created puzzles for ${dateStr}: short=${calendar.dates[dateStr].short}, medium=${calendar.dates[dateStr].medium}, long=${calendar.dates[dateStr].long}`);
