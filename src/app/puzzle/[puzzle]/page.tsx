@@ -18,8 +18,8 @@ function formatDateHeader(dateStr: string): string {
   return date.toLocaleDateString(undefined, options);
 }
 
-export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
-  const puzzleId = params.puzzle;
+export default async function PuzzlePage({ params }: { params: Promise<{ puzzle: string }> }) {
+  const { puzzle: puzzleId } = await params;
   const puzzlePath = getPuzzlePathFromId(puzzleId);
   let puzzleData;
   try {
