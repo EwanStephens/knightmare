@@ -41,6 +41,15 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
         <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta property="og:title" content="SpellCheck" />
+        <meta property="og:description" content="A word-building chess puzzle game" />
+        <meta property="og:image" content="/social-share.png" />
+        <meta property="og:url" content="https://spellcheckpuzzle.fun/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SpellCheck" />
+        <meta name="twitter:description" content="A word-building chess puzzle game" />
+        <meta name="twitter:image" content="/social-share.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}>
         <TopBar />
