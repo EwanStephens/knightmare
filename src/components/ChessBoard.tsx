@@ -251,7 +251,47 @@ export default function ChessBoard({
     setIsRevealing(false);
   };
 
-  // Handle hint/reveal button click
+  // Factored out reveal logic
+  const reveal = () => {
+    if (!revealPath) return;
+    setHintStep(HintStep.Reveal);
+    setIsRevealing(true);
+    let i = 0;
+    setRevealedPath([]);
+    setGameState(prevState => ({
+      ...prevState,
+      currentWord: '',
+    }));
+    const revealNext = () => {
+      setRevealedPath(path => {
+        const newPath = [...path, revealPath[i]];
+        // Update currentWord to show letters as they are revealed (current blue square included)
+        setGameState(prevState => {
+          const newWord = (gameLevelData?.targetWord || '').slice(0, newPath.length);
+          return {
+            ...prevState,
+            currentWord: newWord,
+          };
+        });
+        return newPath;
+      });
+      i++;
+      if (i < revealPath.length) {
+        setTimeout(revealNext, 4000);
+      } else {
+        // Mark puzzle as solved in localStorage if not tutorial
+        if (!tutorialMode && puzzleId) {
+          markPuzzleSolved(puzzleId);
+        }
+        setTimeout(() => {
+          setShowCompleteModal(true);
+          setIsRevealing(false);
+        }, 1800);
+      }
+    };
+    setTimeout(revealNext, 4000);
+  };
+
   const handleHintClick = async () => {
     if (hintStep === HintStep.None && hintSquares) {
       setCrossedOutSquares(hintSquares);
@@ -263,45 +303,7 @@ export default function ChessBoard({
       setHighlightedHintSquare(null); // Clear first letter hint before reveal
       handleCancel(); // Clear board state before reveal
       setTimeout(() => {
-        setHintStep(HintStep.Reveal);
-        setIsRevealing(true);
-        setCrossedOutSquares([]); // Clear crossed out squares
-        // Animate reveal, incrementally filling out the target word
-        let i = 0;
-        setRevealedPath([]);
-        setGameState(prevState => ({
-          ...prevState,
-          currentWord: '',
-        }));
-        const revealNext = () => {
-          setRevealedPath(path => {
-            const newPath = [...path, revealPath[i]];
-            // Update currentWord to show letters as they are revealed
-            setGameState(prevState => {
-              const letterIndex = newPath.length - 1;
-              const newWord = (gameLevelData?.targetWord || '').slice(0, newPath.length);
-              return {
-                ...prevState,
-                currentWord: newWord,
-              };
-            });
-            return newPath;
-          });
-          i++;
-          if (i < revealPath.length) {
-            setTimeout(revealNext, 650); // Slower reveal
-          } else {
-            // Mark puzzle as solved in localStorage if not tutorial
-            if (!tutorialMode && puzzleId) {
-              markPuzzleSolved(puzzleId);
-            }
-            setTimeout(() => {
-              setShowCompleteModal(true);
-              setIsRevealing(false);
-            }, 1800); // Slower final delay
-          }
-        };
-        setTimeout(revealNext, 650);
+        reveal();
       }, 0);
     }
   };
