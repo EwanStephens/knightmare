@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { isTutorialCompleted, getCurrentLevel, markTutorialSkipped } from '@/utils/gameState';
+import { isTutorialCompleted, markTutorialSkipped } from '@/utils/gameState';
 
 export default function Home() {
   const router = useRouter();

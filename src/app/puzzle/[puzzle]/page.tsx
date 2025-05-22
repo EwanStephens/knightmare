@@ -80,10 +80,10 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
 
   // Build the board from pieces
   const board = createEmptyBoard();
-  puzzleData.pieces.forEach((piece: any) => {
+  puzzleData.pieces.forEach((piece: { position: string; type: string; color: string; letter: string }) => {
     const { position, ...pieceData } = piece;
     const { row, col } = algebraicToPosition(position);
-    board[row][col].piece = pieceData;
+    board[row][col].piece = pieceData as import('@/types/chess').ChessPiece;
   });
 
   const levelData: LoadedLevel = {

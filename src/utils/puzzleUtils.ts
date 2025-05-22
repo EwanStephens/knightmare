@@ -3,6 +3,7 @@ import { customAlphabet } from 'nanoid';
 import fs from 'fs/promises';
 import { LoadedLevel } from '@/types/level';
 import { createEmptyBoard } from './board';
+import { algebraicToPosition } from './chess';
 
 const NANOID_LENGTH = 7;
 const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', NANOID_LENGTH);
@@ -41,10 +42,10 @@ export async function loadPuzzleById(puzzleId: string): Promise<LoadedLevel> {
   const puzzlePath = getPuzzlePathFromId(puzzleId);
   const puzzleData = await import(`../../${puzzlePath}`).then(m => m.default);
   const board = createEmptyBoard();
-  puzzleData.pieces.forEach((piece: any) => {
+  puzzleData.pieces.forEach((piece: { position: string; type: string; color: string; letter: string }) => {
     const { position, ...pieceData } = piece;
-    const { row, col } = require('./chess').algebraicToPosition(position);
-    board[row][col].piece = pieceData;
+    const { row, col } = algebraicToPosition(position);
+    board[row][col].piece = pieceData as import('@/types/chess').ChessPiece;
   });
   const targetWord = puzzleData.targetWords[0];
   const congratsMessage = `Congratulations! You found the word ${targetWord}!`;
