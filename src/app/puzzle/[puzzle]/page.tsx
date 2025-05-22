@@ -6,7 +6,6 @@ import ChessBoard from '@/components/ChessBoard';
 import { createEmptyBoard } from '@/utils/board';
 import { algebraicToPosition } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
-import { isPuzzleSolved } from '@/utils/gameState';
 
 function getPuzzlePathFromId(id: string): string {
   const [wordLength] = id.split('-');
@@ -68,7 +67,6 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
           nextPuzzleId={nextPuzzleId}
           congratsMessage={congratsMessage}
           puzzleId={puzzleId}
-          showCompleteModalInitially={isPuzzleSolved(puzzleId)}
         />
       </div>
     </main>
