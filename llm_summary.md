@@ -1,7 +1,7 @@
-# Spell Check - LLM Agent Summary
+# SpellCheck - LLM Agent Summary
 
 ## Project Overview
-Spell Check is a word-building puzzle game that combines chess mechanics with word creation. The game is built using Next.js 15.3, React, TypeScript, and Tailwind CSS.
+SpellCheck is a word-building puzzle game that combines chess mechanics with word creation. The game is built using Next.js 15.3, React, TypeScript, and Tailwind CSS.
 
 ## Recent Improvements (2025)
 - **Puzzle Completion Tracking:** Solved puzzle IDs are tracked in localStorage for instant lookup and progress persistence.
@@ -185,4 +185,4 @@ When validating moves, check:
 
 ## Analytics & Performance Monitoring
 
-Spell Check integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard. 
+SpellCheck integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard. 
