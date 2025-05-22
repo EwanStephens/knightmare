@@ -266,24 +266,25 @@ export default function ChessBoard({
         setHintStep(HintStep.Reveal);
         setIsRevealing(true);
         setCrossedOutSquares([]); // Clear crossed out squares
-        // Fill out the target word below the board
-        setGameState(prevState => ({
-          ...prevState,
-          currentWord: gameLevelData?.targetWord || '',
-        }));
-        // Animate reveal, starting with first letter highlighted
+        // Animate reveal, incrementally filling out the target word
         let i = 0;
         setRevealedPath([]);
-        setHighlightedHintSquare(revealPath[0]);
+        setGameState(prevState => ({
+          ...prevState,
+          currentWord: '',
+        }));
         const revealNext = () => {
           setRevealedPath(path => {
             const newPath = [...path, revealPath[i]];
-            // Highlight the next square as yellow for the next step
-            if (i + 1 < revealPath.length) {
-              setHighlightedHintSquare(revealPath[i + 1]);
-            } else {
-              setHighlightedHintSquare(null);
-            }
+            // Update currentWord to show letters as they are revealed
+            setGameState(prevState => {
+              const letterIndex = newPath.length - 1;
+              const newWord = (gameLevelData?.targetWord || '').slice(0, newPath.length);
+              return {
+                ...prevState,
+                currentWord: newWord,
+              };
+            });
             return newPath;
           });
           i++;
