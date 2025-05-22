@@ -3,12 +3,11 @@
 import { useEffect, useState } from 'react';
 import { ChessPiece, GameState } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
-import { loadLevel } from '@/utils/levelLoader';
 import { LoadedLevel } from '@/types/level';
 import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
-import { updateLevelOnCompletion } from '@/utils/gameState';
+import { markPuzzleSolved } from '@/utils/gameState';
 
 // Add prop type
 interface ChessBoardProps {
@@ -20,6 +19,7 @@ interface ChessBoardProps {
   highlightedPosition?: string | null;
   nextPuzzleId?: string | null;
   congratsMessage?: string;
+  puzzleId?: string;
 }
 
 export default function ChessBoard({ 
@@ -30,7 +30,8 @@ export default function ChessBoard({
   onLevelComplete,
   highlightedPosition,
   nextPuzzleId,
-  congratsMessage
+  congratsMessage,
+  puzzleId
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -160,11 +161,16 @@ export default function ChessBoard({
     let message = '';
     if (newWord === gameLevelData.targetWord) {
       message = congratsMessage || gameLevelData.congratsMessage || `Congratulations! You found the word ${gameLevelData.targetWord}!`;
-      
-      // If in tutorial mode, call the completion callback before showing modal
-      if (tutorialMode && onLevelComplete) {
+      // Always call the completion callback if provided
+      if (onLevelComplete) {
         onLevelComplete();
-      } else if (!tutorialMode) {
+      }
+      // Mark puzzle as solved in localStorage for non-tutorial mode
+      if (!tutorialMode && puzzleId) {
+        markPuzzleSolved(puzzleId);
+      }
+      // Show modal for non-tutorial mode
+      if (!tutorialMode) {
         setTimeout(() => {
           setShowCompleteModal(true);
         }, 200);

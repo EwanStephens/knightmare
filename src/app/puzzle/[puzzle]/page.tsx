@@ -66,6 +66,7 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
           levelData={levelData}
           nextPuzzleId={nextPuzzleId}
           congratsMessage={congratsMessage}
+          puzzleId={puzzleId}
         />
       </div>
       {/* TODO: Add Next button if nextPuzzleId exists, and handle navigation client-side */}
