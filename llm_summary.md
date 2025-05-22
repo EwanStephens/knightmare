@@ -1,7 +1,7 @@
-# SpellCheck - LLM Agent Summary
+# Spell Check - LLM Agent Summary
 
 ## Project Overview
-SpellCheck is a word-building puzzle game that combines chess mechanics with word creation. The game is built using Next.js 15.3, React, TypeScript, and Tailwind CSS.
+Spell Check is a word-building puzzle game that combines chess mechanics with word creation. The game is built using Next.js 15.3, React, TypeScript, and Tailwind CSS.
 
 ## Recent Improvements (2025)
 - **Puzzle Completion Tracking:** Solved puzzle IDs are tracked in localStorage for instant lookup and progress persistence.

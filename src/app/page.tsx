@@ -26,12 +26,12 @@ export default function Home() {
   
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
-      <h1 className="text-4xl font-bold mb-8">SpellCheck</h1>
+      <h1 className="text-4xl font-bold mb-8">Spell Check</h1>
       
       {showTutorialPrompt ? (
         <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col gap-4 items-center">
           <h2 className="text-2xl font-semibold mb-2 dark:text-white">Would you like to try the tutorial?</h2>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">Learn how to play SpellCheck with our guided tutorial.</p>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">Learn how to play Spell Check with our guided tutorial.</p>
           <button
             className="px-6 py-3 bg-blue-600 text-white rounded-lg text-xl font-semibold hover:bg-blue-700 w-64"
             onClick={handleStartTutorial}

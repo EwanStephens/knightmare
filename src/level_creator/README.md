@@ -1,6 +1,6 @@
 # Level Creator
 
-This directory contains the modular code for generating chess-based word puzzle levels for the SpellCheck project.
+This directory contains the modular code for generating chess-based word puzzle levels for the Spell Check project.
 
 ## What It Does
 - **Picks a target word** of a specified length from a wordbank, ensuring it is not reused, or allows you to specify a target word directly.

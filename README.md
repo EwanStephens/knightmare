@@ -1,4 +1,4 @@
-# SpellCheck
+# Spell Check
 
 A unique word game that combines chess mechanics with word building. Players must capture pieces using legal chess moves to construct valid English words.
 
