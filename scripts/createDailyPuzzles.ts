@@ -8,13 +8,13 @@ const MAX_RETRIES = 10;
 
 function parseDate(dateStr: string): Date {
   const [year, month, day] = dateStr.split('-').map(Number);
-  return new Date(Date.UTC(year, month, day));
+  return new Date(Date.UTC(year, month - 1, day));
 }
 
 function formatDate(date: Date): string {
   // Format as YYYY-MM-DD in UTC
   const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth()).padStart(2, '0');
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
   const day = String(date.getUTCDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 }
@@ -94,10 +94,10 @@ async function main() {
   for (
     let d = new Date(Date.UTC(startDate.getUTCFullYear(), startDate.getUTCMonth(), startDate.getUTCDate()));
     d <= endDate;
-    d = new Date(d.getTime() + 24 * 60 * 60 * 1000)
+    d.setUTCDate(d.getUTCDate() + 1)
   ) {
     const dateStr = formatDate(d);
-    console.log(`[DailyPuzzles] Creating puzzles for ${dateStr}`);
+    console.log(`[DailyPuzzles] Creating puzzles for ${dateStr} (raw: ${d.toISOString()})`);
     // if (!calendar.dates[dateStr]) calendar.dates[dateStr] = {};
     // await createAndAssignPuzzle(calendar, dateStr, 'short', [5, 6]);
     // await createAndAssignPuzzle(calendar, dateStr, 'medium', [7, 8]);
