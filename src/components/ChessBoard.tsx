@@ -256,40 +256,44 @@ export default function ChessBoard({
     if (!revealPath) return;
     setHintStep(HintStep.Reveal);
     setIsRevealing(true);
-    let i = 0;
     setRevealedPath([]);
     setGameState(prevState => ({
       ...prevState,
       currentWord: '',
     }));
+    let i = 0;
     const revealNext = () => {
       setRevealedPath(path => {
-        const newPath = [...path, revealPath[i]];
-        // Update currentWord to show letters as they are revealed (current blue square included)
-        setGameState(prevState => {
-          const newWord = (gameLevelData?.targetWord || '').slice(0, newPath.length);
-          return {
-            ...prevState,
-            currentWord: newWord,
-          };
-        });
-        return newPath;
+        const nextIndex = path.length;
+        if (nextIndex < revealPath.length) {
+          const newPath = [...path, revealPath[nextIndex]];
+          setGameState(prevState => {
+            const newWord = (gameLevelData?.targetWord || '').slice(0, newPath.length);
+            return {
+              ...prevState,
+              currentWord: newWord,
+            };
+          });
+          return newPath;
+        }
+        return path;
       });
       i++;
       if (i < revealPath.length) {
-        setTimeout(revealNext, 4000);
+        setTimeout(revealNext, 1000);
       } else {
-        // Mark puzzle as solved in localStorage if not tutorial
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
         }
         setTimeout(() => {
           setShowCompleteModal(true);
           setIsRevealing(false);
-        }, 1800);
+        }, 2000);
       }
     };
-    setTimeout(revealNext, 4000);
+    if (revealPath.length > 0) {
+      revealNext();
+    }
   };
 
   const handleHintClick = async () => {
@@ -302,9 +306,7 @@ export default function ChessBoard({
     } else if (hintStep === HintStep.FirstLetter && revealPath) {
       setHighlightedHintSquare(null); // Clear first letter hint before reveal
       handleCancel(); // Clear board state before reveal
-      setTimeout(() => {
-        reveal();
-      }, 0);
+      reveal();
     }
   };
 
