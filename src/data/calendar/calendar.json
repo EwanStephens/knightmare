@@ -1,6 +1,6 @@
 {
   "dates": {
-    "2025-05-21": {
+    "2025-05-22": {
       "short": "6-2-MZ9btd4",
       "medium": "8-4-Qn1dCzI",
       "long": "9-8-C167J3T"
@@ -8,17 +8,17 @@
   },
   "puzzles": {
     "6-2-MZ9btd4": {
-      "date": "2025-05-21",
+      "date": "2025-05-22",
       "length": 6,
       "type": "short"
     },
     "8-4-Qn1dCzI": {
-      "date": "2025-05-21",
+      "date": "2025-05-22",
       "length": 8,
       "type": "medium"
     },
     "9-8-C167J3T": {
-      "date": "2025-05-21",
+      "date": "2025-05-22",
       "length": 9,
       "type": "long"
     }

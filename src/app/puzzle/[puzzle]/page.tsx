@@ -3,6 +3,9 @@ import path from 'path';
 import fs from 'fs';
 import { getDateForPuzzleId, getDailyPuzzlesForDate } from '@/utils/calendar';
 import ChessBoard from '@/components/ChessBoard';
+import { createEmptyBoard } from '@/utils/board';
+import { algebraicToPosition } from '@/utils/chess';
+import { LoadedLevel } from '@/types/level';
 
 function getPuzzlePathFromId(id: string): string {
   const [wordLength] = id.split('-');
@@ -40,19 +43,27 @@ export default function PuzzlePage({ params }: { params: { puzzle: string } }) {
   if (daily && daily.long === puzzleId) {
     congratsMessage += ' You completed all the daily puzzles! See you tomorrow.';
   }
-  // ...construct board as in levelLoader.ts if needed...
+
+  // Build the board from pieces
+  const board = createEmptyBoard();
+  puzzleData.pieces.forEach((piece: any) => {
+    const { position, ...pieceData } = piece;
+    const { row, col } = algebraicToPosition(position);
+    board[row][col].piece = pieceData;
+  });
+
+  const levelData: LoadedLevel = {
+    board,
+    targetWord,
+    congratsMessage,
+  };
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
       <h1 className="text-2xl font-bold mb-4 dark:text-white">Daily Puzzle</h1>
       <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
         <ChessBoard
-          tutorialMode={false}
-          tutorialLevel={{
-            board: [], // TODO: build board from puzzleData.pieces
-            targetWord,
-            congratsMessage,
-          }}
+          levelData={levelData}
           onLevelComplete={undefined} // TODO: handle next puzzle navigation client-side
         />
       </div>
