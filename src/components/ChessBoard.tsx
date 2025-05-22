@@ -9,6 +9,14 @@ import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
 import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
 
+// Add enum for hint step
+enum HintStep {
+  None = 0,
+  CrossOut = 1,
+  FirstLetter = 2,
+  Reveal = 3
+}
+
 // Add prop type
 interface ChessBoardProps {
   levelData?: LoadedLevel; // Required for non-tutorial mode
@@ -20,6 +28,9 @@ interface ChessBoardProps {
   nextPuzzleId?: string | null;
   congratsMessage?: string;
   puzzleId?: string;
+  hintSquares?: string[];
+  firstLetterSquare?: string;
+  revealPath?: string[];
 }
 
 export default function ChessBoard({ 
@@ -31,7 +42,10 @@ export default function ChessBoard({
   highlightedPosition,
   nextPuzzleId,
   congratsMessage,
-  puzzleId
+  puzzleId,
+  hintSquares,
+  firstLetterSquare,
+  revealPath
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -43,6 +57,11 @@ export default function ChessBoard({
   });
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
+  const [hintStep, setHintStep] = useState<HintStep>(HintStep.None);
+  const [crossedOutSquares, setCrossedOutSquares] = useState<string[]>([]);
+  const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
+  const [revealedPath, setRevealedPath] = useState<string[]>([]);
+  const [isRevealing, setIsRevealing] = useState(false);
 
   useEffect(() => {
     // If in tutorial mode, use the provided level data
@@ -201,6 +220,105 @@ export default function ChessBoard({
     }
   };
 
+  // Factored out replay logic
+  const handleReplay = () => {
+    if (!gameLevelData) return;
+    setShowCompleteModal(false);
+    setGameState(prevState => ({
+      ...prevState,
+      board: gameLevelData.board.map(row =>
+        row.map(sq => ({
+          ...sq,
+          isSelected: false,
+          isLegalMove: false,
+          isHighlighted: false,
+        }))
+      ),
+      selectedSquare: null,
+      currentWord: '',
+      previousSquares: [],
+      message: '',
+    }));
+    // Notify tutorial system of clear action in tutorial mode
+    if (tutorialMode && onPieceSelected) {
+      onPieceSelected('clear', '');
+    }
+    // Clear all hint/reveal state
+    setHintStep(HintStep.None);
+    setCrossedOutSquares([]);
+    setHighlightedHintSquare(null);
+    setRevealedPath([]);
+    setIsRevealing(false);
+  };
+
+  // Factored out reveal logic
+  const reveal = () => {
+    if (!revealPath) return;
+    setHintStep(HintStep.Reveal);
+    setIsRevealing(true);
+    setRevealedPath([]);
+    setGameState(prevState => ({
+      ...prevState,
+      currentWord: '',
+    }));
+    let i = 0;
+    const revealNext = () => {
+      setRevealedPath(path => {
+        const nextIndex = path.length;
+        if (nextIndex < revealPath.length) {
+          const newPath = [...path, revealPath[nextIndex]];
+          setGameState(prevState => {
+            const newWord = (gameLevelData?.targetWord || '').slice(0, newPath.length);
+            return {
+              ...prevState,
+              currentWord: newWord,
+            };
+          });
+          return newPath;
+        }
+        return path;
+      });
+      i++;
+      if (i < revealPath.length) {
+        setTimeout(revealNext, 1000);
+      } else {
+        if (!tutorialMode && puzzleId) {
+          markPuzzleSolved(puzzleId);
+        }
+        setTimeout(() => {
+          setShowCompleteModal(true);
+          setIsRevealing(false);
+        }, 2000);
+      }
+    };
+    if (revealPath.length > 0) {
+      setTimeout(revealNext, 500);
+    }
+  };
+
+  const handleHintClick = async () => {
+    if (hintStep === HintStep.None && hintSquares) {
+      setCrossedOutSquares(hintSquares);
+      setHintStep(HintStep.CrossOut);
+    } else if (hintStep === HintStep.CrossOut && firstLetterSquare) {
+      setHighlightedHintSquare(firstLetterSquare);
+      setHintStep(HintStep.FirstLetter);
+    } else if (hintStep === HintStep.FirstLetter && revealPath) {
+      setHighlightedHintSquare(null); // Clear first letter hint before reveal
+      handleCancel(); // Clear board state before reveal
+      reveal();
+    }
+  };
+
+  // Reset hint state when board changes (e.g. on replay)
+  useEffect(() => {
+    setHintStep(HintStep.None);
+    setCrossedOutSquares([]);
+    setHighlightedHintSquare(null);
+    setRevealedPath([]);
+    setIsRevealing(false);
+  }, [levelData]);
+
   if (!gameLevelData) {
     return <div>Loading...</div>;
   }
@@ -217,87 +335,110 @@ export default function ChessBoard({
           <div className="aspect-square mx-auto w-[min(75vw,40vh)] min-w-50 min-h-50 max-w-120 max-h-120">
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
-                row.map((square, colIndex) => (
-                  <div
-                    key={square.position}
-                    onClick={() => handleSquareClick(square.position)}
-                    className={`
-                      aspect-square flex items-center justify-center relative
-                      transition-colors duration-200
-                      ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
-                      ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
-                      ${square.isHighlighted ? 'bg-yellow-200' : ''}
-                      ${square.isSelected ? 'bg-[#94A3B8]' : ''}
-                      ${!square.isHighlighted && !square.isSelected && illegalMoveSquare !== square.position ? 
-                        (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
-                      ${square.piece ? 'hover:bg-opacity-90' : ''}
-                      cursor-pointer
-                    `}
-                  >
-                    {tutorialMode && highlightedPosition === square.position && (
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
-                      </div>
-                    )}
-                    {square.isLegalMove && !square.piece && (
-                      <div className="absolute w-1/4 h-1/4 rounded-full bg-[rgba(50,50,50,0.4)]" />
-                    )}
-                    {square.isLegalMove && square.piece && (
-                      <svg className="absolute w-full h-full pointer-events-none" viewBox="0 0 100 100">
-                        <path
-                          d="M 0 35 A 35 35 0 0 1 35 0 L 0 0 Z"
-                          fill="rgba(50,50,50,0.4)"
-                        />
-                        <path
-                          d="M 65 0 A 35 35 0 0 1 100 35 L 100 0 Z"
-                          fill="rgba(50,50,50,0.4)"
-                        />
-                        <path
-                          d="M 0 65 A 35 35 0 0 0 35 100 L 0 100 Z"
-                          fill="rgba(50,50,50,0.4)"
-                        />
-                        <path
-                          d="M 65 100 A 35 35 0 0 0 100 65 L 100 100 Z"
-                          fill="rgba(50,50,50,0.4)"
-                        />
-                      </svg>
-                    )}
-                    {square.piece && (
-                      <>
-                        {square.isHighlighted ? (
-                          <div 
-                            className="font-bold text-[#769656] z-20 flex items-center justify-center"
-                            style={{
-                              fontSize: "max(24px, min(8vw, 4vh))",
-                              width: "100%",
-                              height: "100%"
-                            }}
-                          >
-                            {square.piece.letter}
-                          </div>
-                        ) : (
-                          <>
-                            <div className="absolute inset-0 flex items-center justify-center z-10">
-                              <div className="w-[75%] h-[75%]">
-                                {getPieceComponent(square.piece.type, square.piece.color)}
-                              </div>
-                            </div>
+                row.map((square, colIndex) => {
+                  const isCrossed = crossedOutSquares.includes(square.position);
+                  const isHintHighlight = highlightedHintSquare === square.position;
+                  const isReveal = revealedPath.includes(square.position);
+                  const revealIndex = revealedPath.indexOf(square.position);
+                  const isRevealCurrent = isReveal && revealIndex === revealedPath.length - 1;
+                  const isRevealPrev = isReveal && revealIndex !== revealedPath.length - 1;
+                  // For first letter hint: show piece+letter with yellow ring/pulse, not just letter
+                  // Only show just the letter if part of revealed path (i.e. after reveal starts)
+                  return (
+                    <div
+                      key={square.position}
+                      onClick={() => !isRevealing && handleSquareClick(square.position)}
+                      className={`
+                        aspect-square flex items-center justify-center relative
+                        transition-colors duration-200
+                        ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
+                        ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
+                        ${(isHintHighlight && !isReveal) ? 'ring-4 ring-yellow-400 z-10' : ''}
+                        ${isRevealCurrent ? 'bg-[#94A3B8]' : ''}
+                        ${isRevealPrev ? 'bg-yellow-200' : ''}
+                        ${square.isHighlighted && !isRevealPrev ? 'bg-yellow-200' : ''}
+                        ${square.isSelected && !isRevealCurrent ? 'bg-[#94A3B8]' : ''}
+                        ${!square.isHighlighted && !square.isSelected && !isReveal && illegalMoveSquare !== square.position ? 
+                          (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
+                        ${square.piece ? 'hover:bg-opacity-90' : ''}
+                        cursor-pointer
+                        ${isCrossed ? 'opacity-40 grayscale relative' : ''}
+                      `}
+                    >
+                      {isCrossed && (
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
+                          <svg width="80%" height="80%" viewBox="0 0 100 100">
+                            <line x1="10" y1="10" x2="90" y2="90" stroke="#b91c1c" strokeWidth="10" strokeLinecap="round" />
+                            <line x1="90" y1="10" x2="10" y2="90" stroke="#b91c1c" strokeWidth="10" strokeLinecap="round" />
+                          </svg>
+                        </div>
+                      )}
+                      {((tutorialMode && highlightedPosition === square.position) || (isHintHighlight && !isReveal)) && (
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
+                        </div>
+                      )}
+                      {square.isLegalMove && !square.piece && (
+                        <div className="absolute w-1/4 h-1/4 rounded-full bg-[rgba(50,50,50,0.4)]" />
+                      )}
+                      {square.isLegalMove && square.piece && (
+                        <svg className="absolute w-full h-full pointer-events-none" viewBox="0 0 100 100">
+                          <path
+                            d="M 0 35 A 35 35 0 0 1 35 0 L 0 0 Z"
+                            fill="rgba(50,50,50,0.4)"
+                          />
+                          <path
+                            d="M 65 0 A 35 35 0 0 1 100 35 L 100 0 Z"
+                            fill="rgba(50,50,50,0.4)"
+                          />
+                          <path
+                            d="M 0 65 A 35 35 0 0 0 35 100 L 0 100 Z"
+                            fill="rgba(50,50,50,0.4)"
+                          />
+                          <path
+                            d="M 65 100 A 35 35 0 0 0 100 65 L 100 100 Z"
+                            fill="rgba(50,50,50,0.4)"
+                          />
+                        </svg>
+                      )}
+                      {square.piece && (
+                        <>
+                          {/* Show just the letter if part of revealed path or if square.isHighlighted (clicked path), else show piece+letter */}
+                          {(isRevealPrev || (square.isHighlighted && !isRevealCurrent)) ? (
                             <div 
-                              className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
+                              className="font-bold text-[#769656] z-20 flex items-center justify-center"
                               style={{
-                                fontSize: "max(14px, min(4vw, 2vh))",
-                                top: "max(2px, min(1vw, 0.5vh))",
-                                right: "max(2px, min(1vw, 0.5vh))"
+                                fontSize: "max(24px, min(8vw, 4vh))",
+                                width: "100%",
+                                height: "100%"
                               }}
                             >
                               {square.piece.letter}
                             </div>
-                          </>
-                        )}
-                      </>
-                    )}
-                  </div>
-                ))
+                          ) : (
+                            <>
+                              <div className="absolute inset-0 flex items-center justify-center z-10">
+                                <div className="w-[75%] h-[75%]">
+                                  {getPieceComponent(square.piece.type, square.piece.color)}
+                                </div>
+                              </div>
+                              <div 
+                                className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
+                                style={{
+                                  fontSize: "max(14px, min(4vw, 2vh))",
+                                  top: "max(2px, min(1vw, 0.5vh))",
+                                  right: "max(2px, min(1vw, 0.5vh))"
+                                }}
+                              >
+                                {square.piece.letter}
+                              </div>
+                            </>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  );
+                })
               )}
             </div>
           </div>
@@ -335,10 +476,23 @@ export default function ChessBoard({
             <div className="flex gap-4 mt-1 sm:mt-2">
               <button
                 onClick={handleCancel}
-                className="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600"
+                disabled={isRevealing}
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600${isRevealing ? ' opacity-60 cursor-not-allowed' : ''}`}
               >
                 Clear
               </button>
+              {hintSquares && firstLetterSquare && revealPath && (
+                <button
+                  onClick={handleHintClick}
+                  disabled={isRevealing}
+                  className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg rounded transition-colors duration-200
+                    ${hintStep < HintStep.FirstLetter ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-yellow-500 text-black hover:bg-yellow-600'}
+                    ${hintStep === HintStep.Reveal ? 'bg-green-600 text-white hover:bg-green-700' : ''}
+                    ${isRevealing ? 'opacity-60 cursor-not-allowed' : ''}`}
+                >
+                  {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal' : 'Revealing...'}
+                </button>
+              )}
             </div>
             {gameState.message && !showCompleteModal && !gameState.message.includes('Congratulations') && (
               <div className="text-base sm:text-lg text-red-600 mt-2">{gameState.message}</div>
@@ -353,28 +507,7 @@ export default function ChessBoard({
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
         {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
-        onReplay={() => {
-          setShowCompleteModal(false);
-          setGameState(prevState => ({
-            ...prevState,
-            board: gameLevelData.board.map(row =>
-              row.map(sq => ({
-                ...sq,
-                isSelected: false,
-                isLegalMove: false,
-                isHighlighted: false,
-              }))
-            ),
-            selectedSquare: null,
-            currentWord: '',
-            previousSquares: [],
-            message: '',
-          }));
-          // Notify tutorial system of clear action in tutorial mode
-          if (tutorialMode && onPieceSelected) {
-            onPieceSelected('clear', '');
-          }
-        }}
+        onReplay={handleReplay}
       />
     </div>
   );

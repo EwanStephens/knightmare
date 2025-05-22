@@ -7,6 +7,7 @@ import { createEmptyBoard } from '@/utils/board';
 import { algebraicToPosition } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
 import { ChessPiece } from '@/types/chess';
+import { getUnusedHintSquares, getFirstLetterHintSquare, getRevealAnswerPath } from '@/utils/hints';
 
 function getPuzzlePathFromId(id: string): string {
   const [wordLength] = id.split('-');
@@ -27,6 +28,21 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
     puzzleData = JSON.parse(fs.readFileSync(puzzlePath, 'utf-8'));
   } catch {
     notFound();
+  }
+
+  // Fetch hint/reveal info
+  let hintSquares: string[] | null = null;
+  let firstLetterSquare: string | null = null;
+  let revealPath: string[] | null = null;
+  try {
+    hintSquares = await getUnusedHintSquares(puzzleId);
+    firstLetterSquare = await getFirstLetterHintSquare(puzzleId);
+    revealPath = await getRevealAnswerPath(puzzleId);
+  } catch {
+    // If hints fail, just don't show them
+    hintSquares = null;
+    firstLetterSquare = null;
+    revealPath = null;
   }
 
   // Find the next puzzle in the daily sequence (if any)
@@ -102,6 +118,11 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
           nextPuzzleId={nextPuzzleId}
           congratsMessage={congratsMessage}
           puzzleId={puzzleId}
+          {...(hintSquares && firstLetterSquare && revealPath ? {
+            hintSquares,
+            firstLetterSquare,
+            revealPath
+          } : {})}
         />
       </div>
     </main>
