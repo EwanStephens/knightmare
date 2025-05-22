@@ -89,8 +89,6 @@ async function main() {
     calendar = { dates: {} as Record<string, any>, puzzles: {} as Record<string, any> };
   }
 
-  console.log(formatDate(startDate));
-
   for (
     let d = new Date(Date.UTC(startDate.getUTCFullYear(), startDate.getUTCMonth(), startDate.getUTCDate()));
     d <= endDate;
