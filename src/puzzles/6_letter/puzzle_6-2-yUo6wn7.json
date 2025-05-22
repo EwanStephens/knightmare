@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "LONELY",
+    "ELON",
+    "LONE",
+    "ONE"
+  ],
+  "targetPath": [
+    "d3",
+    "c4",
+    "b5",
+    "a4",
+    "c5",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "a4": 1,
+    "c4": 1,
+    "d4": 1,
+    "c3": 1,
+    "d3": 4,
+    "e3": 0
+  }
+}

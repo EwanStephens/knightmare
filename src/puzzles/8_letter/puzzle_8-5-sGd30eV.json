@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CONCLUDE",
+    "CONC",
+    "DECO",
+    "ECON",
+    "ONCE",
+    "CON",
+    "DEC",
+    "DON",
+    "ECO",
+    "UDO"
+  ],
+  "targetPath": [
+    "b4",
+    "c4",
+    "d5",
+    "a2",
+    "a5",
+    "d2",
+    "e3",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "d5": 1,
+    "b4": 2,
+    "c4": 1,
+    "e4": 2,
+    "e3": 2,
+    "a2": 2,
+    "b2": 0,
+    "c2": 1,
+    "d2": 1,
+    "e2": 2,
+    "e1": 0
+  }
+}

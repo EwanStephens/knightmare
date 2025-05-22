@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "READILY",
+    "TREAD",
+    "EADI",
+    "READ",
+    "DIL",
+    "EAD",
+    "EAT",
+    "REA",
+    "TAD",
+    "TAE"
+  ],
+  "targetPath": [
+    "a3",
+    "c2",
+    "c1",
+    "c4",
+    "b5",
+    "d3",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c4": 1,
+    "e4": 2,
+    "a3": 2,
+    "d3": 1,
+    "c2": 1,
+    "e2": 0,
+    "a1": 2,
+    "c1": 3,
+    "d1": 0
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "WHOLESALE",
+    "WHOLES",
+    "HOLES",
+    "WHOLE",
+    "HOLE",
+    "LESE",
+    "OLES",
+    "SELE",
+    "ALW",
+    "ESE"
+  ],
+  "targetPath": [
+    "b4",
+    "e1",
+    "e2",
+    "c1",
+    "b3",
+    "a2",
+    "c4",
+    "b5",
+    "b1"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "d5": 0,
+    "b4": 2,
+    "c4": 2,
+    "e4": 0,
+    "b3": 1,
+    "a2": 2,
+    "c2": 1,
+    "e2": 1,
+    "b1": 1,
+    "c1": 2,
+    "d1": 2,
+    "e1": 1
+  }
+}

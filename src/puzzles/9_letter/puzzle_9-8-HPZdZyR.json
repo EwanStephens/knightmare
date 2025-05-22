@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "J"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "OBJECTIVE",
+    "OBJECT",
+    "COIT",
+    "TECO",
+    "WIVE",
+    "CPO",
+    "CPT",
+    "CTO",
+    "ECB",
+    "ECO"
+  ],
+  "targetPath": [
+    "b1",
+    "a3",
+    "c5",
+    "e5",
+    "b2",
+    "a2",
+    "d2",
+    "e2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 3,
+    "e5": 1,
+    "a4": 0,
+    "c4": 3,
+    "a3": 2,
+    "b3": 3,
+    "e3": 3,
+    "a2": 3,
+    "b2": 5,
+    "d2": 1,
+    "e2": 1,
+    "a1": 1,
+    "b1": 1,
+    "c1": 2,
+    "d1": 2,
+    "e1": 2
+  }
+}

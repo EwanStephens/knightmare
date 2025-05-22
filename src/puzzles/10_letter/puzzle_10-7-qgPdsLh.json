@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DESCRIBING",
+    "ESCRIBING",
+    "SCRIBING",
+    "SCRINE",
+    "CRINE",
+    "SCRIN",
+    "WINES",
+    "CRIB",
+    "CRIN",
+    "DESC"
+  ],
+  "targetPath": [
+    "e1",
+    "a5",
+    "b3",
+    "c2",
+    "c1",
+    "b1",
+    "a2",
+    "c4",
+    "a4",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "c5": 2,
+    "d5": 2,
+    "e5": 0,
+    "a4": 2,
+    "c4": 2,
+    "e4": 2,
+    "a3": 0,
+    "b3": 2,
+    "d3": 4,
+    "a2": 1,
+    "c2": 4,
+    "b1": 1,
+    "c1": 2,
+    "d1": 0,
+    "e1": 1
+  }
+}

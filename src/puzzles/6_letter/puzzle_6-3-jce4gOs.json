@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "AGENDA",
+    "AGEND",
+    "AGEN",
+    "AGE",
+    "DAE",
+    "GEN",
+    "RYA"
+  ],
+  "targetPath": [
+    "c1",
+    "c3",
+    "b2",
+    "e5",
+    "a1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 0,
+    "c4": 3,
+    "b3": 2,
+    "c3": 1,
+    "a2": 2,
+    "b2": 1,
+    "a1": 1,
+    "c1": 1
+  }
+}

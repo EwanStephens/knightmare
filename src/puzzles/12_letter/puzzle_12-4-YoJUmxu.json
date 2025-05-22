@@ -1,0 +1,144 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "INSTRUMENTAL",
+    "INSTRUMENT",
+    "INSTAL",
+    "LATINS",
+    "STALIN",
+    "INSTR",
+    "LATIN",
+    "REINS",
+    "RUMEN",
+    "ALIN"
+  ],
+  "targetPath": [
+    "d4",
+    "c5",
+    "c4",
+    "d5",
+    "d1",
+    "b1",
+    "c2",
+    "b3",
+    "a5",
+    "b5",
+    "e5",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 1,
+    "d5": 2,
+    "e5": 2,
+    "c4": 2,
+    "d4": 1,
+    "a3": 2,
+    "b3": 2,
+    "c3": 2,
+    "e3": 3,
+    "a2": 2,
+    "c2": 1,
+    "e2": 3,
+    "b1": 2,
+    "d1": 1
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "GENESIS",
+    "GENES",
+    "SINES",
+    "GENE",
+    "SINE",
+    "AES",
+    "GEN",
+    "NEA",
+    "SIN",
+    "SIS"
+  ],
+  "targetPath": [
+    "e2",
+    "d4",
+    "d1",
+    "b3",
+    "a2",
+    "b1",
+    "c1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b4": 1,
+    "c4": 1,
+    "d4": 2,
+    "a3": 1,
+    "b3": 1,
+    "e3": 2,
+    "a2": 2,
+    "e2": 1,
+    "b1": 1,
+    "c1": 1,
+    "d1": 2
+  }
+}

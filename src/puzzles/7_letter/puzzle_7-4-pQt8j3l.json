@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "TEENAGE",
+    "ENAGE",
+    "DEAN",
+    "TEAN",
+    "TEEN",
+    "AGT",
+    "DEA",
+    "DEE",
+    "DWT",
+    "EAN"
+  ],
+  "targetPath": [
+    "a3",
+    "c2",
+    "b1",
+    "d2",
+    "d1",
+    "c1",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "a4": 2,
+    "a3": 1,
+    "e3": 0,
+    "c2": 2,
+    "d2": 1,
+    "a1": 0,
+    "b1": 1,
+    "c1": 1,
+    "d1": 3
+  }
+}

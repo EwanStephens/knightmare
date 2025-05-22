@@ -1,0 +1,99 @@
+{
+  "pieces": [
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "PROCEED",
+    "PROC",
+    "CEE",
+    "PRO",
+    "ROC"
+  ],
+  "targetPath": [
+    "a1",
+    "a2",
+    "b1",
+    "d2",
+    "e4",
+    "d4",
+    "d1"
+  ],
+  "legalCaptures": {
+    "c4": 1,
+    "d4": 3,
+    "e4": 1,
+    "b3": 2,
+    "e3": 1,
+    "a2": 1,
+    "d2": 2,
+    "e2": 1,
+    "a1": 1,
+    "b1": 1,
+    "d1": 1
+  }
+}

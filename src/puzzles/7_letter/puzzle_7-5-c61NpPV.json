@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "REACHED",
+    "ACHED",
+    "CHETH",
+    "LEACH",
+    "REACH",
+    "ACHE",
+    "ACLE",
+    "CHET",
+    "CLED",
+    "EACH"
+  ],
+  "targetPath": [
+    "e5",
+    "e1",
+    "c3",
+    "a5",
+    "a4",
+    "c4",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "b5": 1,
+    "c5": 1,
+    "e5": 1,
+    "a4": 2,
+    "c4": 4,
+    "d4": 1,
+    "a3": 0,
+    "b3": 2,
+    "c3": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "INVESTIGATOR",
+    "INVEST",
+    "GATOR",
+    "DURO",
+    "INVT",
+    "ROTA",
+    "TOGA",
+    "TORU",
+    "VEST",
+    "DUR"
+  ],
+  "targetPath": [
+    "b5",
+    "c4",
+    "b3",
+    "a5",
+    "b4",
+    "c5",
+    "c3",
+    "a1",
+    "c2",
+    "a2",
+    "b1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 1,
+    "d5": 1,
+    "e5": 1,
+    "b4": 2,
+    "c4": 2,
+    "d4": 1,
+    "e4": 4,
+    "b3": 5,
+    "c3": 4,
+    "a2": 3,
+    "c2": 2,
+    "d2": 1,
+    "a1": 2,
+    "b1": 3,
+    "e1": 2
+  }
+}

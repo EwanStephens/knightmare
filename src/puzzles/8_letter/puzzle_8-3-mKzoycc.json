@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DEFERRED",
+    "REDDER",
+    "DEFER",
+    "EDDER",
+    "ERRED",
+    "TERRE",
+    "DEED",
+    "FERR",
+    "REDD",
+    "TERR"
+  ],
+  "targetPath": [
+    "c4",
+    "d2",
+    "c2",
+    "b4",
+    "d3",
+    "e2",
+    "d1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b4": 2,
+    "c4": 3,
+    "a3": 2,
+    "d3": 1,
+    "b2": 3,
+    "c2": 1,
+    "d2": 3,
+    "e2": 2,
+    "a1": 1,
+    "d1": 1
+  }
+}

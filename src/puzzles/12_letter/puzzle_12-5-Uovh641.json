@@ -1,0 +1,151 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "PRESERVATION",
+    "PRESER",
+    "PRESE",
+    "PREST",
+    "SORVA",
+    "ATIP",
+    "ORES",
+    "PION",
+    "PRES",
+    "REST"
+  ],
+  "targetPath": [
+    "c3",
+    "d2",
+    "d3",
+    "e4",
+    "e1",
+    "e5",
+    "c4",
+    "b5",
+    "b1",
+    "a1",
+    "d4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 1,
+    "d5": 1,
+    "e5": 2,
+    "a4": 1,
+    "c4": 2,
+    "d4": 2,
+    "e4": 3,
+    "a3": 1,
+    "c3": 2,
+    "d3": 1,
+    "a2": 0,
+    "d2": 2,
+    "a1": 1,
+    "b1": 2,
+    "e1": 1
+  }
+}

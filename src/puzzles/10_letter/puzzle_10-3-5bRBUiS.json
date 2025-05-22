@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "CAPABILITY",
+    "ABILITY",
+    "APALIT",
+    "ALITY",
+    "APILI",
+    "TYPAL",
+    "ALIT",
+    "CAPA",
+    "KAPA",
+    "PALI"
+  ],
+  "targetPath": [
+    "b5",
+    "e5",
+    "c3",
+    "c1",
+    "b2",
+    "b3",
+    "d2",
+    "e3",
+    "e4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "e5": 1,
+    "c4": 2,
+    "e4": 1,
+    "b3": 1,
+    "c3": 3,
+    "d3": 4,
+    "e3": 1,
+    "b2": 1,
+    "d2": 4,
+    "e2": 1,
+    "a1": 0,
+    "c1": 3
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "AWARDED",
+    "WARDED",
+    "AWARD",
+    "DRAW",
+    "WARD",
+    "AWA",
+    "DEW",
+    "RAW",
+    "WAR"
+  ],
+  "targetPath": [
+    "b1",
+    "a2",
+    "a4",
+    "b5",
+    "d3",
+    "e3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "a4": 1,
+    "d4": 0,
+    "e4": 1,
+    "d3": 4,
+    "e3": 2,
+    "a2": 1,
+    "d2": 1,
+    "e2": 0,
+    "b1": 1,
+    "c1": 1
+  }
+}

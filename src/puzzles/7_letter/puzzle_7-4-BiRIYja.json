@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "TYPICAL",
+    "TYPICA",
+    "PICAL",
+    "TYPIC",
+    "PICA",
+    "PITH",
+    "PITY",
+    "PIC",
+    "PIE",
+    "PIT"
+  ],
+  "targetPath": [
+    "e2",
+    "d1",
+    "d3",
+    "c3",
+    "d5",
+    "b3",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d5": 1,
+    "b3": 0,
+    "c3": 3,
+    "d3": 2,
+    "e3": 0,
+    "a2": 2,
+    "e2": 1,
+    "c1": 0,
+    "d1": 2
+  }
+}

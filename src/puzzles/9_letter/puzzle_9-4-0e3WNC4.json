@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "CORPORATE",
+    "CORPORA",
+    "ORATE",
+    "PATER",
+    "TEPOR",
+    "CORP",
+    "ERAT",
+    "PATE",
+    "RATE",
+    "TEPA"
+  ],
+  "targetPath": [
+    "e1",
+    "d1",
+    "e2",
+    "d3",
+    "e3",
+    "d4",
+    "c3",
+    "a5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 2,
+    "a4": 0,
+    "c4": 3,
+    "d4": 2,
+    "e4": 1,
+    "c3": 2,
+    "d3": 2,
+    "e3": 1,
+    "a2": 0,
+    "e2": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

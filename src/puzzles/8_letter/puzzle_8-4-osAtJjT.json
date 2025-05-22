@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "TEACHING",
+    "ACHING",
+    "GRINCH",
+    "CHINE",
+    "CHING",
+    "RINCH",
+    "TEACH",
+    "CHIA",
+    "CHIN",
+    "EACH"
+  ],
+  "targetPath": [
+    "a3",
+    "b2",
+    "c3",
+    "d4",
+    "e3",
+    "d5",
+    "b4",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 3,
+    "a4": 4,
+    "b4": 3,
+    "d4": 2,
+    "a3": 1,
+    "c3": 2,
+    "e3": 1,
+    "b2": 2,
+    "e2": 1,
+    "a1": 0,
+    "d1": 2
+  }
+}

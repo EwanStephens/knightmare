@@ -1,0 +1,164 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "FUNDRAISING",
+    "INFUND",
+    "RAISIN",
+    "DRONA",
+    "NIAIS",
+    "FUND",
+    "RAIS",
+    "SISI",
+    "AIS",
+    "FUG"
+  ],
+  "targetPath": [
+    "a2",
+    "b1",
+    "b3",
+    "c2",
+    "d3",
+    "d4",
+    "e5",
+    "c4",
+    "d5",
+    "a5",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "e5": 1,
+    "b4": 1,
+    "c4": 1,
+    "d4": 1,
+    "e4": 1,
+    "b3": 1,
+    "c3": 2,
+    "d3": 4,
+    "e3": 0,
+    "a2": 1,
+    "c2": 2,
+    "d2": 1,
+    "e2": 1,
+    "a1": 1,
+    "b1": 4,
+    "c1": 1,
+    "d1": 1
+  }
+}

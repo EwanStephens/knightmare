@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "LATINO",
+    "LATIN",
+    "LATUS",
+    "TALUS",
+    "LAST",
+    "LATI",
+    "SOLA",
+    "TINO",
+    "TULA",
+    "UTAS"
+  ],
+  "targetPath": [
+    "c4",
+    "c3",
+    "b4",
+    "b2",
+    "d1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "b4": 3,
+    "c4": 2,
+    "c3": 3,
+    "a2": 2,
+    "b2": 2,
+    "e2": 2,
+    "c1": 2,
+    "d1": 1
+  }
+}

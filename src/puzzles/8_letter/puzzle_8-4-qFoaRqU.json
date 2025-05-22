@@ -1,0 +1,108 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "STRONGLY",
+    "STRONG",
+    "TRON",
+    "SMA",
+    "STR",
+    "TRY"
+  ],
+  "targetPath": [
+    "b3",
+    "d4",
+    "e5",
+    "c3",
+    "e1",
+    "e2",
+    "c1",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "e5": 3,
+    "a4": 0,
+    "d4": 1,
+    "b3": 2,
+    "c3": 3,
+    "d3": 0,
+    "e3": 0,
+    "e2": 1,
+    "c1": 1,
+    "e1": 1
+  }
+}

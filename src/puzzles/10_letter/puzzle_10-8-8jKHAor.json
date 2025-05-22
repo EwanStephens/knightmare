@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "MICROPHONE",
+    "CROPS",
+    "MICRO",
+    "CROP",
+    "INRO",
+    "MICE",
+    "NICE",
+    "ROIN",
+    "SPOT",
+    "CPO"
+  ],
+  "targetPath": [
+    "e3",
+    "d2",
+    "c2",
+    "d1",
+    "c3",
+    "b2",
+    "c1",
+    "c5",
+    "d3",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "e5": 0,
+    "b4": 2,
+    "d4": 0,
+    "e4": 0,
+    "a3": 1,
+    "b3": 0,
+    "c3": 3,
+    "d3": 1,
+    "e3": 1,
+    "b2": 4,
+    "c2": 5,
+    "d2": 2,
+    "a1": 2,
+    "b1": 1,
+    "c1": 2,
+    "d1": 2
+  }
+}

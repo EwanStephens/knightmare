@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "J"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "EXPOSED",
+    "EXPOSE",
+    "EXPOS",
+    "POSED",
+    "EXPO",
+    "POSE",
+    "EDH",
+    "EOS",
+    "EXP",
+    "JOE"
+  ],
+  "targetPath": [
+    "b5",
+    "c5",
+    "b4",
+    "a5",
+    "a4",
+    "e4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 2,
+    "c5": 1,
+    "a4": 1,
+    "b4": 2,
+    "e4": 1,
+    "a3": 1,
+    "b3": 4,
+    "d3": 3,
+    "b2": 2,
+    "d2": 2,
+    "c1": 0
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "PARTICIPATE",
+    "ARTIC",
+    "PARTE",
+    "PARTI",
+    "PARTS",
+    "TACIT",
+    "TEART",
+    "ARTE",
+    "ARTS",
+    "ATAP"
+  ],
+  "targetPath": [
+    "c4",
+    "d3",
+    "e4",
+    "e3",
+    "e1",
+    "c2",
+    "b3",
+    "a3",
+    "b4",
+    "c3",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "e5": 1,
+    "b4": 2,
+    "c4": 1,
+    "d4": 1,
+    "e4": 1,
+    "a3": 1,
+    "b3": 2,
+    "c3": 2,
+    "d3": 2,
+    "e3": 3,
+    "a2": 1,
+    "b2": 6,
+    "c2": 1,
+    "b1": 0,
+    "c1": 2,
+    "d1": 0,
+    "e1": 2
+  }
+}

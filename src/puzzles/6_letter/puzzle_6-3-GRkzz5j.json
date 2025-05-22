@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Q"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "ADDING",
+    "DING",
+    "ADD",
+    "DIN",
+    "ING"
+  ],
+  "targetPath": [
+    "c5",
+    "d4",
+    "c2",
+    "b2",
+    "a1",
+    "c3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 0,
+    "d4": 1,
+    "e4": 0,
+    "c3": 0,
+    "b2": 1,
+    "c2": 2,
+    "a1": 1,
+    "b1": 0
+  }
+}

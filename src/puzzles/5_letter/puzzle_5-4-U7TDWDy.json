@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "DANNY",
+    "ANN",
+    "ANT",
+    "DAN",
+    "TYT"
+  ],
+  "targetPath": [
+    "e3",
+    "e4",
+    "b1",
+    "e1",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "a4": 1,
+    "e4": 1,
+    "b3": 0,
+    "c3": 2,
+    "e3": 2,
+    "b1": 2,
+    "e1": 1
+  }
+}

@@ -57,7 +57,6 @@
     "participating",
     "participation",
     "precipitation",
-    "psychological",
     "qualification",
     "questionnaire",
     "restructuring",
@@ -75,5 +74,7 @@
     "unfortunately",
     "vulnerability"
   ],
-  "used_words": []
+  "used_words": [
+    "psychological"
+  ]
 }

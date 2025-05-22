@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DEATH",
+    "EATH",
+    "ATA",
+    "DEA",
+    "EAT",
+    "TAE"
+  ],
+  "targetPath": [
+    "e5",
+    "c4",
+    "d3",
+    "e4",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 1,
+    "c4": 1,
+    "e4": 2,
+    "c3": 1,
+    "d3": 2,
+    "d2": 0,
+    "a1": 0
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "POWERED",
+    "POWER",
+    "ARED",
+    "PERE",
+    "POWS",
+    "REDS",
+    "ARE",
+    "AWE",
+    "EDS",
+    "EPI"
+  ],
+  "targetPath": [
+    "d4",
+    "b4",
+    "c3",
+    "d5",
+    "d1",
+    "b2",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 1,
+    "d5": 1,
+    "e5": 1,
+    "b4": 1,
+    "d4": 5,
+    "b3": 2,
+    "c3": 3,
+    "e3": 1,
+    "a2": 0,
+    "b2": 1,
+    "a1": 3,
+    "b1": 0,
+    "d1": 2
+  }
+}

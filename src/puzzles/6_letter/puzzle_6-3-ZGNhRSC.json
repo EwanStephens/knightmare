@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "TRAVEL",
+    "RAVEL",
+    "TRAVE",
+    "RAVE",
+    "TRAV",
+    "VELA",
+    "AVE",
+    "ELA",
+    "TRA",
+    "VAR"
+  ],
+  "targetPath": [
+    "a5",
+    "a2",
+    "b1",
+    "c2",
+    "c4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c4": 1,
+    "d4": 0,
+    "d3": 0,
+    "a2": 1,
+    "c2": 2,
+    "b1": 2,
+    "e1": 0
+  }
+}

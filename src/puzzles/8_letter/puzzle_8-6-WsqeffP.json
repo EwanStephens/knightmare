@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "MATCHING",
+    "HATING",
+    "MATING",
+    "MATINS",
+    "TRAINS",
+    "ATING",
+    "CHATI",
+    "CHING",
+    "CHINS",
+    "MATCH"
+  ],
+  "targetPath": [
+    "e1",
+    "d3",
+    "c4",
+    "c3",
+    "c1",
+    "e2",
+    "b2",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 2,
+    "c4": 4,
+    "d4": 2,
+    "c3": 2,
+    "d3": 2,
+    "e3": 1,
+    "b2": 3,
+    "e2": 2,
+    "a1": 1,
+    "b1": 0,
+    "c1": 2,
+    "e1": 1
+  }
+}

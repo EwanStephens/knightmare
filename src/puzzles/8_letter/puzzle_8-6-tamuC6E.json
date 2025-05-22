@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CITATION",
+    "CITY",
+    "RITA",
+    "ATI",
+    "CIT",
+    "ION",
+    "ITA",
+    "PRY",
+    "RIT",
+    "TAT"
+  ],
+  "targetPath": [
+    "c5",
+    "d5",
+    "b4",
+    "a5",
+    "c4",
+    "c1",
+    "a1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "c5": 1,
+    "d5": 1,
+    "e5": 2,
+    "b4": 3,
+    "c4": 1,
+    "a3": 1,
+    "d3": 2,
+    "a2": 1,
+    "b2": 2,
+    "a1": 2,
+    "c1": 2,
+    "e1": 0
+  }
+}

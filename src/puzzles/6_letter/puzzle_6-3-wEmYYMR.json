@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "ENDING",
+    "DING",
+    "NEIN",
+    "DIN",
+    "END",
+    "ING",
+    "NEG",
+    "NEI",
+    "NEW"
+  ],
+  "targetPath": [
+    "c3",
+    "d4",
+    "e3",
+    "c4",
+    "e5",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "e5": 1,
+    "c4": 2,
+    "d4": 2,
+    "b3": 0,
+    "c3": 5,
+    "e3": 2,
+    "a1": 0,
+    "d1": 0
+  }
+}

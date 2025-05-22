@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "BUFFALO",
+    "BUFFA",
+    "BUFFO",
+    "BUFF",
+    "FLAT",
+    "AFB",
+    "FAT",
+    "FLO",
+    "MOB",
+    "MOO"
+  ],
+  "targetPath": [
+    "c2",
+    "b3",
+    "a2",
+    "d2",
+    "a5",
+    "a1",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 0,
+    "c4": 3,
+    "d4": 3,
+    "e4": 0,
+    "b3": 2,
+    "d3": 0,
+    "a2": 1,
+    "c2": 1,
+    "d2": 4,
+    "a1": 2,
+    "d1": 0
+  }
+}

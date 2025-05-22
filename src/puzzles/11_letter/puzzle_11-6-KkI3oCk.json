@@ -1,0 +1,150 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "ARRANGEMENT",
+    "RANGEMEN",
+    "ARRANGE",
+    "RANGE",
+    "RAGE",
+    "RANG",
+    "TRAG",
+    "AES",
+    "AGE",
+    "ARE"
+  ],
+  "targetPath": [
+    "b1",
+    "c1",
+    "d2",
+    "e3",
+    "e5",
+    "b2",
+    "a1",
+    "c2",
+    "a2",
+    "e2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 3,
+    "d5": 1,
+    "e5": 1,
+    "a4": 2,
+    "b4": 1,
+    "a3": 0,
+    "e3": 2,
+    "a2": 2,
+    "b2": 1,
+    "c2": 1,
+    "d2": 1,
+    "e2": 1,
+    "a1": 1,
+    "b1": 2,
+    "c1": 3,
+    "d1": 3
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "TRINITY",
+    "EIRY",
+    "INIT",
+    "TRIN",
+    "TRIT",
+    "TRYT",
+    "EIR",
+    "HIE",
+    "HIT",
+    "NIT"
+  ],
+  "targetPath": [
+    "e2",
+    "d3",
+    "a3",
+    "b2",
+    "b5",
+    "c5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "e5": 1,
+    "a4": 2,
+    "c4": 2,
+    "d4": 1,
+    "e4": 2,
+    "a3": 4,
+    "d3": 4,
+    "e3": 2,
+    "b2": 1,
+    "c2": 1,
+    "e2": 1,
+    "d1": 1
+  }
+}

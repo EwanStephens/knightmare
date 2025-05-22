@@ -1,0 +1,116 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "EXACTLY",
+    "EXACT",
+    "ACT",
+    "ALY",
+    "CAL",
+    "EXT",
+    "OTC",
+    "TLR"
+  ],
+  "targetPath": [
+    "d5",
+    "c4",
+    "e3",
+    "c5",
+    "a3",
+    "c1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 2,
+    "d5": 1,
+    "e5": 0,
+    "a4": 2,
+    "c4": 2,
+    "a3": 2,
+    "d3": 0,
+    "e3": 2,
+    "a2": 2,
+    "c2": 0,
+    "c1": 2,
+    "e1": 1
+  }
+}

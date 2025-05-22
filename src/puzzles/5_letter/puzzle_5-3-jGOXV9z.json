@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "STAGE",
+    "STAG",
+    "AGE",
+    "STA",
+    "TAG"
+  ],
+  "targetPath": [
+    "d2",
+    "e1",
+    "c2",
+    "b1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "e5": 0,
+    "b4": 0,
+    "c3": 0,
+    "d3": 0,
+    "c2": 1,
+    "d2": 1,
+    "b1": 1,
+    "e1": 2
+  }
+}

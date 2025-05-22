@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "FORCED",
+    "FORCE",
+    "ROID",
+    "FOR",
+    "ORC",
+    "ROI"
+  ],
+  "targetPath": [
+    "a5",
+    "b4",
+    "e4",
+    "e5",
+    "c3",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 1,
+    "d5": 1,
+    "e5": 1,
+    "b4": 2,
+    "e4": 2,
+    "c3": 1
+  }
+}

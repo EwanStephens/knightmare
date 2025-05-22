@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "SECRETARY",
+    "SECRETAR",
+    "SECRETA",
+    "SECRET",
+    "CREES",
+    "SECRE",
+    "CREE",
+    "ARY",
+    "CRE",
+    "ECO"
+  ],
+  "targetPath": [
+    "b5",
+    "b1",
+    "a2",
+    "a3",
+    "a1",
+    "d1",
+    "e1",
+    "d3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 3,
+    "c5": 2,
+    "d5": 0,
+    "a3": 1,
+    "d3": 1,
+    "a2": 2,
+    "c2": 0,
+    "a1": 1,
+    "b1": 3,
+    "d1": 1,
+    "e1": 2
+  }
+}

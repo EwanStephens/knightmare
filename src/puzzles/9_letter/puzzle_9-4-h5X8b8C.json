@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "PARTITION",
+    "AITION",
+    "PARTI",
+    "IONE",
+    "PART",
+    "TITI",
+    "AIT",
+    "ART",
+    "ION",
+    "NEI"
+  ],
+  "targetPath": [
+    "d2",
+    "d5",
+    "e5",
+    "c3",
+    "c5",
+    "b4",
+    "a5",
+    "b3",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 1,
+    "d5": 4,
+    "e5": 1,
+    "a4": 2,
+    "b4": 2,
+    "e4": 1,
+    "a3": 1,
+    "b3": 2,
+    "c3": 1,
+    "d2": 2,
+    "b1": 2,
+    "d1": 2
+  }
+}

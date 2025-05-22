@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "VOTING",
+    "TING",
+    "VOCE",
+    "ING",
+    "RTI",
+    "TIN",
+    "VOC"
+  ],
+  "targetPath": [
+    "b4",
+    "d3",
+    "d1",
+    "c1",
+    "a2",
+    "c4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "b4": 1,
+    "c4": 3,
+    "d4": 2,
+    "d3": 2,
+    "a2": 1,
+    "e2": 1,
+    "c1": 1,
+    "d1": 2
+  }
+}
