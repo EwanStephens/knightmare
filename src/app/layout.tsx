@@ -43,13 +43,13 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:title" content="SpellCheck" />
         <meta property="og:description" content="A word-building chess puzzle game" />
-        <meta property="og:image" content="/social-share.png" />
+        <meta property="og:image" content="https://spellcheckpuzzle.fun/social-share.png" />
         <meta property="og:url" content="https://spellcheckpuzzle.fun/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SpellCheck" />
         <meta name="twitter:description" content="A word-building chess puzzle game" />
-        <meta name="twitter:image" content="/social-share.png" />
+        <meta name="twitter:image" content="https://spellcheckpuzzle.fun/social-share.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}>
         <TopBar />
