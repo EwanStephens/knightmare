@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "Z"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "ORGANIZE",
+    "AGIOS",
+    "ORGAN",
+    "AGIN",
+    "AGIO",
+    "AOR",
+    "GAN",
+    "GIN",
+    "GIO",
+    "IOS"
+  ],
+  "targetPath": [
+    "d3",
+    "c3",
+    "b2",
+    "c2",
+    "a2",
+    "b3",
+    "e3",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "a4": 1,
+    "c4": 2,
+    "a3": 1,
+    "b3": 3,
+    "c3": 2,
+    "d3": 3,
+    "e3": 0,
+    "a2": 1,
+    "b2": 2,
+    "c2": 3,
+    "d2": 2
+  }
+}

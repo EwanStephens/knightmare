@@ -1,25 +1,1905 @@
 {
   "dates": {
-    "2025-05-20": {
+    "2025-05-22": {
       "short": "6-2-MZ9btd4",
       "medium": "8-4-Qn1dCzI",
       "long": "9-8-C167J3T"
+    },
+    "2025-05-21": {
+      "short": "6-3-IV9mmhO",
+      "medium": "8-4-QyoYYwb",
+      "long": "9-8-gYNaD8h"
+    },
+    "2025-05-23": {
+      "short": "5-3-fzsrgtk",
+      "medium": "8-6-SL1BHif",
+      "long": "9-8-7gVb2nX"
+    },
+    "2025-05-24": {
+      "short": "6-3-GRkzz5j",
+      "medium": "7-7-K5UTnV9",
+      "long": "12-4-XH75Xgl"
+    },
+    "2025-05-25": {
+      "short": "5-4-c5qYad7",
+      "medium": "8-5-cMAjQTS",
+      "long": "10-7-Lu97BCS"
+    },
+    "2025-05-26": {
+      "short": "5-3-lFqAg1j",
+      "medium": "8-6-t8vgEDA",
+      "long": "9-3-fTdFQNh"
+    },
+    "2025-05-27": {
+      "short": "5-3-plkuS1P",
+      "medium": "7-5-BzzUgWg",
+      "long": "9-8-ZeRDfyj"
+    },
+    "2025-05-28": {
+      "short": "6-3-mbXgE6o",
+      "medium": "8-6-kZxAcit",
+      "long": "12-5-NTZF9Sd"
+    },
+    "2025-05-29": {
+      "short": "5-4-fuQ3hk7",
+      "medium": "8-3-mT3hqKI",
+      "long": "12-6-tzKRwpa"
+    },
+    "2025-05-30": {
+      "short": "6-3-qxhOJoZ",
+      "medium": "8-3-r8PvuqO",
+      "long": "9-3-6ETAbAH"
+    },
+    "2025-05-31": {
+      "short": "6-2-tk6y09J",
+      "medium": "7-6-RqJ1NVG",
+      "long": "11-5-M7adYiZ"
+    },
+    "2025-06-01": {
+      "short": "5-3-nKJQECd",
+      "medium": "7-4-pQt8j3l",
+      "long": "10-6-AXBQFus"
+    },
+    "2025-06-02": {
+      "short": "6-3-E8qsZxy",
+      "medium": "7-7-WpJa75J",
+      "long": "11-6-DP5b0wS"
+    },
+    "2025-06-03": {
+      "short": "5-3-riSbHan",
+      "medium": "7-5-w9fgY5P",
+      "long": "9-4-Kvwic8z"
+    },
+    "2025-06-04": {
+      "short": "5-4-OGEy5aI",
+      "medium": "8-5-E1SoVlH",
+      "long": "9-8-32twmKf"
+    },
+    "2025-06-05": {
+      "short": "6-2-Fa8qanF",
+      "medium": "7-4-qp1rNtB",
+      "long": "9-3-cimEGkd"
+    },
+    "2025-06-06": {
+      "short": "5-3-SgiPfh5",
+      "medium": "8-6-4vbBr82",
+      "long": "9-4-6inuWGr"
+    },
+    "2025-06-07": {
+      "short": "5-4-QIj20X8",
+      "medium": "7-5-MqTIXxn",
+      "long": "11-8-K5QPMyi"
+    },
+    "2025-06-08": {
+      "short": "5-3-rYuu2Up",
+      "medium": "7-7-B9f6rH3",
+      "long": "9-7-WwHg8ec"
+    },
+    "2025-06-09": {
+      "short": "6-3-LLMjPiw",
+      "medium": "8-4-osAtJjT",
+      "long": "9-3-tiLGgGk"
+    },
+    "2025-06-10": {
+      "short": "5-4-f15UlyB",
+      "medium": "8-4-rIprbeV",
+      "long": "10-5-S1oqHUl"
+    },
+    "2025-06-11": {
+      "short": "6-3-gYSDSe1",
+      "medium": "8-5-sGd30eV",
+      "long": "9-5-auQIC3z"
+    },
+    "2025-06-12": {
+      "short": "6-2-ltctVyi",
+      "medium": "7-5-0Vh4nWM",
+      "long": "9-8-zdK8mBd"
+    },
+    "2025-06-13": {
+      "short": "5-3-09A3bba",
+      "medium": "8-5-7hJtdN9",
+      "long": "10-5-Mgv5Bqh"
+    },
+    "2025-06-14": {
+      "short": "5-3-qLDSI22",
+      "medium": "8-5-JRVmGrI",
+      "long": "9-8-KOrvvF7"
+    },
+    "2025-06-15": {
+      "short": "6-3-Fc9BIaF",
+      "medium": "7-4-ujOaCU4",
+      "long": "9-5-GPF0Jpk"
+    },
+    "2025-06-16": {
+      "short": "6-2-4WFhOkG",
+      "medium": "7-7-6NtDvP0",
+      "long": "11-8-V9adRXE"
+    },
+    "2025-06-17": {
+      "short": "5-4-7P6KHm9",
+      "medium": "8-6-j5nyiPe",
+      "long": "11-3-D6g4Y2t"
+    },
+    "2025-06-18": {
+      "short": "6-2-BcGRWyh",
+      "medium": "8-6-WsqeffP",
+      "long": "11-5-cS004eI"
+    },
+    "2025-06-19": {
+      "short": "6-3-fT6DHbV",
+      "medium": "7-7-kdhwMH4",
+      "long": "11-6-KkI3oCk"
+    },
+    "2025-06-20": {
+      "short": "5-3-3n1lSSa",
+      "medium": "8-6-MNhRd35",
+      "long": "12-5-iQMLABg"
+    },
+    "2025-06-21": {
+      "short": "5-4-U7TDWDy",
+      "medium": "8-3-S77KTFK",
+      "long": "9-7-DGNV1C7"
+    },
+    "2025-06-22": {
+      "short": "6-3-fmtekpO",
+      "medium": "8-3-QIPWdwh",
+      "long": "10-4-ju7DcJK"
+    },
+    "2025-06-23": {
+      "short": "6-3-eElcKHN",
+      "medium": "8-5-pzlJPq9",
+      "long": "9-5-RE13WA8"
+    },
+    "2025-06-24": {
+      "short": "5-3-10CxIV0",
+      "medium": "8-5-vgsSqKt",
+      "long": "9-4-nKkTmgm"
+    },
+    "2025-06-25": {
+      "short": "6-3-rcJ72Vq",
+      "medium": "7-4-B5TZ31B",
+      "long": "14-3-k0eyFcE"
+    },
+    "2025-06-26": {
+      "short": "5-4-8OhhppR",
+      "medium": "8-6-WJiC94k",
+      "long": "10-6-DMsfc58"
+    },
+    "2025-06-27": {
+      "short": "5-3-9QXCb34",
+      "medium": "8-4-giImUVU",
+      "long": "9-8-GPvEsIp"
+    },
+    "2025-06-28": {
+      "short": "5-4-yuzsNTt",
+      "medium": "8-3-mKzoycc",
+      "long": "11-5-fP6hVgQ"
+    },
+    "2025-06-29": {
+      "short": "5-3-Aas8umZ",
+      "medium": "8-5-h9icCK7",
+      "long": "9-6-o2xvnGw"
+    },
+    "2025-06-30": {
+      "short": "6-2-l3wmkj0",
+      "medium": "7-4-L5sKTw0",
+      "long": "9-8-cmRaEB2"
+    },
+    "2025-07-01": {
+      "short": "5-3-vel53hX",
+      "medium": "7-7-yJAvvPx",
+      "long": "12-8-i5a3VQR"
+    },
+    "2025-07-02": {
+      "short": "5-3-IdyKD3L",
+      "medium": "8-5-tXs9iQJ",
+      "long": "10-8-sOPGBIj"
+    },
+    "2025-07-03": {
+      "short": "5-4-p0k0ZwZ",
+      "medium": "7-6-dZERMIe",
+      "long": "9-3-5oR576v"
+    },
+    "2025-07-04": {
+      "short": "6-3-gYGFlco",
+      "medium": "7-7-GFAUTjB",
+      "long": "12-5-Uovh641"
+    },
+    "2025-07-05": {
+      "short": "6-2-MQVlJEM",
+      "medium": "7-5-Cjg6yCD",
+      "long": "9-5-FczMYZo"
+    },
+    "2025-07-06": {
+      "short": "6-2-QaLRk3N",
+      "medium": "7-7-jMAnW1C",
+      "long": "9-4-0e3WNC4"
+    },
+    "2025-07-07": {
+      "short": "5-3-dvAvvrg",
+      "medium": "7-4-EbB2H1K",
+      "long": "11-7-tmz3MsM"
+    },
+    "2025-07-08": {
+      "short": "6-3-IY3cG4Y",
+      "medium": "7-5-1QIRv7P",
+      "long": "10-3-49snHzK"
+    },
+    "2025-07-09": {
+      "short": "5-3-nfoXZUE",
+      "medium": "7-6-Pl5iiFI",
+      "long": "11-4-pQp1lTG"
+    },
+    "2025-07-10": {
+      "short": "6-2-vWWYs4N",
+      "medium": "7-5-PceI4FN",
+      "long": "11-6-W8YG9Rh"
+    },
+    "2025-07-11": {
+      "short": "5-4-n15rXnK",
+      "medium": "8-6-aB4DVyQ",
+      "long": "10-7-qgPdsLh"
+    },
+    "2025-07-12": {
+      "short": "6-2-yUo6wn7",
+      "medium": "7-4-75HqGaD",
+      "long": "9-8-iOx5TFR"
+    },
+    "2025-07-13": {
+      "short": "5-3-zz2xLtY",
+      "medium": "7-6-ICWGI43",
+      "long": "11-8-bw0DHEJ"
+    },
+    "2025-07-14": {
+      "short": "6-3-kaLYvmx",
+      "medium": "8-3-UNy1eB3",
+      "long": "12-4-YoJUmxu"
+    },
+    "2025-07-15": {
+      "short": "5-4-CTtCMWk",
+      "medium": "7-5-XP8jAWo",
+      "long": "11-8-ANTjlBU"
+    },
+    "2025-07-16": {
+      "short": "6-3-a3fqS8x",
+      "medium": "7-6-O2aY2Xt",
+      "long": "10-5-IsuYbqh"
+    },
+    "2025-07-17": {
+      "short": "6-2-jbDXfPY",
+      "medium": "8-6-g4ArADo",
+      "long": "10-3-57RyQNJ"
+    },
+    "2025-07-18": {
+      "short": "6-2-To7QW6N",
+      "medium": "8-6-Q2eUDVk",
+      "long": "12-8-057gll0"
+    },
+    "2025-07-19": {
+      "short": "6-2-12ckUhD",
+      "medium": "8-5-2wYauPN",
+      "long": "10-5-MwG4hDG"
+    },
+    "2025-07-20": {
+      "short": "6-3-CCwcbXX",
+      "medium": "8-6-5V565wv",
+      "long": "9-6-HITWEh1"
+    },
+    "2025-07-21": {
+      "short": "6-2-LQ6yp1q",
+      "medium": "8-5-a3DxjYF",
+      "long": "10-3-5bRBUiS"
+    },
+    "2025-07-22": {
+      "short": "6-3-ZGNhRSC",
+      "medium": "8-6-yyy3TM7",
+      "long": "9-6-uaW3UdJ"
+    },
+    "2025-07-23": {
+      "short": "6-2-toCWcjv",
+      "medium": "8-5-IAPZWoM",
+      "long": "10-6-u7MjPPK"
+    },
+    "2025-07-24": {
+      "short": "5-4-b9bxulQ",
+      "medium": "8-4-qFoaRqU",
+      "long": "12-4-F1Wzmoj"
+    },
+    "2025-07-25": {
+      "short": "6-3-zSKM8Wa",
+      "medium": "7-6-vHwVkfO",
+      "long": "9-8-G05CtZs"
+    },
+    "2025-07-26": {
+      "short": "5-4-OZH3Ray",
+      "medium": "7-5-c61NpPV",
+      "long": "10-5-bQtBmBy"
+    },
+    "2025-07-27": {
+      "short": "6-3-V3b0Xr5",
+      "medium": "8-3-BmWSls9",
+      "long": "9-4-sYJz0F7"
+    },
+    "2025-07-28": {
+      "short": "6-2-1xHpHrO",
+      "medium": "7-5-y197PJv",
+      "long": "9-8-b0KQijM"
+    },
+    "2025-07-29": {
+      "short": "5-3-aelmvNO",
+      "medium": "7-4-ncs4BWd",
+      "long": "10-4-ZpkyokO"
+    },
+    "2025-07-30": {
+      "short": "5-3-lmm7yTW",
+      "medium": "7-6-2Idm0tk",
+      "long": "10-4-xKgld0U"
+    },
+    "2025-07-31": {
+      "short": "5-4-a0yxlLY",
+      "medium": "7-6-AKyCZJk",
+      "long": "10-6-W8rFKse"
+    },
+    "2025-08-01": {
+      "short": "6-3-jce4gOs",
+      "medium": "7-4-TsSztSi",
+      "long": "11-7-qp1O68P"
+    },
+    "2025-08-02": {
+      "short": "6-2-Vo3FIz2",
+      "medium": "7-7-CpH0JtR",
+      "long": "11-8-Ua0jUCU"
+    },
+    "2025-08-03": {
+      "short": "6-3-wMKAeEA",
+      "medium": "7-7-zCHgovP",
+      "long": "9-8-2deSFV1"
+    },
+    "2025-08-04": {
+      "short": "5-4-X15rfCN",
+      "medium": "7-4-YBbankU",
+      "long": "9-8-HPZdZyR"
+    },
+    "2025-08-05": {
+      "short": "5-3-FjfOQye",
+      "medium": "7-5-sY6oVnv",
+      "long": "9-8-A8QW7sY"
+    },
+    "2025-08-06": {
+      "short": "5-3-7wzpmNN",
+      "medium": "7-4-xqOCsZH",
+      "long": "13-4-2y3tIpV"
+    },
+    "2025-08-07": {
+      "short": "5-3-dIoy5X3",
+      "medium": "7-4-BiRIYja",
+      "long": "10-6-DX1rOm9"
+    },
+    "2025-08-08": {
+      "short": "6-3-k91Oo3E",
+      "medium": "8-5-pykO9Dv",
+      "long": "10-8-8jKHAor"
+    },
+    "2025-08-09": {
+      "short": "5-3-cTC4RLk",
+      "medium": "7-7-5ADFKg1",
+      "long": "11-5-xrGSyC0"
+    },
+    "2025-08-10": {
+      "short": "6-3-GI79C0B",
+      "medium": "7-6-72W6S2G",
+      "long": "9-8-nZ6Do66"
+    },
+    "2025-08-11": {
+      "short": "6-2-l3MUOpc",
+      "medium": "7-7-6iVve4i",
+      "long": "9-5-nTwKdBo"
+    },
+    "2025-08-12": {
+      "short": "6-2-4NV2pbW",
+      "medium": "7-5-TJhKIK3",
+      "long": "9-8-IJgU5HX"
+    },
+    "2025-08-13": {
+      "short": "5-3-u3Ca7rI",
+      "medium": "7-6-xk9x1eb",
+      "long": "9-6-FCFdVrk"
+    },
+    "2025-08-14": {
+      "short": "5-3-KdHK7Kn",
+      "medium": "8-5-FmeZ6G0",
+      "long": "9-4-h5X8b8C"
+    },
+    "2025-08-15": {
+      "short": "6-2-2cT3a06",
+      "medium": "7-5-efc5tLi",
+      "long": "9-5-g1AmE3h"
+    },
+    "2025-08-16": {
+      "short": "6-3-1qT2vWu",
+      "medium": "8-3-7KHHwLK",
+      "long": "9-3-MFiVssP"
+    },
+    "2025-08-17": {
+      "short": "6-3-6lC7btW",
+      "medium": "8-6-tamuC6E",
+      "long": "10-3-qsrG3hE"
+    },
+    "2025-08-18": {
+      "short": "6-2-6iLbxpN",
+      "medium": "7-6-khIvD3G",
+      "long": "10-6-ikgpfgc"
+    },
+    "2025-08-19": {
+      "short": "6-3-wEmYYMR",
+      "medium": "8-4-piOk8vL",
+      "long": "9-4-fzETE1Z"
+    },
+    "2025-08-20": {
+      "short": "6-3-okkxfII",
+      "medium": "7-7-5uhBEQx",
+      "long": "10-3-LYVuNkx"
+    },
+    "2025-08-21": {
+      "short": "5-3-PaHr9uO",
+      "medium": "7-5-Qkm8JAa",
+      "long": "9-4-IEM9XcI"
+    },
+    "2025-08-22": {
+      "short": "5-3-jGOXV9z",
+      "medium": "7-6-n9tHfuB",
+      "long": "10-8-LpSZl9T"
+    },
+    "2025-08-23": {
+      "short": "6-2-NOtsxzJ",
+      "medium": "7-4-GsJoGEK",
+      "long": "11-7-DsBdXUL"
     }
   },
   "puzzles": {
     "6-2-MZ9btd4": {
-      "date": "2025-05-20",
+      "date": "2025-05-22",
       "length": 6,
       "type": "short"
     },
     "8-4-Qn1dCzI": {
-      "date": "2025-05-20",
+      "date": "2025-05-22",
       "length": 8,
       "type": "medium"
     },
     "9-8-C167J3T": {
-      "date": "2025-05-20",
+      "date": "2025-05-22",
       "length": 9,
+      "type": "long"
+    },
+    "6-3-IV9mmhO": {
+      "date": "2025-05-21",
+      "length": 6,
+      "type": "short"
+    },
+    "8-4-QyoYYwb": {
+      "date": "2025-05-21",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-gYNaD8h": {
+      "date": "2025-05-21",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-fzsrgtk": {
+      "date": "2025-05-23",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-SL1BHif": {
+      "date": "2025-05-23",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-7gVb2nX": {
+      "date": "2025-05-23",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-GRkzz5j": {
+      "date": "2025-05-24",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-K5UTnV9": {
+      "date": "2025-05-24",
+      "length": 7,
+      "type": "medium"
+    },
+    "12-4-XH75Xgl": {
+      "date": "2025-05-24",
+      "length": 12,
+      "type": "long"
+    },
+    "5-4-c5qYad7": {
+      "date": "2025-05-25",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-cMAjQTS": {
+      "date": "2025-05-25",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-7-Lu97BCS": {
+      "date": "2025-05-25",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-lFqAg1j": {
+      "date": "2025-05-26",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-t8vgEDA": {
+      "date": "2025-05-26",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-3-fTdFQNh": {
+      "date": "2025-05-26",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-plkuS1P": {
+      "date": "2025-05-27",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-BzzUgWg": {
+      "date": "2025-05-27",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-ZeRDfyj": {
+      "date": "2025-05-27",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-mbXgE6o": {
+      "date": "2025-05-28",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-kZxAcit": {
+      "date": "2025-05-28",
+      "length": 8,
+      "type": "medium"
+    },
+    "12-5-NTZF9Sd": {
+      "date": "2025-05-28",
+      "length": 12,
+      "type": "long"
+    },
+    "5-4-fuQ3hk7": {
+      "date": "2025-05-29",
+      "length": 5,
+      "type": "short"
+    },
+    "8-3-mT3hqKI": {
+      "date": "2025-05-29",
+      "length": 8,
+      "type": "medium"
+    },
+    "12-6-tzKRwpa": {
+      "date": "2025-05-29",
+      "length": 12,
+      "type": "long"
+    },
+    "6-3-qxhOJoZ": {
+      "date": "2025-05-30",
+      "length": 6,
+      "type": "short"
+    },
+    "8-3-r8PvuqO": {
+      "date": "2025-05-30",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-3-6ETAbAH": {
+      "date": "2025-05-30",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-tk6y09J": {
+      "date": "2025-05-31",
+      "length": 6,
+      "type": "short"
+    },
+    "7-6-RqJ1NVG": {
+      "date": "2025-05-31",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-5-M7adYiZ": {
+      "date": "2025-05-31",
+      "length": 11,
+      "type": "long"
+    },
+    "5-3-nKJQECd": {
+      "date": "2025-06-01",
+      "length": 5,
+      "type": "short"
+    },
+    "7-4-pQt8j3l": {
+      "date": "2025-06-01",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-6-AXBQFus": {
+      "date": "2025-06-01",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-E8qsZxy": {
+      "date": "2025-06-02",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-WpJa75J": {
+      "date": "2025-06-02",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-6-DP5b0wS": {
+      "date": "2025-06-02",
+      "length": 11,
+      "type": "long"
+    },
+    "5-3-riSbHan": {
+      "date": "2025-06-03",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-w9fgY5P": {
+      "date": "2025-06-03",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-4-Kvwic8z": {
+      "date": "2025-06-03",
+      "length": 9,
+      "type": "long"
+    },
+    "5-4-OGEy5aI": {
+      "date": "2025-06-04",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-E1SoVlH": {
+      "date": "2025-06-04",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-32twmKf": {
+      "date": "2025-06-04",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-Fa8qanF": {
+      "date": "2025-06-05",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-qp1rNtB": {
+      "date": "2025-06-05",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-3-cimEGkd": {
+      "date": "2025-06-05",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-SgiPfh5": {
+      "date": "2025-06-06",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-4vbBr82": {
+      "date": "2025-06-06",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-4-6inuWGr": {
+      "date": "2025-06-06",
+      "length": 9,
+      "type": "long"
+    },
+    "5-4-QIj20X8": {
+      "date": "2025-06-07",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-MqTIXxn": {
+      "date": "2025-06-07",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-8-K5QPMyi": {
+      "date": "2025-06-07",
+      "length": 11,
+      "type": "long"
+    },
+    "5-3-rYuu2Up": {
+      "date": "2025-06-08",
+      "length": 5,
+      "type": "short"
+    },
+    "7-7-B9f6rH3": {
+      "date": "2025-06-08",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-7-WwHg8ec": {
+      "date": "2025-06-08",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-LLMjPiw": {
+      "date": "2025-06-09",
+      "length": 6,
+      "type": "short"
+    },
+    "8-4-osAtJjT": {
+      "date": "2025-06-09",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-3-tiLGgGk": {
+      "date": "2025-06-09",
+      "length": 9,
+      "type": "long"
+    },
+    "5-4-f15UlyB": {
+      "date": "2025-06-10",
+      "length": 5,
+      "type": "short"
+    },
+    "8-4-rIprbeV": {
+      "date": "2025-06-10",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-5-S1oqHUl": {
+      "date": "2025-06-10",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-gYSDSe1": {
+      "date": "2025-06-11",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-sGd30eV": {
+      "date": "2025-06-11",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-5-auQIC3z": {
+      "date": "2025-06-11",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-ltctVyi": {
+      "date": "2025-06-12",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-0Vh4nWM": {
+      "date": "2025-06-12",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-zdK8mBd": {
+      "date": "2025-06-12",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-09A3bba": {
+      "date": "2025-06-13",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-7hJtdN9": {
+      "date": "2025-06-13",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-5-Mgv5Bqh": {
+      "date": "2025-06-13",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-qLDSI22": {
+      "date": "2025-06-14",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-JRVmGrI": {
+      "date": "2025-06-14",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-KOrvvF7": {
+      "date": "2025-06-14",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-Fc9BIaF": {
+      "date": "2025-06-15",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-ujOaCU4": {
+      "date": "2025-06-15",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-5-GPF0Jpk": {
+      "date": "2025-06-15",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-4WFhOkG": {
+      "date": "2025-06-16",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-6NtDvP0": {
+      "date": "2025-06-16",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-8-V9adRXE": {
+      "date": "2025-06-16",
+      "length": 11,
+      "type": "long"
+    },
+    "5-4-7P6KHm9": {
+      "date": "2025-06-17",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-j5nyiPe": {
+      "date": "2025-06-17",
+      "length": 8,
+      "type": "medium"
+    },
+    "11-3-D6g4Y2t": {
+      "date": "2025-06-17",
+      "length": 11,
+      "type": "long"
+    },
+    "6-2-BcGRWyh": {
+      "date": "2025-06-18",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-WsqeffP": {
+      "date": "2025-06-18",
+      "length": 8,
+      "type": "medium"
+    },
+    "11-5-cS004eI": {
+      "date": "2025-06-18",
+      "length": 11,
+      "type": "long"
+    },
+    "6-3-fT6DHbV": {
+      "date": "2025-06-19",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-kdhwMH4": {
+      "date": "2025-06-19",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-6-KkI3oCk": {
+      "date": "2025-06-19",
+      "length": 11,
+      "type": "long"
+    },
+    "5-3-3n1lSSa": {
+      "date": "2025-06-20",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-MNhRd35": {
+      "date": "2025-06-20",
+      "length": 8,
+      "type": "medium"
+    },
+    "12-5-iQMLABg": {
+      "date": "2025-06-20",
+      "length": 12,
+      "type": "long"
+    },
+    "5-4-U7TDWDy": {
+      "date": "2025-06-21",
+      "length": 5,
+      "type": "short"
+    },
+    "8-3-S77KTFK": {
+      "date": "2025-06-21",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-7-DGNV1C7": {
+      "date": "2025-06-21",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-fmtekpO": {
+      "date": "2025-06-22",
+      "length": 6,
+      "type": "short"
+    },
+    "8-3-QIPWdwh": {
+      "date": "2025-06-22",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-4-ju7DcJK": {
+      "date": "2025-06-22",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-eElcKHN": {
+      "date": "2025-06-23",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-pzlJPq9": {
+      "date": "2025-06-23",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-5-RE13WA8": {
+      "date": "2025-06-23",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-10CxIV0": {
+      "date": "2025-06-24",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-vgsSqKt": {
+      "date": "2025-06-24",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-4-nKkTmgm": {
+      "date": "2025-06-24",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-rcJ72Vq": {
+      "date": "2025-06-25",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-B5TZ31B": {
+      "date": "2025-06-25",
+      "length": 7,
+      "type": "medium"
+    },
+    "14-3-k0eyFcE": {
+      "date": "2025-06-25",
+      "length": 14,
+      "type": "long"
+    },
+    "5-4-8OhhppR": {
+      "date": "2025-06-26",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-WJiC94k": {
+      "date": "2025-06-26",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-6-DMsfc58": {
+      "date": "2025-06-26",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-9QXCb34": {
+      "date": "2025-06-27",
+      "length": 5,
+      "type": "short"
+    },
+    "8-4-giImUVU": {
+      "date": "2025-06-27",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-8-GPvEsIp": {
+      "date": "2025-06-27",
+      "length": 9,
+      "type": "long"
+    },
+    "5-4-yuzsNTt": {
+      "date": "2025-06-28",
+      "length": 5,
+      "type": "short"
+    },
+    "8-3-mKzoycc": {
+      "date": "2025-06-28",
+      "length": 8,
+      "type": "medium"
+    },
+    "11-5-fP6hVgQ": {
+      "date": "2025-06-28",
+      "length": 11,
+      "type": "long"
+    },
+    "5-3-Aas8umZ": {
+      "date": "2025-06-29",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-h9icCK7": {
+      "date": "2025-06-29",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-6-o2xvnGw": {
+      "date": "2025-06-29",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-l3wmkj0": {
+      "date": "2025-06-30",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-L5sKTw0": {
+      "date": "2025-06-30",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-cmRaEB2": {
+      "date": "2025-06-30",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-vel53hX": {
+      "date": "2025-07-01",
+      "length": 5,
+      "type": "short"
+    },
+    "7-7-yJAvvPx": {
+      "date": "2025-07-01",
+      "length": 7,
+      "type": "medium"
+    },
+    "12-8-i5a3VQR": {
+      "date": "2025-07-01",
+      "length": 12,
+      "type": "long"
+    },
+    "5-3-IdyKD3L": {
+      "date": "2025-07-02",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-tXs9iQJ": {
+      "date": "2025-07-02",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-8-sOPGBIj": {
+      "date": "2025-07-02",
+      "length": 10,
+      "type": "long"
+    },
+    "5-4-p0k0ZwZ": {
+      "date": "2025-07-03",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-dZERMIe": {
+      "date": "2025-07-03",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-3-5oR576v": {
+      "date": "2025-07-03",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-gYGFlco": {
+      "date": "2025-07-04",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-GFAUTjB": {
+      "date": "2025-07-04",
+      "length": 7,
+      "type": "medium"
+    },
+    "12-5-Uovh641": {
+      "date": "2025-07-04",
+      "length": 12,
+      "type": "long"
+    },
+    "6-2-MQVlJEM": {
+      "date": "2025-07-05",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-Cjg6yCD": {
+      "date": "2025-07-05",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-5-FczMYZo": {
+      "date": "2025-07-05",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-QaLRk3N": {
+      "date": "2025-07-06",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-jMAnW1C": {
+      "date": "2025-07-06",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-4-0e3WNC4": {
+      "date": "2025-07-06",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-dvAvvrg": {
+      "date": "2025-07-07",
+      "length": 5,
+      "type": "short"
+    },
+    "7-4-EbB2H1K": {
+      "date": "2025-07-07",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-7-tmz3MsM": {
+      "date": "2025-07-07",
+      "length": 11,
+      "type": "long"
+    },
+    "6-3-IY3cG4Y": {
+      "date": "2025-07-08",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-1QIRv7P": {
+      "date": "2025-07-08",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-3-49snHzK": {
+      "date": "2025-07-08",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-nfoXZUE": {
+      "date": "2025-07-09",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-Pl5iiFI": {
+      "date": "2025-07-09",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-4-pQp1lTG": {
+      "date": "2025-07-09",
+      "length": 11,
+      "type": "long"
+    },
+    "6-2-vWWYs4N": {
+      "date": "2025-07-10",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-PceI4FN": {
+      "date": "2025-07-10",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-6-W8YG9Rh": {
+      "date": "2025-07-10",
+      "length": 11,
+      "type": "long"
+    },
+    "5-4-n15rXnK": {
+      "date": "2025-07-11",
+      "length": 5,
+      "type": "short"
+    },
+    "8-6-aB4DVyQ": {
+      "date": "2025-07-11",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-7-qgPdsLh": {
+      "date": "2025-07-11",
+      "length": 10,
+      "type": "long"
+    },
+    "6-2-yUo6wn7": {
+      "date": "2025-07-12",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-75HqGaD": {
+      "date": "2025-07-12",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-iOx5TFR": {
+      "date": "2025-07-12",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-zz2xLtY": {
+      "date": "2025-07-13",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-ICWGI43": {
+      "date": "2025-07-13",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-8-bw0DHEJ": {
+      "date": "2025-07-13",
+      "length": 11,
+      "type": "long"
+    },
+    "6-3-kaLYvmx": {
+      "date": "2025-07-14",
+      "length": 6,
+      "type": "short"
+    },
+    "8-3-UNy1eB3": {
+      "date": "2025-07-14",
+      "length": 8,
+      "type": "medium"
+    },
+    "12-4-YoJUmxu": {
+      "date": "2025-07-14",
+      "length": 12,
+      "type": "long"
+    },
+    "5-4-CTtCMWk": {
+      "date": "2025-07-15",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-XP8jAWo": {
+      "date": "2025-07-15",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-8-ANTjlBU": {
+      "date": "2025-07-15",
+      "length": 11,
+      "type": "long"
+    },
+    "6-3-a3fqS8x": {
+      "date": "2025-07-16",
+      "length": 6,
+      "type": "short"
+    },
+    "7-6-O2aY2Xt": {
+      "date": "2025-07-16",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-5-IsuYbqh": {
+      "date": "2025-07-16",
+      "length": 10,
+      "type": "long"
+    },
+    "6-2-jbDXfPY": {
+      "date": "2025-07-17",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-g4ArADo": {
+      "date": "2025-07-17",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-3-57RyQNJ": {
+      "date": "2025-07-17",
+      "length": 10,
+      "type": "long"
+    },
+    "6-2-To7QW6N": {
+      "date": "2025-07-18",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-Q2eUDVk": {
+      "date": "2025-07-18",
+      "length": 8,
+      "type": "medium"
+    },
+    "12-8-057gll0": {
+      "date": "2025-07-18",
+      "length": 12,
+      "type": "long"
+    },
+    "6-2-12ckUhD": {
+      "date": "2025-07-19",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-2wYauPN": {
+      "date": "2025-07-19",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-5-MwG4hDG": {
+      "date": "2025-07-19",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-CCwcbXX": {
+      "date": "2025-07-20",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-5V565wv": {
+      "date": "2025-07-20",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-6-HITWEh1": {
+      "date": "2025-07-20",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-LQ6yp1q": {
+      "date": "2025-07-21",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-a3DxjYF": {
+      "date": "2025-07-21",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-3-5bRBUiS": {
+      "date": "2025-07-21",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-ZGNhRSC": {
+      "date": "2025-07-22",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-yyy3TM7": {
+      "date": "2025-07-22",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-6-uaW3UdJ": {
+      "date": "2025-07-22",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-toCWcjv": {
+      "date": "2025-07-23",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-IAPZWoM": {
+      "date": "2025-07-23",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-6-u7MjPPK": {
+      "date": "2025-07-23",
+      "length": 10,
+      "type": "long"
+    },
+    "5-4-b9bxulQ": {
+      "date": "2025-07-24",
+      "length": 5,
+      "type": "short"
+    },
+    "8-4-qFoaRqU": {
+      "date": "2025-07-24",
+      "length": 8,
+      "type": "medium"
+    },
+    "12-4-F1Wzmoj": {
+      "date": "2025-07-24",
+      "length": 12,
+      "type": "long"
+    },
+    "6-3-zSKM8Wa": {
+      "date": "2025-07-25",
+      "length": 6,
+      "type": "short"
+    },
+    "7-6-vHwVkfO": {
+      "date": "2025-07-25",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-G05CtZs": {
+      "date": "2025-07-25",
+      "length": 9,
+      "type": "long"
+    },
+    "5-4-OZH3Ray": {
+      "date": "2025-07-26",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-c61NpPV": {
+      "date": "2025-07-26",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-5-bQtBmBy": {
+      "date": "2025-07-26",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-V3b0Xr5": {
+      "date": "2025-07-27",
+      "length": 6,
+      "type": "short"
+    },
+    "8-3-BmWSls9": {
+      "date": "2025-07-27",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-4-sYJz0F7": {
+      "date": "2025-07-27",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-1xHpHrO": {
+      "date": "2025-07-28",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-y197PJv": {
+      "date": "2025-07-28",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-b0KQijM": {
+      "date": "2025-07-28",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-aelmvNO": {
+      "date": "2025-07-29",
+      "length": 5,
+      "type": "short"
+    },
+    "7-4-ncs4BWd": {
+      "date": "2025-07-29",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-4-ZpkyokO": {
+      "date": "2025-07-29",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-lmm7yTW": {
+      "date": "2025-07-30",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-2Idm0tk": {
+      "date": "2025-07-30",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-4-xKgld0U": {
+      "date": "2025-07-30",
+      "length": 10,
+      "type": "long"
+    },
+    "5-4-a0yxlLY": {
+      "date": "2025-07-31",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-AKyCZJk": {
+      "date": "2025-07-31",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-6-W8rFKse": {
+      "date": "2025-07-31",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-jce4gOs": {
+      "date": "2025-08-01",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-TsSztSi": {
+      "date": "2025-08-01",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-7-qp1O68P": {
+      "date": "2025-08-01",
+      "length": 11,
+      "type": "long"
+    },
+    "6-2-Vo3FIz2": {
+      "date": "2025-08-02",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-CpH0JtR": {
+      "date": "2025-08-02",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-8-Ua0jUCU": {
+      "date": "2025-08-02",
+      "length": 11,
+      "type": "long"
+    },
+    "6-3-wMKAeEA": {
+      "date": "2025-08-03",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-zCHgovP": {
+      "date": "2025-08-03",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-2deSFV1": {
+      "date": "2025-08-03",
+      "length": 9,
+      "type": "long"
+    },
+    "5-4-X15rfCN": {
+      "date": "2025-08-04",
+      "length": 5,
+      "type": "short"
+    },
+    "7-4-YBbankU": {
+      "date": "2025-08-04",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-HPZdZyR": {
+      "date": "2025-08-04",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-FjfOQye": {
+      "date": "2025-08-05",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-sY6oVnv": {
+      "date": "2025-08-05",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-A8QW7sY": {
+      "date": "2025-08-05",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-7wzpmNN": {
+      "date": "2025-08-06",
+      "length": 5,
+      "type": "short"
+    },
+    "7-4-xqOCsZH": {
+      "date": "2025-08-06",
+      "length": 7,
+      "type": "medium"
+    },
+    "13-4-2y3tIpV": {
+      "date": "2025-08-06",
+      "length": 13,
+      "type": "long"
+    },
+    "5-3-dIoy5X3": {
+      "date": "2025-08-07",
+      "length": 5,
+      "type": "short"
+    },
+    "7-4-BiRIYja": {
+      "date": "2025-08-07",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-6-DX1rOm9": {
+      "date": "2025-08-07",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-k91Oo3E": {
+      "date": "2025-08-08",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-pykO9Dv": {
+      "date": "2025-08-08",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-8-8jKHAor": {
+      "date": "2025-08-08",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-cTC4RLk": {
+      "date": "2025-08-09",
+      "length": 5,
+      "type": "short"
+    },
+    "7-7-5ADFKg1": {
+      "date": "2025-08-09",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-5-xrGSyC0": {
+      "date": "2025-08-09",
+      "length": 11,
+      "type": "long"
+    },
+    "6-3-GI79C0B": {
+      "date": "2025-08-10",
+      "length": 6,
+      "type": "short"
+    },
+    "7-6-72W6S2G": {
+      "date": "2025-08-10",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-nZ6Do66": {
+      "date": "2025-08-10",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-l3MUOpc": {
+      "date": "2025-08-11",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-6iVve4i": {
+      "date": "2025-08-11",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-5-nTwKdBo": {
+      "date": "2025-08-11",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-4NV2pbW": {
+      "date": "2025-08-12",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-TJhKIK3": {
+      "date": "2025-08-12",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-8-IJgU5HX": {
+      "date": "2025-08-12",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-u3Ca7rI": {
+      "date": "2025-08-13",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-xk9x1eb": {
+      "date": "2025-08-13",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-6-FCFdVrk": {
+      "date": "2025-08-13",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-KdHK7Kn": {
+      "date": "2025-08-14",
+      "length": 5,
+      "type": "short"
+    },
+    "8-5-FmeZ6G0": {
+      "date": "2025-08-14",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-4-h5X8b8C": {
+      "date": "2025-08-14",
+      "length": 9,
+      "type": "long"
+    },
+    "6-2-2cT3a06": {
+      "date": "2025-08-15",
+      "length": 6,
+      "type": "short"
+    },
+    "7-5-efc5tLi": {
+      "date": "2025-08-15",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-5-g1AmE3h": {
+      "date": "2025-08-15",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-1qT2vWu": {
+      "date": "2025-08-16",
+      "length": 6,
+      "type": "short"
+    },
+    "8-3-7KHHwLK": {
+      "date": "2025-08-16",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-3-MFiVssP": {
+      "date": "2025-08-16",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-6lC7btW": {
+      "date": "2025-08-17",
+      "length": 6,
+      "type": "short"
+    },
+    "8-6-tamuC6E": {
+      "date": "2025-08-17",
+      "length": 8,
+      "type": "medium"
+    },
+    "10-3-qsrG3hE": {
+      "date": "2025-08-17",
+      "length": 10,
+      "type": "long"
+    },
+    "6-2-6iLbxpN": {
+      "date": "2025-08-18",
+      "length": 6,
+      "type": "short"
+    },
+    "7-6-khIvD3G": {
+      "date": "2025-08-18",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-6-ikgpfgc": {
+      "date": "2025-08-18",
+      "length": 10,
+      "type": "long"
+    },
+    "6-3-wEmYYMR": {
+      "date": "2025-08-19",
+      "length": 6,
+      "type": "short"
+    },
+    "8-4-piOk8vL": {
+      "date": "2025-08-19",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-4-fzETE1Z": {
+      "date": "2025-08-19",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-okkxfII": {
+      "date": "2025-08-20",
+      "length": 6,
+      "type": "short"
+    },
+    "7-7-5uhBEQx": {
+      "date": "2025-08-20",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-3-LYVuNkx": {
+      "date": "2025-08-20",
+      "length": 10,
+      "type": "long"
+    },
+    "5-3-PaHr9uO": {
+      "date": "2025-08-21",
+      "length": 5,
+      "type": "short"
+    },
+    "7-5-Qkm8JAa": {
+      "date": "2025-08-21",
+      "length": 7,
+      "type": "medium"
+    },
+    "9-4-IEM9XcI": {
+      "date": "2025-08-21",
+      "length": 9,
+      "type": "long"
+    },
+    "5-3-jGOXV9z": {
+      "date": "2025-08-22",
+      "length": 5,
+      "type": "short"
+    },
+    "7-6-n9tHfuB": {
+      "date": "2025-08-22",
+      "length": 7,
+      "type": "medium"
+    },
+    "10-8-LpSZl9T": {
+      "date": "2025-08-22",
+      "length": 10,
+      "type": "long"
+    },
+    "6-2-NOtsxzJ": {
+      "date": "2025-08-23",
+      "length": 6,
+      "type": "short"
+    },
+    "7-4-GsJoGEK": {
+      "date": "2025-08-23",
+      "length": 7,
+      "type": "medium"
+    },
+    "11-7-DsBdXUL": {
+      "date": "2025-08-23",
+      "length": 11,
       "type": "long"
     }
   }

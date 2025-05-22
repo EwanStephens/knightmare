@@ -1,0 +1,74 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DENIAL",
+    "DEN"
+  ],
+  "targetPath": [
+    "c5",
+    "d4",
+    "e5",
+    "b5",
+    "d3",
+    "c2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "e5": 0,
+    "a4": 0,
+    "d4": 2,
+    "d3": 1,
+    "c2": 1,
+    "d2": 0
+  }
+}

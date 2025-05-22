@@ -1,0 +1,143 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "INVOLVEMENT",
+    "INVOLVE",
+    "DEME",
+    "DENT",
+    "FEME",
+    "LOIN",
+    "MENT",
+    "DEM",
+    "DEN",
+    "EME"
+  ],
+  "targetPath": [
+    "e3",
+    "d2",
+    "b4",
+    "a3",
+    "a4",
+    "c4",
+    "d5",
+    "e4",
+    "c2",
+    "d1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "c5": 3,
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 1,
+    "c4": 1,
+    "d4": 0,
+    "e4": 2,
+    "a3": 2,
+    "e3": 1,
+    "c2": 2,
+    "d2": 3,
+    "e2": 3,
+    "c1": 1,
+    "d1": 2,
+    "e1": 0
+  }
+}

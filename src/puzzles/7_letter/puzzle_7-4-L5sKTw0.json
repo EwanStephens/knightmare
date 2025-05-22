@@ -1,0 +1,99 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "SOMEONE",
+    "SOME",
+    "EON",
+    "MEO",
+    "ONE"
+  ],
+  "targetPath": [
+    "a2",
+    "b3",
+    "d5",
+    "b4",
+    "d4",
+    "c5",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 3,
+    "d5": 1,
+    "a4": 1,
+    "b4": 1,
+    "d4": 1,
+    "e4": 0,
+    "b3": 2,
+    "c3": 1,
+    "a2": 1,
+    "e2": 0
+  }
+}

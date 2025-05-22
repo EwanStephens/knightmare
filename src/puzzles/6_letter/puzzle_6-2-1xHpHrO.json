@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "ATOMIC",
+    "ATOM",
+    "OMIT",
+    "ITO",
+    "MIR",
+    "MIT",
+    "RIC",
+    "RIT",
+    "TOM"
+  ],
+  "targetPath": [
+    "e2",
+    "c2",
+    "d3",
+    "c5",
+    "b4",
+    "a2"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 0,
+    "a4": 1,
+    "b4": 3,
+    "d3": 1,
+    "a2": 0,
+    "c2": 1,
+    "e2": 1
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "SPIRIT",
+    "FIP",
+    "FIR",
+    "PIR",
+    "RIT"
+  ],
+  "targetPath": [
+    "d5",
+    "d4",
+    "b2",
+    "a3",
+    "b1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 1,
+    "d4": 1,
+    "a3": 1,
+    "d3": 1,
+    "b2": 2,
+    "d2": 1,
+    "a1": 1,
+    "b1": 1
+  }
+}

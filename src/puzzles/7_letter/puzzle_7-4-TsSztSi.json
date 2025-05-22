@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ALLERGY",
+    "ALLER",
+    "ALLE",
+    "ALLS",
+    "LLER",
+    "AER",
+    "ALL",
+    "ELL",
+    "ELS",
+    "ERG"
+  ],
+  "targetPath": [
+    "c2",
+    "a1",
+    "d4",
+    "e3",
+    "b3",
+    "c4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "d5": 1,
+    "c4": 2,
+    "d4": 4,
+    "b3": 1,
+    "e3": 2,
+    "c2": 2,
+    "a1": 1,
+    "b1": 0,
+    "c1": 0
+  }
+}

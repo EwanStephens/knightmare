@@ -1,0 +1,152 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "PSYCHOLOGICAL",
+    "PSYCHOLOGIC",
+    "PSYCHOL",
+    "LOGICS",
+    "PSYCHO",
+    "CHOLO",
+    "LOGIC",
+    "OSTIC",
+    "PSYCH",
+    "CHOL"
+  ],
+  "targetPath": [
+    "a2",
+    "c3",
+    "e1",
+    "e2",
+    "b2",
+    "c1",
+    "d1",
+    "d3",
+    "e4",
+    "c5",
+    "b3",
+    "e3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 2,
+    "d5": 1,
+    "e5": 1,
+    "c4": 2,
+    "e4": 2,
+    "b3": 1,
+    "c3": 5,
+    "d3": 1,
+    "e3": 2,
+    "a2": 2,
+    "b2": 1,
+    "e2": 2,
+    "c1": 1,
+    "d1": 2,
+    "e1": 1
+  }
+}

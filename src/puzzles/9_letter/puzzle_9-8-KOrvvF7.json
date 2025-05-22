@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "ABANDONED",
+    "ABANDON",
+    "BANDON",
+    "ABAND",
+    "BANDO",
+    "TONED",
+    "BAND",
+    "DONE",
+    "DONN",
+    "SONE"
+  ],
+  "targetPath": [
+    "e2",
+    "d3",
+    "e3",
+    "a3",
+    "b2",
+    "b1",
+    "c1",
+    "d2",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "a4": 0,
+    "b4": 1,
+    "c4": 2,
+    "a3": 1,
+    "d3": 1,
+    "e3": 2,
+    "b2": 3,
+    "c2": 5,
+    "d2": 2,
+    "e2": 2,
+    "a1": 2,
+    "b1": 3,
+    "c1": 1,
+    "d1": 0,
+    "e1": 0
+  }
+}

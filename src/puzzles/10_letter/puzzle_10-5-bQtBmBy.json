@@ -1,0 +1,135 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "REGISTERED",
+    "REGISTER",
+    "DHERI",
+    "ERRED",
+    "IRRED",
+    "REGIE",
+    "STERE",
+    "ERIE",
+    "ERIS",
+    "HERD"
+  ],
+  "targetPath": [
+    "b3",
+    "a3",
+    "a4",
+    "d1",
+    "d3",
+    "e2",
+    "e5",
+    "c4",
+    "b5",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "b5": 2,
+    "e5": 1,
+    "a4": 0,
+    "b4": 3,
+    "c4": 1,
+    "d4": 1,
+    "a3": 2,
+    "b3": 4,
+    "c3": 1,
+    "d3": 1,
+    "e2": 2,
+    "a1": 1,
+    "c1": 0,
+    "d1": 2
+  }
+}

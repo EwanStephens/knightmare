@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "DIAGRAM",
+    "AGRA",
+    "APAR",
+    "DIAG",
+    "GRAM",
+    "AGR",
+    "APA",
+    "ARG",
+    "DAD",
+    "DAM"
+  ],
+  "targetPath": [
+    "e2",
+    "d4",
+    "c5",
+    "b4",
+    "a5",
+    "a1",
+    "c1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 2,
+    "d5": 0,
+    "e5": 2,
+    "b4": 2,
+    "d4": 1,
+    "c3": 2,
+    "d3": 2,
+    "b2": 3,
+    "c2": 4,
+    "e2": 1,
+    "a1": 2,
+    "c1": 1
+  }
+}

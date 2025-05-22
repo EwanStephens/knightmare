@@ -1,0 +1,80 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "EARTH",
+    "ARTE",
+    "TEAR",
+    "ARF",
+    "ART",
+    "EAR",
+    "FRA",
+    "RAH",
+    "TEA"
+  ],
+  "targetPath": [
+    "a5",
+    "c4",
+    "e4",
+    "a4",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "a4": 2,
+    "c4": 2,
+    "e4": 2,
+    "e2": 2,
+    "c1": 0,
+    "d1": 0
+  }
+}

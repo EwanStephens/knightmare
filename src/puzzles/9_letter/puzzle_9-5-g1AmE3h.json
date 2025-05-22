@@ -1,0 +1,127 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "COMMUNIST",
+    "COMMUNIS",
+    "TECOMA",
+    "STEIN",
+    "UNIST",
+    "COMA",
+    "COMM",
+    "NIST",
+    "TECO",
+    "TEES"
+  ],
+  "targetPath": [
+    "c4",
+    "e2",
+    "b5",
+    "c5",
+    "a4",
+    "d1",
+    "d2",
+    "c1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "e5": 0,
+    "a4": 1,
+    "b4": 0,
+    "c4": 1,
+    "c3": 4,
+    "e3": 3,
+    "b2": 2,
+    "d2": 2,
+    "e2": 1,
+    "c1": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "FAITH",
+    "AITH",
+    "FAIT",
+    "AIT"
+  ],
+  "targetPath": [
+    "a3",
+    "b3",
+    "a2",
+    "c3",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a3": 1,
+    "b3": 1,
+    "c3": 1,
+    "d3": 0,
+    "e3": 0,
+    "a2": 1,
+    "c2": 0,
+    "a1": 0
+  }
+}

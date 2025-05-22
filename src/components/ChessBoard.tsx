@@ -3,33 +3,37 @@
 import { useEffect, useState } from 'react';
 import { ChessPiece, GameState } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
-import { loadLevel } from '@/utils/levelLoader';
 import { LoadedLevel } from '@/types/level';
 import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
-import { updateLevelOnCompletion } from '@/utils/gameState';
+import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
 
 // Add prop type
 interface ChessBoardProps {
-  initialLevel?: number;
+  levelData?: LoadedLevel; // Required for non-tutorial mode
   tutorialMode?: boolean;
   tutorialLevel?: LoadedLevel;
   onPieceSelected?: (position: string, word: string) => void;
   onLevelComplete?: () => void;
   highlightedPosition?: string | null;
+  nextPuzzleId?: string | null;
+  congratsMessage?: string;
+  puzzleId?: string;
 }
 
 export default function ChessBoard({ 
-  initialLevel = 1, 
+  levelData,
   tutorialMode = false,
   tutorialLevel,
   onPieceSelected,
   onLevelComplete,
-  highlightedPosition
+  highlightedPosition,
+  nextPuzzleId,
+  congratsMessage,
+  puzzleId
 }: ChessBoardProps) {
-  const [currentLevel] = useState(initialLevel);
-  const [levelData, setLevelData] = useState<LoadedLevel | null>(null);
+  const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
     board: [],
     currentWord: '',
@@ -41,36 +45,40 @@ export default function ChessBoard({
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
 
   useEffect(() => {
-    const initializeLevel = async () => {
-      // If in tutorial mode, use the provided level data
-      if (tutorialMode && tutorialLevel) {
-        setLevelData(tutorialLevel);
-        setGameState(prevState => ({
-          ...prevState,
-          board: tutorialLevel.board,
-          currentWord: '',
-          selectedSquare: null,
-          previousSquares: [],
-          message: '',
-        }));
-        return;
-      }
-
-      // Otherwise load the level normally
-      const loadedLevel = await loadLevel(currentLevel);
-      setLevelData(loadedLevel);
+    // If in tutorial mode, use the provided level data
+    if (tutorialMode && tutorialLevel) {
+      setGameLevelData(tutorialLevel);
       setGameState(prevState => ({
         ...prevState,
-        board: loadedLevel.board,
+        board: tutorialLevel.board,
         currentWord: '',
         selectedSquare: null,
         previousSquares: [],
         message: '',
       }));
-    };
+      return;
+    }
+    // Otherwise, use the provided levelData prop
+    if (levelData) {
+      setGameLevelData(levelData);
+      setGameState(prevState => ({
+        ...prevState,
+        board: levelData.board,
+        currentWord: '',
+        selectedSquare: null,
+        previousSquares: [],
+        message: '',
+      }));
+    }
+  }, [levelData, tutorialMode, tutorialLevel]);
 
-    initializeLevel();
-  }, [currentLevel, tutorialMode, tutorialLevel]);
+  useEffect(() => {
+    if (puzzleId && typeof window !== 'undefined') {
+      if (isPuzzleSolved(puzzleId)) {
+        setShowCompleteModal(true);
+      }
+    }
+  }, [puzzleId]);
 
   const clearGameBoard = (message: string) => {
     return {
@@ -91,7 +99,7 @@ export default function ChessBoard({
   };
 
   const handleSquareClick = (position: string) => {
-    if (!levelData) return;
+    if (!gameLevelData) return;
 
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
@@ -159,19 +167,20 @@ export default function ChessBoard({
 
     // Check if word matches target
     let message = '';
-    if (newWord === levelData.targetWord) {
-      message = levelData.congratsMessage || `Congratulations! You found the word ${levelData.targetWord}!`;
-      
-      // If in tutorial mode, call the completion callback before showing modal
-      if (tutorialMode && onLevelComplete) {
+    if (newWord === gameLevelData.targetWord) {
+      message = congratsMessage || gameLevelData.congratsMessage || `Congratulations! You found the word ${gameLevelData.targetWord}!`;
+      // Always call the completion callback if provided
+      if (onLevelComplete) {
         onLevelComplete();
-      } else if (!tutorialMode) {
-        // Only show the modal in non-tutorial mode
+      }
+      // Mark puzzle as solved in localStorage for non-tutorial mode
+      if (!tutorialMode && puzzleId) {
+        markPuzzleSolved(puzzleId);
+      }
+      // Show modal for non-tutorial mode
+      if (!tutorialMode) {
         setTimeout(() => {
           setShowCompleteModal(true);
-          
-          // Update game state in localStorage for completed level
-          updateLevelOnCompletion(currentLevel);
         }, 200);
       }
     }
@@ -196,7 +205,7 @@ export default function ChessBoard({
     }
   };
 
-  if (!levelData) {
+  if (!gameLevelData) {
     return <div>Loading...</div>;
   }
 
@@ -206,7 +215,7 @@ export default function ChessBoard({
       <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
         <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4">
           <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4 level-title">
-            Find a {levelData.targetWord.length} letter word
+            Find a {gameLevelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
           <div className="aspect-square mx-auto w-[min(75vw,40vh)] min-w-50 min-h-50 max-w-120 max-h-120">
@@ -304,9 +313,9 @@ export default function ChessBoard({
                 height: "max(50px, min(6vh, 8vw))"
               }}
             >
-              {Array.from(levelData.targetWord).map((_, index) => {
+              {Array.from(gameLevelData.targetWord).map((_, index) => {
                 // Dynamically calculate sizes based on word length
-                const letterWidth = Math.max(100 / levelData.targetWord.length, 6);
+                const letterWidth = Math.max(100 / gameLevelData.targetWord.length, 6);
                 
                 return (
                   <span 
@@ -319,7 +328,7 @@ export default function ChessBoard({
                       height: '80%',
                       minHeight: '40px',
                       // Calculate font size based on viewport with minimum size guarantee
-                      fontSize: `max(20px, min(${Math.min(12, 60/levelData.targetWord.length)}vw, ${Math.min(6, 30/levelData.targetWord.length)}vh))`
+                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}vw, ${Math.min(6, 30/gameLevelData.targetWord.length)}vh))`
                     }}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
@@ -345,11 +354,31 @@ export default function ChessBoard({
       <CompletionModal 
         isOpen={showCompleteModal}
         onClose={() => setShowCompleteModal(false)}
-        congratsMessage={levelData.congratsMessage}
-        targetWord={levelData.targetWord}
-        currentLevel={currentLevel}
-        nextPath={tutorialMode ? undefined : `/play/${currentLevel + 1}`}
-        isTutorial={tutorialMode}
+        congratsMessage={congratsMessage || gameLevelData.congratsMessage}
+        targetWord={gameLevelData.targetWord}
+        {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
+        onReplay={() => {
+          setShowCompleteModal(false);
+          setGameState(prevState => ({
+            ...prevState,
+            board: gameLevelData.board.map(row =>
+              row.map(sq => ({
+                ...sq,
+                isSelected: false,
+                isLegalMove: false,
+                isHighlighted: false,
+              }))
+            ),
+            selectedSquare: null,
+            currentWord: '',
+            previousSquares: [],
+            message: '',
+          }));
+          // Notify tutorial system of clear action in tutorial mode
+          if (tutorialMode && onPieceSelected) {
+            onPieceSelected('clear', '');
+          }
+        }}
       />
     </div>
   );

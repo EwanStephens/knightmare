@@ -7,9 +7,9 @@ interface CompletionModalProps {
   onClose: () => void;
   congratsMessage: string;
   targetWord: string;
-  currentLevel: number;
   nextPath?: string;
-  isTutorial?: boolean;
+  onReplay?: () => void;
+  allowReplays?: boolean;
 }
 
 export default function CompletionModal({
@@ -17,9 +17,9 @@ export default function CompletionModal({
   onClose,
   congratsMessage,
   targetWord,
-  currentLevel,
   nextPath,
-  isTutorial = false
+  onReplay,
+  allowReplays = true,
 }: CompletionModalProps) {
   const router = useRouter();
   
@@ -30,6 +30,16 @@ export default function CompletionModal({
     onClose();
     if (nextPath) {
       router.push(nextPath);
+    }
+  };
+
+  const handleReplay = () => {
+    onClose();
+    if (onReplay) {
+      onReplay();
+    } else {
+      // Default: reload the page
+      router.refresh();
     }
   };
   
@@ -46,24 +56,21 @@ export default function CompletionModal({
           >
             Home
           </button>
-          {isTutorial ? (
-            currentLevel < 3 && (
-              <button
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
-                onClick={handleNextLevel}
-              >
-                Next Level
-              </button>
-            )
-          ) : (
-            currentLevel < 20 && (
-              <button
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
-                onClick={handleNextLevel}
-              >
-                Next Level
-              </button>
-            )
+          {nextPath && (
+            <button
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
+              onClick={handleNextLevel}
+            >
+              Next Level
+            </button>
+          )}
+          {allowReplays && (
+            <button
+              className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors duration-200"
+              onClick={handleReplay}
+            >
+              Play Again
+            </button>
           )}
         </div>
       </div>

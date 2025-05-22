@@ -1,0 +1,109 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "BIGGEST",
+    "BIGG",
+    "GEST",
+    "BIG",
+    "EST",
+    "GES",
+    "TNT",
+    "TST"
+  ],
+  "targetPath": [
+    "b2",
+    "a4",
+    "c2",
+    "b1",
+    "a2",
+    "b4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 2,
+    "d5": 0,
+    "a4": 1,
+    "b4": 2,
+    "d4": 2,
+    "a2": 1,
+    "b2": 1,
+    "c2": 1,
+    "d2": 2,
+    "b1": 2,
+    "e1": 1
+  }
+}

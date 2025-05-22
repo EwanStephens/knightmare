@@ -1,0 +1,172 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Z"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "INTERSECTION",
+    "INTERSECT",
+    "SECTION",
+    "ENTERS",
+    "INTERS",
+    "SECRET",
+    "ENTER",
+    "INTER",
+    "SECRE",
+    "SENTI"
+  ],
+  "targetPath": [
+    "e1",
+    "d2",
+    "b4",
+    "c5",
+    "d4",
+    "c4",
+    "d3",
+    "b3",
+    "c1",
+    "b2",
+    "a1",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c5": 2,
+    "d5": 0,
+    "a4": 2,
+    "b4": 1,
+    "c4": 1,
+    "d4": 4,
+    "e4": 0,
+    "a3": 0,
+    "b3": 4,
+    "d3": 2,
+    "b2": 2,
+    "c2": 2,
+    "d2": 3,
+    "e2": 0,
+    "a1": 3,
+    "b1": 0,
+    "c1": 2,
+    "e1": 1
+  }
+}

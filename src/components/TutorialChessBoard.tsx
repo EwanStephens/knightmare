@@ -66,7 +66,6 @@ export default function TutorialChessBoard() {
       {/* Main content, blurred when modal is open */}
       <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
         <ChessBoard 
-          initialLevel={currentLevel?.levelNumber || 1} 
           tutorialMode={true}
           tutorialLevel={tutorialLevel}
           onPieceSelected={handlePieceSelected}
@@ -81,9 +80,8 @@ export default function TutorialChessBoard() {
         onClose={handleCloseModal}
         congratsMessage={tutorialLevel.congratsMessage}
         targetWord={tutorialLevel.targetWord}
-        currentLevel={currentLevel?.levelNumber || 1}
-        nextPath={nextPath}
-        isTutorial={true}
+        allowReplays={false}
+        {...(nextPath ? { nextPath } : {})}
       />
     </div>
   );

@@ -1,0 +1,147 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "IMMEDIATE",
+    "DIMMED",
+    "RIMMED",
+    "TIAR",
+    "ATE",
+    "DIA",
+    "DIM",
+    "DIR",
+    "RIM"
+  ],
+  "targetPath": [
+    "b2",
+    "c1",
+    "b1",
+    "b4",
+    "c5",
+    "c2",
+    "a3",
+    "e3",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c5": 2,
+    "d5": 0,
+    "e5": 3,
+    "a4": 0,
+    "b4": 2,
+    "e4": 1,
+    "a3": 3,
+    "e3": 2,
+    "b2": 2,
+    "c2": 1,
+    "d2": 0,
+    "e2": 0,
+    "a1": 1,
+    "b1": 2,
+    "c1": 1
+  }
+}

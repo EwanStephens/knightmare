@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "FORTH",
+    "FORT",
+    "ORTH",
+    "SORT",
+    "FOR",
+    "ORT"
+  ],
+  "targetPath": [
+    "e4",
+    "e2",
+    "d1",
+    "c2",
+    "b1"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "e5": 0,
+    "e4": 1,
+    "c2": 2,
+    "e2": 1,
+    "b1": 2,
+    "c1": 2,
+    "d1": 2,
+    "e1": 1
+  }
+}

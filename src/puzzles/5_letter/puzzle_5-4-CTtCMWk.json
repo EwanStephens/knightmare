@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "CAROL",
+    "CARO",
+    "SLOE",
+    "ARO",
+    "CAR",
+    "LOE",
+    "LOR",
+    "ROE"
+  ],
+  "targetPath": [
+    "b5",
+    "c5",
+    "d3",
+    "e4",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "d4": 1,
+    "e4": 3,
+    "a3": 0,
+    "c3": 3,
+    "d3": 1,
+    "e2": 1,
+    "e1": 1
+  }
+}

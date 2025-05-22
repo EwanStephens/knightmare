@@ -1,0 +1,142 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "ECOLOGICAL",
+    "ECOLOGIC",
+    "OLOGICAL",
+    "LOGICAL",
+    "LOCALE",
+    "COLIC",
+    "COLOG",
+    "LOCAL",
+    "LOGIC",
+    "OHELO"
+  ],
+  "targetPath": [
+    "d2",
+    "a2",
+    "a3",
+    "e3",
+    "d4",
+    "e5",
+    "c4",
+    "d5",
+    "a5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 2,
+    "e5": 1,
+    "b4": 4,
+    "c4": 1,
+    "d4": 1,
+    "e4": 1,
+    "a3": 4,
+    "e3": 4,
+    "a2": 2,
+    "d2": 5,
+    "e2": 2,
+    "b1": 0,
+    "c1": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

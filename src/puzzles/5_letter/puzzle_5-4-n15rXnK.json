@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "SCREW",
+    "CREW",
+    "CRE",
+    "REW",
+    "RUS",
+    "SCR"
+  ],
+  "targetPath": [
+    "b4",
+    "d2",
+    "e3",
+    "e5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 1,
+    "e5": 1,
+    "b4": 2,
+    "c4": 0,
+    "e3": 1,
+    "a2": 2,
+    "d2": 2,
+    "a1": 0
+  }
+}

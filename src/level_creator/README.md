@@ -63,4 +63,4 @@ This directory contains the modular code for generating chess-based word puzzle 
 - The script ensures the target word is the longest (or joint longest) word on the board.
 - If board generation or validation fails, the word is returned to the unused list (if it was from the wordbank).
 - All modules are written in TypeScript and use only relative imports for compatibility with `ts-node`.
-- Utility functions in `puzzleUtils.ts` allow for programmatic puzzle ID and path management. 
+- Utility functions in `puzzleUtils.ts` allow for programmatic puzzle ID and path management.

@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "Q"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "EQUAL",
+    "QUAL",
+    "QUA"
+  ],
+  "targetPath": [
+    "a4",
+    "a3",
+    "b1",
+    "d2",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "a4": 2,
+    "a3": 1,
+    "d3": 0,
+    "a2": 1,
+    "d2": 1,
+    "b1": 2,
+    "d1": 3,
+    "e1": 0
+  }
+}

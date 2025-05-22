@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "CLIFF",
+    "LIFE",
+    "CLI",
+    "IFE",
+    "IFF",
+    "LIF"
+  ],
+  "targetPath": [
+    "d5",
+    "a5",
+    "b4",
+    "c3",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 1,
+    "a4": 0,
+    "b4": 2,
+    "c4": 1,
+    "c3": 3,
+    "d3": 1,
+    "c2": 0,
+    "b1": 1
+  }
+}

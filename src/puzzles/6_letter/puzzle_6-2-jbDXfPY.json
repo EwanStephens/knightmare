@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "F"
+    }
+  ],
+  "targetWords": [
+    "LAUNCH",
+    "LAUN",
+    "UNCA",
+    "UNC"
+  ],
+  "targetPath": [
+    "b1",
+    "a3",
+    "b4",
+    "e4",
+    "d3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "b4": 1,
+    "e4": 1,
+    "a3": 1,
+    "d3": 3,
+    "e2": 2,
+    "b1": 1,
+    "c1": 1,
+    "d1": 0
+  }
+}

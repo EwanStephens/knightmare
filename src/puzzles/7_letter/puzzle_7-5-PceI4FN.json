@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "B"
+    }
+  ],
+  "targetWords": [
+    "LOCKING",
+    "KING",
+    "LOCA",
+    "LOCK",
+    "LOCN",
+    "ING",
+    "KIN",
+    "LOC",
+    "OCA",
+    "OCK"
+  ],
+  "targetPath": [
+    "a3",
+    "a2",
+    "b3",
+    "c3",
+    "d4",
+    "b4",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "b4": 1,
+    "d4": 3,
+    "a3": 1,
+    "b3": 4,
+    "c3": 1,
+    "d3": 0,
+    "a2": 1,
+    "a1": 0,
+    "b1": 0,
+    "c1": 1
+  }
+}

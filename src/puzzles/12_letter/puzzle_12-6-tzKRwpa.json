@@ -1,0 +1,158 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "SUCCESSFULLY",
+    "SUCCESSFUL",
+    "SUCCESS",
+    "SUCCES",
+    "EYESS",
+    "CESS",
+    "CEST",
+    "ECCE",
+    "ESSE",
+    "EYES"
+  ],
+  "targetPath": [
+    "c2",
+    "b3",
+    "d1",
+    "d2",
+    "c4",
+    "d3",
+    "b1",
+    "a1",
+    "b2",
+    "c3",
+    "b4",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "c5": 3,
+    "d5": 1,
+    "b4": 1,
+    "c4": 2,
+    "e4": 1,
+    "a3": 0,
+    "b3": 5,
+    "c3": 4,
+    "d3": 3,
+    "b2": 3,
+    "c2": 2,
+    "d2": 2,
+    "a1": 1,
+    "b1": 2,
+    "c1": 4,
+    "d1": 2
+  }
+}

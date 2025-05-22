@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "ACCESSORY",
+    "ACCESSOR",
+    "ACCESS",
+    "CESSOR",
+    "ORACY",
+    "ACCE",
+    "CESS",
+    "ECCE",
+    "ESSE",
+    "RACY"
+  ],
+  "targetPath": [
+    "a4",
+    "b5",
+    "b2",
+    "a3",
+    "c2",
+    "e3",
+    "c3",
+    "a5",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "e5": 0,
+    "a4": 1,
+    "c4": 1,
+    "d4": 1,
+    "e4": 0,
+    "a3": 3,
+    "c3": 4,
+    "e3": 5,
+    "a2": 1,
+    "b2": 2,
+    "c2": 3,
+    "e2": 0,
+    "b1": 1,
+    "c1": 1,
+    "e1": 2
+  }
+}

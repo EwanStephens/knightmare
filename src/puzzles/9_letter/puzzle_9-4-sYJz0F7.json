@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "COMMENTED",
+    "COMMENT",
+    "COMME",
+    "COML",
+    "COMM",
+    "MEED",
+    "MENT",
+    "COM",
+    "EME",
+    "EOM"
+  ],
+  "targetPath": [
+    "b1",
+    "a2",
+    "a3",
+    "c4",
+    "b3",
+    "e3",
+    "d2",
+    "d5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "d5": 1,
+    "b4": 1,
+    "c4": 1,
+    "e4": 4,
+    "a3": 2,
+    "b3": 4,
+    "e3": 1,
+    "a2": 1,
+    "c2": 1,
+    "d2": 3,
+    "b1": 2,
+    "c1": 1
+  }
+}

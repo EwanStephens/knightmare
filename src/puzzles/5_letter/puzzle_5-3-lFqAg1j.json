@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "RATIO",
+    "ATI",
+    "RAT",
+    "TSI"
+  ],
+  "targetPath": [
+    "a5",
+    "e1",
+    "c1",
+    "b3",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 2,
+    "d4": 1,
+    "e4": 0,
+    "b3": 1,
+    "c2": 0,
+    "c1": 1,
+    "e1": 2
+  }
+}

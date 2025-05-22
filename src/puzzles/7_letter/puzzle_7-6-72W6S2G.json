@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "ARRANGE",
+    "RANGER",
+    "ANGER",
+    "RANGE",
+    "ARNA",
+    "ORNA",
+    "ORRA",
+    "RANG",
+    "ARE",
+    "ARN"
+  ],
+  "targetPath": [
+    "e1",
+    "d3",
+    "b2",
+    "b4",
+    "c5",
+    "d4",
+    "e5"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 1,
+    "d4": 2,
+    "e4": 1,
+    "c3": 0,
+    "d3": 4,
+    "e3": 3,
+    "b2": 2,
+    "b1": 1,
+    "d1": 1,
+    "e1": 1
+  }
+}

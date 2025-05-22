@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "SURVIVAL",
+    "VALSE",
+    "SURV",
+    "VAVS",
+    "VIVA",
+    "ALS",
+    "AUS",
+    "AVN",
+    "IVA",
+    "SEI"
+  ],
+  "targetPath": [
+    "a3",
+    "c1",
+    "d3",
+    "c4",
+    "e3",
+    "e5",
+    "d5",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d5": 3,
+    "e5": 2,
+    "a4": 1,
+    "c4": 3,
+    "a3": 2,
+    "b3": 2,
+    "d3": 1,
+    "e3": 1,
+    "c2": 2,
+    "e2": 0,
+    "c1": 3
+  }
+}

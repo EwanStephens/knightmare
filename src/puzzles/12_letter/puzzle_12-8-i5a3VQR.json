@@ -1,0 +1,172 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "Z"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "CIVILIZATION",
+    "CIVIL",
+    "VATIC",
+    "ATIP",
+    "LIIN",
+    "LITI",
+    "LIZA",
+    "PITA",
+    "RIVA",
+    "TIZA"
+  ],
+  "targetPath": [
+    "d2",
+    "e1",
+    "a5",
+    "c4",
+    "a3",
+    "b1",
+    "d1",
+    "b3",
+    "a2",
+    "a4",
+    "e4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "c5": 0,
+    "d5": 1,
+    "e5": 1,
+    "a4": 2,
+    "c4": 5,
+    "e4": 1,
+    "a3": 2,
+    "b3": 1,
+    "d3": 2,
+    "e3": 0,
+    "a2": 3,
+    "b2": 2,
+    "d2": 1,
+    "e2": 0,
+    "a1": 1,
+    "b1": 4,
+    "d1": 3,
+    "e1": 1
+  }
+}
