@@ -8,13 +8,13 @@ const MAX_RETRIES = 10;
 
 function parseDate(dateStr: string): Date {
   const [year, month, day] = dateStr.split('-').map(Number);
-  return new Date(year, month - 1, day);
+  return new Date(Date.UTC(year, month, day));
 }
 
 function formatDate(date: Date): string {
   // Format as YYYY-MM-DD in UTC
   const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const month = String(date.getUTCMonth()).padStart(2, '0');
   const day = String(date.getUTCDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 }
@@ -71,23 +71,25 @@ async function createAndAssignPuzzle(calendar: any, dateStr: string, type: 'shor
 
 async function main() {
   const [,, startDateStr, endDateStr] = process.argv;
-  if (!startDateStr || !endDateStr) {
-    console.error('Usage: npx ts-node --compiler-options "{\"module\":\"CommonJS\"}" scripts/createDailyPuzzles.ts <start-date> <end-date>');
-    console.error('  <start-date> and <end-date> must be in YYYY-MM-DD format.');
-    console.error('  Example: npx ts-node --compiler-options "{\"module\":\"CommonJS\"}" scripts/createDailyPuzzles.ts 2025-06-01 2025-06-01');
-    process.exit(1);
-  }
+  // if (!startDateStr || !endDateStr) {
+  //   console.error('Usage: npx ts-node --compiler-options "{\"module\":\"CommonJS\"}" scripts/createDailyPuzzles.ts <start-date> <end-date>');
+  //   console.error('  <start-date> and <end-date> must be in YYYY-MM-DD format.');
+  //   console.error('  Example: npx ts-node --compiler-options "{\"module\":\"CommonJS\"}" scripts/createDailyPuzzles.ts 2025-06-01 2025-06-01');
+  //   process.exit(1);
+  // }
   const startDate = parseDate(startDateStr);
   const endDate = parseDate(endDateStr);
-  const calendarPath = path.join(__dirname, '../src/data/calendar/calendar.json');
-  let calendar = { dates: {} as Record<string, any>, puzzles: {} as Record<string, any> };
-  try {
-    const content = await fs.readFile(calendarPath, 'utf-8');
-    calendar = JSON.parse(content);
-  } catch (e) {
-    // File may not exist, start fresh
-    calendar = { dates: {} as Record<string, any>, puzzles: {} as Record<string, any> };
-  }
+  // const calendarPath = path.join(__dirname, '../src/data/calendar/calendar.json');
+  // let calendar = { dates: {} as Record<string, any>, puzzles: {} as Record<string, any> };
+  // try {
+  //   const content = await fs.readFile(calendarPath, 'utf-8');
+  //   calendar = JSON.parse(content);
+  // } catch (e) {
+  //   // File may not exist, start fresh
+  //   calendar = { dates: {} as Record<string, any>, puzzles: {} as Record<string, any> };
+  // }
+
+  console.log(formatDate(startDate));
 
   for (
     let d = new Date(Date.UTC(startDate.getUTCFullYear(), startDate.getUTCMonth(), startDate.getUTCDate()));
@@ -95,13 +97,14 @@ async function main() {
     d = new Date(d.getTime() + 24 * 60 * 60 * 1000)
   ) {
     const dateStr = formatDate(d);
-    if (!calendar.dates[dateStr]) calendar.dates[dateStr] = {};
-    await createAndAssignPuzzle(calendar, dateStr, 'short', [5, 6]);
-    await createAndAssignPuzzle(calendar, dateStr, 'medium', [7, 8]);
-    await createAndAssignPuzzle(calendar, dateStr, 'long', [9, 10, 11, 12, 13, 14, 15]);
-    await fs.mkdir(path.dirname(calendarPath), { recursive: true });
-    await fs.writeFile(calendarPath, JSON.stringify(calendar, null, 2), 'utf-8');
-    console.log(`[DailyPuzzles] Created puzzles for ${dateStr}: short=${calendar.dates[dateStr].short}, medium=${calendar.dates[dateStr].medium}, long=${calendar.dates[dateStr].long}`);
+    console.log(`[DailyPuzzles] Creating puzzles for ${dateStr}`);
+    // if (!calendar.dates[dateStr]) calendar.dates[dateStr] = {};
+    // await createAndAssignPuzzle(calendar, dateStr, 'short', [5, 6]);
+    // await createAndAssignPuzzle(calendar, dateStr, 'medium', [7, 8]);
+    // await createAndAssignPuzzle(calendar, dateStr, 'long', [9, 10, 11, 12, 13, 14, 15]);
+    // await fs.mkdir(path.dirname(calendarPath), { recursive: true });
+    // await fs.writeFile(calendarPath, JSON.stringify(calendar, null, 2), 'utf-8');
+    // console.log(`[DailyPuzzles] Created puzzles for ${dateStr}: short=${calendar.dates[dateStr].short}, medium=${calendar.dates[dateStr].medium}, long=${calendar.dates[dateStr].long}`);
   }
 }
 
