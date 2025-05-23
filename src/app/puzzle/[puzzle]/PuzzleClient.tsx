@@ -1,3 +1,7 @@
+// This client component handles all date logic for daily puzzles.
+// Desired behavior: Daily puzzles should transition at midnight LOCAL TIME for the user (browser),
+// not the server's timezone. All date logic and daily puzzle gating is handled here for this reason.
+
 "use client";
 
 import { useMemo } from 'react';

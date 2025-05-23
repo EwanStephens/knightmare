@@ -1,4 +1,8 @@
-import dynamic from 'next/dynamic';
+// This server component loads puzzle data and passes it to the client-side PuzzleClient.
+// Desired behavior: Daily puzzles should transition at midnight LOCAL TIME for the client (user's browser),
+// not the server's timezone. All date logic and daily puzzle gating is handled in PuzzleClient.tsx.
+
+import PuzzleClient from './PuzzleClient';
 import { notFound } from 'next/navigation';
 import path from 'path';
 import fs from 'fs';
@@ -8,9 +12,6 @@ import { algebraicToPosition } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
 import { ChessPiece } from '@/types/chess';
 import { getUnusedHintSquares, getFirstLetterHintSquare, getRevealAnswerPath } from '@/utils/hints';
-
-// Dynamically import the client-side PuzzleClient component
-const PuzzleClient = dynamic(() => import('./PuzzleClient'), { ssr: false });
 
 function getPuzzlePathFromId(id: string): string {
   const [wordLength] = id.split('-');
