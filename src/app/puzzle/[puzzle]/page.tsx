@@ -46,13 +46,14 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
   // Find the next puzzle in the daily sequence (if any)
   const puzzleDate = getDateForPuzzleId(puzzleId);
   const puzzleType = getPuzzleTypeForId(puzzleId);
+  const daily = puzzleDate ? getDailyPuzzlesForDate(puzzleDate) : null;
 
   // Prepare props for ChessBoard
   const targetWord = puzzleData.targetWords[0];
   let congratsMessage = `Congratulations! You found the word ${targetWord}!`;
-  // If this is today's long puzzle, add extra congrats
-  const daily = getDailyPuzzlesForDate(todayStr);
-  if (daily && daily.long === puzzleId) {
+
+  // If this is the long puzzle for the day, add extra congrats
+  if (daily && puzzleType === 'long') {
     congratsMessage += ' You completed all the daily puzzles! See you tomorrow.';
   }
 
@@ -70,15 +71,12 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
     congratsMessage,
   };
 
-  // Find the next puzzle in the daily sequence (if any)
+  // Determine nextPuzzleId based on puzzleType
   let nextPuzzleId: string | null = null;
-  if (puzzleDate) {
-    const daily = getDailyPuzzlesForDate(puzzleDate);
-    if (daily) {
-      if (daily.short === puzzleId) nextPuzzleId = daily.medium;
-      else if (daily.medium === puzzleId) nextPuzzleId = daily.long;
-      else nextPuzzleId = null;
-    }
+  if (daily && puzzleType) {
+    if (puzzleType === 'short') nextPuzzleId = daily.medium;
+    else if (puzzleType === 'medium') nextPuzzleId = daily.long;
+    else nextPuzzleId = null;
   }
 
   // Pass all loaded data to the client-side PuzzleClient
