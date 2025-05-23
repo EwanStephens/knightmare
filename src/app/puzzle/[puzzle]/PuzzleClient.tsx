@@ -44,10 +44,10 @@ export default function PuzzleClient({
   firstLetterSquare,
   revealPath,
 }: PuzzleClientProps) {
-  // Get today's date in the user's local timezone
-  const todayStr = useMemo(() => {
-    return new Date().toLocaleDateString('en-CA');
-  }, []);
+  // Use a single Date instance for both todayStr and the log
+  const today = useMemo(() => new Date(), []);
+  const todayStr = useMemo(() => today.toLocaleDateString('en-CA'), [today]);
+  console.log('[PuzzleClient] todayStr:', todayStr, '| local datetime:', today.toString());
 
   // Determine header and if this puzzle is from the future
   let header = 'Puzzle';
