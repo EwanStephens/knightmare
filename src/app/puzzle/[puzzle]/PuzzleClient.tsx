@@ -78,7 +78,7 @@ export default function PuzzleClient({
   }
 
   return (
-    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8">
+    <main>
       <h1 className="text-2xl font-bold mb-4 dark:text-white text-center">{header}</h1>
       <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
         <ChessBoard
