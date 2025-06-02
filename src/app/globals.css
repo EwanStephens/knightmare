@@ -25,6 +25,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  /* Chrome-specific fix for layout positioning on Android */
+  transform: translateZ(0);
+  contain: layout style;
 }
 
 /* Dark mode specific classes for SVG elements that can't use dark: variants directly */
