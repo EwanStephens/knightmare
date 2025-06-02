@@ -25,8 +25,8 @@ export default function Home() {
   };
   
   return (
-    <main className="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
-      <h1 className="text-4xl font-bold mb-8">SpellCheck</h1>
+    <main>
+      <h1 className="text-4xl font-bold mb-8 text-center">SpellCheck</h1>
       
       {showTutorialPrompt ? (
         <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col gap-4 items-center">
