@@ -11,7 +11,7 @@ export default function TutorialRedirect() {
   }, [router]);
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800">
+    <main className="flex flex-col items-center w-full max-w-md mx-auto px-2 sm:px-0">
       <p className="text-gray-700 dark:text-gray-300">Redirecting to tutorial...</p>
     </main>
   );

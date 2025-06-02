@@ -27,7 +27,7 @@ export default function TutorialLevelPage() {
 
   return (
     <TutorialProvider initialLevel={levelNumber}>
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
+      <main className="flex flex-col items-center w-full max-w-2xl mx-auto px-2 sm:px-0">
         <h1 className="text-3xl font-bold mb-8 dark:text-white">SpellCheck Tutorial</h1>
         <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg w-full max-w-4xl">
           <TutorialChessBoard />

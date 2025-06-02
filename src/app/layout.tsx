@@ -54,7 +54,14 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}>
         <TopBar />
         <GoogleAnalytics gaId="G-SFZLXFGSDV" />
-        {children}
+        {/*
+          This container ensures the page content fills the viewport below the fixed TopBar (56px tall).
+          The min-h-[calc(100vh-56px)] prevents unwanted scrolling and keeps content centered.
+          If you change the TopBar height, update the 56px value here to match.
+        */}
+        <div className="min-h-[calc(100vh-56px)] flex flex-col">
+          {children}
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

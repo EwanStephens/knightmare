@@ -32,5 +32,5 @@ export default function DailyRedirectPage() {
     }
     router.replace(`/puzzle/${target}`);
   }, [router]);
-  return <div className="min-h-screen flex items-center justify-center">Redirecting to your daily puzzle...</div>;
+  return <main className="flex flex-col items-center w-full max-w-md mx-auto px-2 sm:px-0">Redirecting to your daily puzzle...</main>;
 } 
