@@ -51,7 +51,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="A word-building chess puzzle game" />
         <meta name="twitter:image" content="https://spellcheckpuzzle.fun/social-share.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-16`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <TopBar />
         <GoogleAnalytics gaId="G-SFZLXFGSDV" />
         {/*
@@ -59,7 +59,7 @@ export default function RootLayout({
           The min-h-[calc(100vh-56px)] prevents unwanted scrolling and keeps content centered.
           If you change the TopBar height, update the 56px value here to match.
         */}
-        <div className="min-h-[calc(100vh-56px)] bg-gray-50 dark:bg-gray-800 flex-1 flex flex-col items-center justify-center w-full h-full">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-800 flex-1 flex flex-col items-center justify-center w-full h-full">
           {children}
         </div>
         <Analytics />
