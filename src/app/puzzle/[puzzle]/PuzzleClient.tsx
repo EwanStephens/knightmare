@@ -78,9 +78,9 @@ export default function PuzzleClient({
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
-      <h1 className="text-2xl font-bold mb-4 dark:text-white">{header}</h1>
-      <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+    <main className="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 px-2 sm:px-0 w-full max-w-md mx-auto">
+      <h1 className="text-2xl font-bold mb-4 dark:text-white text-center">{header}</h1>
+      <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg w-full">
         <ChessBoard
           levelData={levelData}
           nextPuzzleId={nextPuzzleId}
