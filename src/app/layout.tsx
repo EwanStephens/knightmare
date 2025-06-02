@@ -51,14 +51,14 @@ export default function RootLayout({
         <meta name="twitter:description" content="A word-building chess puzzle game" />
         <meta name="twitter:image" content="https://spellcheckpuzzle.fun/social-share.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-8`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-14`}>
         <TopBar />
         <GoogleAnalytics gaId="G-SFZLXFGSDV" />
         {/*
           This container ensures the page content fills the viewport below the fixed TopBar (56px tall).
           The min-h-screen ensures the background fills the viewport and allows scrolling if content is too tall.
         */}
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-32px)] w-full bg-gray-50 dark:bg-gray-800 overflow-auto">
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-56px)] w-full bg-gray-50 dark:bg-gray-800 overflow-auto">
           {children}
         </div>
         <Analytics />
