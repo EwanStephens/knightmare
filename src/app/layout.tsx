@@ -59,7 +59,7 @@ export default function RootLayout({
           The min-h-[calc(100vh-56px)] prevents unwanted scrolling and keeps content centered.
           If you change the TopBar height, update the 56px value here to match.
         */}
-        <div className="min-h-[calc(100vh-56px)] bg-gray-50 dark:bg-gray-800 flex-1 flex flex-col items-center justify-center w-full">
+        <div className="min-h-[calc(100vh-56px)] bg-gray-50 dark:bg-gray-800 flex-1 flex flex-col items-center justify-center w-full mx-auto px-2 sm:px-0">
           {children}
         </div>
         <Analytics />
