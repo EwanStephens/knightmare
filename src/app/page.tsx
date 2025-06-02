@@ -15,6 +15,21 @@ export default function Home() {
     }
   }, []);
 
+  // Force layout recalculation for Chrome Android
+  useEffect(() => {
+    // Small delay to ensure all resources are loaded
+    const timer = setTimeout(() => {
+      // Force a reflow to fix Chrome positioning issues
+      document.body.style.transform = 'translateZ(0)';
+      // Trigger a layout recalculation
+      window.requestAnimationFrame(() => {
+        document.documentElement.scrollTop = 0;
+      });
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleSkipTutorial = () => {
     markTutorialSkipped();
     setShowTutorialPrompt(false);
