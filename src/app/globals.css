@@ -1,33 +1,5 @@
 @import "tailwindcss";
 
-/* Prevent layout shift on mobile browsers during initial load */
-html {
-  height: 100dvh;
-  height: 100vh; /* Fallback for browsers without dvh support */
-}
-
-body {
-  min-height: 100dvh;
-  min-height: 100vh; /* Fallback for browsers without dvh support */
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Chrome-specific fix for layout positioning on Android */
-body {
-  /* Force Chrome to use GPU acceleration for consistent rendering */
-  transform: translateZ(0);
-  /* Prevent Chrome from repositioning content during initial render */
-  contain: layout style;
-}
-
-/* Ensure consistent rendering across browsers */
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -46,6 +18,13 @@ body {
     --foreground: #ededed;
     color-scheme: dark;
   }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark mode specific classes for SVG elements that can't use dark: variants directly */
