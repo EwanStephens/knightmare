@@ -332,7 +332,7 @@ export default function ChessBoard({
             Find a {gameLevelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
-          <div className="aspect-square mx-auto w-[min(75vw,40vh)] min-w-50 min-h-50 max-w-120 max-h-120">
+          <div className="aspect-square mx-auto w-[min(75dvw,40dvh)] min-w-50 min-h-50 max-w-120 max-h-120">
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
                 row.map((square, colIndex) => {
@@ -408,7 +408,7 @@ export default function ChessBoard({
                             <div 
                               className="font-bold text-[#769656] z-20 flex items-center justify-center"
                               style={{
-                                fontSize: "max(24px, min(8vw, 4vh))",
+                                fontSize: "max(24px, min(8dvw, 4dvh))",
                                 width: "100%",
                                 height: "100%"
                               }}
@@ -425,9 +425,9 @@ export default function ChessBoard({
                               <div 
                                 className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
                                 style={{
-                                  fontSize: "max(14px, min(4vw, 2vh))",
-                                  top: "max(2px, min(1vw, 0.5vh))",
-                                  right: "max(2px, min(1vw, 0.5vh))"
+                                  fontSize: "max(14px, min(4dvw, 2dvh))",
+                                  top: "max(2px, min(1dvw, 0.5dvh))",
+                                  right: "max(2px, min(1dvw, 0.5dvh))"
                                 }}
                               >
                                 {square.piece.letter}
@@ -447,7 +447,7 @@ export default function ChessBoard({
             <div 
               className="flex whitespace-nowrap justify-center items-center font-mono w-full overflow-visible relative"
               style={{ 
-                height: "max(50px, min(6vh, 8vw))"
+                height: "max(50px, min(6dvh, 8dvw))"
               }}
             >
               {Array.from(gameLevelData.targetWord).map((_, index) => {
@@ -465,7 +465,7 @@ export default function ChessBoard({
                       height: '80%',
                       minHeight: '40px',
                       // Calculate font size based on viewport with minimum size guarantee
-                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}vw, ${Math.min(6, 30/gameLevelData.targetWord.length)}vh))`
+                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}dvw, ${Math.min(6, 30/gameLevelData.targetWord.length)}dvh))`
                     }}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
