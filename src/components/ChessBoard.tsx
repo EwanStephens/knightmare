@@ -131,6 +131,11 @@ export default function ChessBoard({
     // If a square is already selected, check if new square is a legal capture
     let newPreviousSquares: string[] = [];
     if (gameState.selectedSquare) {
+      // Ignore clicks on the already selected square
+      if (gameState.selectedSquare === position) {
+        return;
+      }
+
       const startPos = algebraicToPosition(gameState.selectedSquare);
       const startSquare = gameState.board[startPos.row][startPos.col];
       
