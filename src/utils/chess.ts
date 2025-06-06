@@ -50,14 +50,9 @@ export const isValidChessMove = (
       // White pawns move up (negative row diff), black pawns move down (positive row diff)
       const correctDirection = piece.color === 'white' ? rowDiff < 0 : rowDiff > 0;
       
-      // Forward move
-      if (colDiff === 0 && Math.abs(rowDiff) === 1) {
-        // Forward moves cannot capture
-        if (targetSquare.piece) {
-          return false;
-        }
-        return correctDirection;
-      }
+      // Forward move logic removed for SpellCheck
+      // In SpellCheck, all moves must be captures, so forward pawn moves (which can't capture)
+      // would confuse users by showing as legal moves but not being usable
       
       // Diagonal move (only if there's a piece to capture)
       if (Math.abs(colDiff) === 1 && Math.abs(rowDiff) === 1) {
