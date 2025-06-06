@@ -58,7 +58,7 @@ export default function ChessBoard({
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
   const [hintStep, setHintStep] = useState<HintStep>(HintStep.None);
-  const [crossedOutSquares, setCrossedOutSquares] = useState<string[]>([]);
+  const [greyedOutSquares, setGreyedOutSquares] = useState<string[]>([]);
   const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
   const [revealedPath, setRevealedPath] = useState<string[]>([]);
   const [isRevealing, setIsRevealing] = useState(false);
@@ -245,7 +245,7 @@ export default function ChessBoard({
     }
     // Clear all hint/reveal state
     setHintStep(HintStep.None);
-    setCrossedOutSquares([]);
+    setGreyedOutSquares([]);
     setHighlightedHintSquare(null);
     setRevealedPath([]);
     setIsRevealing(false);
@@ -298,7 +298,7 @@ export default function ChessBoard({
 
   const handleHintClick = async () => {
     if (hintStep === HintStep.None && hintSquares) {
-      setCrossedOutSquares(hintSquares);
+      setGreyedOutSquares(hintSquares);
       setHintStep(HintStep.CrossOut);
     } else if (hintStep === HintStep.CrossOut && firstLetterSquare) {
       setHighlightedHintSquare(firstLetterSquare);
@@ -313,7 +313,7 @@ export default function ChessBoard({
   // Reset hint state when board changes (e.g. on replay)
   useEffect(() => {
     setHintStep(HintStep.None);
-    setCrossedOutSquares([]);
+    setGreyedOutSquares([]);
     setHighlightedHintSquare(null);
     setRevealedPath([]);
     setIsRevealing(false);
@@ -336,7 +336,7 @@ export default function ChessBoard({
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
                 row.map((square, colIndex) => {
-                  const isCrossed = crossedOutSquares.includes(square.position);
+                  const isGreyedOut = greyedOutSquares.includes(square.position);
                   const isHintHighlight = highlightedHintSquare === square.position;
                   const isReveal = revealedPath.includes(square.position);
                   const revealIndex = revealedPath.indexOf(square.position);
@@ -362,7 +362,7 @@ export default function ChessBoard({
                           (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
                         ${square.piece ? 'hover:bg-opacity-90' : ''}
                         cursor-pointer
-                        ${isCrossed ? 'opacity-40 grayscale relative' : ''}
+                        ${isGreyedOut ? 'opacity-40 grayscale relative' : ''}
                       `}
                     >
                       {((tutorialMode && highlightedPosition === square.position) || (isHintHighlight && !isReveal)) && (
