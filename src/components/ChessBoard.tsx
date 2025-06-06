@@ -365,14 +365,6 @@ export default function ChessBoard({
                         ${isCrossed ? 'opacity-40 grayscale relative' : ''}
                       `}
                     >
-                      {isCrossed && (
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-                          <svg width="80%" height="80%" viewBox="0 0 100 100">
-                            <line x1="10" y1="10" x2="90" y2="90" stroke="#b91c1c" strokeWidth="10" strokeLinecap="round" />
-                            <line x1="90" y1="10" x2="10" y2="90" stroke="#b91c1c" strokeWidth="10" strokeLinecap="round" />
-                          </svg>
-                        </div>
-                      )}
                       {((tutorialMode && highlightedPosition === square.position) || (isHintHighlight && !isReveal)) && (
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                           <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
