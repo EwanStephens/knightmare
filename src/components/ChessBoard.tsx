@@ -101,17 +101,25 @@ export default function ChessBoard({
       if (isPuzzleSolved(puzzleId)) {
         // For already solved puzzles, load the completed state with path shown
         if (revealPath) {
+          const lastPosition = revealPath[revealPath.length - 1];
+          const previousPositions = revealPath.slice(0, -1);
+          
+          // Get the piece at the last position to calculate legal moves
+          const { row: lastRow, col: lastCol } = algebraicToPosition(lastPosition);
+          const lastSquare = gameLevelData.board[lastRow][lastCol];
+          const legalMoves = lastSquare.piece ? getLegalMoves(lastSquare.piece, { row: lastRow, col: lastCol }, gameLevelData.board, previousPositions) : [];
+          
           setGameState(prevState => ({
             ...prevState,
             currentWord: gameLevelData.targetWord,
-            selectedSquare: null,
-            previousSquares: revealPath.slice(0, -1), // All squares except the last one
+            selectedSquare: lastPosition, // Set the last position as selected
+            previousSquares: previousPositions, // All squares except the last one
             board: prevState.board.map(row =>
               row.map(sq => ({
                 ...sq,
-                isSelected: false,
-                isLegalMove: false,
-                isHighlighted: revealPath.slice(0, -1).includes(sq.position), // Highlight the path excluding last square
+                isSelected: sq.position === lastPosition, // Last position is selected
+                isLegalMove: legalMoves.some(move => positionToAlgebraic(move.row, move.col) === sq.position), // Show legal moves from last position
+                isHighlighted: previousPositions.includes(sq.position), // Highlight the path excluding last square
               }))
             ),
           }));
@@ -234,22 +242,23 @@ export default function ChessBoard({
       
       // Handle completion based on mode
       if (tutorialMode) {
-        // For tutorial levels 1 and 2, show wave animation
-        if (tutorialLevelNumber && tutorialLevelNumber < 3) {
-          // Set the completed word and start wave animation
-          setGameState({
-            ...gameState,
-            board: newBoard,
-            currentWord: newWord,
-            selectedSquare: null,
-            previousSquares: newPreviousSquares,
-          });
-          
-          // Start wave animation with navigation
+        // For all tutorial levels, show wave animation
+        // Set the completed word and start wave animation
+        setGameState({
+          ...gameState,
+          board: newBoard,
+          currentWord: newWord,
+          selectedSquare: null,
+          previousSquares: newPreviousSquares,
+        });
+        
+        // Start wave animation with navigation to next tutorial level
+        if (tutorialLevelNumber) {
           startWaveAnimation(newWord, `/tutorial/${tutorialLevelNumber + 1}`);
-          return; // Exit early to avoid duplicate setGameState
+        } else {
+          startWaveAnimation(newWord);
         }
-        // For tutorial level 3, the completion modal will be handled by the callback
+        return; // Exit early to avoid duplicate setGameState
       } else {
         // For daily puzzles, show wave animation for all types, then modal only for long
         if (isDailyPuzzle) {
@@ -533,11 +542,11 @@ export default function ChessBoard({
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] mx-auto overflow-hidden">
+          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] mx-auto">
             <div 
-              className="flex whitespace-nowrap justify-center items-center font-mono w-full overflow-visible relative"
+              className="flex whitespace-nowrap justify-center items-center font-mono w-full relative pt-4 pb-2"
               style={{ 
-                height: "max(50px, min(6dvh, 8dvw))"
+                height: "max(60px, min(8dvh, 10dvw))"
               }}
             >
               {Array.from(gameLevelData.targetWord).map((_, index) => {

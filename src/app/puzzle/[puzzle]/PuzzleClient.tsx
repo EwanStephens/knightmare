@@ -4,7 +4,7 @@
 
 "use client";
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import ChessBoard from '@/components/ChessBoard';
 import { getSolvedPuzzleIds } from '@/utils/gameState';
@@ -68,6 +68,13 @@ export default function PuzzleClient({
 
   const solvedPuzzleIds = useMemo(() => getSolvedPuzzleIds(), []);
 
+  // Use state to track if we're on the client to avoid hydration mismatch
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // Determine header and if this puzzle is from the future
   let header = 'Puzzle';
   let isFuture = false;
@@ -81,11 +88,11 @@ export default function PuzzleClient({
     }
   }
 
-  // Determine which tabs should be available
+  // Determine which tabs should be available - only show correct state after client mount
   const showTabs = dailyPuzzles && puzzleType;
-  const isShortSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.short) : false;
-  const isMediumSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.medium) : false;
-  const isLongSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.long) : false;
+  const isShortSolved = isClient && dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.short) : false;
+  const isMediumSolved = isClient && dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.medium) : false;
+  const isLongSolved = isClient && dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.long) : false;
   
   const handleTabClick = (tabType: 'short' | 'medium' | 'long') => {
     if (!dailyPuzzles) return;
