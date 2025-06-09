@@ -13,5 +13,4 @@ export interface LoadedLevel {
   board: Square[][];
   targetWord: string;
   congratsMessage: string;
-  solution?: string[]; // The target path for the solution
 } 

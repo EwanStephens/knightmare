@@ -7,9 +7,9 @@
 import { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import ChessBoard from '@/components/ChessBoard';
-import { getDailyPuzzlesForDate } from '@/utils/calendar';
 import { getSolvedPuzzleIds } from '@/utils/gameState';
 import type { LoadedLevel } from '@/types/level';
+import type { DailyPuzzles } from '@/utils/calendar';
 
 // Props for PuzzleClient, matching what the server passes
 interface PuzzleClientProps {
@@ -22,6 +22,7 @@ interface PuzzleClientProps {
   hintSquares: string[] | null;
   firstLetterSquare: string | null;
   revealPath: string[] | null;
+  dailyPuzzleIds: DailyPuzzles | null;
 }
 
 // Helper to format date header
@@ -50,6 +51,7 @@ export default function PuzzleClient({
   hintSquares,
   firstLetterSquare,
   revealPath,
+  dailyPuzzleIds,
 }: PuzzleClientProps) {
   const router = useRouter();
   
@@ -61,8 +63,8 @@ export default function PuzzleClient({
   // Get daily puzzles and solved status for tabs
   const dailyPuzzles = useMemo(() => {
     if (!puzzleDate) return null;
-    return getDailyPuzzlesForDate(puzzleDate);
-  }, [puzzleDate]);
+    return dailyPuzzleIds;
+  }, [puzzleDate, dailyPuzzleIds]);
 
   const solvedPuzzleIds = useMemo(() => getSolvedPuzzleIds(), []);
 

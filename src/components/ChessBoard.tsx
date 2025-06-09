@@ -100,19 +100,18 @@ export default function ChessBoard({
     if (puzzleId && typeof window !== 'undefined' && gameLevelData) {
       if (isPuzzleSolved(puzzleId)) {
         // For already solved puzzles, load the completed state with path shown
-        if (gameLevelData.solution) {
-          const solutionPath = gameLevelData.solution;
+        if (revealPath) {
           setGameState(prevState => ({
             ...prevState,
             currentWord: gameLevelData.targetWord,
             selectedSquare: null,
-            previousSquares: solutionPath.slice(0, -1), // All squares except the last one
+            previousSquares: revealPath.slice(0, -1), // All squares except the last one
             board: prevState.board.map(row =>
               row.map(sq => ({
                 ...sq,
                 isSelected: false,
                 isLegalMove: false,
-                isHighlighted: solutionPath.slice(0, -1).includes(sq.position), // Highlight the path excluding last square
+                isHighlighted: revealPath.slice(0, -1).includes(sq.position), // Highlight the path excluding last square
               }))
             ),
           }));
@@ -142,7 +141,7 @@ export default function ChessBoard({
         }
       }
     }
-  }, [puzzleId, gameLevelData, isDailyPuzzle, puzzleType]);
+  }, [puzzleId, gameLevelData, isDailyPuzzle, puzzleType, revealPath]);
 
   const clearGameBoard = () => {
     return {

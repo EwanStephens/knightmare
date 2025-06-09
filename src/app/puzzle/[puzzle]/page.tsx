@@ -93,6 +93,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
       hintSquares={hintSquares}
       firstLetterSquare={firstLetterSquare}
       revealPath={revealPath}
+      dailyPuzzleIds={daily}
     />
   );
 } 
