@@ -31,6 +31,8 @@ interface ChessBoardProps {
   hintSquares?: string[];
   firstLetterSquare?: string;
   revealPath?: string[];
+  isDailyPuzzle?: boolean;
+  puzzleType?: 'short' | 'medium' | 'long' | null;
 }
 
 export default function ChessBoard({ 
@@ -45,7 +47,9 @@ export default function ChessBoard({
   puzzleId,
   hintSquares,
   firstLetterSquare,
-  revealPath
+  revealPath,
+  isDailyPuzzle,
+  puzzleType
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -61,6 +65,7 @@ export default function ChessBoard({
   const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
   const [revealedPath, setRevealedPath] = useState<string[]>([]);
   const [isRevealing, setIsRevealing] = useState(false);
+  const [showSuccessFeedback, setShowSuccessFeedback] = useState(false);
 
   useEffect(() => {
     // If in tutorial mode, use the provided level data
@@ -185,9 +190,42 @@ export default function ChessBoard({
         markPuzzleSolved(puzzleId);
       }
       if (!tutorialMode) {
-        setTimeout(() => {
-          setShowCompleteModal(true);
-        }, 200);
+        // For daily puzzles, only show completion modal for long puzzles
+        if (isDailyPuzzle && puzzleType !== 'long') {
+          // Show simple visual feedback for short/medium puzzles
+          const completionBoard = newBoard.map(row =>
+            row.map(sq => ({
+              ...sq,
+              isSelected: false,
+              isLegalMove: false,
+              isHighlighted: sq.position === position, // Highlight the final capture
+            }))
+          );
+          
+          setGameState({
+            ...gameState,
+            board: completionBoard,
+            currentWord: newWord,
+            selectedSquare: null,
+            previousSquares: newPreviousSquares,
+          });
+          
+          // Show success feedback
+          setShowSuccessFeedback(true);
+          
+          // Auto-navigate to next puzzle after delay
+          if (nextPuzzleId) {
+            setTimeout(() => {
+              window.location.href = `/puzzle/${nextPuzzleId}`;
+            }, 1500);
+          }
+          return; // Exit early to avoid duplicate setGameState
+        } else {
+          // Regular behavior for non-daily puzzles or long daily puzzles
+          setTimeout(() => {
+            setShowCompleteModal(true);
+          }, 200);
+        }
       }
     }
 
@@ -208,36 +246,6 @@ export default function ChessBoard({
     if (tutorialMode && onPieceSelected) {
       onPieceSelected('clear', '');
     }
-  };
-
-  // Factored out replay logic
-  const handleReplay = () => {
-    if (!gameLevelData) return;
-    setShowCompleteModal(false);
-    setGameState(prevState => ({
-      ...prevState,
-      board: gameLevelData.board.map(row =>
-        row.map(sq => ({
-          ...sq,
-          isSelected: false,
-          isLegalMove: false,
-          isHighlighted: false,
-        }))
-      ),
-      selectedSquare: null,
-      currentWord: '',
-      previousSquares: [],
-    }));
-    // Notify tutorial system of clear action in tutorial mode
-    if (tutorialMode && onPieceSelected) {
-      onPieceSelected('clear', '');
-    }
-    // Clear all hint/reveal state
-    setHintStep(HintStep.None);
-    setGreyedOutSquares([]);
-    setHighlightedHintSquare(null);
-    setRevealedPath([]);
-    setIsRevealing(false);
   };
 
   // Factored out reveal logic
@@ -274,10 +282,21 @@ export default function ChessBoard({
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
         }
-        setTimeout(() => {
-          setShowCompleteModal(true);
-          setIsRevealing(false);
-        }, 2000);
+        // For daily puzzles, only show completion modal for long puzzles
+        if (isDailyPuzzle && puzzleType !== 'long') {
+          // Auto-navigate to next puzzle after delay for short/medium
+          if (nextPuzzleId) {
+            setTimeout(() => {
+              window.location.href = `/puzzle/${nextPuzzleId}`;
+            }, 1500);
+          }
+        } else {
+          // Regular behavior for non-daily puzzles or long daily puzzles
+          setTimeout(() => {
+            setShowCompleteModal(true);
+            setIsRevealing(false);
+          }, 2000);
+        }
       }
     };
     if (revealPath.length > 0) {
@@ -485,8 +504,19 @@ export default function ChessBoard({
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
         {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
-        onReplay={handleReplay}
       />
+      
+      {/* Success feedback for short/medium daily puzzles */}
+      {showSuccessFeedback && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30 pointer-events-none">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center gap-4 animate-in fade-in duration-300">
+            <div className="text-2xl">🎉</div>
+            <div className="text-xl font-bold text-gray-900 dark:text-white text-center">
+              Great job! Moving to the next puzzle...
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

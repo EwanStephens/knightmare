@@ -8,8 +8,6 @@ interface CompletionModalProps {
   congratsMessage: string;
   targetWord: string;
   nextPath?: string;
-  onReplay?: () => void;
-  allowReplays?: boolean;
 }
 
 export default function CompletionModal({
@@ -18,8 +16,6 @@ export default function CompletionModal({
   congratsMessage,
   targetWord,
   nextPath,
-  onReplay,
-  allowReplays = true,
 }: CompletionModalProps) {
   const router = useRouter();
   
@@ -33,20 +29,28 @@ export default function CompletionModal({
     }
   };
 
-  const handleReplay = () => {
-    onClose();
-    if (onReplay) {
-      onReplay();
-    } else {
-      // Default: reload the page
-      router.refresh();
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      onClose();
     }
   };
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-700 p-8 flex flex-col items-center gap-6 min-w-[320px] transition-colors duration-200">
-        <div className="text-2xl font-bold text-gray-900 dark:text-white">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      onClick={handleBackdropClick}
+    >
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-700 p-8 flex flex-col items-center gap-6 min-w-[320px] transition-colors duration-200 relative">
+        {/* X button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl font-bold w-6 h-6 flex items-center justify-center"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        
+        <div className="text-2xl font-bold text-gray-900 dark:text-white text-center">
           {congratsMessage || `Congratulations! You found the word ${targetWord}!`}
         </div>
         <div className="flex gap-4">
@@ -62,14 +66,6 @@ export default function CompletionModal({
               onClick={handleNextLevel}
             >
               Next Level
-            </button>
-          )}
-          {allowReplays && (
-            <button
-              className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors duration-200"
-              onClick={handleReplay}
-            >
-              Play Again
             </button>
           )}
         </div>

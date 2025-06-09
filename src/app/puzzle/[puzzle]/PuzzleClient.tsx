@@ -5,7 +5,10 @@
 "use client";
 
 import { useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import ChessBoard from '@/components/ChessBoard';
+import { getDailyPuzzlesForDate } from '@/utils/calendar';
+import { getSolvedPuzzleIds } from '@/utils/gameState';
 import type { LoadedLevel } from '@/types/level';
 
 // Props for PuzzleClient, matching what the server passes
@@ -48,23 +51,45 @@ export default function PuzzleClient({
   firstLetterSquare,
   revealPath,
 }: PuzzleClientProps) {
+  const router = useRouter();
+  
   // Use a single Date instance for both todayStr and the log
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => today.toLocaleDateString('en-CA'), [today]);
   console.log('[PuzzleClient] todayStr:', todayStr, '| local datetime:', today.toString());
+
+  // Get daily puzzles and solved status for tabs
+  const dailyPuzzles = useMemo(() => {
+    if (!puzzleDate) return null;
+    return getDailyPuzzlesForDate(puzzleDate);
+  }, [puzzleDate]);
+
+  const solvedPuzzleIds = useMemo(() => getSolvedPuzzleIds(), []);
 
   // Determine header and if this puzzle is from the future
   let header = 'Puzzle';
   let isFuture = false;
   if (puzzleDate) {
     if (puzzleDate === todayStr) {
-      header = `Daily Puzzle${puzzleType ? ' – ' + puzzleType.charAt(0).toUpperCase() + puzzleType.slice(1) : ''}`;
+      header = 'Daily Puzzle';
     } else if (puzzleDate < todayStr) {
-      header = `${formatDateHeader(puzzleDate)}${puzzleType ? ' – ' + puzzleType.charAt(0).toUpperCase() + puzzleType.slice(1) : ''}`;
+      header = formatDateHeader(puzzleDate);
     } else {
       isFuture = true;
     }
   }
+
+  // Determine which tabs should be available
+  const showTabs = dailyPuzzles && puzzleType;
+  const isShortSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.short) : false;
+  const isMediumSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.medium) : false;
+  
+  const handleTabClick = (tabType: 'short' | 'medium' | 'long') => {
+    if (!dailyPuzzles) return;
+    
+    const targetPuzzleId = dailyPuzzles[tabType];
+    router.push(`/puzzle/${targetPuzzleId}`);
+  };
 
   if (isFuture) {
     return (
@@ -80,12 +105,59 @@ export default function PuzzleClient({
   return (
     <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8">
       <h1 className="text-2xl font-bold mb-4 dark:text-white text-center">{header}</h1>
+      
+      {/* Tabs for daily puzzles */}
+      {showTabs && (
+        <div className="flex gap-1 mb-6 bg-gray-200 dark:bg-gray-600 rounded-lg p-1">
+          <button
+            onClick={() => handleTabClick('short')}
+            className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+              puzzleType === 'short'
+                ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
+                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+            }`}
+          >
+            Short
+          </button>
+          
+          <button
+            onClick={() => handleTabClick('medium')}
+            disabled={!isShortSolved}
+            className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+              puzzleType === 'medium'
+                ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
+                : isShortSolved
+                ? 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
+            }`}
+          >
+            Medium
+          </button>
+          
+          <button
+            onClick={() => handleTabClick('long')}
+            disabled={!isMediumSolved}
+            className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+              puzzleType === 'long'
+                ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
+                : isMediumSolved
+                ? 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
+            }`}
+          >
+            Long
+          </button>
+        </div>
+      )}
+      
       <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
         <ChessBoard
           levelData={levelData}
           nextPuzzleId={nextPuzzleId}
           congratsMessage={congratsMessage}
           puzzleId={puzzleId}
+          isDailyPuzzle={!!puzzleDate}
+          puzzleType={puzzleType}
           {...(hintSquares && firstLetterSquare && revealPath ? {
             hintSquares,
             firstLetterSquare,

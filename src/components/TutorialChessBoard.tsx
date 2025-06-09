@@ -80,7 +80,6 @@ export default function TutorialChessBoard() {
         onClose={handleCloseModal}
         congratsMessage={tutorialLevel.congratsMessage}
         targetWord={tutorialLevel.targetWord}
-        allowReplays={false}
         {...(nextPath ? { nextPath } : {})}
       />
     </div>
