@@ -21,7 +21,6 @@ export interface GameState {
   currentWord: string;
   selectedSquare: string | null;
   previousSquares: string[];
-  message: string;
 }
 
 export type Position = {

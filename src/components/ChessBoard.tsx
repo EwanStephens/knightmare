@@ -53,7 +53,6 @@ export default function ChessBoard({
     currentWord: '',
     selectedSquare: null,
     previousSquares: [],
-    message: '',
   });
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
@@ -73,7 +72,6 @@ export default function ChessBoard({
         currentWord: '',
         selectedSquare: null,
         previousSquares: [],
-        message: '',
       }));
       return;
     }
@@ -86,7 +84,6 @@ export default function ChessBoard({
         currentWord: '',
         selectedSquare: null,
         previousSquares: [],
-        message: '',
       }));
     }
   }, [levelData, tutorialMode, tutorialLevel]);
@@ -99,7 +96,7 @@ export default function ChessBoard({
     }
   }, [puzzleId]);
 
-  const clearGameBoard = (message: string) => {
+  const clearGameBoard = () => {
     return {
       ...gameState,
       board: gameState.board.map(row =>
@@ -113,7 +110,6 @@ export default function ChessBoard({
       selectedSquare: null,
       currentWord: '',
       previousSquares: [],
-      message,
     };
   };
 
@@ -147,10 +143,6 @@ export default function ChessBoard({
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
         setIllegalMoveSquare(position);
         setTimeout(() => setIllegalMoveSquare(null), 200);
-        setGameState({
-          ...gameState,
-          message: "Illegal move. You must capture a piece of the opposite color."
-        });
         return;
       }
 
@@ -160,10 +152,6 @@ export default function ChessBoard({
       if (!square.piece) {
         setIllegalMoveSquare(position);
         setTimeout(() => setIllegalMoveSquare(null), 200);
-        setGameState({
-          ...gameState,
-          message: "Illegal move. You must start by selecting a square containing a piece."
-        });
         return;
       }
     }
@@ -211,12 +199,11 @@ export default function ChessBoard({
       currentWord: newWord,
       selectedSquare: position,
       previousSquares: newPreviousSquares,
-      message: message,
     });
   };
 
   const handleCancel = () => {
-    const newState = clearGameBoard('');
+    const newState = clearGameBoard();
     setGameState(newState);
     
     // Notify tutorial system of clear action in tutorial mode
@@ -242,7 +229,6 @@ export default function ChessBoard({
       selectedSquare: null,
       currentWord: '',
       previousSquares: [],
-      message: '',
     }));
     // Notify tutorial system of clear action in tutorial mode
     if (tutorialMode && onPieceSelected) {
@@ -491,9 +477,6 @@ export default function ChessBoard({
                 </button>
               )}
             </div>
-            {gameState.message && !showCompleteModal && !gameState.message.includes('Congratulations') && (
-              <div className="text-base sm:text-lg text-red-600 mt-2">{gameState.message}</div>
-            )}
           </div>
         </div>
       </div>
