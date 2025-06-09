@@ -175,9 +175,7 @@ export default function ChessBoard({
     );
 
     // Check if word matches target
-    let message = '';
     if (newWord === gameLevelData.targetWord) {
-      message = congratsMessage || gameLevelData.congratsMessage || `Congratulations! You found the word ${gameLevelData.targetWord}!`;
       // Always call the completion callback if provided
       if (onLevelComplete) {
         onLevelComplete();
