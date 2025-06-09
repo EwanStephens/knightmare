@@ -46,7 +46,7 @@ export default function CompletionModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-700 p-8 flex flex-col items-center gap-6 min-w-[320px] transition-colors duration-200">
-        <div className="text-2xl font-bold text-green-700 dark:text-green-500">
+        <div className="text-2xl font-bold text-gray-900 dark:text-white">
           {congratsMessage || `Congratulations! You found the word ${targetWord}!`}
         </div>
         <div className="flex gap-4">

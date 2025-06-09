@@ -53,12 +53,11 @@ export default function ChessBoard({
     currentWord: '',
     selectedSquare: null,
     previousSquares: [],
-    message: '',
   });
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [illegalMoveSquare, setIllegalMoveSquare] = useState<string | null>(null);
   const [hintStep, setHintStep] = useState<HintStep>(HintStep.None);
-  const [crossedOutSquares, setCrossedOutSquares] = useState<string[]>([]);
+  const [greyedOutSquares, setGreyedOutSquares] = useState<string[]>([]);
   const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
   const [revealedPath, setRevealedPath] = useState<string[]>([]);
   const [isRevealing, setIsRevealing] = useState(false);
@@ -73,7 +72,6 @@ export default function ChessBoard({
         currentWord: '',
         selectedSquare: null,
         previousSquares: [],
-        message: '',
       }));
       return;
     }
@@ -86,7 +84,6 @@ export default function ChessBoard({
         currentWord: '',
         selectedSquare: null,
         previousSquares: [],
-        message: '',
       }));
     }
   }, [levelData, tutorialMode, tutorialLevel]);
@@ -99,7 +96,7 @@ export default function ChessBoard({
     }
   }, [puzzleId]);
 
-  const clearGameBoard = (message: string) => {
+  const clearGameBoard = () => {
     return {
       ...gameState,
       board: gameState.board.map(row =>
@@ -113,7 +110,6 @@ export default function ChessBoard({
       selectedSquare: null,
       currentWord: '',
       previousSquares: [],
-      message,
     };
   };
 
@@ -131,6 +127,11 @@ export default function ChessBoard({
     // If a square is already selected, check if new square is a legal capture
     let newPreviousSquares: string[] = [];
     if (gameState.selectedSquare) {
+      // Ignore clicks on the already selected square
+      if (gameState.selectedSquare === position) {
+        return;
+      }
+
       const startPos = algebraicToPosition(gameState.selectedSquare);
       const startSquare = gameState.board[startPos.row][startPos.col];
       
@@ -142,10 +143,6 @@ export default function ChessBoard({
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
         setIllegalMoveSquare(position);
         setTimeout(() => setIllegalMoveSquare(null), 200);
-        setGameState({
-          ...gameState,
-          message: "Illegal move. You must capture a piece of the opposite color."
-        });
         return;
       }
 
@@ -155,10 +152,6 @@ export default function ChessBoard({
       if (!square.piece) {
         setIllegalMoveSquare(position);
         setTimeout(() => setIllegalMoveSquare(null), 200);
-        setGameState({
-          ...gameState,
-          message: "Illegal move. You must start by selecting a square containing a piece."
-        });
         return;
       }
     }
@@ -182,9 +175,7 @@ export default function ChessBoard({
     );
 
     // Check if word matches target
-    let message = '';
     if (newWord === gameLevelData.targetWord) {
-      message = congratsMessage || gameLevelData.congratsMessage || `Congratulations! You found the word ${gameLevelData.targetWord}!`;
       // Always call the completion callback if provided
       if (onLevelComplete) {
         onLevelComplete();
@@ -206,12 +197,11 @@ export default function ChessBoard({
       currentWord: newWord,
       selectedSquare: position,
       previousSquares: newPreviousSquares,
-      message: message,
     });
   };
 
   const handleCancel = () => {
-    const newState = clearGameBoard('');
+    const newState = clearGameBoard();
     setGameState(newState);
     
     // Notify tutorial system of clear action in tutorial mode
@@ -237,7 +227,6 @@ export default function ChessBoard({
       selectedSquare: null,
       currentWord: '',
       previousSquares: [],
-      message: '',
     }));
     // Notify tutorial system of clear action in tutorial mode
     if (tutorialMode && onPieceSelected) {
@@ -245,7 +234,7 @@ export default function ChessBoard({
     }
     // Clear all hint/reveal state
     setHintStep(HintStep.None);
-    setCrossedOutSquares([]);
+    setGreyedOutSquares([]);
     setHighlightedHintSquare(null);
     setRevealedPath([]);
     setIsRevealing(false);
@@ -298,7 +287,7 @@ export default function ChessBoard({
 
   const handleHintClick = async () => {
     if (hintStep === HintStep.None && hintSquares) {
-      setCrossedOutSquares(hintSquares);
+      setGreyedOutSquares(hintSquares);
       setHintStep(HintStep.CrossOut);
     } else if (hintStep === HintStep.CrossOut && firstLetterSquare) {
       setHighlightedHintSquare(firstLetterSquare);
@@ -313,7 +302,7 @@ export default function ChessBoard({
   // Reset hint state when board changes (e.g. on replay)
   useEffect(() => {
     setHintStep(HintStep.None);
-    setCrossedOutSquares([]);
+    setGreyedOutSquares([]);
     setHighlightedHintSquare(null);
     setRevealedPath([]);
     setIsRevealing(false);
@@ -336,7 +325,7 @@ export default function ChessBoard({
             <div className="grid grid-cols-5 gap-0.5 sm:gap-1 bg-gray-200 w-full h-full">
               {gameState.board.map((row, rowIndex) =>
                 row.map((square, colIndex) => {
-                  const isCrossed = crossedOutSquares.includes(square.position);
+                  const isGreyedOut = greyedOutSquares.includes(square.position);
                   const isHintHighlight = highlightedHintSquare === square.position;
                   const isReveal = revealedPath.includes(square.position);
                   const revealIndex = revealedPath.indexOf(square.position);
@@ -362,17 +351,9 @@ export default function ChessBoard({
                           (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
                         ${square.piece ? 'hover:bg-opacity-90' : ''}
                         cursor-pointer
-                        ${isCrossed ? 'opacity-40 grayscale relative' : ''}
+                        ${isGreyedOut ? 'opacity-40 grayscale relative' : ''}
                       `}
                     >
-                      {isCrossed && (
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-                          <svg width="80%" height="80%" viewBox="0 0 100 100">
-                            <line x1="10" y1="10" x2="90" y2="90" stroke="#b91c1c" strokeWidth="10" strokeLinecap="round" />
-                            <line x1="90" y1="10" x2="10" y2="90" stroke="#b91c1c" strokeWidth="10" strokeLinecap="round" />
-                          </svg>
-                        </div>
-                      )}
                       {((tutorialMode && highlightedPosition === square.position) || (isHintHighlight && !isReveal)) && (
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                           <div className="absolute inset-0 animate-pulse bg-yellow-400 opacity-20 rounded-md"></div>
@@ -494,9 +475,6 @@ export default function ChessBoard({
                 </button>
               )}
             </div>
-            {gameState.message && !showCompleteModal && !gameState.message.includes('Congratulations') && (
-              <div className="text-base sm:text-lg text-red-600 mt-2">{gameState.message}</div>
-            )}
           </div>
         </div>
       </div>
