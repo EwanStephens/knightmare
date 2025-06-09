@@ -32,13 +32,12 @@ export default function TutorialChessBoard() {
 
   // Handle level completion callback from ChessBoard
   const handleLevelComplete = () => {
-    // Show the completion modal immediately
-    setShowCompleteModal(true);
-    
-    // If this is the last tutorial level, mark the tutorial as completed
+    // If this is the last tutorial level, show the completion modal
     if (currentLevel?.levelNumber === 3) {
+      setShowCompleteModal(true);
       markTutorialCompleted();
     }
+    // For levels 1 and 2, the ChessBoard will handle the simple success feedback and auto-navigation
   };
 
   // Handle next level navigation
@@ -68,6 +67,7 @@ export default function TutorialChessBoard() {
         <ChessBoard 
           tutorialMode={true}
           tutorialLevel={tutorialLevel}
+          tutorialLevelNumber={currentLevel?.levelNumber}
           onPieceSelected={handlePieceSelected}
           onLevelComplete={handleLevelComplete}
           highlightedPosition={highlightedPosition}

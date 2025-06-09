@@ -87,8 +87,13 @@ export default function PuzzleClient({
   const handleTabClick = (tabType: 'short' | 'medium' | 'long') => {
     if (!dailyPuzzles) return;
     
-    const targetPuzzleId = dailyPuzzles[tabType];
-    router.push(`/puzzle/${targetPuzzleId}`);
+    // Allow navigation to short always, medium if short is solved, long if medium is solved
+    if (tabType === 'short' || 
+        (tabType === 'medium' && isShortSolved) || 
+        (tabType === 'long' && isMediumSolved)) {
+      const targetPuzzleId = dailyPuzzles[tabType];
+      router.push(`/puzzle/${targetPuzzleId}`);
+    }
   };
 
   if (isFuture) {
@@ -114,10 +119,12 @@ export default function PuzzleClient({
             className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
               puzzleType === 'short'
                 ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
+                : isShortSolved
+                ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
                 : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
-            Short
+            Short {isShortSolved ? '✓' : ''}
           </button>
           
           <button
@@ -127,11 +134,13 @@ export default function PuzzleClient({
               puzzleType === 'medium'
                 ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
                 : isShortSolved
-                ? 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                ? isMediumSolved
+                  ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                 : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
             }`}
           >
-            Medium
+            Medium {isMediumSolved ? '✓' : ''}
           </button>
           
           <button

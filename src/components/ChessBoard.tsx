@@ -22,6 +22,7 @@ interface ChessBoardProps {
   levelData?: LoadedLevel; // Required for non-tutorial mode
   tutorialMode?: boolean;
   tutorialLevel?: LoadedLevel;
+  tutorialLevelNumber?: number;
   onPieceSelected?: (position: string, word: string) => void;
   onLevelComplete?: () => void;
   highlightedPosition?: string | null;
@@ -39,6 +40,7 @@ export default function ChessBoard({
   levelData,
   tutorialMode = false,
   tutorialLevel,
+  tutorialLevelNumber,
   onPieceSelected,
   onLevelComplete,
   highlightedPosition,
@@ -65,7 +67,8 @@ export default function ChessBoard({
   const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
   const [revealedPath, setRevealedPath] = useState<string[]>([]);
   const [isRevealing, setIsRevealing] = useState(false);
-  const [showSuccessFeedback, setShowSuccessFeedback] = useState(false);
+  const [showWaveAnimation, setShowWaveAnimation] = useState(false);
+  const [waveAnimationLetterIndex, setWaveAnimationLetterIndex] = useState(0);
 
   useEffect(() => {
     // If in tutorial mode, use the provided level data
@@ -96,10 +99,26 @@ export default function ChessBoard({
   useEffect(() => {
     if (puzzleId && typeof window !== 'undefined') {
       if (isPuzzleSolved(puzzleId)) {
-        setShowCompleteModal(true);
+        // For already solved puzzles, load the completed state without showing modal
+        if (gameLevelData) {
+          setGameState(prevState => ({
+            ...prevState,
+            currentWord: gameLevelData.targetWord,
+            selectedSquare: null,
+            previousSquares: [],
+            board: prevState.board.map(row =>
+              row.map(sq => ({
+                ...sq,
+                isSelected: false,
+                isLegalMove: false,
+                isHighlighted: false,
+              }))
+            ),
+          }));
+        }
       }
     }
-  }, [puzzleId]);
+  }, [puzzleId, gameLevelData]);
 
   const clearGameBoard = () => {
     return {
@@ -189,35 +208,42 @@ export default function ChessBoard({
       if (!tutorialMode && puzzleId) {
         markPuzzleSolved(puzzleId);
       }
-      if (!tutorialMode) {
-        // For daily puzzles, only show completion modal for long puzzles
-        if (isDailyPuzzle && puzzleType !== 'long') {
-          // Show simple visual feedback for short/medium puzzles
-          const completionBoard = newBoard.map(row =>
-            row.map(sq => ({
-              ...sq,
-              isSelected: false,
-              isLegalMove: false,
-              isHighlighted: sq.position === position, // Highlight the final capture
-            }))
-          );
-          
+      
+      // Handle completion based on mode
+      if (tutorialMode) {
+        // For tutorial levels 1 and 2, show wave animation
+        if (tutorialLevelNumber && tutorialLevelNumber < 3) {
+          // Set the completed word and start wave animation
           setGameState({
             ...gameState,
-            board: completionBoard,
+            board: newBoard,
             currentWord: newWord,
             selectedSquare: null,
             previousSquares: newPreviousSquares,
           });
           
-          // Show success feedback
-          setShowSuccessFeedback(true);
+          // Start wave animation with navigation
+          startWaveAnimation(newWord, `/tutorial/${tutorialLevelNumber + 1}`);
+          return; // Exit early to avoid duplicate setGameState
+        }
+        // For tutorial level 3, the completion modal will be handled by the callback
+      } else {
+        // For daily puzzles, only show completion modal for long puzzles
+        if (isDailyPuzzle && puzzleType !== 'long') {
+          // Set the completed word and start wave animation
+          setGameState({
+            ...gameState,
+            board: newBoard,
+            currentWord: newWord,
+            selectedSquare: null,
+            previousSquares: newPreviousSquares,
+          });
           
-          // Auto-navigate to next puzzle after delay
+          // Start wave animation with navigation
           if (nextPuzzleId) {
-            setTimeout(() => {
-              window.location.href = `/puzzle/${nextPuzzleId}`;
-            }, 1500);
+            startWaveAnimation(newWord, `/puzzle/${nextPuzzleId}`);
+          } else {
+            startWaveAnimation(newWord);
           }
           return; // Exit early to avoid duplicate setGameState
         } else {
@@ -246,6 +272,31 @@ export default function ChessBoard({
     if (tutorialMode && onPieceSelected) {
       onPieceSelected('clear', '');
     }
+  };
+
+  // Wave animation for success feedback
+  const startWaveAnimation = (targetWord: string, navigationUrl?: string) => {
+    setShowWaveAnimation(true);
+    setWaveAnimationLetterIndex(0);
+    
+    let letterIndex = 0;
+    const animateNextLetter = () => {
+      setWaveAnimationLetterIndex(letterIndex);
+      letterIndex++;
+      
+      if (letterIndex < targetWord.length) {
+        setTimeout(animateNextLetter, 150); // 150ms delay between letters
+      } else {
+        // Animation complete, navigate after a short delay
+        if (navigationUrl) {
+          setTimeout(() => {
+            window.location.href = navigationUrl;
+          }, 800);
+        }
+      }
+    };
+    
+    setTimeout(animateNextLetter, 300); // Initial delay before starting animation
   };
 
   // Factored out reveal logic
@@ -325,6 +376,8 @@ export default function ChessBoard({
     setHighlightedHintSquare(null);
     setRevealedPath([]);
     setIsRevealing(false);
+    setShowWaveAnimation(false);
+    setWaveAnimationLetterIndex(0);
   }, [levelData]);
 
   if (!gameLevelData) {
@@ -453,11 +506,15 @@ export default function ChessBoard({
               {Array.from(gameLevelData.targetWord).map((_, index) => {
                 // Dynamically calculate sizes based on word length
                 const letterWidth = Math.max(100 / gameLevelData.targetWord.length, 6);
+                const isWaving = showWaveAnimation && index <= waveAnimationLetterIndex;
+                const waveDelay = showWaveAnimation ? index * 150 : 0;
                 
                 return (
                   <span 
                     key={index} 
-                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center"
+                    className={`text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center transition-transform duration-300 ${
+                      isWaving ? 'animate-bounce' : ''
+                    }`}
                     style={{ 
                       width: `${letterWidth}%`, 
                       minWidth: '1rem',
@@ -465,7 +522,8 @@ export default function ChessBoard({
                       height: '80%',
                       minHeight: '40px',
                       // Calculate font size based on viewport with minimum size guarantee
-                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}dvw, ${Math.min(6, 30/gameLevelData.targetWord.length)}dvh))`
+                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}dvw, ${Math.min(6, 30/gameLevelData.targetWord.length)}dvh))`,
+                      animationDelay: isWaving ? `${waveDelay}ms` : '0ms'
                     }}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
@@ -506,14 +564,11 @@ export default function ChessBoard({
         {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
       />
       
-      {/* Success feedback for short/medium daily puzzles */}
-      {showSuccessFeedback && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30 pointer-events-none">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center gap-4 animate-in fade-in duration-300">
-            <div className="text-2xl">🎉</div>
-            <div className="text-xl font-bold text-gray-900 dark:text-white text-center">
-              Great job! Moving to the next puzzle...
-            </div>
+      {/* Wave animation congratulations message */}
+      {showWaveAnimation && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center pointer-events-none">
+          <div className="text-4xl font-bold text-green-600 dark:text-green-400 animate-in fade-in duration-500 slide-in-from-bottom-4">
+            Congratulations!
           </div>
         </div>
       )}
