@@ -37,7 +37,7 @@ export default function CompletionModal({
   
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-20 backdrop-blur-sm"
       onClick={handleBackdropClick}
     >
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-700 p-8 flex flex-col items-center gap-6 min-w-[320px] transition-colors duration-200 relative">

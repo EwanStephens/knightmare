@@ -106,13 +106,13 @@ export default function ChessBoard({
             ...prevState,
             currentWord: gameLevelData.targetWord,
             selectedSquare: null,
-            previousSquares: solutionPath,
+            previousSquares: solutionPath.slice(0, -1), // All squares except the last one
             board: prevState.board.map(row =>
               row.map(sq => ({
                 ...sq,
                 isSelected: false,
                 isLegalMove: false,
-                isHighlighted: solutionPath.includes(sq.position),
+                isHighlighted: solutionPath.slice(0, -1).includes(sq.position), // Highlight the path excluding last square
               }))
             ),
           }));
@@ -252,8 +252,8 @@ export default function ChessBoard({
         }
         // For tutorial level 3, the completion modal will be handled by the callback
       } else {
-        // For daily puzzles, only show completion modal for long puzzles
-        if (isDailyPuzzle && puzzleType !== 'long') {
+        // For daily puzzles, show wave animation for all types, then modal only for long
+        if (isDailyPuzzle) {
           // Set the completed word and start wave animation
           setGameState({
             ...gameState,
@@ -263,15 +263,21 @@ export default function ChessBoard({
             previousSquares: newPreviousSquares,
           });
           
-          // Start wave animation with navigation
-          if (nextPuzzleId) {
-            startWaveAnimation(newWord, `/puzzle/${nextPuzzleId}`);
+          // Start wave animation
+          if (puzzleType === 'long') {
+            // For long puzzles, show completion modal after wave animation
+            startWaveAnimation(newWord, undefined, true);
           } else {
-            startWaveAnimation(newWord);
+            // For short/medium puzzles, navigate to next puzzle after wave animation
+            if (nextPuzzleId) {
+              startWaveAnimation(newWord, `/puzzle/${nextPuzzleId}`);
+            } else {
+              startWaveAnimation(newWord);
+            }
           }
           return; // Exit early to avoid duplicate setGameState
         } else {
-          // Regular behavior for non-daily puzzles or long daily puzzles
+          // Regular behavior for non-daily puzzles
           setTimeout(() => {
             setShowCompleteModal(true);
           }, 200);
@@ -299,7 +305,7 @@ export default function ChessBoard({
   };
 
   // Improved wave animation for success feedback
-  const startWaveAnimation = (targetWord: string, navigationUrl?: string) => {
+  const startWaveAnimation = (targetWord: string, navigationUrl?: string, showCompletionModal = false) => {
     setShowWaveAnimation(true);
     setWaveAnimationLetterIndex(0);
     
@@ -309,18 +315,23 @@ export default function ChessBoard({
       letterIndex++;
       
       if (letterIndex < targetWord.length) {
-        setTimeout(animateNextLetter, 20); // 150ms delay between letters
+        setTimeout(animateNextLetter, 10); // delay between letters
       } else {
-        // Animation complete, navigate after a short delay
+        // Animation complete, handle next action after a short delay
         if (navigationUrl) {
           setTimeout(() => {
             window.location.href = navigationUrl;
+          }, 1500);
+        } else if (showCompletionModal) {
+          setTimeout(() => {
+            setShowWaveAnimation(false);
+            setShowCompleteModal(true);
           }, 1500);
         }
       }
     };
     
-    setTimeout(animateNextLetter, 20); // Initial delay before starting animation
+    setTimeout(animateNextLetter, 10); // Initial delay before starting animation
   };
 
   // Factored out reveal logic
@@ -589,15 +600,6 @@ export default function ChessBoard({
         targetWord={gameLevelData.targetWord}
         {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
       />
-      
-      {/* Wave animation congratulations message */}
-      {showWaveAnimation && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center pointer-events-none">
-          <div className="text-4xl font-bold text-green-600 dark:text-green-400 animate-in fade-in duration-500 slide-in-from-bottom-4">
-            Congratulations!
-          </div>
-        </div>
-      )}
       
       {/* Wave animation CSS */}
       <style jsx>{`
