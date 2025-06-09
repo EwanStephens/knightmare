@@ -50,5 +50,6 @@ export async function loadPuzzleById(puzzleId: string): Promise<LoadedLevel> {
   });
   const targetWord = puzzleData.targetWords[0];
   const congratsMessage = `Congratulations! You found the word ${targetWord}!`;
-  return { board, targetWord, congratsMessage };
+  const solution = puzzleData.targetPath || undefined;
+  return { board, targetWord, congratsMessage, solution };
 } 

@@ -83,6 +83,7 @@ export default function PuzzleClient({
   const showTabs = dailyPuzzles && puzzleType;
   const isShortSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.short) : false;
   const isMediumSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.medium) : false;
+  const isLongSolved = dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.long) : false;
   
   const handleTabClick = (tabType: 'short' | 'medium' | 'long') => {
     if (!dailyPuzzles) return;
@@ -150,11 +151,13 @@ export default function PuzzleClient({
               puzzleType === 'long'
                 ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
                 : isMediumSolved
-                ? 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                ? isLongSolved
+                  ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                 : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
             }`}
           >
-            Long
+            Long {isLongSolved ? '✓' : ''}
           </button>
         </div>
       )}

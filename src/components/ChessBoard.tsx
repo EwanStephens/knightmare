@@ -97,10 +97,27 @@ export default function ChessBoard({
   }, [levelData, tutorialMode, tutorialLevel]);
 
   useEffect(() => {
-    if (puzzleId && typeof window !== 'undefined') {
+    if (puzzleId && typeof window !== 'undefined' && gameLevelData) {
       if (isPuzzleSolved(puzzleId)) {
-        // For already solved puzzles, load the completed state without showing modal
-        if (gameLevelData) {
+        // For already solved puzzles, load the completed state with path shown
+        if (gameLevelData.solution) {
+          const solutionPath = gameLevelData.solution;
+          setGameState(prevState => ({
+            ...prevState,
+            currentWord: gameLevelData.targetWord,
+            selectedSquare: null,
+            previousSquares: solutionPath,
+            board: prevState.board.map(row =>
+              row.map(sq => ({
+                ...sq,
+                isSelected: false,
+                isLegalMove: false,
+                isHighlighted: solutionPath.includes(sq.position),
+              }))
+            ),
+          }));
+        } else {
+          // Fallback if no solution path is available
           setGameState(prevState => ({
             ...prevState,
             currentWord: gameLevelData.targetWord,
@@ -116,9 +133,16 @@ export default function ChessBoard({
             ),
           }));
         }
+        
+        // For long daily puzzles, show the completion modal
+        if (isDailyPuzzle && puzzleType === 'long') {
+          setTimeout(() => {
+            setShowCompleteModal(true);
+          }, 200);
+        }
       }
     }
-  }, [puzzleId, gameLevelData]);
+  }, [puzzleId, gameLevelData, isDailyPuzzle, puzzleType]);
 
   const clearGameBoard = () => {
     return {
@@ -274,7 +298,7 @@ export default function ChessBoard({
     }
   };
 
-  // Wave animation for success feedback
+  // Improved wave animation for success feedback
   const startWaveAnimation = (targetWord: string, navigationUrl?: string) => {
     setShowWaveAnimation(true);
     setWaveAnimationLetterIndex(0);
@@ -285,18 +309,18 @@ export default function ChessBoard({
       letterIndex++;
       
       if (letterIndex < targetWord.length) {
-        setTimeout(animateNextLetter, 150); // 150ms delay between letters
+        setTimeout(animateNextLetter, 20); // 150ms delay between letters
       } else {
         // Animation complete, navigate after a short delay
         if (navigationUrl) {
           setTimeout(() => {
             window.location.href = navigationUrl;
-          }, 800);
+          }, 1500);
         }
       }
     };
     
-    setTimeout(animateNextLetter, 300); // Initial delay before starting animation
+    setTimeout(animateNextLetter, 20); // Initial delay before starting animation
   };
 
   // Factored out reveal logic
@@ -384,10 +408,13 @@ export default function ChessBoard({
     return <div>Loading...</div>;
   }
 
+  // Determine if we should blur the main content
+  const shouldBlurContent = showCompleteModal;
+
   return (
     <div className="relative w-full flex flex-col items-center">
       {/* Main content, blurred when modal is open */}
-      <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
+      <div className={shouldBlurContent ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
         <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4">
           <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4 level-title">
             Find a {gameLevelData.targetWord.length} letter word
@@ -507,13 +534,12 @@ export default function ChessBoard({
                 // Dynamically calculate sizes based on word length
                 const letterWidth = Math.max(100 / gameLevelData.targetWord.length, 6);
                 const isWaving = showWaveAnimation && index <= waveAnimationLetterIndex;
-                const waveDelay = showWaveAnimation ? index * 150 : 0;
                 
                 return (
                   <span 
                     key={index} 
-                    className={`text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center transition-transform duration-300 ${
-                      isWaving ? 'animate-bounce' : ''
+                    className={`text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center transition-transform duration-200 ease-out ${
+                      isWaving ? 'wave-letter' : ''
                     }`}
                     style={{ 
                       width: `${letterWidth}%`, 
@@ -523,7 +549,7 @@ export default function ChessBoard({
                       minHeight: '40px',
                       // Calculate font size based on viewport with minimum size guarantee
                       fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}dvw, ${Math.min(6, 30/gameLevelData.targetWord.length)}dvh))`,
-                      animationDelay: isWaving ? `${waveDelay}ms` : '0ms'
+                      animationDelay: isWaving ? `${index * 150}ms` : '0ms'
                     }}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
@@ -572,6 +598,28 @@ export default function ChessBoard({
           </div>
         </div>
       )}
+      
+      {/* Wave animation CSS */}
+      <style jsx>{`
+        .wave-letter {
+          animation: wave-bounce 0.6s ease-out forwards;
+        }
+        
+        @keyframes wave-bounce {
+          0% {
+            transform: translateY(0px) scale(1);
+          }
+          30% {
+            transform: translateY(-12px) scale(1.1);
+          }
+          60% {
+            transform: translateY(-6px) scale(1.05);
+          }
+          100% {
+            transform: translateY(0px) scale(1);
+          }
+        }
+      `}</style>
     </div>
   );
 }
