@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import { colors } from './src/styles/colors'
 
 const config: Config = {
   content: [
@@ -14,34 +13,35 @@ const config: Config = {
         chess7: ['Chess7', 'sans-serif'],
       },
       colors: {
-        // SpellCheck Custom Colors
+        // SpellCheck Custom Color Palette
+        // Base Colors: #769656, #EEEED2, #4059AD, #2A2B2A, #EF3E36
         asparagus: {
-          light: colors.asparagus.light,
-          DEFAULT: colors.asparagus.base,
-          dark: colors.asparagus.dark,
-          darker: colors.asparagus.darker,
+          light: '#8FA76B',         // Lighter green
+          DEFAULT: '#769656',       // Primary green (chessboard green squares)
+          dark: '#5A7042',          // Darker green (hover states)
+          darker: '#3F4A2A',        // Even darker green
         },
         jet: {
-          lighter: colors.jet.lighter,
-          light: colors.jet.light,
-          DEFAULT: colors.jet.base,
-          dark: colors.jet.dark,
-          darker: colors.jet.darker,
+          lighter: '#4A4B4A',       // Lighter jet
+          light: '#3A3B3A',         // Light jet (modals, containers)
+          DEFAULT: '#2A2B2A',       // Base jet (main dark backgrounds)
+          dark: '#1A1B1A',          // Dark jet
+          darker: '#0A0B0A',        // Darker jet
         },
         cream: {
-          light: colors.cream.light,
-          DEFAULT: colors.cream.base,
-          dark: colors.cream.dark,
+          light: '#F5F5E8',         // Lighter cream
+          DEFAULT: '#EEEED2',       // Base cream (chessboard light squares)
+          dark: '#E0E0C8',          // Darker cream (hover states)
         },
         'spell-blue': {
-          light: colors.blue.light,
-          DEFAULT: colors.blue.base,
-          dark: colors.blue.dark,
+          light: '#5B7BC7',         // Lighter blue
+          DEFAULT: '#4059AD',       // Base blue (accent blue)
+          dark: '#2D4185',          // Darker blue (hover states)
         },
         'spell-red': {
-          light: colors.red.light,
-          DEFAULT: colors.red.base,
-          dark: colors.red.dark,
+          light: '#F4615A',         // Lighter red
+          DEFAULT: '#EF3E36',       // Base red (accent red)
+          dark: '#C92E27',          // Darker red (hover states)
         },
         // Legacy dark board colors (keeping for compatibility)
         dark: {
