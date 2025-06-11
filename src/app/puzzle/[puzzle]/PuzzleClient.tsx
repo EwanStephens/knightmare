@@ -96,9 +96,9 @@ export default function PuzzleClient({
 
   if (isFuture) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-[#2A2B2A]">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-jet">
         <h1 className="text-2xl font-bold mb-4 dark:text-white">This puzzle is from the future!</h1>
-        <div className="bg-white dark:bg-[#3A3B3A] p-8 rounded-lg shadow-lg text-lg text-center">
+        <div className="bg-white dark:bg-jet-light p-8 rounded-lg shadow-lg text-lg text-center">
           <p>Whoa there, time traveler. This puzzle hasn&apos;t been released yet. Please be patient and try again on the correct day. The chessboard of destiny awaits, but not just yet.</p>
         </div>
       </main>
@@ -106,7 +106,7 @@ export default function PuzzleClient({
   }
 
   return (
-    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8 bg-white dark:bg-[#2A2B2A]">
+    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8 bg-white dark:bg-jet">
       {/* Tabs for daily puzzles */}
       {showTabs && (
         <DailyPuzzleTabs

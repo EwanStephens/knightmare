@@ -31,14 +31,14 @@ export default function DailyPuzzleTabs({
   };
 
   return (
-    <div className="flex gap-1 mb-6 bg-[#EEEED2] dark:bg-[#3A3B3A] rounded-lg p-1">
+    <div className="flex gap-1 mb-6 bg-cream dark:bg-jet-light rounded-lg p-1">
       <button
         onClick={() => handleTabClick('short')}
         className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'short'
-            ? 'bg-white dark:bg-[#2A2B2A] text-gray-900 dark:text-white shadow-sm'
+            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
-            ? 'text-[#769656] dark:text-[#769656] hover:text-[#5a7042] dark:hover:text-[#5a7042]'
+            ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark'
             : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
         }`}
       >
@@ -50,10 +50,10 @@ export default function DailyPuzzleTabs({
         disabled={!isShortSolved}
         className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'medium'
-            ? 'bg-white dark:bg-[#2A2B2A] text-gray-900 dark:text-white shadow-sm'
+            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
             ? isMediumSolved
-              ? 'text-[#769656] dark:text-[#769656] hover:text-[#5a7042] dark:hover:text-[#5a7042]'
+              ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark'
               : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
         }`}
@@ -66,10 +66,10 @@ export default function DailyPuzzleTabs({
         disabled={!isMediumSolved}
         className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'long'
-            ? 'bg-white dark:bg-[#2A2B2A] text-gray-900 dark:text-white shadow-sm'
+            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm'
             : isMediumSolved
             ? isLongSolved
-              ? 'text-[#769656] dark:text-[#769656] hover:text-[#5a7042] dark:hover:text-[#5a7042]'
+              ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark'
               : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
         }`}
