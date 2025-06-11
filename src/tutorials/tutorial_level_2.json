@@ -17,8 +17,7 @@
       "trigger": "load",
       "nextStepId": "level2-try-bishop",
       "position": "bottom",
-      "triggerData": null,
-      "target": ".level-title"
+      "triggerData": null
     },
     {
       "id": "level2-try-bishop",

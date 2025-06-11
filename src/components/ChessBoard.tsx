@@ -438,7 +438,7 @@ export default function ChessBoard({
       {/* Main content, blurred when modal is open */}
       <div className={shouldBlurContent ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
         <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4">
-          <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4 level-title">
+          <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4">
             Find a {gameLevelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
