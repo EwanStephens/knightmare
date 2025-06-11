@@ -34,7 +34,7 @@ export default function DailyPuzzleTabs({
     <div className="flex gap-1 mb-6 bg-[#EEEED2] dark:bg-[#2D2D2D] rounded-lg p-1">
       <button
         onClick={() => handleTabClick('short')}
-        className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+        className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'short'
             ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
@@ -48,7 +48,7 @@ export default function DailyPuzzleTabs({
       <button
         onClick={() => handleTabClick('medium')}
         disabled={!isShortSolved}
-        className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+        className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'medium'
             ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
@@ -64,7 +64,7 @@ export default function DailyPuzzleTabs({
       <button
         onClick={() => handleTabClick('long')}
         disabled={!isMediumSolved}
-        className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+        className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'long'
             ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
             : isMediumSolved
