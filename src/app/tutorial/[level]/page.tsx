@@ -28,6 +28,7 @@ export default function TutorialLevelPage() {
   return (
     <TutorialProvider initialLevel={levelNumber}>
       <main className="bg-white dark:bg-gray-800">
+        <h1 className="text-3xl font-bold mb-8 dark:text-white text-center">Tutorial</h1>
         <div>
           <TutorialChessBoard />
         </div>
