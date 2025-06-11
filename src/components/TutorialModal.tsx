@@ -24,12 +24,14 @@ export default function TutorialModal() {
     
     // Handle the special case for buttons with specific text
     if (currentStep.target.includes(':contains(')) {
-      const textMatch = currentStep.target.match(/:contains\(['"]([^'"]+)['"]\)/);
+      const textMatch = currentStep.target.match(/:contains\(['"]?([^'"]+)['"]?\)/);
       if (textMatch && textMatch[1]) {
         const buttonText = textMatch[1];
-        const allButtons = document.querySelectorAll('button');
-        targetElements = Array.from(allButtons).filter(button => 
-          button.textContent?.trim() === buttonText
+        // Look for buttons specifically if the selector includes 'button'
+        const selector = currentStep.target.includes('button') ? 'button' : '*';
+        const allElements = document.querySelectorAll(selector);
+        targetElements = Array.from(allElements).filter(element => 
+          element.textContent?.trim() === buttonText.trim()
         );
       }
     } else {
@@ -43,7 +45,7 @@ export default function TutorialModal() {
       // Create a highlight overlay
       if (!highlightRef.current) {
         const highlightDiv = document.createElement('div');
-        highlightDiv.style.position = 'absolute';
+        highlightDiv.style.position = 'fixed'; // Use fixed positioning for better alignment
         highlightDiv.style.zIndex = '40';
         highlightDiv.style.pointerEvents = 'none';
         highlightDiv.style.border = '2px solid #FFDF00';
@@ -65,7 +67,7 @@ export default function TutorialModal() {
         highlightRef.current = highlightDiv;
       }
       
-      // Position the highlight
+      // Position the highlight using getBoundingClientRect for accurate positioning
       const rect = targetElement.getBoundingClientRect();
       const highlight = highlightRef.current;
       highlight.style.left = `${rect.left - 4}px`;

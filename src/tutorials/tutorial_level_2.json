@@ -34,7 +34,7 @@
       "triggerData": { "position": "e4", "currentWord": "U" },
       "nextStepId": null,
       "position": "top",
-      "target": ":contains('Clear')"
+      "target": "button:contains('Clear')"
     },
     {
       "id": "level2-pawn-a-selected",
@@ -43,7 +43,7 @@
       "triggerData": { "position": "b5", "currentWord": "A" },
       "nextStepId": null,
       "position": "top",
-      "target": ":contains('Clear')"
+      "target": "button:contains('Clear')"
     },
     {
       "id": "level2-cc-selected",
@@ -52,7 +52,7 @@
       "triggerData": { "position": "d2", "currentWord": "CC" },
       "nextStepId": null,
       "position": "top",
-      "target": ":contains('Clear')"
+      "target": "button:contains('Clear')"
     },
     {
       "id": "level2-after-clear",
