@@ -242,7 +242,7 @@ export default function ChessBoard({
       
       // Handle completion based on mode
       if (tutorialMode) {
-        // For all tutorial levels, show wave animation
+        // For all tutorial levels, show wave animation and then use callback
         // Set the completed word and start wave animation
         setGameState({
           ...gameState,
@@ -252,12 +252,8 @@ export default function ChessBoard({
           previousSquares: newPreviousSquares,
         });
         
-        // Start wave animation with navigation to next tutorial level
-        if (tutorialLevelNumber) {
-          startWaveAnimation(newWord, `/tutorial/${tutorialLevelNumber + 1}`);
-        } else {
-          startWaveAnimation(newWord);
-        }
+        // Always use callback for tutorial completion to let context handle progression
+        startWaveAnimation(newWord, undefined, false, true);
         return; // Exit early to avoid duplicate setGameState
       } else {
         // For daily puzzles, show wave animation for all types, then modal only for long
@@ -313,7 +309,7 @@ export default function ChessBoard({
   };
 
   // Improved wave animation for success feedback
-  const startWaveAnimation = (targetWord: string, navigationUrl?: string, showCompletionModal = false) => {
+  const startWaveAnimation = (targetWord: string, navigationUrl?: string, showCompletionModal = false, useCallback = false) => {
     setShowWaveAnimation(true);
     setWaveAnimationLetterIndex(0);
     
@@ -326,7 +322,12 @@ export default function ChessBoard({
         setTimeout(animateNextLetter, 10); // delay between letters
       } else {
         // Animation complete, handle next action after a short delay
-        if (navigationUrl) {
+        if (useCallback && onLevelComplete) {
+          setTimeout(() => {
+            setShowWaveAnimation(false);
+            onLevelComplete();
+          }, 1500);
+        } else if (navigationUrl) {
           setTimeout(() => {
             window.location.href = navigationUrl;
           }, 1500);
@@ -334,6 +335,10 @@ export default function ChessBoard({
           setTimeout(() => {
             setShowWaveAnimation(false);
             setShowCompleteModal(true);
+          }, 1500);
+        } else {
+          setTimeout(() => {
+            setShowWaveAnimation(false);
           }, 1500);
         }
       }

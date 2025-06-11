@@ -9,7 +9,7 @@ import CompletionModal from './CompletionModal';
 import { markTutorialCompleted } from '@/utils/gameState';
 
 export default function TutorialChessBoard() {
-  const { currentLevel, handlePieceSelect, tutorialState } = useTutorial();
+  const { currentLevel, handlePieceSelect, tutorialState, advanceToNextLevel } = useTutorial();
   const [tutorialLevel, setTutorialLevel] = useState<LoadedLevel | null>(null);
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const { highlightedPosition } = tutorialState;
@@ -32,17 +32,23 @@ export default function TutorialChessBoard() {
 
   // Handle level completion callback from ChessBoard
   const handleLevelComplete = () => {
-    // If this is the last tutorial level, show the completion modal
-    if (currentLevel?.levelNumber === 3) {
-      setShowCompleteModal(true);
-      markTutorialCompleted();
-    }
-    // For levels 1 and 2, the ChessBoard will handle the simple success feedback and auto-navigation
+    // Delay tutorial progression to allow wave animation to complete
+    // This prevents the immediate state change from interrupting the animation
+    setTimeout(() => {
+      if (currentLevel?.levelNumber === 3) {
+        setShowCompleteModal(true);
+        markTutorialCompleted();
+      } else if (currentLevel?.levelNumber && currentLevel.levelNumber < 3) {
+        // For levels 1 and 2, advance to the next tutorial level using the context
+        advanceToNextLevel();
+      }
+    }, 1600); // Slightly longer than the 1500ms animation timeout
   };
 
   // Handle next level navigation
   const handleCloseModal = () => {
     setShowCompleteModal(false);
+    // For the final tutorial, navigate home or wherever appropriate
   };
 
   // Notify the tutorial system about piece selection
@@ -55,10 +61,8 @@ export default function TutorialChessBoard() {
     return <div className="flex items-center justify-center h-64">Loading tutorial...</div>;
   }
   
-  // Calculate the next tutorial level path
-  const nextPath = currentLevel?.levelNumber && currentLevel.levelNumber < 3 
-    ? `/tutorial/${currentLevel.levelNumber + 1}` 
-    : undefined;
+  // For the final tutorial level, provide home navigation
+  const nextPath = currentLevel?.levelNumber === 3 ? '/' : undefined;
 
   return (
     <div className="relative w-full flex flex-col items-center">
