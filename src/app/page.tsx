@@ -51,7 +51,7 @@ export default function Home() {
             className="px-6 py-3 bg-green-600 text-white rounded-lg text-xl font-semibold hover:bg-green-700 w-64"
             onClick={() => router.push('/play/daily')}
           >
-            Daily
+            Play
           </button>
           <button
             className="px-6 py-3 bg-blue-600 text-white rounded-lg text-xl font-semibold hover:bg-blue-700 w-64"
