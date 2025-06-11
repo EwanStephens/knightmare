@@ -106,7 +106,7 @@ export default function PuzzleClient({
   }
 
   return (
-    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8">
+    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8 bg-white dark:bg-gray-800">
       {/* Tabs for daily puzzles */}
       {showTabs && (
         <DailyPuzzleTabs
@@ -116,7 +116,7 @@ export default function PuzzleClient({
         />
       )}
       
-      <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+      <div>
         <ChessBoard
           levelData={levelData}
           nextPuzzleId={nextPuzzleId}
