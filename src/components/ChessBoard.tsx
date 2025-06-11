@@ -49,7 +49,7 @@ export default function ChessBoard({
   firstLetterSquare,
   revealPath,
   isDailyPuzzle,
-  puzzleType
+  puzzleType,
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -378,6 +378,10 @@ export default function ChessBoard({
       } else {
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
+        }
+        // Always call the completion callback if provided
+        if (onLevelComplete) {
+          onLevelComplete();
         }
         // For daily puzzles, only show completion modal for long puzzles
         if (isDailyPuzzle && puzzleType !== 'long') {

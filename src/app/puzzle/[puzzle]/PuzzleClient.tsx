@@ -7,6 +7,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import ChessBoard from '@/components/ChessBoard';
+import DailyPuzzleTabs from '@/components/DailyPuzzleTabs';
 import { getSolvedPuzzleIds } from '@/utils/gameState';
 import type { LoadedLevel } from '@/types/level';
 import type { DailyPuzzles } from '@/utils/calendar';
@@ -53,20 +54,36 @@ export default function PuzzleClient({
   const todayStr = useMemo(() => today.toLocaleDateString('en-CA'), [today]);
   console.log('[PuzzleClient] todayStr:', todayStr, '| local datetime:', today.toString());
 
-  // Get daily puzzles and solved status for tabs
-  const dailyPuzzles = useMemo(() => {
-    if (!puzzleDate) return null;
-    return dailyPuzzleIds;
-  }, [puzzleDate, dailyPuzzleIds]);
-
-  const solvedPuzzleIds = useMemo(() => getSolvedPuzzleIds(), []);
+  // State for tracking solved puzzles with automatic updates
+  const [solvedPuzzleIds, setSolvedPuzzleIds] = useState<Set<string>>(new Set());
 
   // Use state to track if we're on the client to avoid hydration mismatch
   const [isClient, setIsClient] = useState(false);
   
   useEffect(() => {
     setIsClient(true);
+    // Initialize solved puzzle IDs
+    setSolvedPuzzleIds(getSolvedPuzzleIds());
   }, []);
+
+  // Callback to handle puzzle completion and update tabs
+  const handlePuzzleCompleted = (completedPuzzleId: string) => {
+    setSolvedPuzzleIds(prev => new Set([...prev, completedPuzzleId]));
+  };
+
+  // Callback for level completion that handles tab updates for daily puzzles
+  const handleLevelComplete = () => {
+    if (puzzleId && puzzleDate) {
+      // For daily puzzles, update the tabs automatically
+      handlePuzzleCompleted(puzzleId);
+    }
+  };
+
+  // Get daily puzzles
+  const dailyPuzzles = useMemo(() => {
+    if (!puzzleDate) return null;
+    return dailyPuzzleIds;
+  }, [puzzleDate, dailyPuzzleIds]);
 
   // Check if this puzzle is from the future
   let isFuture = false;
@@ -75,22 +92,7 @@ export default function PuzzleClient({
   }
 
   // Determine which tabs should be available - only show correct state after client mount
-  const showTabs = dailyPuzzles && puzzleType;
-  const isShortSolved = isClient && dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.short) : false;
-  const isMediumSolved = isClient && dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.medium) : false;
-  const isLongSolved = isClient && dailyPuzzles ? solvedPuzzleIds.has(dailyPuzzles.long) : false;
-  
-  const handleTabClick = (tabType: 'short' | 'medium' | 'long') => {
-    if (!dailyPuzzles) return;
-    
-    // Allow navigation to short always, medium if short is solved, long if medium is solved
-    if (tabType === 'short' || 
-        (tabType === 'medium' && isShortSolved) || 
-        (tabType === 'long' && isMediumSolved)) {
-      const targetPuzzleId = dailyPuzzles[tabType];
-      router.push(`/puzzle/${targetPuzzleId}`);
-    }
-  };
+  const showTabs = isClient && dailyPuzzles && puzzleType;
 
   if (isFuture) {
     return (
@@ -107,52 +109,11 @@ export default function PuzzleClient({
     <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8">
       {/* Tabs for daily puzzles */}
       {showTabs && (
-        <div className="flex gap-1 mb-6 bg-gray-200 dark:bg-gray-600 rounded-lg p-1">
-          <button
-            onClick={() => handleTabClick('short')}
-            className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
-              puzzleType === 'short'
-                ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
-                : isShortSolved
-                ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
-                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Short {isShortSolved ? '✓' : ''}
-          </button>
-          
-          <button
-            onClick={() => handleTabClick('medium')}
-            disabled={!isShortSolved}
-            className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
-              puzzleType === 'medium'
-                ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
-                : isShortSolved
-                ? isMediumSolved
-                  ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
-            }`}
-          >
-            Medium {isMediumSolved ? '✓' : ''}
-          </button>
-          
-          <button
-            onClick={() => handleTabClick('long')}
-            disabled={!isMediumSolved}
-            className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
-              puzzleType === 'long'
-                ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
-                : isMediumSolved
-                ? isLongSolved
-                  ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
-                : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
-            }`}
-          >
-            Long {isLongSolved ? '✓' : ''}
-          </button>
-        </div>
+        <DailyPuzzleTabs
+          dailyPuzzles={dailyPuzzles}
+          currentPuzzleType={puzzleType}
+          solvedPuzzleIds={solvedPuzzleIds}
+        />
       )}
       
       <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
@@ -163,6 +124,7 @@ export default function PuzzleClient({
           puzzleId={puzzleId}
           isDailyPuzzle={!!puzzleDate}
           puzzleType={puzzleType}
+          onLevelComplete={handleLevelComplete}
           {...(hintSquares && firstLetterSquare && revealPath ? {
             hintSquares,
             firstLetterSquare,
