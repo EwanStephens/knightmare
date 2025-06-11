@@ -7,7 +7,6 @@ interface CompletionModalProps {
   onClose: () => void;
   congratsMessage: string;
   targetWord: string;
-  nextPath?: string;
 }
 
 export default function CompletionModal({
@@ -15,20 +14,11 @@ export default function CompletionModal({
   onClose,
   congratsMessage,
   targetWord,
-  nextPath,
 }: CompletionModalProps) {
   const router = useRouter();
   
   if (!isOpen) return null;
   
-  // Determine the next path (either tutorial or regular level)
-  const handleNextLevel = () => {
-    onClose();
-    if (nextPath) {
-      router.push(nextPath);
-    }
-  };
-
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -60,14 +50,6 @@ export default function CompletionModal({
           >
             Home
           </button>
-          {nextPath && (
-            <button
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
-              onClick={handleNextLevel}
-            >
-              Next Level
-            </button>
-          )}
         </div>
       </div>
     </div>

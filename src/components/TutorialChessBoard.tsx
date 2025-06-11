@@ -60,9 +60,6 @@ export default function TutorialChessBoard() {
   if (!tutorialLevel) {
     return <div className="flex items-center justify-center h-64">Loading tutorial...</div>;
   }
-  
-  // For the final tutorial level, provide home navigation
-  const nextPath = currentLevel?.levelNumber === 3 ? '/' : undefined;
 
   return (
     <div className="relative w-full flex flex-col items-center">
@@ -71,7 +68,6 @@ export default function TutorialChessBoard() {
         <ChessBoard 
           tutorialMode={true}
           tutorialLevel={tutorialLevel}
-          tutorialLevelNumber={currentLevel?.levelNumber}
           onPieceSelected={handlePieceSelected}
           onLevelComplete={handleLevelComplete}
           highlightedPosition={highlightedPosition}
@@ -84,7 +80,6 @@ export default function TutorialChessBoard() {
         onClose={handleCloseModal}
         congratsMessage={tutorialLevel.congratsMessage}
         targetWord={tutorialLevel.targetWord}
-        {...(nextPath ? { nextPath } : {})}
       />
     </div>
   );

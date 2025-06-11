@@ -22,7 +22,6 @@ interface ChessBoardProps {
   levelData?: LoadedLevel; // Required for non-tutorial mode
   tutorialMode?: boolean;
   tutorialLevel?: LoadedLevel;
-  tutorialLevelNumber?: number;
   onPieceSelected?: (position: string, word: string) => void;
   onLevelComplete?: () => void;
   highlightedPosition?: string | null;
@@ -40,7 +39,6 @@ export default function ChessBoard({
   levelData,
   tutorialMode = false,
   tutorialLevel,
-  tutorialLevelNumber,
   onPieceSelected,
   onLevelComplete,
   highlightedPosition,
@@ -611,7 +609,6 @@ export default function ChessBoard({
         onClose={() => setShowCompleteModal(false)}
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
-        {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
       />
       
       {/* Wave animation CSS */}
