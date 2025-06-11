@@ -31,14 +31,14 @@ export default function DailyPuzzleTabs({
   };
 
   return (
-    <div className="flex gap-1 mb-6 bg-gray-200 dark:bg-gray-600 rounded-lg p-1">
+    <div className="flex gap-1 mb-6 bg-[#EEEED2] dark:bg-[#2D2D2D] rounded-lg p-1">
       <button
         onClick={() => handleTabClick('short')}
         className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
           currentPuzzleType === 'short'
             ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
-            ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
+            ? 'text-[#769656] dark:text-[#769656] hover:text-[#5a7042] dark:hover:text-[#5a7042]'
             : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
         }`}
       >
@@ -53,7 +53,7 @@ export default function DailyPuzzleTabs({
             ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
             ? isMediumSolved
-              ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
+              ? 'text-[#769656] dark:text-[#769656] hover:text-[#5a7042] dark:hover:text-[#5a7042]'
               : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
         }`}
@@ -69,7 +69,7 @@ export default function DailyPuzzleTabs({
             ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm'
             : isMediumSolved
             ? isLongSolved
-              ? 'text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300'
+              ? 'text-[#769656] dark:text-[#769656] hover:text-[#5a7042] dark:hover:text-[#5a7042]'
               : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
         }`}
