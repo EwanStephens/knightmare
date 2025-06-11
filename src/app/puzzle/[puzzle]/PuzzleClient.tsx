@@ -25,13 +25,6 @@ interface PuzzleClientProps {
   dailyPuzzleIds: DailyPuzzles | null;
 }
 
-// Helper to format date header
-function formatDateHeader(dateStr: string): string {
-  const date = new Date(dateStr);
-  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleDateString(undefined, options);
-}
-
 /**
  * Client-side component for puzzle page.
  *
@@ -75,17 +68,10 @@ export default function PuzzleClient({
     setIsClient(true);
   }, []);
 
-  // Determine header and if this puzzle is from the future
-  let header = 'Puzzle';
+  // Check if this puzzle is from the future
   let isFuture = false;
   if (puzzleDate) {
-    if (puzzleDate === todayStr) {
-      header = 'Daily Puzzle';
-    } else if (puzzleDate < todayStr) {
-      header = formatDateHeader(puzzleDate);
-    } else {
-      isFuture = true;
-    }
+    isFuture = puzzleDate > todayStr;
   }
 
   // Determine which tabs should be available - only show correct state after client mount
@@ -119,8 +105,6 @@ export default function PuzzleClient({
 
   return (
     <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8">
-      <h1 className="text-2xl font-bold mb-4 dark:text-white text-center">{header}</h1>
-      
       {/* Tabs for daily puzzles */}
       {showTabs && (
         <div className="flex gap-1 mb-6 bg-gray-200 dark:bg-gray-600 rounded-lg p-1">
