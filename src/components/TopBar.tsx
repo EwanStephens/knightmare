@@ -47,7 +47,7 @@ export default function TopBar() {
           
           {/* Dropdown menu */}
           {isDropdownOpen && (
-            <div className="absolute right-0 top-full mt-2 w-40 bg-white dark:bg-jet-light border border-gray-200 dark:border-gray-600 shadow-lg py-1 z-60">
+            <div className="absolute right-0 top-full w-40 bg-white dark:bg-jet-light border border-gray-200 dark:border-gray-600 shadow-lg py-1 z-60">
               <Link 
                 href="/tutorial"
                 className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
