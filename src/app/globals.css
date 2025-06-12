@@ -10,6 +10,30 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* SpellCheck Custom Color Palette */
+  --color-asparagus-light: #8FA76B;
+  --color-asparagus: #769656;
+  --color-asparagus-dark: #5A7042;
+  --color-asparagus-darker: #3F4A2A;
+  
+  --color-jet-lighter: #4A4B4A;
+  --color-jet-light: #3A3B3A;
+  --color-jet: #2A2B2A;
+  --color-jet-dark: #1A1B1A;
+  --color-jet-darker: #0A0B0A;
+  
+  --color-cream-light: #F5F5E8;
+  --color-cream: #EEEED2;
+  --color-cream-dark: #E0E0C8;
+  
+  --color-spell-blue-light: #5B7BC7;
+  --color-spell-blue: #4059AD;
+  --color-spell-blue-dark: #2D4185;
+  
+  --color-spell-red-light: #F4615A;
+  --color-spell-red: #EF3E36;
+  --color-spell-red-dark: #C92E27;
 }
 
 @media (prefers-color-scheme: dark) {
