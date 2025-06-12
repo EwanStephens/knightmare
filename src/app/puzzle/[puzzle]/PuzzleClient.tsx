@@ -7,7 +7,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import ChessBoard from '@/components/ChessBoard';
 import DailyPuzzleTabs from '@/components/DailyPuzzleTabs';
-import { getSolvedPuzzleIds } from '@/utils/gameState';
+import { isPuzzleSolved } from '@/utils/gameState';
 import type { LoadedLevel } from '@/types/level';
 import type { DailyPuzzles } from '@/utils/calendar';
 
@@ -60,9 +60,15 @@ export default function PuzzleClient({
   
   useEffect(() => {
     setIsClient(true);
-    // Initialize solved puzzle IDs
-    setSolvedPuzzleIds(getSolvedPuzzleIds());
-  }, []);
+    // Initialize solved puzzle IDs for daily puzzles
+    if (dailyPuzzleIds) {
+      const solvedIds = new Set<string>();
+      if (isPuzzleSolved(dailyPuzzleIds.short)) solvedIds.add(dailyPuzzleIds.short);
+      if (isPuzzleSolved(dailyPuzzleIds.medium)) solvedIds.add(dailyPuzzleIds.medium);
+      if (isPuzzleSolved(dailyPuzzleIds.long)) solvedIds.add(dailyPuzzleIds.long);
+      setSolvedPuzzleIds(solvedIds);
+    }
+  }, [dailyPuzzleIds]);
 
   // Callback to handle puzzle completion and update tabs
   const handlePuzzleCompleted = (completedPuzzleId: string) => {
@@ -123,6 +129,10 @@ export default function PuzzleClient({
           isDailyPuzzle={!!puzzleDate}
           puzzleType={puzzleType}
           onLevelComplete={handleLevelComplete}
+          date={puzzleDate || undefined}
+          shortPuzzleId={dailyPuzzles?.short}
+          mediumPuzzleId={dailyPuzzles?.medium}
+          longPuzzleId={dailyPuzzles?.long}
           {...(hintSquares && firstLetterSquare && revealPath ? {
             hintSquares,
             firstLetterSquare,

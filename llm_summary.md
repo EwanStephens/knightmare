@@ -180,9 +180,28 @@ When validating moves, check:
 - The puzzle page (`src/app/puzzle/[puzzle]/page.tsx`) is a server component that loads puzzle data and determines the next puzzle in the daily sequence.
 - It passes `nextPuzzleId` and a custom `congratsMessage` to the `ChessBoard` client component.
 - `ChessBoard` displays the puzzle and, upon completion, shows the `CompletionModal`.
-- `CompletionModal` uses the `nextPath` prop (from `nextPuzzleId`) to handle client-side navigation to the next puzzle, if available.
+- `CompletionModal` displays stats and provides a Home button for navigation.
 - This architecture keeps puzzle logic and data loading on the server, while UI and navigation are handled on the client for a seamless user experience.
 
 ## Analytics & Performance Monitoring
 
-SpellCheck integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard. 
+SpellCheck integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard.
+
+## Stats, Streak, and Share Functionality
+
+- **Per-puzzle stats** are tracked in localStorage for each puzzle:
+  - Solved status
+  - Hints used
+  - Reveal used
+  - Clear button presses
+  - Piece presses (per piece type)
+- **Global stats** track:
+  - Days played
+  - Current streak (consecutive days with at least one daily puzzle played)
+  - Max streak
+- **Streak** is shown in the completion modal and in the share text as a minimal flame emoji and number (e.g. '🔥7').
+- **Share**: After completing the daily puzzles, users can share their results. The share text includes:
+  - Date
+  - Emoji summary for each puzzle (hints, reveal, solved)
+  - Piece usage summary
+  - Current streak (if 2+ days, as '🔥7') 
