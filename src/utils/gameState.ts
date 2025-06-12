@@ -193,13 +193,19 @@ export const updateStreakForDate = (dateString: string): void => {
   const today = new Date(dateString).toDateString();
   const lastPlayDate = stats.lastPlayDate ? new Date(stats.lastPlayDate).toDateString() : null;
   
+  console.log(`Updating streak for date: ${dateString} (${today})`);
+  console.log(`Last play date: ${lastPlayDate || 'none'}`);
+  console.log(`Current streak before update: ${stats.currentStreak}`);
+  
   if (lastPlayDate === today) {
     // Already played today, no changes needed
+    console.log(`Already played today (${today}), no streak changes`);
     return;
   }
   
   if (!lastPlayDate) {
     // First time playing
+    console.log(`First time playing, setting streak to 1`);
     stats.daysPlayed = 1;
     stats.currentStreak = 1;
     stats.maxStreak = Math.max(stats.maxStreak, 1);
@@ -208,18 +214,24 @@ export const updateStreakForDate = (dateString: string): void => {
     yesterday.setDate(yesterday.getDate() - 1);
     const yesterdayString = yesterday.toDateString();
     
+    console.log(`Yesterday was: ${yesterdayString}`);
+    
     if (lastPlayDate === yesterdayString) {
       // Played yesterday, continue streak
+      console.log(`Played yesterday, continuing streak from ${stats.currentStreak} to ${stats.currentStreak + 1}`);
       stats.currentStreak += 1;
       stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak);
     } else {
       // Streak broken, start new streak
+      console.log(`Streak broken (last played: ${lastPlayDate}), starting new streak`);
       stats.currentStreak = 1;
     }
     stats.daysPlayed += 1;
   }
   
   stats.lastPlayDate = dateString;
+  console.log(`Setting last play date to: ${dateString}`);
+  console.log(`Updated stats: days=${stats.daysPlayed}, streak=${stats.currentStreak}, max=${stats.maxStreak}`);
   setGlobalStats(stats);
 };
 
@@ -256,6 +268,8 @@ export const generateShareText = (
   const globalStats = overrideGlobalStats || getGlobalStats();
   const streak = globalStats.currentStreak;
   
+  console.log('Generating share text with streak:', streak);
+  
   let shareText = `SpellCheck ${formattedDate}:\n`;
   
   // Add results for each puzzle
@@ -275,7 +289,10 @@ export const generateShareText = (
   
   // Add streak if it's at least 2 days
   if (streak >= 2) {
-    shareText += `\n🔥 ${streak} day streak`;
+    shareText += `\n🔥 ${streak} days`;
+    console.log(`Added streak to share text: 🔥 ${streak} days`);
+  } else {
+    console.log(`Streak is ${streak}, not adding to share text`);
   }
   
   return shareText;

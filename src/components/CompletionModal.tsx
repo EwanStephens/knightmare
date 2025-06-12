@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   getGlobalStats, 
   getDailyResultsForPuzzles, 
@@ -37,6 +37,49 @@ export default function CompletionModal({
 }: CompletionModalProps) {
   const router = useRouter();
   const [shareTextCopied, setShareTextCopied] = useState(false);
+  const [streakUpdated, setStreakUpdated] = useState(false);
+  const [globalStats, setGlobalStats] = useState<GlobalStats>({ daysPlayed: 0, currentStreak: 0, maxStreak: 0 });
+  const [dailyResults, setDailyResults] = useState<DailyResults>({});
+  const [shareText, setShareText] = useState('');
+  
+  // Effect to handle stats and streak updates when modal opens
+  useEffect(() => {
+    if (isOpen && isDailyPuzzle && date && shortPuzzleId && mediumPuzzleId && longPuzzleId && !streakUpdated) {
+      console.log("CompletionModal: Updating streak for first time");
+      
+      // Log before update
+      const beforeStats = getGlobalStats();
+      console.log("Before streak update:", beforeStats);
+      
+      // Update streak for today only once when the modal first opens
+      updateStreakForDate(date);
+      setStreakUpdated(true);
+      
+      // Get the latest global stats after streak update
+      const stats = getGlobalStats();
+      console.log("After streak update:", stats);
+      setGlobalStats(stats);
+      
+      // Get daily results
+      const results = getDailyResultsForPuzzles(shortPuzzleId, mediumPuzzleId, longPuzzleId);
+      setDailyResults(results);
+      
+      // Generate share text with the updated stats
+      const text = generateShareText(date, results);
+      setShareText(text);
+    } else if (isOpen && !isDailyPuzzle) {
+      // For non-daily puzzles, just get the current stats
+      const stats = getGlobalStats();
+      setGlobalStats(stats);
+    }
+  }, [isOpen, isDailyPuzzle, date, shortPuzzleId, mediumPuzzleId, longPuzzleId, streakUpdated]);
+  
+  // Reset streak updated state when modal closes
+  useEffect(() => {
+    if (!isOpen) {
+      setStreakUpdated(false);
+    }
+  }, [isOpen]);
   
   if (!isOpen) return null;
   
@@ -45,22 +88,6 @@ export default function CompletionModal({
       onClose();
     }
   };
-
-  // Get stats for daily puzzles
-  const globalStats: GlobalStats = getGlobalStats();
-  let dailyResults: DailyResults = {};
-  let shareText = '';
-
-  if (isDailyPuzzle && date && shortPuzzleId && mediumPuzzleId && longPuzzleId) {
-    // Update streak for today if this is a daily puzzle completion
-    updateStreakForDate(date);
-    
-    // Get daily results
-    dailyResults = getDailyResultsForPuzzles(shortPuzzleId, mediumPuzzleId, longPuzzleId);
-    
-    // Generate share text
-    shareText = generateShareText(date, dailyResults);
-  }
 
   const handleShare = async () => {
     if (!shareText) return;
