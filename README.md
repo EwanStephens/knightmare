@@ -18,6 +18,11 @@ A unique word game that combines chess mechanics with word building. Players mus
 - Progressive level system
 - Persistent puzzle completion tracking (localStorage)
 - Seamless client/server integration for puzzle data
+- **Detailed stats and sharing:**
+  - Per-puzzle stats: solved status, hints used, reveal used, clear presses, piece presses
+  - Global stats: days played, current streak, max streak
+  - Streak is tracked for daily puzzles and shown in the share text as a minimal flame emoji and number (e.g. "🔥7")
+  - Share your daily results with a single click (copy/share emoji summary)
 
 ## Game Rules
 
@@ -99,3 +104,32 @@ For information on creating custom levels, see [src/level_creator/README.md](src
 ## Daily Puzzle Generation
 
 See [src/data/calendar/README.md](src/data/calendar/README.md) for how daily puzzles are generated and managed.
+
+## Stats, Streak, and Share Functionality
+
+- **Per-puzzle stats** are tracked in your browser for each puzzle:
+  - Whether you solved it
+  - How many hints you used
+  - Whether you used the reveal
+  - How many times you pressed clear
+  - How many times you pressed each piece type
+- **Global stats** track your overall progress:
+  - Days played
+  - Current streak (consecutive days with at least one daily puzzle played)
+  - Max streak
+- **Streak** is shown in the completion modal and in the share text as a minimal flame emoji and number (e.g. "🔥7").
+- **Share**: After completing the daily puzzles, you can share your results. The share text includes:
+  - Date
+  - Emoji summary for each puzzle (hints, reveal, solved)
+  - Piece usage summary
+  - Your current streak (if 2+ days)
+
+## Running the Share/Stats Unit Test
+
+To run the unit test for the share text and stats logic:
+
+```bash
+npx ts-node --compiler-options '{"module":"CommonJS"}' src/utils/gameState.test.ts
+```
+
+This will print several example share texts and show the expected output format, including the minimal streak format (e.g. "🔥7").

@@ -112,7 +112,7 @@ function testShareTextGeneration() {
   console.log('💡✅');
   console.log('💡💡👁️');
   console.log('♙♙♟♟♟♘x4♗♗♝x7♜♕x12♛♛');
-  console.log('🔥 7 day streak');
+  console.log('🔥7');
 }
 
 // Run the test if this file is executed directly

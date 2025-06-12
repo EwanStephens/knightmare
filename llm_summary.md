@@ -185,4 +185,23 @@ When validating moves, check:
 
 ## Analytics & Performance Monitoring
 
-SpellCheck integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard. 
+SpellCheck integrates [Vercel Analytics](https://vercel.com/docs/analytics) and [Vercel Speed Insights](https://vercel.com/docs/speed-insights) for automatic analytics and performance tracking. These are enabled via the `@vercel/analytics` and `@vercel/speed-insights` packages in the root layout. No manual setup is required beyond deploying to Vercel—metrics and insights are available in the Vercel dashboard.
+
+## Stats, Streak, and Share Functionality
+
+- **Per-puzzle stats** are tracked in localStorage for each puzzle:
+  - Solved status
+  - Hints used
+  - Reveal used
+  - Clear button presses
+  - Piece presses (per piece type)
+- **Global stats** track:
+  - Days played
+  - Current streak (consecutive days with at least one daily puzzle played)
+  - Max streak
+- **Streak** is shown in the completion modal and in the share text as a minimal flame emoji and number (e.g. '🔥7').
+- **Share**: After completing the daily puzzles, users can share their results. The share text includes:
+  - Date
+  - Emoji summary for each puzzle (hints, reveal, solved)
+  - Piece usage summary
+  - Current streak (if 2+ days, as '🔥7') 
