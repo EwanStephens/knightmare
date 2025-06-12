@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { ChessPiece, GameState } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
-import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
 import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
@@ -68,6 +67,32 @@ export default function ChessBoard({
   const [showWaveAnimation, setShowWaveAnimation] = useState(false);
   const [waveAnimationLetterIndex, setWaveAnimationLetterIndex] = useState(0);
 
+  // Function to setup the board in a completed state for already solved puzzles
+  const setupCompletedBoardState = (levelData: LoadedLevel, revealPath: string[]) => {
+    const lastPosition = revealPath[revealPath.length - 1];
+    const previousPositions = revealPath.slice(0, -1);
+    
+    // Get the piece at the last position to calculate legal moves
+    const { row: lastRow, col: lastCol } = algebraicToPosition(lastPosition);
+    const lastSquare = levelData.board[lastRow][lastCol];
+    const legalMoves = lastSquare.piece ? getLegalMoves(lastSquare.piece, { row: lastRow, col: lastCol }, levelData.board, previousPositions) : [];
+    
+    setGameState(prevState => ({
+      ...prevState,
+      currentWord: levelData.targetWord,
+      selectedSquare: lastPosition, // Set the last position as selected
+      previousSquares: previousPositions, // All squares except the last one
+      board: prevState.board.map(row =>
+        row.map(sq => ({
+          ...sq,
+          isSelected: sq.position === lastPosition, // Last position is selected
+          isLegalMove: legalMoves.some(move => positionToAlgebraic(move.row, move.col) === sq.position), // Show legal moves from last position
+          isHighlighted: previousPositions.includes(sq.position), // Highlight the path excluding last square
+        }))
+      ),
+    }));
+  };
+
   useEffect(() => {
     // If in tutorial mode, use the provided level data
     if (tutorialMode && tutorialLevel) {
@@ -99,28 +124,7 @@ export default function ChessBoard({
       if (isPuzzleSolved(puzzleId)) {
         // For already solved puzzles, load the completed state with path shown
         if (revealPath) {
-          const lastPosition = revealPath[revealPath.length - 1];
-          const previousPositions = revealPath.slice(0, -1);
-          
-          // Get the piece at the last position to calculate legal moves
-          const { row: lastRow, col: lastCol } = algebraicToPosition(lastPosition);
-          const lastSquare = gameLevelData.board[lastRow][lastCol];
-          const legalMoves = lastSquare.piece ? getLegalMoves(lastSquare.piece, { row: lastRow, col: lastCol }, gameLevelData.board, previousPositions) : [];
-          
-          setGameState(prevState => ({
-            ...prevState,
-            currentWord: gameLevelData.targetWord,
-            selectedSquare: lastPosition, // Set the last position as selected
-            previousSquares: previousPositions, // All squares except the last one
-            board: prevState.board.map(row =>
-              row.map(sq => ({
-                ...sq,
-                isSelected: sq.position === lastPosition, // Last position is selected
-                isLegalMove: legalMoves.some(move => positionToAlgebraic(move.row, move.col) === sq.position), // Show legal moves from last position
-                isHighlighted: previousPositions.includes(sq.position), // Highlight the path excluding last square
-              }))
-            ),
-          }));
+          setupCompletedBoardState(gameLevelData, revealPath);
         } else {
           // Fallback if no solution path is available
           setGameState(prevState => ({
@@ -614,28 +618,6 @@ export default function ChessBoard({
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
         targetWord={gameLevelData.targetWord}
       />
-      
-      {/* Wave animation CSS */}
-      <style jsx>{`
-        .wave-letter {
-          animation: wave-bounce 0.6s ease-out forwards;
-        }
-        
-        @keyframes wave-bounce {
-          0% {
-            transform: translateY(0px) scale(1);
-          }
-          30% {
-            transform: translateY(-12px) scale(1.1);
-          }
-          60% {
-            transform: translateY(-6px) scale(1.05);
-          }
-          100% {
-            transform: translateY(0px) scale(1);
-          }
-        }
-      `}</style>
     </div>
   );
 }

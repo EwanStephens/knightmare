@@ -10,7 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        chess7: ['Chess7', 'sans-serif'],
       },
     },
   },
