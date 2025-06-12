@@ -152,15 +152,15 @@ export default function CompletionModal({
               <h3 className="text-lg font-semibold mb-3">Your Stats</h3>
               <div className="grid grid-cols-3 gap-4 text-sm">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-spell-blue">{globalStats.daysPlayed}</div>
+                  <div className="text-2xl font-bold text-spell-blue dark:text-spell-blue-light">{globalStats.daysPlayed}</div>
                   <div className="text-gray-600 dark:text-gray-400">Days Played</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-spell-blue">{globalStats.currentStreak}</div>
+                  <div className="text-2xl font-bold text-spell-blue dark:text-spell-blue-light">{globalStats.currentStreak}</div>
                   <div className="text-gray-600 dark:text-gray-400">Current Streak</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-spell-blue">{globalStats.maxStreak}</div>
+                  <div className="text-2xl font-bold text-spell-blue dark:text-spell-blue-light">{globalStats.maxStreak}</div>
                   <div className="text-gray-600 dark:text-gray-400">Max Streak</div>
                 </div>
               </div>
