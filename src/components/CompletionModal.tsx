@@ -45,7 +45,7 @@ export default function CompletionModal({
         </div>
         <div className="flex gap-4">
           <button
-            className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200"
+            className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200"
             onClick={() => router.push('/')}
           >
             Home

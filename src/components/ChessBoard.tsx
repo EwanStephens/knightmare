@@ -473,7 +473,7 @@ export default function ChessBoard({
                         ${square.isHighlighted && !isRevealPrev ? 'bg-yellow-200' : ''}
                         ${square.isSelected && !isRevealCurrent ? 'bg-[#94A3B8]' : ''}
                         ${!square.isHighlighted && !square.isSelected && !isReveal && illegalMoveSquare !== square.position ? 
-                          (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
+                          (rowIndex + colIndex) % 2 === 0 ? 'bg-cream' : 'bg-asparagus' : ''}
                         ${square.piece ? 'hover:bg-opacity-90' : ''}
                         cursor-pointer
                         ${isGreyedOut ? 'opacity-40 grayscale relative' : ''}
@@ -512,7 +512,7 @@ export default function ChessBoard({
                           {/* Show just the letter if part of revealed path or if square.isHighlighted (clicked path), else show piece+letter */}
                           {(isRevealPrev || (square.isHighlighted && !isRevealCurrent)) ? (
                             <div 
-                              className="font-bold text-[#769656] z-20 flex items-center justify-center"
+                              className="font-bold text-asparagus z-20 flex items-center justify-center"
                               style={{
                                 fontSize: "max(24px, min(8dvw, 4dvh))",
                                 width: "100%",
@@ -529,7 +529,7 @@ export default function ChessBoard({
                                 </div>
                               </div>
                               <div 
-                                className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
+                                className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-asparagus' : 'text-cream'}`}
                                 style={{
                                   fontSize: "max(14px, min(4dvw, 2dvh))",
                                   top: "max(2px, min(1dvw, 0.5dvh))",
@@ -596,8 +596,8 @@ export default function ChessBoard({
                   onClick={handleHintClick}
                   disabled={isRevealing}
                   className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg rounded transition-colors duration-200
-                    ${hintStep < HintStep.FirstLetter ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-yellow-500 text-black hover:bg-yellow-600'}
-                    ${hintStep === HintStep.Reveal ? 'bg-green-600 text-white hover:bg-green-700' : ''}
+                    ${hintStep < HintStep.FirstLetter ? 'bg-spell-blue text-white hover:bg-spell-blue-dark' : 'bg-spell-red text-white hover:bg-spell-red-dark'}
+                    ${hintStep === HintStep.Reveal ? 'bg-spell-red text-white hover:bg-spell-red-dark' : ''}
                     ${isRevealing ? 'opacity-60 cursor-not-allowed' : ''}`}
                 >
                   {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal' : 'Revealing...'}
