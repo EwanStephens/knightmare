@@ -123,6 +123,10 @@ export default function PuzzleClient({
           isDailyPuzzle={!!puzzleDate}
           puzzleType={puzzleType}
           onLevelComplete={handleLevelComplete}
+          date={puzzleDate || undefined}
+          shortPuzzleId={dailyPuzzles?.short}
+          mediumPuzzleId={dailyPuzzles?.medium}
+          longPuzzleId={dailyPuzzles?.long}
           {...(hintSquares && firstLetterSquare && revealPath ? {
             hintSquares,
             firstLetterSquare,

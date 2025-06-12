@@ -6,7 +6,14 @@ import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCa
 import { LoadedLevel } from '@/types/level';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
-import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
+import { 
+  markPuzzleSolved, 
+  isPuzzleSolved, 
+  incrementHintUsed, 
+  markRevealUsed, 
+  incrementClearButtonPress, 
+  incrementPiecePress 
+} from '@/utils/gameState';
 
 // Add enum for hint step
 enum HintStep {
@@ -32,6 +39,10 @@ interface ChessBoardProps {
   revealPath?: string[];
   isDailyPuzzle?: boolean;
   puzzleType?: 'short' | 'medium' | 'long' | null;
+  date?: string;
+  shortPuzzleId?: string;
+  mediumPuzzleId?: string;
+  longPuzzleId?: string;
 }
 
 export default function ChessBoard({ 
@@ -49,6 +60,10 @@ export default function ChessBoard({
   revealPath,
   isDailyPuzzle,
   puzzleType,
+  date,
+  shortPuzzleId,
+  mediumPuzzleId,
+  longPuzzleId,
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -187,6 +202,11 @@ export default function ChessBoard({
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
 
+    // Track piece press for non-tutorial mode
+    if (!tutorialMode && puzzleId && square.piece) {
+      incrementPiecePress(puzzleId, square.piece);
+    }
+
     // In tutorial mode, notify when a piece is selected
     if (tutorialMode && onPieceSelected && square.piece) {
       onPieceSelected(position, gameState.currentWord + (square.piece?.letter || ''));
@@ -310,6 +330,11 @@ export default function ChessBoard({
   };
 
   const handleCancel = () => {
+    // Track clear button press for non-tutorial mode
+    if (!tutorialMode && puzzleId) {
+      incrementClearButtonPress(puzzleId);
+    }
+
     // Clear the revealed path first to ensure board renders correctly
     setRevealedPath([]);
     
@@ -371,6 +396,12 @@ export default function ChessBoard({
   // Factored out reveal logic
   const reveal = () => {
     if (!revealPath) return;
+    
+    // Track reveal usage for non-tutorial mode
+    if (!tutorialMode && puzzleId) {
+      markRevealUsed(puzzleId);
+    }
+    
     setHintStep(HintStep.Reveal);
     setIsRevealing(true);
     setRevealedPath([]);
@@ -438,9 +469,17 @@ export default function ChessBoard({
 
   const handleHintClick = async () => {
     if (hintStep === HintStep.None && hintSquares) {
+      // Track first hint usage for non-tutorial mode
+      if (!tutorialMode && puzzleId) {
+        incrementHintUsed(puzzleId);
+      }
       setGreyedOutSquares(hintSquares);
       setHintStep(HintStep.CrossOut);
     } else if (hintStep === HintStep.CrossOut && firstLetterSquare) {
+      // Track second hint usage for non-tutorial mode
+      if (!tutorialMode && puzzleId) {
+        incrementHintUsed(puzzleId);
+      }
       setHighlightedHintSquare(firstLetterSquare);
       setHintStep(HintStep.FirstLetter);
     } else if (hintStep === HintStep.FirstLetter && revealPath) {
@@ -643,6 +682,13 @@ export default function ChessBoard({
         isOpen={showCompleteModal}
         onClose={() => setShowCompleteModal(false)}
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
+        isDailyPuzzle={isDailyPuzzle}
+        puzzleType={puzzleType}
+        date={date}
+        shortPuzzleId={shortPuzzleId}
+        mediumPuzzleId={mediumPuzzleId}
+        longPuzzleId={longPuzzleId}
+        nextPath={nextPuzzleId ? `/puzzle/${nextPuzzleId}` : undefined}
       />
     </div>
   );
