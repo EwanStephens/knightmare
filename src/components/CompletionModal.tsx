@@ -176,10 +176,10 @@ export default function CompletionModal({
             </div>
 
             {/* Share button */}
-            <div className="mb-4">
+            <div className="mb-4 flex justify-center">
               <button
                 onClick={handleShare}
-                className="w-full px-4 py-2 bg-asparagus text-white rounded hover:bg-asparagus-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
+                className="px-4 py-2 bg-asparagus text-white rounded hover:bg-asparagus-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
               >
                 <span
                   className="material-symbols-outlined text-lg align-middle"
@@ -193,21 +193,13 @@ export default function CompletionModal({
           </div>
         )}
 
-        <div className="flex gap-4 w-full">
+        <div className="flex gap-4 w-full justify-center">
           <button
-            className="flex-1 px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer"
+            className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer"
             onClick={() => router.push('/')}
           >
             Home
           </button>
-          {nextPath && (
-            <button
-              className="flex-1 px-4 py-2 bg-spell-red text-white rounded hover:bg-spell-red-dark transition-colors duration-200 cursor-pointer"
-              onClick={handleNextLevel}
-            >
-              Next Level
-            </button>
-          )}
         </div>
       </div>
     </div>
