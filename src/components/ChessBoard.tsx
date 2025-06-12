@@ -301,12 +301,14 @@ export default function ChessBoard({
   };
 
   const handleCancel = () => {
+    // Clear the revealed path first to ensure board renders correctly
+    setRevealedPath([]);
+    
     const newState = clearGameBoard();
     setGameState(newState);
     
-    // If we're clearing after a reveal, reset the revealed path state but preserve hints
+    // If we're clearing after a reveal, preserve hints but ensure clean state
     if (hintStep === HintStep.Reveal) {
-      setRevealedPath([]);
       // Go back to the first letter hint state (preserve the first two hints)
       setHintStep(HintStep.FirstLetter);
       setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
