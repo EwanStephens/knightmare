@@ -28,12 +28,12 @@ export default function TopBar() {
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-jet-light shadow dark:shadow-gray-800 flex items-center justify-between px-6 py-3">
       <div className="text-2xl font-bold tracking-wide dark:text-white">SpellCheck</div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center">
         {/* Question mark icon with dropdown */}
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
-            className={`p-1 rounded-full transition-colors ${
+            className={`px-3 h-14 flex items-center transition-colors ${
               isDropdownOpen 
                 ? 'bg-gray-100 dark:bg-jet-lighter' 
                 : 'hover:bg-gray-100 dark:hover:bg-jet-lighter'
@@ -60,9 +60,11 @@ export default function TopBar() {
         </div>
 
         <Link href="/" aria-label="Home">
-          <span className="material-symbols-outlined text-gray-700 dark:text-gray-300" style={{ fontSize: '28px' }}>
-            home
-          </span>
+          <div className="px-3 h-14 flex items-center hover:bg-gray-100 dark:hover:bg-jet-lighter transition-colors">
+            <span className="material-symbols-outlined text-gray-700 dark:text-gray-300" style={{ fontSize: '28px' }}>
+              home
+            </span>
+          </div>
         </Link>
       </div>
     </div>
