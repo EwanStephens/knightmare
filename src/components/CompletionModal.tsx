@@ -162,7 +162,7 @@ export default function CompletionModal({
             <div className="mb-4">
               <button
                 onClick={handleShare}
-                className="w-full px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
+                className="w-full px-4 py-2 bg-asparagus text-white rounded hover:bg-asparagus-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
               >
                 <span
                   className="material-symbols-outlined text-lg align-middle"
