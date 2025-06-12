@@ -240,13 +240,21 @@ export const getDailyResultsForPuzzles = (shortId: string, mediumId: string, lon
 };
 
 // Share text generation
-export const generateShareText = (dateString: string, dailyResults: DailyResults): string => {
+export const generateShareText = (
+  dateString: string, 
+  dailyResults: DailyResults, 
+  overrideGlobalStats?: GlobalStats
+): string => {
   const date = new Date(dateString);
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
   const formattedDate = `${monthNames[date.getMonth()]} ${date.getDate()}${getOrdinalSuffix(date.getDate())}, ${date.getFullYear()}`;
+  
+  // Get global stats to include streak
+  const globalStats = overrideGlobalStats || getGlobalStats();
+  const streak = globalStats.currentStreak;
   
   let shareText = `SpellCheck ${formattedDate}:\n`;
   
@@ -264,6 +272,11 @@ export const generateShareText = (dateString: string, dailyResults: DailyResults
   // Add total piece presses
   const totalPiecePresses = calculateTotalPiecePresses(dailyResults);
   shareText += formatPiecePresses(totalPiecePresses);
+  
+  // Add streak if it's at least 2 days
+  if (streak >= 2) {
+    shareText += `\n🔥 ${streak} day streak`;
+  }
   
   return shareText;
 };

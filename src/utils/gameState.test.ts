@@ -1,7 +1,14 @@
 // src/utils/gameState.test.ts
 // Simple test for share text generation
 
-import { generateShareText, DailyResults } from './gameState';
+import { generateShareText, DailyResults, GlobalStats } from './gameState';
+
+// Mock global stats for testing
+const mockGlobalStats: GlobalStats = {
+  daysPlayed: 15,
+  currentStreak: 7,
+  maxStreak: 10
+};
 
 // Test the share text generation
 function testShareTextGeneration() {
@@ -44,7 +51,7 @@ function testShareTextGeneration() {
     },
   };
 
-  const result1 = generateShareText(testDate, dailyResults1);
+  const result1 = generateShareText(testDate, dailyResults1, mockGlobalStats);
   console.log('Test 1 - Mixed results:');
   console.log(result1);
   console.log('---');
@@ -82,9 +89,20 @@ function testShareTextGeneration() {
     },
   };
 
-  const result2 = generateShareText(testDate, dailyResults2);
+  const result2 = generateShareText(testDate, dailyResults2, mockGlobalStats);
   console.log('Test 2 - Perfect results:');
   console.log(result2);
+  console.log('---');
+
+  // Test case 3: No streak (should not show streak)
+  const noStreakStats: GlobalStats = {
+    daysPlayed: 1,
+    currentStreak: 1,
+    maxStreak: 1
+  };
+  const result3 = generateShareText(testDate, dailyResults2, noStreakStats);
+  console.log('Test 3 - No streak:');
+  console.log(result3);
   console.log('---');
 
   // Expected format validation
@@ -94,6 +112,7 @@ function testShareTextGeneration() {
   console.log('💡✅');
   console.log('💡💡👁️');
   console.log('♙♙♟♟♟♘x4♗♗♝x7♜♕x12♛♛');
+  console.log('🔥 7 day streak');
 }
 
 // Run the test if this file is executed directly
