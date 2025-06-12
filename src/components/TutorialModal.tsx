@@ -100,12 +100,7 @@ export default function TutorialModal() {
     return (
       <div className={`fixed inset-0 z-50 flex items-center justify-center ${isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
         <div className="fixed inset-0 bg-black bg-opacity-30 dark:bg-opacity-50" onClick={() => {}} />
-        <div 
-          className="bg-white dark:bg-jet-lighter rounded-lg p-6 max-w-md w-full mx-4 z-10 dark:text-white"
-          style={{
-            boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
-          }}
-        >
+        <div className="bg-white dark:bg-jet-lighter rounded-lg p-6 max-w-md w-full mx-4 z-10 dark:text-white modal-shadow">
           <h2 className="text-2xl font-bold mb-4">Welcome to SpellCheck!</h2>
           <p className="mb-6">
             SpellCheck is a word-building puzzle game that combines chess mechanics with word creation. 
@@ -133,12 +128,7 @@ export default function TutorialModal() {
   return (
     <div className={`fixed ${position === 'top' ? 'top-0' : 'bottom-0'} left-0 right-0 z-50 flex justify-center ${isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
       {/* No full-screen overlay - this allows visibility of the board */}
-      <div 
-        className={`bg-white dark:bg-jet-lighter ${position === 'top' ? 'rounded-b-lg' : 'rounded-t-lg'} p-4 max-w-md w-full mx-4 z-10 bg-opacity-95 dark:bg-opacity-95 dark:text-white`}
-        style={{
-          boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
-        }}
-      >
+      <div className={`bg-white dark:bg-jet-lighter ${position === 'top' ? 'rounded-b-lg' : 'rounded-t-lg'} p-4 max-w-md w-full mx-4 z-10 bg-opacity-95 dark:bg-opacity-95 dark:text-white modal-shadow`}>
         <p className="mb-4">{currentStep.text}</p>
         <div className="flex justify-end">
           {currentStep.nextStepId ? (

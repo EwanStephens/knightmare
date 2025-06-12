@@ -30,7 +30,7 @@ export default function CompletionModal({
       className="fixed inset-0 z-50 flex items-center justify-center"
       onClick={handleBackdropClick}
     >
-      <div className="bg-white dark:bg-jet-light rounded-lg shadow-lg dark:shadow-gray-700 p-8 flex flex-col items-center gap-6 min-w-[320px] transition-colors duration-200 relative border dark:border-gray-600">
+      <div className="bg-white dark:bg-jet-light rounded-lg modal-shadow dark:text-white p-8 flex flex-col items-center gap-6 min-w-[320px] transition-colors duration-200 relative">
         {/* X button */}
         <button
           onClick={onClose}
