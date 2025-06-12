@@ -31,7 +31,7 @@ export default function DailyPuzzleTabs({
   };
 
   return (
-    <div className="flex gap-1 mb-6 bg-cream dark:bg-jet-light rounded-lg p-1">
+    <div className="flex gap-1 mb-6 bg-cream dark:bg-jet-lighter rounded-lg p-1">
       <button
         onClick={() => handleTabClick('short')}
         className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${

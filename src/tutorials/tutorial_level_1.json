@@ -90,5 +90,5 @@
     }
   ],
   "startingStepId": "level1-intro",
-  "congratsMessage": "Congratulations! You found the word BOAT!"
+  "congratsMessage": "Congratulations!"
 } 

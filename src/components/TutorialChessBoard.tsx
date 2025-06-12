@@ -24,7 +24,7 @@ export default function TutorialChessBoard() {
     const level: LoadedLevel = {
       board,
       targetWord: currentLevel.targetWord,
-      congratsMessage: currentLevel.congratsMessage || `Congratulations! You found the word ${currentLevel.targetWord}!`,
+      congratsMessage: currentLevel.congratsMessage || `Congratulations!`,
     };
 
     setTutorialLevel(level);

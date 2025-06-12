@@ -41,7 +41,7 @@ export default function CompletionModal({
         </button>
         
         <div className="text-2xl font-bold text-gray-900 dark:text-white text-center">
-          {congratsMessage || `Congratulations! You found the word ${targetWord}!`}
+          {congratsMessage || `Congratulations!`}
         </div>
         <div className="flex gap-4">
           <button

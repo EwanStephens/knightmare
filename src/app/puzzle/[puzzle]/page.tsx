@@ -51,7 +51,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
 
   // Prepare props for ChessBoard
   const targetWord = puzzleData.targetWords[0];
-  let congratsMessage = `Congratulations! You found the word ${targetWord}!`;
+  let congratsMessage = `Congratulations!`;
 
   // If this is the long puzzle for the day, add extra congrats
   if (daily && puzzleType === 'long') {
