@@ -688,7 +688,6 @@ export default function ChessBoard({
         shortPuzzleId={shortPuzzleId}
         mediumPuzzleId={mediumPuzzleId}
         longPuzzleId={longPuzzleId}
-        nextPath={nextPuzzleId ? `/puzzle/${nextPuzzleId}` : undefined}
       />
     </div>
   );

@@ -180,7 +180,7 @@ When validating moves, check:
 - The puzzle page (`src/app/puzzle/[puzzle]/page.tsx`) is a server component that loads puzzle data and determines the next puzzle in the daily sequence.
 - It passes `nextPuzzleId` and a custom `congratsMessage` to the `ChessBoard` client component.
 - `ChessBoard` displays the puzzle and, upon completion, shows the `CompletionModal`.
-- `CompletionModal` uses the `nextPath` prop (from `nextPuzzleId`) to handle client-side navigation to the next puzzle, if available.
+- `CompletionModal` displays stats and provides a Home button for navigation.
 - This architecture keeps puzzle logic and data loading on the server, while UI and navigation are handled on the client for a seamless user experience.
 
 ## Analytics & Performance Monitoring
