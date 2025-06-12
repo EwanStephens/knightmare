@@ -170,6 +170,17 @@ export default function ChessBoard({
     };
   };
 
+  const triggerIllegalMoveFlash = (position: string) => {
+    setIllegalMoveSquare(position);
+    setTimeout(() => {
+      setIllegalMoveSquare(null);
+      setTimeout(() => {
+        setIllegalMoveSquare(position);
+        setTimeout(() => setIllegalMoveSquare(null), 200);
+      }, 200);
+    }, 200);
+  };
+
   const handleSquareClick = (position: string) => {
     if (!gameLevelData) return;
 
@@ -198,8 +209,7 @@ export default function ChessBoard({
 
       // Check if it's a legal capture
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
-        setIllegalMoveSquare(position);
-        setTimeout(() => setIllegalMoveSquare(null), 200);
+        triggerIllegalMoveFlash(position);
         return;
       }
 
@@ -207,8 +217,7 @@ export default function ChessBoard({
     } else {
       // First selection: must be a square with a piece
       if (!square.piece) {
-        setIllegalMoveSquare(position);
-        setTimeout(() => setIllegalMoveSquare(null), 200);
+        triggerIllegalMoveFlash(position);
         return;
       }
     }
@@ -347,16 +356,10 @@ export default function ChessBoard({
           setTimeout(() => {
             setShowWaveAnimation(false);
             setShowCompleteModal(true);
-            // After wave animation and modal setup, reset hint step back to FirstLetter to preserve hints
-            setHintStep(HintStep.FirstLetter);
-            setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
           }, 1500);
         } else {
           setTimeout(() => {
             setShowWaveAnimation(false);
-            // Reset hint step back to FirstLetter to preserve hints
-            setHintStep(HintStep.FirstLetter);
-            setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
           }, 1500);
         }
       }
@@ -398,6 +401,10 @@ export default function ChessBoard({
       } else {
         // Reveal animation complete, now transition to normal state and show wave animation
         setIsRevealing(false); // Reset revealing state immediately
+        
+        // Reset hint state back to FirstLetter to preserve the previous hints
+        setHintStep(HintStep.FirstLetter);
+        setHighlightedHintSquare(firstLetterSquare || null);
         
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
@@ -489,7 +496,7 @@ export default function ChessBoard({
                       className={`
                         aspect-square flex items-center justify-center relative
                         transition-colors duration-200
-                        ${illegalMoveSquare === square.position ? 'bg-red-500' : ''}
+                        ${illegalMoveSquare === square.position ? 'bg-spell-red' : ''}
                         ${tutorialMode && highlightedPosition === square.position ? 'ring-4 ring-yellow-400 z-10' : ''}
                         ${(isHintHighlight && !isReveal) ? 'ring-4 ring-yellow-400 z-10' : ''}
                         ${isRevealCurrent ? 'bg-[#94A3B8]' : ''}

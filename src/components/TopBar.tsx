@@ -40,7 +40,7 @@ export default function TopBar() {
             }`}
             aria-label="Help menu"
           >
-            <span className="material-symbols-outlined text-gray-700 dark:text-gray-300" style={{ fontSize: '28px' }}>
+            <span className="material-symbols-outlined text-gray-500 dark:text-gray-300" style={{ fontSize: '28px' }}>
               question_mark
             </span>
           </button>
@@ -61,7 +61,7 @@ export default function TopBar() {
 
         <Link href="/" aria-label="Home">
           <div className="px-3 h-14 flex items-center hover:bg-gray-100 dark:hover:bg-jet-lighter transition-colors cursor-pointer">
-            <span className="material-symbols-outlined text-gray-700 dark:text-gray-300" style={{ fontSize: '28px' }}>
+            <span className="material-symbols-outlined text-gray-500 dark:text-gray-300" style={{ fontSize: '28px' }}>
               home
             </span>
           </div>
