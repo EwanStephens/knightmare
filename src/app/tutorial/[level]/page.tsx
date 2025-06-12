@@ -22,7 +22,7 @@ export default function TutorialLevelPage() {
   }, [levelNumber, router]);
 
   if (!isValidLevel) {
-    return <main className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-jet"><p className="dark:text-white">Redirecting...</p></main>;
+    return <main className="min-h-screen flex items-center justify-center bg-white dark:bg-jet"><p className="dark:text-white">Redirecting...</p></main>;
   }
 
   return (
