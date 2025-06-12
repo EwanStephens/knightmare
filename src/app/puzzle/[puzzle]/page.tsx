@@ -51,7 +51,7 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
 
   // Prepare props for ChessBoard
   const targetWord = puzzleData.targetWords[0];
-  let congratsMessage = `Congratulations!`;
+  const congratsMessage = `Congratulations!`;
 
   // Build the board from pieces
   const board = createEmptyBoard();
