@@ -10,8 +10,7 @@
   "tutorialSteps": [
     {
       "id": "level1-intro",
-      "text": "Welcome to SpellCheck! In this game, you'll use chess pieces to build words. The goal for each level is shown at the top of the screen.",
-      "target": ".level-title",
+      "text": "Welcome to SpellCheck! In this game, you'll use chess pieces to build words. The goal for each level is shown at the top of the screen. In this puzzle, the goal is to find a 4 letter word.",
       "trigger": "load",
       "nextStepId": "level1-select-rook",
       "position": "bottom",
@@ -91,5 +90,5 @@
     }
   ],
   "startingStepId": "level1-intro",
-  "congratsMessage": "Congratulations! You found the word BOAT!"
+  "congratsMessage": "Congratulations!"
 } 

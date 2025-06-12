@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { ChessPiece, GameState } from '@/types/chess';
 import { algebraicToPosition, getLegalMoves, positionToAlgebraic, isValidChessCapture } from '@/utils/chess';
 import { LoadedLevel } from '@/types/level';
-import '@/styles/chess.css';
 import chessPieces from '../../public/img/chesspieces/standard';
 import CompletionModal from './CompletionModal';
 import { markPuzzleSolved, isPuzzleSolved } from '@/utils/gameState';
@@ -31,6 +30,8 @@ interface ChessBoardProps {
   hintSquares?: string[];
   firstLetterSquare?: string;
   revealPath?: string[];
+  isDailyPuzzle?: boolean;
+  puzzleType?: 'short' | 'medium' | 'long' | null;
 }
 
 export default function ChessBoard({ 
@@ -45,7 +46,9 @@ export default function ChessBoard({
   puzzleId,
   hintSquares,
   firstLetterSquare,
-  revealPath
+  revealPath,
+  isDailyPuzzle,
+  puzzleType,
 }: ChessBoardProps) {
   const [gameLevelData, setGameLevelData] = useState<LoadedLevel | null>(null);
   const [gameState, setGameState] = useState<GameState>({
@@ -61,6 +64,34 @@ export default function ChessBoard({
   const [highlightedHintSquare, setHighlightedHintSquare] = useState<string | null>(null);
   const [revealedPath, setRevealedPath] = useState<string[]>([]);
   const [isRevealing, setIsRevealing] = useState(false);
+  const [showWaveAnimation, setShowWaveAnimation] = useState(false);
+  const [waveAnimationLetterIndex, setWaveAnimationLetterIndex] = useState(0);
+
+  // Function to setup the board in a completed state for already solved puzzles
+  const setupCompletedBoardState = (levelData: LoadedLevel, revealPath: string[]) => {
+    const lastPosition = revealPath[revealPath.length - 1];
+    const previousPositions = revealPath.slice(0, -1);
+    
+    // Get the piece at the last position to calculate legal moves
+    const { row: lastRow, col: lastCol } = algebraicToPosition(lastPosition);
+    const lastSquare = levelData.board[lastRow][lastCol];
+    const legalMoves = lastSquare.piece ? getLegalMoves(lastSquare.piece, { row: lastRow, col: lastCol }, levelData.board, previousPositions) : [];
+    
+    setGameState(prevState => ({
+      ...prevState,
+      currentWord: levelData.targetWord,
+      selectedSquare: lastPosition, // Set the last position as selected
+      previousSquares: previousPositions, // All squares except the last one
+      board: prevState.board.map(row =>
+        row.map(sq => ({
+          ...sq,
+          isSelected: sq.position === lastPosition, // Last position is selected
+          isLegalMove: legalMoves.some(move => positionToAlgebraic(move.row, move.col) === sq.position), // Show legal moves from last position
+          isHighlighted: previousPositions.includes(sq.position), // Highlight the path excluding last square
+        }))
+      ),
+    }));
+  };
 
   useEffect(() => {
     // If in tutorial mode, use the provided level data
@@ -89,12 +120,38 @@ export default function ChessBoard({
   }, [levelData, tutorialMode, tutorialLevel]);
 
   useEffect(() => {
-    if (puzzleId && typeof window !== 'undefined') {
+    if (puzzleId && typeof window !== 'undefined' && gameLevelData) {
       if (isPuzzleSolved(puzzleId)) {
-        setShowCompleteModal(true);
+        // For already solved puzzles, load the completed state with path shown
+        if (revealPath) {
+          setupCompletedBoardState(gameLevelData, revealPath);
+        } else {
+          // Fallback if no solution path is available
+          setGameState(prevState => ({
+            ...prevState,
+            currentWord: gameLevelData.targetWord,
+            selectedSquare: null,
+            previousSquares: [],
+            board: prevState.board.map(row =>
+              row.map(sq => ({
+                ...sq,
+                isSelected: false,
+                isLegalMove: false,
+                isHighlighted: false,
+              }))
+            ),
+          }));
+        }
+        
+        // For long daily puzzles, show the completion modal
+        if (isDailyPuzzle && puzzleType === 'long') {
+          setTimeout(() => {
+            setShowCompleteModal(true);
+          }, 200);
+        }
       }
     }
-  }, [puzzleId]);
+  }, [puzzleId, gameLevelData, isDailyPuzzle, puzzleType, revealPath]);
 
   const clearGameBoard = () => {
     return {
@@ -184,10 +241,53 @@ export default function ChessBoard({
       if (!tutorialMode && puzzleId) {
         markPuzzleSolved(puzzleId);
       }
-      if (!tutorialMode) {
-        setTimeout(() => {
-          setShowCompleteModal(true);
-        }, 200);
+      
+      // Handle completion based on mode
+      if (tutorialMode) {
+        // For all tutorial levels, show wave animation and then use callback
+        // Set the completed word and start wave animation
+        setGameState({
+          ...gameState,
+          board: newBoard,
+          currentWord: newWord,
+          selectedSquare: null,
+          previousSquares: newPreviousSquares,
+        });
+        
+        // Always use callback for tutorial completion to let context handle progression
+        startWaveAnimation(newWord, undefined, false, true);
+        return; // Exit early to avoid duplicate setGameState
+      } else {
+        // For daily puzzles, show wave animation for all types, then modal only for long
+        if (isDailyPuzzle) {
+          // Set the completed word and start wave animation
+          setGameState({
+            ...gameState,
+            board: newBoard,
+            currentWord: newWord,
+            selectedSquare: null,
+            previousSquares: newPreviousSquares,
+          });
+          
+          // Start wave animation
+          if (puzzleType === 'long') {
+            // For long puzzles, show completion modal after wave animation
+            startWaveAnimation(newWord, undefined, true);
+          } else {
+            // For short/medium puzzles, navigate to next puzzle after wave animation
+            if (nextPuzzleId) {
+              startWaveAnimation(newWord, `/puzzle/${nextPuzzleId}`);
+            } else {
+              startWaveAnimation(newWord);
+            }
+          }
+          return; // Exit early to avoid duplicate setGameState
+        } else {
+          // Regular behavior for non-daily puzzles
+          setTimeout(() => {
+            setShowCompleteModal(true);
+          }, 200);
+        }
       }
     }
 
@@ -201,8 +301,18 @@ export default function ChessBoard({
   };
 
   const handleCancel = () => {
+    // Clear the revealed path first to ensure board renders correctly
+    setRevealedPath([]);
+    
     const newState = clearGameBoard();
     setGameState(newState);
+    
+    // If we're clearing after a reveal, preserve hints but ensure clean state
+    if (hintStep === HintStep.Reveal) {
+      // Go back to the first letter hint state (preserve the first two hints)
+      setHintStep(HintStep.FirstLetter);
+      setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
+    }
     
     // Notify tutorial system of clear action in tutorial mode
     if (tutorialMode && onPieceSelected) {
@@ -210,34 +320,49 @@ export default function ChessBoard({
     }
   };
 
-  // Factored out replay logic
-  const handleReplay = () => {
-    if (!gameLevelData) return;
-    setShowCompleteModal(false);
-    setGameState(prevState => ({
-      ...prevState,
-      board: gameLevelData.board.map(row =>
-        row.map(sq => ({
-          ...sq,
-          isSelected: false,
-          isLegalMove: false,
-          isHighlighted: false,
-        }))
-      ),
-      selectedSquare: null,
-      currentWord: '',
-      previousSquares: [],
-    }));
-    // Notify tutorial system of clear action in tutorial mode
-    if (tutorialMode && onPieceSelected) {
-      onPieceSelected('clear', '');
-    }
-    // Clear all hint/reveal state
-    setHintStep(HintStep.None);
-    setGreyedOutSquares([]);
-    setHighlightedHintSquare(null);
-    setRevealedPath([]);
-    setIsRevealing(false);
+  // Improved wave animation for success feedback
+  const startWaveAnimation = (targetWord: string, navigationUrl?: string, showCompletionModal = false, useCallback = false) => {
+    setShowWaveAnimation(true);
+    setWaveAnimationLetterIndex(0);
+    
+    let letterIndex = 0;
+    const animateNextLetter = () => {
+      setWaveAnimationLetterIndex(letterIndex);
+      letterIndex++;
+      
+      if (letterIndex < targetWord.length) {
+        setTimeout(animateNextLetter, 10); // delay between letters
+      } else {
+        // Animation complete, handle next action after a short delay
+        if (useCallback && onLevelComplete) {
+          setTimeout(() => {
+            setShowWaveAnimation(false);
+            onLevelComplete();
+          }, 1500);
+        } else if (navigationUrl) {
+          setTimeout(() => {
+            window.location.href = navigationUrl;
+          }, 1500);
+        } else if (showCompletionModal) {
+          setTimeout(() => {
+            setShowWaveAnimation(false);
+            setShowCompleteModal(true);
+            // After wave animation and modal setup, reset hint step back to FirstLetter to preserve hints
+            setHintStep(HintStep.FirstLetter);
+            setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
+          }, 1500);
+        } else {
+          setTimeout(() => {
+            setShowWaveAnimation(false);
+            // Reset hint step back to FirstLetter to preserve hints
+            setHintStep(HintStep.FirstLetter);
+            setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
+          }, 1500);
+        }
+      }
+    };
+    
+    setTimeout(animateNextLetter, 10); // Initial delay before starting animation
   };
 
   // Factored out reveal logic
@@ -271,13 +396,32 @@ export default function ChessBoard({
       if (i < revealPath.length) {
         setTimeout(revealNext, 1000);
       } else {
+        // Reveal animation complete, now transition to normal state and show wave animation
+        setIsRevealing(false); // Reset revealing state immediately
+        
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
         }
-        setTimeout(() => {
-          setShowCompleteModal(true);
-          setIsRevealing(false);
-        }, 2000);
+        // Always call the completion callback if provided
+        if (onLevelComplete) {
+          onLevelComplete();
+        }
+        
+        // Show wave animation for the completed word
+        const targetWord = gameLevelData?.targetWord || '';
+        
+        // For daily puzzles, handle different types
+        if (isDailyPuzzle && puzzleType !== 'long') {
+          // Auto-navigate to next puzzle after wave animation for short/medium
+          if (nextPuzzleId) {
+            startWaveAnimation(targetWord, `/puzzle/${nextPuzzleId}`);
+          } else {
+            startWaveAnimation(targetWord);
+          }
+        } else {
+          // For non-daily puzzles or long daily puzzles, show completion modal after wave animation
+          startWaveAnimation(targetWord, undefined, true);
+        }
       }
     };
     if (revealPath.length > 0) {
@@ -306,18 +450,23 @@ export default function ChessBoard({
     setHighlightedHintSquare(null);
     setRevealedPath([]);
     setIsRevealing(false);
+    setShowWaveAnimation(false);
+    setWaveAnimationLetterIndex(0);
   }, [levelData]);
 
   if (!gameLevelData) {
     return <div>Loading...</div>;
   }
 
+  // Determine if we should blur the main content
+  const shouldBlurContent = showCompleteModal;
+
   return (
     <div className="relative w-full flex flex-col items-center">
       {/* Main content, blurred when modal is open */}
-      <div className={showCompleteModal ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
+      <div className={shouldBlurContent ? "filter blur-sm pointer-events-none transition-all duration-200" : "transition-all duration-200"}>
         <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full px-2 sm:px-4">
-          <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4 level-title">
+          <div className="text-xl sm:text-2xl font-bold my-2 sm:my-4">
             Find a {gameLevelData.targetWord.length} letter word
           </div>
           {/* Responsive chessboard grid - constrained to viewport with max size */}
@@ -348,7 +497,7 @@ export default function ChessBoard({
                         ${square.isHighlighted && !isRevealPrev ? 'bg-yellow-200' : ''}
                         ${square.isSelected && !isRevealCurrent ? 'bg-[#94A3B8]' : ''}
                         ${!square.isHighlighted && !square.isSelected && !isReveal && illegalMoveSquare !== square.position ? 
-                          (rowIndex + colIndex) % 2 === 0 ? 'bg-[#EEEED2]' : 'bg-[#769656]' : ''}
+                          (rowIndex + colIndex) % 2 === 0 ? 'bg-cream' : 'bg-asparagus' : ''}
                         ${square.piece ? 'hover:bg-opacity-90' : ''}
                         cursor-pointer
                         ${isGreyedOut ? 'opacity-40 grayscale relative' : ''}
@@ -387,7 +536,7 @@ export default function ChessBoard({
                           {/* Show just the letter if part of revealed path or if square.isHighlighted (clicked path), else show piece+letter */}
                           {(isRevealPrev || (square.isHighlighted && !isRevealCurrent)) ? (
                             <div 
-                              className="font-bold text-[#769656] z-20 flex items-center justify-center"
+                              className="font-bold text-asparagus z-20 flex items-center justify-center"
                               style={{
                                 fontSize: "max(24px, min(8dvw, 4dvh))",
                                 width: "100%",
@@ -404,7 +553,7 @@ export default function ChessBoard({
                                 </div>
                               </div>
                               <div 
-                                className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-[#769656]' : 'text-[#EEEED2]'}`}
+                                className={`absolute top-0 right-0 z-20 font-bold ${(rowIndex + colIndex) % 2 === 0 ? 'text-asparagus' : 'text-cream'}`}
                                 style={{
                                   fontSize: "max(14px, min(4dvw, 2dvh))",
                                   top: "max(2px, min(1dvw, 0.5dvh))",
@@ -424,21 +573,24 @@ export default function ChessBoard({
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] mx-auto overflow-hidden">
+          <div className="flex flex-col items-center gap-2 sm:gap-4 w-full max-w-[90vmin] sm:max-w-[80vmin] md:max-w-[75vmin] mx-auto">
             <div 
-              className="flex whitespace-nowrap justify-center items-center font-mono w-full overflow-visible relative"
+              className="flex whitespace-nowrap justify-center items-center font-mono w-full relative pt-4 pb-2"
               style={{ 
-                height: "max(50px, min(6dvh, 8dvw))"
+                height: "max(60px, min(8dvh, 10dvw))"
               }}
             >
               {Array.from(gameLevelData.targetWord).map((_, index) => {
                 // Dynamically calculate sizes based on word length
                 const letterWidth = Math.max(100 / gameLevelData.targetWord.length, 6);
+                const isWaving = showWaveAnimation && index <= waveAnimationLetterIndex;
                 
                 return (
                   <span 
                     key={index} 
-                    className="text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center"
+                    className={`text-center border-b-4 border-gray-400 mx-[2px] sm:mx-1 flex justify-center items-center transition-transform duration-200 ease-out ${
+                      isWaving ? 'wave-letter' : ''
+                    }`}
                     style={{ 
                       width: `${letterWidth}%`, 
                       minWidth: '1rem',
@@ -446,7 +598,8 @@ export default function ChessBoard({
                       height: '80%',
                       minHeight: '40px',
                       // Calculate font size based on viewport with minimum size guarantee
-                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}dvw, ${Math.min(6, 30/gameLevelData.targetWord.length)}dvh))`
+                      fontSize: `max(20px, min(${Math.min(12, 60/gameLevelData.targetWord.length)}dvw, ${Math.min(6, 30/gameLevelData.targetWord.length)}dvh))`,
+                      animationDelay: isWaving ? `${index * 150}ms` : '0ms'
                     }}
                   >
                     {index < gameState.currentWord.length ? gameState.currentWord[index] : '\u00A0'}
@@ -458,7 +611,7 @@ export default function ChessBoard({
               <button
                 onClick={handleCancel}
                 disabled={isRevealing}
-                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600${isRevealing ? ' opacity-60 cursor-not-allowed' : ''}`}
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200 ${isRevealing ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
               >
                 Clear
               </button>
@@ -467,9 +620,9 @@ export default function ChessBoard({
                   onClick={handleHintClick}
                   disabled={isRevealing}
                   className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg rounded transition-colors duration-200
-                    ${hintStep < HintStep.FirstLetter ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-yellow-500 text-black hover:bg-yellow-600'}
-                    ${hintStep === HintStep.Reveal ? 'bg-green-600 text-white hover:bg-green-700' : ''}
-                    ${isRevealing ? 'opacity-60 cursor-not-allowed' : ''}`}
+                    ${hintStep < HintStep.FirstLetter ? 'bg-spell-blue text-white hover:bg-spell-blue-dark' : 'bg-spell-red text-white hover:bg-spell-red-dark'}
+                    ${hintStep === HintStep.Reveal ? 'bg-spell-red text-white hover:bg-spell-red-dark' : ''}
+                    ${isRevealing ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
                 >
                   {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal' : 'Revealing...'}
                 </button>
@@ -483,9 +636,6 @@ export default function ChessBoard({
         isOpen={showCompleteModal}
         onClose={() => setShowCompleteModal(false)}
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
-        targetWord={gameLevelData.targetWord}
-        {...(nextPuzzleId ? { nextPath: `/puzzle/${nextPuzzleId}` } : {})}
-        onReplay={handleReplay}
       />
     </div>
   );

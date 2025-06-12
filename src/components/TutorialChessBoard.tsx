@@ -9,7 +9,7 @@ import CompletionModal from './CompletionModal';
 import { markTutorialCompleted } from '@/utils/gameState';
 
 export default function TutorialChessBoard() {
-  const { currentLevel, handlePieceSelect, tutorialState } = useTutorial();
+  const { currentLevel, handlePieceSelect, tutorialState, advanceToNextLevel } = useTutorial();
   const [tutorialLevel, setTutorialLevel] = useState<LoadedLevel | null>(null);
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const { highlightedPosition } = tutorialState;
@@ -24,7 +24,7 @@ export default function TutorialChessBoard() {
     const level: LoadedLevel = {
       board,
       targetWord: currentLevel.targetWord,
-      congratsMessage: currentLevel.congratsMessage || `Congratulations! You found the word ${currentLevel.targetWord}!`,
+      congratsMessage: currentLevel.congratsMessage || `Congratulations!`,
     };
 
     setTutorialLevel(level);
@@ -32,18 +32,17 @@ export default function TutorialChessBoard() {
 
   // Handle level completion callback from ChessBoard
   const handleLevelComplete = () => {
-    // Show the completion modal immediately
-    setShowCompleteModal(true);
-    
-    // If this is the last tutorial level, mark the tutorial as completed
-    if (currentLevel?.levelNumber === 3) {
-      markTutorialCompleted();
-    }
-  };
-
-  // Handle next level navigation
-  const handleCloseModal = () => {
-    setShowCompleteModal(false);
+    // Delay tutorial progression to allow wave animation to complete
+    // This prevents the immediate state change from interrupting the animation
+    setTimeout(() => {
+      if (currentLevel?.levelNumber === 3) {
+        setShowCompleteModal(true);
+        markTutorialCompleted();
+      } else if (currentLevel?.levelNumber && currentLevel.levelNumber < 3) {
+        // For levels 1 and 2, advance to the next tutorial level using the context
+        advanceToNextLevel();
+      }
+    }, 1600); // Slightly longer than the 1500ms animation timeout
   };
 
   // Notify the tutorial system about piece selection
@@ -55,11 +54,6 @@ export default function TutorialChessBoard() {
   if (!tutorialLevel) {
     return <div className="flex items-center justify-center h-64">Loading tutorial...</div>;
   }
-  
-  // Calculate the next tutorial level path
-  const nextPath = currentLevel?.levelNumber && currentLevel.levelNumber < 3 
-    ? `/tutorial/${currentLevel.levelNumber + 1}` 
-    : undefined;
 
   return (
     <div className="relative w-full flex flex-col items-center">
@@ -77,11 +71,8 @@ export default function TutorialChessBoard() {
       {/* Use the shared CompletionModal component */}
       <CompletionModal 
         isOpen={showCompleteModal}
-        onClose={handleCloseModal}
-        congratsMessage={tutorialLevel.congratsMessage}
-        targetWord={tutorialLevel.targetWord}
-        allowReplays={false}
-        {...(nextPath ? { nextPath } : {})}
+        onClose={() => setShowCompleteModal(false)}
+        congratsMessage={tutorialLevel?.congratsMessage || `Level complete! Well done.`}
       />
     </div>
   );

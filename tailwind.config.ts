@@ -10,15 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        chess7: ['Chess7', 'sans-serif'],
-      },
-      colors: {
-        dark: {
-          board: {
-            light: '#8e8e8e',
-            dark: '#4b4b4b',
-          }
-        }
       },
     },
   },

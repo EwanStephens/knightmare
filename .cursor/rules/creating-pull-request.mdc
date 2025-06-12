@@ -6,4 +6,7 @@ alwaysApply: false
 When asked to create a pull request:
 - Use the github MCP tool in preference to the CLI
 - Assume that the feature branch has already been created and all code has been pushed
-- Check the name of the feature branch if you're not sure what it is before creating the pull request
+- Check the name of the feature branch and the remote branch if you're not sure what they are before creating the pull request
+- Do not be overly focussed on recent changes that are made as part of the PR. Look closely at all the changes made before coming up with a PR description
+- Do not include details about things that were changed and then reverted in the PR description. We only care about the differences between the base branch and the current branch
+- Print out the proposed title and description of the PR for the user to review before making the tool call

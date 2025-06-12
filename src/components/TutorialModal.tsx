@@ -24,12 +24,14 @@ export default function TutorialModal() {
     
     // Handle the special case for buttons with specific text
     if (currentStep.target.includes(':contains(')) {
-      const textMatch = currentStep.target.match(/:contains\(['"]([^'"]+)['"]\)/);
+      const textMatch = currentStep.target.match(/:contains\(['"]?([^'"]+)['"]?\)/);
       if (textMatch && textMatch[1]) {
         const buttonText = textMatch[1];
-        const allButtons = document.querySelectorAll('button');
-        targetElements = Array.from(allButtons).filter(button => 
-          button.textContent?.trim() === buttonText
+        // Look for buttons specifically if the selector includes 'button'
+        const selector = currentStep.target.includes('button') ? 'button' : '*';
+        const allElements = document.querySelectorAll(selector);
+        targetElements = Array.from(allElements).filter(element => 
+          element.textContent?.trim() === buttonText.trim()
         );
       }
     } else {
@@ -43,7 +45,7 @@ export default function TutorialModal() {
       // Create a highlight overlay
       if (!highlightRef.current) {
         const highlightDiv = document.createElement('div');
-        highlightDiv.style.position = 'absolute';
+        highlightDiv.style.position = 'fixed'; // Use fixed positioning for better alignment
         highlightDiv.style.zIndex = '40';
         highlightDiv.style.pointerEvents = 'none';
         highlightDiv.style.border = '2px solid #FFDF00';
@@ -65,7 +67,7 @@ export default function TutorialModal() {
         highlightRef.current = highlightDiv;
       }
       
-      // Position the highlight
+      // Position the highlight using getBoundingClientRect for accurate positioning
       const rect = targetElement.getBoundingClientRect();
       const highlight = highlightRef.current;
       highlight.style.left = `${rect.left - 4}px`;
@@ -98,7 +100,7 @@ export default function TutorialModal() {
     return (
       <div className={`fixed inset-0 z-50 flex items-center justify-center ${isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
         <div className="fixed inset-0 bg-black bg-opacity-30 dark:bg-opacity-50" onClick={() => {}} />
-        <div className="bg-white dark:bg-gray-700 rounded-lg p-6 max-w-md w-full mx-4 z-10 shadow-xl dark:text-white">
+        <div className="bg-white dark:bg-jet-lighter rounded-lg p-6 max-w-md w-full mx-4 z-10 dark:text-white modal-shadow">
           <h2 className="text-2xl font-bold mb-4">Welcome to SpellCheck!</h2>
           <p className="mb-6">
             SpellCheck is a word-building puzzle game that combines chess mechanics with word creation. 
@@ -107,7 +109,7 @@ export default function TutorialModal() {
           <div className="flex justify-end">
             <button
               onClick={startTutorial}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors cursor-pointer"
             >
               Start Tutorial
             </button>
@@ -126,20 +128,20 @@ export default function TutorialModal() {
   return (
     <div className={`fixed ${position === 'top' ? 'top-0' : 'bottom-0'} left-0 right-0 z-50 flex justify-center ${isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
       {/* No full-screen overlay - this allows visibility of the board */}
-      <div className={`bg-white dark:bg-gray-600 ${position === 'top' ? 'rounded-b-lg' : 'rounded-t-lg'} p-4 max-w-md w-full mx-4 z-10 shadow-xl ${position === 'top' ? 'mt-0 border-b' : 'mb-0 border-t'} border-gray-200 dark:border-gray-500 bg-opacity-95 dark:bg-opacity-95 dark:text-white`}>
+      <div className={`bg-white dark:bg-jet-lighter rounded-lg p-4 max-w-md w-full mx-4 z-10 bg-opacity-95 dark:bg-opacity-95 dark:text-white modal-shadow`}>
         <p className="mb-4">{currentStep.text}</p>
         <div className="flex justify-end">
           {currentStep.nextStepId ? (
             <button
               onClick={goToNextStep}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors cursor-pointer"
             >
               Next
             </button>
           ) : (
             <button
               onClick={closeModal}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors cursor-pointer"
             >
               Got it
             </button>

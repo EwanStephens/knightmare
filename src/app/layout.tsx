@@ -33,8 +33,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link 
+          rel="preconnect" 
+          href="https://fonts.googleapis.com" 
+        />
+        <link 
+          rel="preconnect" 
+          href="https://fonts.gstatic.com" 
+          crossOrigin="anonymous"
+        />
+        <link 
           rel="stylesheet" 
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=block" 
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,question_mark&display=swap"
         />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
@@ -58,7 +67,7 @@ export default function RootLayout({
           This container ensures the page content fills the viewport below the fixed TopBar (56px tall).
           The min-h-screen ensures the background fills the viewport and allows scrolling if content is too tall.
         */}
-        <div className="flex flex-col items-center justify-center min-h-[calc(100dvh-56px)] w-full bg-gray-50 dark:bg-gray-800 overflow-auto">
+        <div className="flex flex-col items-center justify-center min-h-[calc(100dvh-56px)] w-full bg-white dark:bg-jet overflow-auto">
           {children}
         </div>
         <Analytics />

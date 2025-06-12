@@ -4,9 +4,12 @@
 
 "use client";
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import ChessBoard from '@/components/ChessBoard';
+import DailyPuzzleTabs from '@/components/DailyPuzzleTabs';
+import { getSolvedPuzzleIds } from '@/utils/gameState';
 import type { LoadedLevel } from '@/types/level';
+import type { DailyPuzzles } from '@/utils/calendar';
 
 // Props for PuzzleClient, matching what the server passes
 interface PuzzleClientProps {
@@ -19,13 +22,7 @@ interface PuzzleClientProps {
   hintSquares: string[] | null;
   firstLetterSquare: string | null;
   revealPath: string[] | null;
-}
-
-// Helper to format date header
-function formatDateHeader(dateStr: string): string {
-  const date = new Date(dateStr);
-  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleDateString(undefined, options);
+  dailyPuzzleIds: DailyPuzzles | null;
 }
 
 /**
@@ -47,30 +44,59 @@ export default function PuzzleClient({
   hintSquares,
   firstLetterSquare,
   revealPath,
+  dailyPuzzleIds,
 }: PuzzleClientProps) {
+  
   // Use a single Date instance for both todayStr and the log
   const today = useMemo(() => new Date(), []);
   const todayStr = useMemo(() => today.toLocaleDateString('en-CA'), [today]);
   console.log('[PuzzleClient] todayStr:', todayStr, '| local datetime:', today.toString());
 
-  // Determine header and if this puzzle is from the future
-  let header = 'Puzzle';
+  // State for tracking solved puzzles with automatic updates
+  const [solvedPuzzleIds, setSolvedPuzzleIds] = useState<Set<string>>(new Set());
+
+  // Use state to track if we're on the client to avoid hydration mismatch
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true);
+    // Initialize solved puzzle IDs
+    setSolvedPuzzleIds(getSolvedPuzzleIds());
+  }, []);
+
+  // Callback to handle puzzle completion and update tabs
+  const handlePuzzleCompleted = (completedPuzzleId: string) => {
+    setSolvedPuzzleIds(prev => new Set([...prev, completedPuzzleId]));
+  };
+
+  // Callback for level completion that handles tab updates for daily puzzles
+  const handleLevelComplete = () => {
+    if (puzzleId && puzzleDate) {
+      // For daily puzzles, update the tabs automatically
+      handlePuzzleCompleted(puzzleId);
+    }
+  };
+
+  // Get daily puzzles
+  const dailyPuzzles = useMemo(() => {
+    if (!puzzleDate) return null;
+    return dailyPuzzleIds;
+  }, [puzzleDate, dailyPuzzleIds]);
+
+  // Check if this puzzle is from the future
   let isFuture = false;
   if (puzzleDate) {
-    if (puzzleDate === todayStr) {
-      header = `Daily Puzzle${puzzleType ? ' – ' + puzzleType.charAt(0).toUpperCase() + puzzleType.slice(1) : ''}`;
-    } else if (puzzleDate < todayStr) {
-      header = `${formatDateHeader(puzzleDate)}${puzzleType ? ' – ' + puzzleType.charAt(0).toUpperCase() + puzzleType.slice(1) : ''}`;
-    } else {
-      isFuture = true;
-    }
+    isFuture = puzzleDate > todayStr;
   }
+
+  // Determine which tabs should be available - only show correct state after client mount
+  const showTabs = isClient && dailyPuzzles && puzzleType;
 
   if (isFuture) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-jet">
         <h1 className="text-2xl font-bold mb-4 dark:text-white">This puzzle is from the future!</h1>
-        <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg text-lg text-center">
+        <div className="bg-white dark:bg-jet-light p-8 rounded-lg shadow-lg text-lg text-center">
           <p>Whoa there, time traveler. This puzzle hasn&apos;t been released yet. Please be patient and try again on the correct day. The chessboard of destiny awaits, but not just yet.</p>
         </div>
       </main>
@@ -78,14 +104,25 @@ export default function PuzzleClient({
   }
 
   return (
-    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8">
-      <h1 className="text-2xl font-bold mb-4 dark:text-white text-center">{header}</h1>
-      <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
+    <main className="flex-1 w-full flex flex-col items-center justify-center px-2 py-8 bg-white dark:bg-jet">
+      {/* Tabs for daily puzzles */}
+      {showTabs && (
+        <DailyPuzzleTabs
+          dailyPuzzles={dailyPuzzles}
+          currentPuzzleType={puzzleType}
+          solvedPuzzleIds={solvedPuzzleIds}
+        />
+      )}
+      
+      <div>
         <ChessBoard
           levelData={levelData}
           nextPuzzleId={nextPuzzleId}
           congratsMessage={congratsMessage}
           puzzleId={puzzleId}
+          isDailyPuzzle={!!puzzleDate}
+          puzzleType={puzzleType}
+          onLevelComplete={handleLevelComplete}
           {...(hintSquares && firstLetterSquare && revealPath ? {
             hintSquares,
             firstLetterSquare,

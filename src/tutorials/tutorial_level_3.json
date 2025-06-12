@@ -20,5 +20,5 @@
     }
   ],
   "startingStepId": "level3-intro",
-  "congratsMessage": "Congratulations! You found the word FINISH! You've completed the tutorial and are ready to take on the real levels."
+  "congratsMessage": "Congratulations! You've completed the tutorial and are ready to take on the real levels."
 } 

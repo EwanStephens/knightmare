@@ -49,6 +49,6 @@ export async function loadPuzzleById(puzzleId: string): Promise<LoadedLevel> {
     board[row][col].piece = pieceData as ChessPiece;
   });
   const targetWord = puzzleData.targetWords[0];
-  const congratsMessage = `Congratulations! You found the word ${targetWord}!`;
+  const congratsMessage = `Congratulations!`;
   return { board, targetWord, congratsMessage };
 } 

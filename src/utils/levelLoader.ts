@@ -20,7 +20,7 @@ export const loadLevel = async (levelNumber: number): Promise<LoadedLevel> => {
   const targetWord = levelData.targetWords[0];
   
   // Create the congratulation message
-  const congratsMessage = `Congratulations! You found the word ${targetWord}!`;
+  const congratsMessage = `Congratulations!`;
 
   return {
     board,
