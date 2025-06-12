@@ -5,7 +5,6 @@
 "use client";
 
 import { useMemo, useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import ChessBoard from '@/components/ChessBoard';
 import DailyPuzzleTabs from '@/components/DailyPuzzleTabs';
 import { getSolvedPuzzleIds } from '@/utils/gameState';
@@ -47,7 +46,6 @@ export default function PuzzleClient({
   revealPath,
   dailyPuzzleIds,
 }: PuzzleClientProps) {
-  const router = useRouter();
   
   // Use a single Date instance for both todayStr and the log
   const today = useMemo(() => new Date(), []);
