@@ -33,13 +33,13 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-2 dark:text-white">Would you like to try the tutorial?</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4">Learn how to play SpellCheck with our guided tutorial.</p>
           <button
-            className="px-6 py-3 bg-spell-blue text-white rounded-lg text-xl font-semibold hover:bg-spell-blue-dark transition-colors duration-200 w-64"
+            className="px-6 py-3 bg-spell-blue text-white rounded-lg text-xl font-semibold hover:bg-spell-blue-dark transition-colors duration-200 w-64 cursor-pointer"
             onClick={handleStartTutorial}
           >
             Start Tutorial
           </button>
           <button
-            className="px-6 py-3 bg-asparagus text-white rounded-lg text-xl font-semibold hover:bg-asparagus-dark transition-colors duration-200 w-64"
+            className="px-6 py-3 bg-asparagus text-white rounded-lg text-xl font-semibold hover:bg-asparagus-dark transition-colors duration-200 w-64 cursor-pointer"
             onClick={handleSkipTutorial}
           >
             Skip Tutorial
@@ -48,13 +48,13 @@ export default function Home() {
       ) : (
         <div className="flex flex-col gap-6 items-center">
           <button
-            className="px-6 py-3 bg-asparagus text-white rounded-lg text-xl font-semibold hover:bg-asparagus-dark transition-colors duration-200 w-64"
+            className="px-6 py-3 bg-asparagus text-white rounded-lg text-xl font-semibold hover:bg-asparagus-dark transition-colors duration-200 w-64 cursor-pointer"
             onClick={() => router.push('/play/daily')}
           >
             Play
           </button>
           <button
-            className="px-6 py-3 bg-spell-blue text-white rounded-lg text-xl font-semibold hover:bg-spell-blue-dark transition-colors duration-200 w-64"
+            className="px-6 py-3 bg-spell-blue text-white rounded-lg text-xl font-semibold hover:bg-spell-blue-dark transition-colors duration-200 w-64 cursor-pointer"
             onClick={() => router.push('/tutorial')}
           >
             Tutorial

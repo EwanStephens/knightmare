@@ -34,7 +34,7 @@ export default function DailyPuzzleTabs({
     <div className="flex gap-1 mb-6 bg-cream dark:bg-jet-lighter rounded-lg p-1">
       <button
         onClick={() => handleTabClick('short')}
-        className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
+        className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 cursor-pointer ${
           currentPuzzleType === 'short'
             ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm'
             : isShortSolved
@@ -50,11 +50,11 @@ export default function DailyPuzzleTabs({
         disabled={!isShortSolved}
         className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'medium'
-            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm'
+            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm cursor-pointer'
             : isShortSolved
             ? isMediumSolved
-              ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark'
-              : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark cursor-pointer'
+              : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white cursor-pointer'
             : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
         }`}
       >
@@ -66,11 +66,11 @@ export default function DailyPuzzleTabs({
         disabled={!isMediumSolved}
         className={`px-4 py-2 rounded-md font-bold transition-colors duration-200 ${
           currentPuzzleType === 'long'
-            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm'
+            ? 'bg-white dark:bg-jet text-gray-900 dark:text-white shadow-sm cursor-pointer'
             : isMediumSolved
             ? isLongSolved
-              ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark'
-              : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              ? 'text-asparagus dark:text-asparagus hover:text-asparagus-dark dark:hover:text-asparagus-dark cursor-pointer'
+              : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white cursor-pointer'
             : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
         }`}
       >

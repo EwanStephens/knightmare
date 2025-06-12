@@ -109,7 +109,7 @@ export default function TutorialModal() {
           <div className="flex justify-end">
             <button
               onClick={startTutorial}
-              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors"
+              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors cursor-pointer"
             >
               Start Tutorial
             </button>
@@ -134,14 +134,14 @@ export default function TutorialModal() {
           {currentStep.nextStepId ? (
             <button
               onClick={goToNextStep}
-              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors"
+              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors cursor-pointer"
             >
               Next
             </button>
           ) : (
             <button
               onClick={closeModal}
-              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors"
+              className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors cursor-pointer"
             >
               Got it
             </button>

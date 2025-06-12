@@ -611,7 +611,7 @@ export default function ChessBoard({
               <button
                 onClick={handleCancel}
                 disabled={isRevealing}
-                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600${isRevealing ? ' opacity-60 cursor-not-allowed' : ''}`}
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200 ${isRevealing ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
               >
                 Clear
               </button>
@@ -622,7 +622,7 @@ export default function ChessBoard({
                   className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base md:text-lg rounded transition-colors duration-200
                     ${hintStep < HintStep.FirstLetter ? 'bg-spell-blue text-white hover:bg-spell-blue-dark' : 'bg-spell-red text-white hover:bg-spell-red-dark'}
                     ${hintStep === HintStep.Reveal ? 'bg-spell-red text-white hover:bg-spell-red-dark' : ''}
-                    ${isRevealing ? 'opacity-60 cursor-not-allowed' : ''}`}
+                    ${isRevealing ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
                 >
                   {hintStep < HintStep.FirstLetter ? 'Hint' : hintStep === HintStep.FirstLetter ? 'Reveal' : 'Revealing...'}
                 </button>

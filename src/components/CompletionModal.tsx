@@ -34,7 +34,7 @@ export default function CompletionModal({
         {/* X button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl font-bold w-6 h-6 flex items-center justify-center"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl font-bold w-6 h-6 flex items-center justify-center cursor-pointer"
           aria-label="Close"
         >
           ×
@@ -45,7 +45,7 @@ export default function CompletionModal({
         </div>
         <div className="flex gap-4">
           <button
-            className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200"
+            className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer"
             onClick={() => router.push('/')}
           >
             Home
