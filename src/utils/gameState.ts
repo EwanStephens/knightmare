@@ -289,8 +289,8 @@ export const generateShareText = (
   
   // Add streak if it's at least 2 days
   if (streak >= 2) {
-    shareText += `\n🔥 ${streak} days`;
-    console.log(`Added streak to share text: 🔥 ${streak} days`);
+    shareText += `\n🔥${streak}`;
+    console.log(`Added streak to share text: 🔥${streak}`);
   } else {
     console.log(`Streak is ${streak}, not adding to share text`);
   }
