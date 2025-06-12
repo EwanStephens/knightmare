@@ -164,36 +164,38 @@ export default function CompletionModal({
                 </div>
               </div>
             </div>
-
-            {/* Share and Home buttons side by side */}
-            <div className="mb-4 flex flex-row gap-4 justify-center">
-              <button
-                onClick={handleShare}
-                className="px-4 py-2 bg-asparagus text-white rounded hover:bg-asparagus-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
-              >
-                <span
-                  className="material-symbols-outlined text-lg align-middle"
-                  style={{ fontFamily: 'Material Symbols Outlined', fontVariationSettings: '"FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24' }}
-                >
-                  share
-                </span>
-                {shareTextCopied ? 'Copied!' : 'Share'}
-              </button>
-              <button
-                className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
-                onClick={() => router.push('/')}
-              >
-                <span
-                  className="material-symbols-outlined text-lg align-middle"
-                  style={{ fontFamily: 'Material Symbols Outlined', fontVariationSettings: '"FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24' }}
-                >
-                  home
-                </span>
-                Home
-              </button>
-            </div>
           </div>
         )}
+
+        {/* Share and Home buttons side by side (always visible) */}
+        <div className="mb-4 flex flex-row gap-4 justify-center">
+          {isDailyPuzzle && (
+            <button
+              onClick={handleShare}
+              className="px-4 py-2 bg-asparagus text-white rounded hover:bg-asparagus-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
+            >
+              <span
+                className="material-symbols-outlined text-lg align-middle"
+                style={{ fontFamily: 'Material Symbols Outlined', fontVariationSettings: '"FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24' }}
+              >
+                share
+              </span>
+              {shareTextCopied ? 'Copied!' : 'Share'}
+            </button>
+          )}
+          <button
+            className="px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
+            onClick={() => router.push('/')}
+          >
+            <span
+              className="material-symbols-outlined text-lg align-middle"
+              style={{ fontFamily: 'Material Symbols Outlined', fontVariationSettings: '"FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24' }}
+            >
+              home
+            </span>
+            Home
+          </button>
+        </div>
       </div>
     </div>
   );
