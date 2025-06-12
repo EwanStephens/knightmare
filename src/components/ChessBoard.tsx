@@ -325,14 +325,6 @@ export default function ChessBoard({
     setShowWaveAnimation(true);
     setWaveAnimationLetterIndex(0);
     
-    // Helper function to reset hint state if needed
-    const resetHintStateIfRevealing = () => {
-      if (hintStep === HintStep.Reveal) {
-        setHintStep(HintStep.FirstLetter);
-        setHighlightedHintSquare(firstLetterSquare || null);
-      }
-    };
-    
     let letterIndex = 0;
     const animateNextLetter = () => {
       setWaveAnimationLetterIndex(letterIndex);
@@ -355,12 +347,10 @@ export default function ChessBoard({
           setTimeout(() => {
             setShowWaveAnimation(false);
             setShowCompleteModal(true);
-            resetHintStateIfRevealing();
           }, 1500);
         } else {
           setTimeout(() => {
             setShowWaveAnimation(false);
-            resetHintStateIfRevealing();
           }, 1500);
         }
       }
@@ -402,6 +392,10 @@ export default function ChessBoard({
       } else {
         // Reveal animation complete, now transition to normal state and show wave animation
         setIsRevealing(false); // Reset revealing state immediately
+        
+        // Reset hint state back to FirstLetter to preserve the previous hints
+        setHintStep(HintStep.FirstLetter);
+        setHighlightedHintSquare(firstLetterSquare || null);
         
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
