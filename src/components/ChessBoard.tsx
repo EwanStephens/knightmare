@@ -202,11 +202,6 @@ export default function ChessBoard({
     const { row, col } = algebraicToPosition(position);
     const square = gameState.board[row][col];
 
-    // Track piece press for non-tutorial mode
-    if (!tutorialMode && puzzleId && square.piece) {
-      incrementPiecePress(puzzleId, square.piece);
-    }
-
     // In tutorial mode, notify when a piece is selected
     if (tutorialMode && onPieceSelected && square.piece) {
       onPieceSelected(position, gameState.currentWord + (square.piece?.letter || ''));
@@ -230,7 +225,7 @@ export default function ChessBoard({
       // Check if it's a legal capture
       if (!isValidChessCapture(startSquare.piece, startPos, { row, col }, gameState.board, gameState.previousSquares)) {
         triggerIllegalMoveFlash(position);
-        return;
+        return; // Don't track illegal moves
       }
 
       newPreviousSquares = [...gameState.previousSquares, gameState.selectedSquare];
@@ -238,8 +233,13 @@ export default function ChessBoard({
       // First selection: must be a square with a piece
       if (!square.piece) {
         triggerIllegalMoveFlash(position);
-        return;
+        return; // Don't track illegal moves
       }
+    }
+
+    // Only track piece press for non-tutorial mode and valid moves
+    if (!tutorialMode && puzzleId && square.piece) {
+      incrementPiecePress(puzzleId, square.piece);
     }
 
     // Add new letter to word

@@ -5,7 +5,6 @@ import { ChessPiece } from '@/types/chess';
 
 // Storage keys
 const TUTORIAL_COMPLETED_KEY = 'spellcheck_tutorial_completed';
-const SOLVED_PUZZLE_IDS_KEY = 'spellcheck_solved_puzzle_ids';
 const PUZZLE_STATS_KEY = 'spellcheck_puzzle_stats';
 const GLOBAL_STATS_KEY = 'spellcheck_global_stats';
 
@@ -15,10 +14,10 @@ const isBrowser = typeof window !== 'undefined';
 // Type definitions for the enhanced stats system
 export interface PuzzleStats {
   solved: boolean;
-  hintsUsed: number; // 0-2
-  revealUsed: boolean;
-  clearButtonPresses: number;
-  piecePresses: Record<string, number>; // e.g. "white-pawn": 3, "black-knight": 1
+  hints: number; // 0-2 (was hintsUsed)
+  reveal: boolean; // (was revealUsed)
+  clears: number; // (was clearButtonPresses)
+  piecePresses: Record<string, number>; // e.g. "wP": 3, "bN": 1 (abbreviated piece names)
 }
 
 export interface GlobalStats {
@@ -34,25 +33,43 @@ export interface DailyResults {
   long?: PuzzleStats;
 }
 
-// Helper function to get piece key for tracking
+// Helper function to create default puzzle stats
+const createDefaultPuzzleStats = (): PuzzleStats => ({
+  solved: false,
+  hints: 0,
+  reveal: false,
+  clears: 0,
+  piecePresses: {},
+});
+
+// Helper function to get abbreviated piece key for tracking
 export const getPieceKey = (piece: ChessPiece): string => {
-  return `${piece.color}-${piece.type}`;
+  const colorPrefix = piece.color === 'white' ? 'w' : 'b';
+  const pieceMap = {
+    pawn: 'P',
+    knight: 'N',
+    bishop: 'B',
+    rook: 'R',
+    queen: 'Q',
+    king: 'K', // Not used in game but included for completeness
+  };
+  return `${colorPrefix}${pieceMap[piece.type]}`;
 };
 
 // Helper function to get piece unicode symbols for sharing
 const PIECE_UNICODE: Record<string, string> = {
-  'white-pawn': '♙',
-  'black-pawn': '♟',
-  'white-knight': '♘',
-  'black-knight': '♞',
-  'white-bishop': '♗',
-  'black-bishop': '♝',
-  'white-rook': '♖',
-  'black-rook': '♜',
-  'white-queen': '♕',
-  'black-queen': '♛',
-  'white-king': '♔', // Not used in game but included for completeness
-  'black-king': '♚', // Not used in game but included for completeness
+  'wP': '♙',
+  'bP': '♟',
+  'wN': '♘',
+  'bN': '♞',
+  'wB': '♗',
+  'bB': '♝',
+  'wR': '♖',
+  'bR': '♜',
+  'wQ': '♕',
+  'bQ': '♛',
+  'wK': '♔', // Not used in game but included for completeness
+  'bK': '♚', // Not used in game but included for completeness
 };
 
 // Tutorial functions
@@ -69,28 +86,6 @@ export const markTutorialCompleted = (): void => {
 export const markTutorialSkipped = (): void => {
   if (!isBrowser) return;
   localStorage.setItem(TUTORIAL_COMPLETED_KEY, 'true');
-};
-
-// Legacy solved puzzle IDs (for backward compatibility)
-export const getSolvedPuzzleIds = (): Set<string> => {
-  if (!isBrowser) return new Set();
-  const stored = localStorage.getItem(SOLVED_PUZZLE_IDS_KEY);
-  if (!stored) return new Set();
-  try {
-    const arr = JSON.parse(stored);
-    if (Array.isArray(arr)) {
-      return new Set(arr);
-    }
-    return new Set();
-  } catch (e) {
-    console.error('Error parsing solved puzzle IDs from localStorage:', e);
-    return new Set();
-  }
-};
-
-export const isPuzzleSolved = (puzzleId: string): boolean => {
-  const stats = getPuzzleStats(puzzleId);
-  return stats?.solved || false;
 };
 
 // Enhanced puzzle stats functions
@@ -125,40 +120,23 @@ export const setPuzzleStats = (puzzleId: string, stats: PuzzleStats): void => {
   localStorage.setItem(PUZZLE_STATS_KEY, JSON.stringify(allStats));
 };
 
+export const isPuzzleSolved = (puzzleId: string): boolean => {
+  const stats = getPuzzleStats(puzzleId);
+  return stats?.solved || false;
+};
+
 export const markPuzzleSolved = (puzzleId: string): void => {
-  const existingStats = getPuzzleStats(puzzleId) || {
-    solved: false,
-    hintsUsed: 0,
-    revealUsed: false,
-    clearButtonPresses: 0,
-    piecePresses: {},
-  };
-  
+  const existingStats = getPuzzleStats(puzzleId) || createDefaultPuzzleStats();
   existingStats.solved = true;
   setPuzzleStats(puzzleId, existingStats);
-  
-  // Also update legacy system for backward compatibility
-  if (!isBrowser) return;
-  const solved = getSolvedPuzzleIds();
-  if (!solved.has(puzzleId)) {
-    solved.add(puzzleId);
-    localStorage.setItem(SOLVED_PUZZLE_IDS_KEY, JSON.stringify(Array.from(solved)));
-  }
 };
 
 export const incrementHintUsed = (puzzleId: string): void => {
   // Only track if puzzle hasn't been solved yet
   if (isPuzzleSolved(puzzleId)) return;
   
-  const stats = getPuzzleStats(puzzleId) || {
-    solved: false,
-    hintsUsed: 0,
-    revealUsed: false,
-    clearButtonPresses: 0,
-    piecePresses: {},
-  };
-  
-  stats.hintsUsed = Math.min(stats.hintsUsed + 1, 2); // Cap at 2
+  const stats = getPuzzleStats(puzzleId) || createDefaultPuzzleStats();
+  stats.hints = Math.min(stats.hints + 1, 2); // Cap at 2
   setPuzzleStats(puzzleId, stats);
 };
 
@@ -166,15 +144,8 @@ export const markRevealUsed = (puzzleId: string): void => {
   // Only track if puzzle hasn't been solved yet
   if (isPuzzleSolved(puzzleId)) return;
   
-  const stats = getPuzzleStats(puzzleId) || {
-    solved: false,
-    hintsUsed: 0,
-    revealUsed: false,
-    clearButtonPresses: 0,
-    piecePresses: {},
-  };
-  
-  stats.revealUsed = true;
+  const stats = getPuzzleStats(puzzleId) || createDefaultPuzzleStats();
+  stats.reveal = true;
   setPuzzleStats(puzzleId, stats);
 };
 
@@ -182,15 +153,8 @@ export const incrementClearButtonPress = (puzzleId: string): void => {
   // Only track if puzzle hasn't been solved yet
   if (isPuzzleSolved(puzzleId)) return;
   
-  const stats = getPuzzleStats(puzzleId) || {
-    solved: false,
-    hintsUsed: 0,
-    revealUsed: false,
-    clearButtonPresses: 0,
-    piecePresses: {},
-  };
-  
-  stats.clearButtonPresses += 1;
+  const stats = getPuzzleStats(puzzleId) || createDefaultPuzzleStats();
+  stats.clears += 1;
   setPuzzleStats(puzzleId, stats);
 };
 
@@ -198,14 +162,7 @@ export const incrementPiecePress = (puzzleId: string, piece: ChessPiece): void =
   // Only track if puzzle hasn't been solved yet
   if (isPuzzleSolved(puzzleId)) return;
   
-  const stats = getPuzzleStats(puzzleId) || {
-    solved: false,
-    hintsUsed: 0,
-    revealUsed: false,
-    clearButtonPresses: 0,
-    piecePresses: {},
-  };
-  
+  const stats = getPuzzleStats(puzzleId) || createDefaultPuzzleStats();
   const pieceKey = getPieceKey(piece);
   stats.piecePresses[pieceKey] = (stats.piecePresses[pieceKey] || 0) + 1;
   setPuzzleStats(puzzleId, stats);
@@ -325,12 +282,12 @@ const formatPuzzleResult = (stats: PuzzleStats): string => {
   let result = '';
   
   // Add hint emojis
-  for (let i = 0; i < stats.hintsUsed; i++) {
+  for (let i = 0; i < stats.hints; i++) {
     result += '💡';
   }
   
   // Add completion emoji
-  if (stats.revealUsed) {
+  if (stats.reveal) {
     result += '👁️';
   } else if (stats.solved) {
     result += '✅';
@@ -358,11 +315,11 @@ const calculateTotalPiecePresses = (dailyResults: DailyResults): Record<string, 
 const formatPiecePresses = (piecePresses: Record<string, number>): string => {
   // Define the order: pawns, knights, bishops, rooks, queens
   const pieceOrder = [
-    'white-pawn', 'black-pawn',
-    'white-knight', 'black-knight',
-    'white-bishop', 'black-bishop',
-    'white-rook', 'black-rook',
-    'white-queen', 'black-queen',
+    'wP', 'bP',
+    'wN', 'bN',
+    'wB', 'bB',
+    'wR', 'bR',
+    'wQ', 'bQ',
   ];
   
   let result = '';

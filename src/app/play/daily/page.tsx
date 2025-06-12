@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { getDailyPuzzlesForDate } from '@/utils/calendar';
-import { getSolvedPuzzleIds } from '@/utils/gameState';
+import { isPuzzleSolved } from '@/utils/gameState';
 import { useRouter } from 'next/navigation';
 
 function getTodayString() {
@@ -21,11 +21,11 @@ export default function DailyRedirectPage() {
       router.replace('/');
       return;
     }
-    const solved = getSolvedPuzzleIds();
+    
     let target = puzzles.short;
-    if (!solved.has(puzzles.short)) {
+    if (!isPuzzleSolved(puzzles.short)) {
       target = puzzles.short;
-    } else if (!solved.has(puzzles.medium)) {
+    } else if (!isPuzzleSolved(puzzles.medium)) {
       target = puzzles.medium;
     } else {
       target = puzzles.long;

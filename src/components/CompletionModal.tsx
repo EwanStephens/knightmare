@@ -162,9 +162,15 @@ export default function CompletionModal({
             <div className="mb-4">
               <button
                 onClick={handleShare}
-                className="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors duration-200 cursor-pointer"
+                className="w-full px-4 py-2 bg-spell-blue text-white rounded hover:bg-spell-blue-dark transition-colors duration-200 cursor-pointer flex items-center justify-center gap-2"
               >
-                {shareTextCopied ? 'Copied!' : 'Share Results'}
+                <span
+                  className="material-symbols-outlined text-lg align-middle"
+                  style={{ fontFamily: 'Material Symbols Outlined', fontVariationSettings: '"FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24' }}
+                >
+                  share
+                </span>
+                {shareTextCopied ? 'Copied!' : 'Share'}
               </button>
             </div>
           </div>
@@ -185,14 +191,6 @@ export default function CompletionModal({
               Next Level
             </button>
           )}
-          {isDailyPuzzle && !nextPath && (
-            <button
-              className="flex-1 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200 cursor-pointer"
-              onClick={() => window.location.reload()}
-            >
-              Play Again
-            </button>
-          )}
         </div>
       </div>
     </div>
@@ -200,18 +198,18 @@ export default function CompletionModal({
 }
 
 // Helper function to format puzzle result for display
-function formatPuzzleResultEmoji(stats: { solved?: boolean; hintsUsed?: number; revealUsed?: boolean } | undefined): string {
+function formatPuzzleResultEmoji(stats: { solved?: boolean; hints?: number; reveal?: boolean } | undefined): string {
   if (!stats) return '❌';
   
   let result = '';
   
   // Add hint emojis
-  for (let i = 0; i < (stats.hintsUsed || 0); i++) {
+  for (let i = 0; i < (stats.hints || 0); i++) {
     result += '💡';
   }
   
   // Add completion emoji
-  if (stats.revealUsed) {
+  if (stats.reveal) {
     result += '👁️';
   } else if (stats.solved) {
     result += '✅';
