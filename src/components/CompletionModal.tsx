@@ -45,25 +45,15 @@ export default function CompletionModal({
   // Effect to handle stats and streak updates when modal opens
   useEffect(() => {
     if (isOpen && isDailyPuzzle && date && shortPuzzleId && mediumPuzzleId && longPuzzleId && !streakUpdated) {
-      console.log("CompletionModal: Updating streak for first time");
-      
-      // Log before update
-      const beforeStats = getGlobalStats();
-      console.log("Before streak update:", beforeStats);
-      
       // Update streak for today only once when the modal first opens
       updateStreakForDate(date);
       setStreakUpdated(true);
-      
       // Get the latest global stats after streak update
       const stats = getGlobalStats();
-      console.log("After streak update:", stats);
       setGlobalStats(stats);
-      
       // Get daily results
       const results = getDailyResultsForPuzzles(shortPuzzleId, mediumPuzzleId, longPuzzleId);
       setDailyResults(results);
-      
       // Generate share text with the updated stats
       const text = generateShareText(date, results);
       setShareText(text);
