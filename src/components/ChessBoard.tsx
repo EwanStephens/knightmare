@@ -304,6 +304,14 @@ export default function ChessBoard({
     const newState = clearGameBoard();
     setGameState(newState);
     
+    // If we're clearing after a reveal, reset the revealed path state but preserve hints
+    if (hintStep === HintStep.Reveal) {
+      setRevealedPath([]);
+      // Go back to the first letter hint state (preserve the first two hints)
+      setHintStep(HintStep.FirstLetter);
+      setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
+    }
+    
     // Notify tutorial system of clear action in tutorial mode
     if (tutorialMode && onPieceSelected) {
       onPieceSelected('clear', '');
@@ -337,10 +345,16 @@ export default function ChessBoard({
           setTimeout(() => {
             setShowWaveAnimation(false);
             setShowCompleteModal(true);
+            // After wave animation and modal setup, reset hint step back to FirstLetter to preserve hints
+            setHintStep(HintStep.FirstLetter);
+            setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
           }, 1500);
         } else {
           setTimeout(() => {
             setShowWaveAnimation(false);
+            // Reset hint step back to FirstLetter to preserve hints
+            setHintStep(HintStep.FirstLetter);
+            setHighlightedHintSquare(firstLetterSquare || null); // Re-highlight the first letter
           }, 1500);
         }
       }
@@ -380,6 +394,9 @@ export default function ChessBoard({
       if (i < revealPath.length) {
         setTimeout(revealNext, 1000);
       } else {
+        // Reveal animation complete, now transition to normal state and show wave animation
+        setIsRevealing(false); // Reset revealing state immediately
+        
         if (!tutorialMode && puzzleId) {
           markPuzzleSolved(puzzleId);
         }
@@ -387,20 +404,21 @@ export default function ChessBoard({
         if (onLevelComplete) {
           onLevelComplete();
         }
-        // For daily puzzles, only show completion modal for long puzzles
+        
+        // Show wave animation for the completed word
+        const targetWord = gameLevelData?.targetWord || '';
+        
+        // For daily puzzles, handle different types
         if (isDailyPuzzle && puzzleType !== 'long') {
-          // Auto-navigate to next puzzle after delay for short/medium
+          // Auto-navigate to next puzzle after wave animation for short/medium
           if (nextPuzzleId) {
-            setTimeout(() => {
-              window.location.href = `/puzzle/${nextPuzzleId}`;
-            }, 1500);
+            startWaveAnimation(targetWord, `/puzzle/${nextPuzzleId}`);
+          } else {
+            startWaveAnimation(targetWord);
           }
         } else {
-          // Regular behavior for non-daily puzzles or long daily puzzles
-          setTimeout(() => {
-            setShowCompleteModal(true);
-            setIsRevealing(false);
-          }, 2000);
+          // For non-daily puzzles or long daily puzzles, show completion modal after wave animation
+          startWaveAnimation(targetWord, undefined, true);
         }
       }
     };
