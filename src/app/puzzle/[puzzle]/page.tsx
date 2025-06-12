@@ -53,11 +53,6 @@ export default async function PuzzlePage({ params }: { params: Promise<{ puzzle:
   const targetWord = puzzleData.targetWords[0];
   let congratsMessage = `Congratulations!`;
 
-  // If this is the long puzzle for the day, add extra congrats
-  if (daily && puzzleType === 'long') {
-    congratsMessage += ' You completed all the daily puzzles! See you tomorrow.';
-  }
-
   // Build the board from pieces
   const board = createEmptyBoard();
   puzzleData.pieces.forEach((piece: { position: string; type: string; color: string; letter: string }) => {
