@@ -45,12 +45,6 @@ export default function TutorialChessBoard() {
     }, 1600); // Slightly longer than the 1500ms animation timeout
   };
 
-  // Handle next level navigation
-  const handleCloseModal = () => {
-    setShowCompleteModal(false);
-    // For the final tutorial, navigate home or wherever appropriate
-  };
-
   // Notify the tutorial system about piece selection
   const handlePieceSelected = (position: string, currentWord: string) => {
     console.log(`TutorialChessBoard passing to context: position=${position}, currentWord=${currentWord}`);
@@ -77,9 +71,8 @@ export default function TutorialChessBoard() {
       {/* Use the shared CompletionModal component */}
       <CompletionModal 
         isOpen={showCompleteModal}
-        onClose={handleCloseModal}
-        congratsMessage={tutorialLevel.congratsMessage}
-        targetWord={tutorialLevel.targetWord}
+        onClose={() => setShowCompleteModal(false)}
+        congratsMessage={tutorialLevel?.congratsMessage || `Level complete! Well done.`}
       />
     </div>
   );

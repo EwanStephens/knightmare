@@ -6,14 +6,12 @@ interface CompletionModalProps {
   isOpen: boolean;
   onClose: () => void;
   congratsMessage: string;
-  targetWord: string;
 }
 
 export default function CompletionModal({
   isOpen,
   onClose,
   congratsMessage,
-  targetWord,
 }: CompletionModalProps) {
   const router = useRouter();
   

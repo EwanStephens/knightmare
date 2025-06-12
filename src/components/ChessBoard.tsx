@@ -636,7 +636,6 @@ export default function ChessBoard({
         isOpen={showCompleteModal}
         onClose={() => setShowCompleteModal(false)}
         congratsMessage={congratsMessage || gameLevelData.congratsMessage}
-        targetWord={gameLevelData.targetWord}
       />
     </div>
   );
