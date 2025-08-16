@@ -44,3 +44,5 @@ venv/
 
 # Nonstandard puzzles
 src/interesting/
+
+*.code-workspace

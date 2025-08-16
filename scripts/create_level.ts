@@ -1,5 +1,5 @@
 import { getAndUseRandomWord, moveWordBackToUnused } from '../src/utils/wordbankManager';
-import { generateBoard, GeneratedBoardResult } from '../src/level_creator/boardGenerator';
+import { generateBoard, GeneratedBoardResult, PieceFrequencies } from '../src/level_creator/boardGenerator';
 import { findLongestWords, ValidationResult } from '../src/level_creator/validator';
 import { serializeLevel } from '../src/level_creator/serializer';
 import path from 'path';
@@ -8,14 +8,14 @@ import { generatePuzzleId, getPuzzlePathFromId, checkPuzzleIdExists } from '../s
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-export async function createLevelWithTargetWord(targetWord: string, extraLetters: number, fromWordbank: boolean, testMode = false) {
+export async function createLevelWithTargetWord(targetWord: string, extraLetters: number, fromWordbank: boolean, testMode = false, pieceFrequencies?: PieceFrequencies) {
   try {
     console.log(`[Level Creator] Starting with target word '${targetWord}' (length ${targetWord.length}) and ${extraLetters} extra letters.`);
 
     // 1. Generate the board (with error handling)
-    let board, targetPath, legalCaptures;
+    let board: any, targetPath: any, legalCaptures: any;
     try {
-      const result: GeneratedBoardResult = await generateBoard(targetWord, extraLetters);
+      const result: GeneratedBoardResult = await generateBoard(targetWord, extraLetters, pieceFrequencies);
       board = result.board;
       targetPath = result.targetPath;
       legalCaptures = result.legalCaptures;
@@ -70,9 +70,9 @@ export async function createLevelWithTargetWord(targetWord: string, extraLetters
   }
 }
 
-export async function createLevelWithWordLength(wordLength: number, extraLetters: number, testMode = false) {
+export async function createLevelWithWordLength(wordLength: number, extraLetters: number, testMode = false, pieceFrequencies?: PieceFrequencies) {
   try {
-    let targetWord;
+    let targetWord: string;
     if (!testMode) {
       targetWord = await getAndUseRandomWord(wordLength);
     } else {
@@ -85,7 +85,7 @@ export async function createLevelWithWordLength(wordLength: number, extraLetters
       }
       targetWord = wordbank.unused_words[Math.floor(Math.random() * wordbank.unused_words.length)];
     }
-    return await createLevelWithTargetWord(targetWord, extraLetters, !testMode, testMode);
+    return await createLevelWithTargetWord(targetWord, extraLetters, !testMode, testMode, pieceFrequencies);
   } catch (err) {
     console.error('[Level Creator] Error picking word from wordbank:', err);
     return { success: false, error: err };
@@ -111,12 +111,30 @@ if (require.main === module) {
       describe: 'Number of additional random letters to add to the board',
       default: 0,
     })
+    .option('piece-frequencies', {
+      type: 'string',
+      describe: 'JSON string defining piece frequencies (e.g., \'{"pawn":0.15,"knight":0.25,"bishop":0.15,"rook":0.2,"queen":0.25}\')',
+      coerce: (arg: string) => {
+        try {
+          const parsed = JSON.parse(arg);
+          // Validate that all required piece types are present and sum to 1
+          const requiredTypes = ['pawn', 'knight', 'bishop', 'rook', 'queen'];
+          const total = requiredTypes.reduce((sum, type) => sum + (parsed[type] || 0), 0);
+          if (Math.abs(total - 1) > 0.001) {
+            throw new Error(`Piece frequencies must sum to 1, got ${total}`);
+          }
+          return parsed;
+        } catch (e) {
+          throw new Error(`Invalid piece frequencies JSON: ${e}`);
+        }
+      },
+    })
     .option('test', {
       type: 'boolean',
       describe: 'Test mode (no wordbank or file writes)',
       default: false,
     })
-    .check(argv => {
+    .check((argv: any) => {
       if ((argv.word && argv.wordLength) || (!argv.word && !argv.wordLength)) {
         throw new Error('You must specify exactly one of --word or --word-length.');
       }
@@ -136,7 +154,8 @@ if (require.main === module) {
     // Mode: --word <targetWord>
     const explicitTargetWord = argv.word;
     const extraLetters = argv.extraLetters as number;
-    createLevelWithTargetWord(explicitTargetWord, extraLetters, false, argv.test).then(result => {
+    const pieceFrequencies = argv.pieceFrequencies as PieceFrequencies | undefined;
+    createLevelWithTargetWord(explicitTargetWord, extraLetters, false, argv.test, pieceFrequencies).then(result => {
       if (result.success) {
         if (argv.test) {
           console.log(`[Level Creator] Test mode complete.`);
@@ -152,7 +171,8 @@ if (require.main === module) {
     // Mode: --word-length <wordLength>
     const wordLength = argv.wordLength as number;
     const extraLetters = argv.extraLetters as number;
-    createLevelWithWordLength(wordLength, extraLetters, argv.test).then(result => {
+    const pieceFrequencies = argv.pieceFrequencies as PieceFrequencies | undefined;
+    createLevelWithWordLength(wordLength, extraLetters, argv.test, pieceFrequencies).then(result => {
       if (result.success) {
         if (argv.test) {
           console.log(`[Level Creator] Test mode complete.`);
