@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "MANDATE",
+    "MANDAT",
+    "MANDI",
+    "ANDA",
+    "ANDI",
+    "ATEF",
+    "DATE",
+    "MAND",
+    "TEAN",
+    "AND"
+  ],
+  "targetPath": [
+    "d3",
+    "c3",
+    "d2",
+    "e3",
+    "c5",
+    "a4",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 1,
+    "a4": 1,
+    "a3": 2,
+    "b3": 3,
+    "c3": 1,
+    "d3": 2,
+    "e3": 2,
+    "b2": 1,
+    "d2": 2,
+    "e2": 1,
+    "a1": 1,
+    "c1": 1
+  }
+}

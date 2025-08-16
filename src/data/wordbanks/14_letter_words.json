@@ -6,8 +6,6 @@
     "administrative",
     "authentication",
     "cardiovascular",
-    "characteristic",
-    "circumstantial",
     "classification",
     "constitutional",
     "correspondence",
@@ -31,6 +29,8 @@
     "transportation"
   ],
   "used_words": [
-    "infrastructure"
+    "infrastructure",
+    "characteristic",
+    "circumstantial"
   ]
 }

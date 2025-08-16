@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "LIFETIME",
+    "LIFE",
+    "TIME",
+    "ELI",
+    "FET",
+    "FIL",
+    "IFE",
+    "LIF",
+    "TIL",
+    "TIM"
+  ],
+  "targetPath": [
+    "e3",
+    "d2",
+    "c3",
+    "b2",
+    "c2",
+    "c5",
+    "a5",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "e5": 1,
+    "d4": 1,
+    "a3": 2,
+    "c3": 2,
+    "e3": 1,
+    "b2": 1,
+    "c2": 3,
+    "d2": 2,
+    "c1": 0
+  }
+}

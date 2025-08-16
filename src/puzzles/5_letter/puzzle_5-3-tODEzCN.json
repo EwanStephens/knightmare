@@ -1,0 +1,73 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DROVE",
+    "ROVE"
+  ],
+  "targetPath": [
+    "c1",
+    "d2",
+    "c4",
+    "a2",
+    "c2"
+  ],
+  "legalCaptures": {
+    "e5": 0,
+    "a4": 1,
+    "c4": 1,
+    "a2": 2,
+    "c2": 0,
+    "d2": 1,
+    "a1": 0,
+    "c1": 1
+  }
+}

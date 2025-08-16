@@ -16,7 +16,6 @@
     "biodiversity",
     "broadcasting",
     "cancellation",
-    "championship",
     "commissioner",
     "commonwealth",
     "compensation",
@@ -103,17 +102,13 @@
     "productivity",
     "professional",
     "quantitative",
-    "recreational",
     "refrigerator",
     "registration",
     "relationship",
     "representing",
     "reproduction",
     "reproductive",
-    "respectively",
     "satisfaction",
-    "satisfactory",
-    "significance",
     "specializing",
     "specifically",
     "spirituality",
@@ -140,6 +135,11 @@
     "preservation",
     "instrumental",
     "intersection",
-    "notification"
+    "notification",
+    "satisfactory",
+    "championship",
+    "significance",
+    "recreational",
+    "respectively"
   ]
 }

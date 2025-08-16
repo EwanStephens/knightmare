@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "APPLY",
+    "APPL",
+    "PYRO",
+    "APP",
+    "PLY",
+    "PPD",
+    "PPL",
+    "PYR"
+  ],
+  "targetPath": [
+    "b5",
+    "d4",
+    "e5",
+    "e2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "e5": 2,
+    "b4": 0,
+    "d4": 3,
+    "b3": 1,
+    "c3": 2,
+    "e2": 1,
+    "d1": 3
+  }
+}

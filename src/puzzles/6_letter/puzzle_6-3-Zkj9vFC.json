@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "GENTLE",
+    "GENT",
+    "LENT",
+    "GEN",
+    "LEN"
+  ],
+  "targetPath": [
+    "a4",
+    "b2",
+    "c4",
+    "b5",
+    "e5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "e5": 1,
+    "a4": 1,
+    "c4": 1,
+    "d4": 1,
+    "a3": 1,
+    "b2": 2,
+    "c1": 1,
+    "e1": 0
+  }
+}

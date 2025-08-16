@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "PROTECT",
+    "PROTE",
+    "OUTR",
+    "ROTE",
+    "ROUN",
+    "ROUT",
+    "NUT",
+    "OUT",
+    "PRO",
+    "PTE"
+  ],
+  "targetPath": [
+    "e3",
+    "e5",
+    "b5",
+    "e2",
+    "b2",
+    "b4",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "e5": 2,
+    "a4": 3,
+    "b4": 1,
+    "e3": 2,
+    "a2": 2,
+    "b2": 2,
+    "e2": 2,
+    "a1": 0,
+    "b1": 0,
+    "c1": 1,
+    "e1": 0
+  }
+}

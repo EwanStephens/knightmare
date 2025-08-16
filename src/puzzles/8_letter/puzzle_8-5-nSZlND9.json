@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DOWNTOWN",
+    "DOTE",
+    "DOTH",
+    "DOTO",
+    "DOWN",
+    "POTE",
+    "TOWN",
+    "WOTE",
+    "DOT",
+    "DOW"
+  ],
+  "targetPath": [
+    "d1",
+    "c3",
+    "c1",
+    "a1",
+    "b3",
+    "d2",
+    "e3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 0,
+    "d5": 1,
+    "c4": 1,
+    "d4": 0,
+    "e4": 1,
+    "b3": 4,
+    "c3": 3,
+    "e3": 1,
+    "d2": 1,
+    "a1": 1,
+    "c1": 2,
+    "d1": 1
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "MENTION",
+    "ENTIA",
+    "AION",
+    "MENO",
+    "MENT",
+    "AIT",
+    "ION",
+    "MEN"
+  ],
+  "targetPath": [
+    "e2",
+    "d1",
+    "b3",
+    "a2",
+    "b1",
+    "c1",
+    "d2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "d5": 0,
+    "d4": 0,
+    "b3": 1,
+    "c3": 0,
+    "d3": 1,
+    "a2": 2,
+    "d2": 1,
+    "e2": 1,
+    "a1": 1,
+    "b1": 3,
+    "c1": 1,
+    "d1": 3
+  }
+}
