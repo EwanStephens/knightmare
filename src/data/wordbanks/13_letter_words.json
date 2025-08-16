@@ -1,6 +1,5 @@
 {
   "unused_words": [
-    "accessibility",
     "accommodation",
     "accreditation",
     "administrator",
@@ -31,7 +30,6 @@
     "controversial",
     "corresponding",
     "demonstration",
-    "determination",
     "developmental",
     "disappearance",
     "distinguished",
@@ -72,9 +70,11 @@
     "undergraduate",
     "understanding",
     "unfortunately",
-    "vulnerability"
+    "determination"
   ],
   "used_words": [
-    "psychological"
+    "psychological",
+    "vulnerability",
+    "accessibility"
   ]
 }

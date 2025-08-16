@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "RELOAD",
+    "LOAD",
+    "ADE",
+    "ELD",
+    "ELI",
+    "ERA",
+    "LER",
+    "LOA",
+    "LOE",
+    "OAD"
+  ],
+  "targetPath": [
+    "b2",
+    "c1",
+    "d2",
+    "e2",
+    "e3",
+    "c2"
+  ],
+  "legalCaptures": {
+    "b4": 0,
+    "c4": 0,
+    "e3": 1,
+    "b2": 2,
+    "c2": 3,
+    "d2": 4,
+    "e2": 3,
+    "a1": 0,
+    "c1": 2
+  }
+}

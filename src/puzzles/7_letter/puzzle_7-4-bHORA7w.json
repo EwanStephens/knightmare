@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "SKATING",
+    "AKING",
+    "ATING",
+    "AKIN",
+    "KATS",
+    "KING",
+    "SKAT",
+    "SKIN",
+    "TING",
+    "ATI"
+  ],
+  "targetPath": [
+    "e4",
+    "c4",
+    "b5",
+    "a4",
+    "a1",
+    "d1",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "d5": 1,
+    "a4": 2,
+    "c4": 2,
+    "e4": 1,
+    "e3": 0,
+    "c2": 1,
+    "a1": 2,
+    "d1": 1,
+    "e1": 0
+  }
+}

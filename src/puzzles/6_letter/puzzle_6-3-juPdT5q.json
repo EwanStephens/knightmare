@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DONATE",
+    "DONAT",
+    "DONA",
+    "NATE",
+    "ATE",
+    "DON",
+    "NAT",
+    "ONA"
+  ],
+  "targetPath": [
+    "e3",
+    "e4",
+    "d3",
+    "c4",
+    "b3",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "b4": 0,
+    "c4": 2,
+    "e4": 1,
+    "b3": 1,
+    "d3": 2,
+    "e3": 1,
+    "b2": 0
+  }
+}

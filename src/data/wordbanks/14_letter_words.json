@@ -4,18 +4,12 @@
     "acknowledgment",
     "administration",
     "administrative",
-    "authentication",
     "cardiovascular",
-    "characteristic",
-    "circumstantial",
-    "classification",
     "constitutional",
     "correspondence",
     "discrimination",
     "identification",
     "implementation",
-    "interpretation",
-    "multiplication",
     "organizational",
     "pharmaceutical",
     "recommendation",
@@ -25,12 +19,18 @@
     "representative",
     "responsibility",
     "simultaneously",
-    "superintendent",
     "sustainability",
     "transformation",
     "transportation"
   ],
   "used_words": [
-    "infrastructure"
+    "infrastructure",
+    "characteristic",
+    "circumstantial",
+    "superintendent",
+    "multiplication",
+    "interpretation",
+    "classification",
+    "authentication"
   ]
 }

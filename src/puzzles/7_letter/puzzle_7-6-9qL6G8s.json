@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "PATTERN",
+    "ATTERN",
+    "PATTER",
+    "ATTER",
+    "PATTE",
+    "TERNE",
+    "ATTE",
+    "PATS",
+    "PATT",
+    "TERN"
+  ],
+  "targetPath": [
+    "d2",
+    "c1",
+    "b1",
+    "b2",
+    "e5",
+    "a1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 0,
+    "d5": 1,
+    "e5": 1,
+    "e4": 1,
+    "b3": 0,
+    "e3": 0,
+    "a2": 1,
+    "b2": 1,
+    "d2": 1,
+    "a1": 2,
+    "b1": 4,
+    "c1": 1
+  }
+}

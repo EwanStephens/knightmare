@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CERTAINLY",
+    "CERTAIN",
+    "CENTAI",
+    "AIRE",
+    "CENT",
+    "CERT",
+    "RENT",
+    "TAKY",
+    "AIR",
+    "CEN"
+  ],
+  "targetPath": [
+    "c2",
+    "b1",
+    "b2",
+    "e2",
+    "c3",
+    "a3",
+    "c1",
+    "a2",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "a4": 2,
+    "c4": 0,
+    "a3": 1,
+    "c3": 3,
+    "d3": 2,
+    "a2": 1,
+    "b2": 2,
+    "c2": 2,
+    "e2": 2,
+    "b1": 3,
+    "c1": 3
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CHARACTERISTIC",
+    "CHARACTERIST",
+    "CHARACTER",
+    "CHARACT",
+    "CORAISE",
+    "ARAISE",
+    "CHARAC",
+    "CHICOT",
+    "CORSER",
+    "CORSIE"
+  ],
+  "targetPath": [
+    "b4",
+    "c5",
+    "c1",
+    "b2",
+    "a3",
+    "b5",
+    "a4",
+    "d4",
+    "b3",
+    "b1",
+    "a1",
+    "a5",
+    "e5",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 2,
+    "e5": 1,
+    "a4": 2,
+    "b4": 2,
+    "d4": 1,
+    "e4": 0,
+    "a3": 2,
+    "b3": 2,
+    "d3": 2,
+    "e3": 1,
+    "b2": 3,
+    "d2": 5,
+    "e2": 0,
+    "a1": 2,
+    "b1": 2,
+    "c1": 4,
+    "d1": 0,
+    "e1": 1
+  }
+}

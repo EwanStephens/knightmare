@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "HOMEWORK",
+    "ALEW",
+    "HOME",
+    "HOWE",
+    "KHOT",
+    "ROME",
+    "ROTO",
+    "TOME",
+    "TORO",
+    "WORK"
+  ],
+  "targetPath": [
+    "c5",
+    "c3",
+    "d2",
+    "d3",
+    "c2",
+    "b3",
+    "d5",
+    "e3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 2,
+    "d5": 2,
+    "a4": 2,
+    "e4": 1,
+    "b3": 3,
+    "c3": 4,
+    "d3": 1,
+    "e3": 2,
+    "a2": 1,
+    "b2": 2,
+    "c2": 2,
+    "d2": 1,
+    "e1": 0
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "THROWN",
+    "THROW",
+    "ORNA",
+    "ROAN",
+    "THRO",
+    "WOAN",
+    "WORN",
+    "AHS",
+    "AHT",
+    "NAN"
+  ],
+  "targetPath": [
+    "e3",
+    "e2",
+    "b5",
+    "e5",
+    "e4",
+    "b1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 4,
+    "e5": 3,
+    "e4": 2,
+    "c3": 2,
+    "e3": 1,
+    "d2": 1,
+    "e2": 3,
+    "b1": 2
+  }
+}

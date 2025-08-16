@@ -5,8 +5,45 @@ import { randomWeightedLetter } from '../utils/letterFrequency';
 const PIECE_TYPES: PieceType[] = ['pawn', 'knight', 'bishop', 'rook', 'queen'];
 const PIECE_COLORS: ('white' | 'black')[] = ['white', 'black'];
 
-function randomPieceType(): PieceType {
-  return PIECE_TYPES[Math.floor(Math.random() * PIECE_TYPES.length)];
+export interface PieceFrequencies {
+  pawn: number;
+  knight: number;
+  bishop: number;
+  rook: number;
+  queen: number;
+}
+
+export const DEFAULT_PIECE_FREQUENCIES: PieceFrequencies = {
+  pawn: 0.2,
+  knight: 0.2,
+  bishop: 0.2,
+  rook: 0.2,
+  queen: 0.2,
+};
+
+function randomPieceType(frequencies?: PieceFrequencies): PieceType {
+  if (!frequencies) {
+    return PIECE_TYPES[Math.floor(Math.random() * PIECE_TYPES.length)];
+  }
+  
+  // Validate that frequencies sum to 1
+  const total = Object.values(frequencies).reduce((sum, freq) => sum + freq, 0);
+  if (Math.abs(total - 1) > 0.001) {
+    throw new Error(`Piece frequencies must sum to 1, got ${total}`);
+  }
+  
+  const random = Math.random();
+  let cumulative = 0;
+  
+  for (const [pieceType, frequency] of Object.entries(frequencies)) {
+    cumulative += frequency;
+    if (random <= cumulative) {
+      return pieceType as PieceType;
+    }
+  }
+  
+  // Fallback to queen if we somehow get here
+  return 'queen';
 }
 
 function oppositePieceColor(color: 'white' | 'black'): 'white' | 'black' {
@@ -58,7 +95,7 @@ export interface GeneratedBoardResult {
   legalCaptures: Record<string, number>; // position -> number of legal captures
 }
 
-export async function generateBoard(targetWord: string, extraLetters: number): Promise<GeneratedBoardResult> {
+export async function generateBoard(targetWord: string, extraLetters: number, pieceFrequencies?: PieceFrequencies): Promise<GeneratedBoardResult> {
   let attempts = 0;
   while (attempts < 10) {
     attempts++;
@@ -71,7 +108,7 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
     // 1. Pick a random starting square
     const start: Position = randomBoardPosition();
     const startSquare = board[start.row][start.col];
-    const startPieceType = randomPieceType();
+    const startPieceType = randomPieceType(pieceFrequencies);
     const startColor: 'white' | 'black' = PIECE_COLORS[Math.floor(Math.random() * 2)];
     startSquare.piece = {
       type: startPieceType,
@@ -116,22 +153,49 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
       const nextColor = oppositePieceColor(currentColor);
       let foundPiece = false;
       let nextPiece: ChessPiece | null = null;
-      const pieceTypesShuffled = PIECE_TYPES.slice().sort(() => Math.random() - 0.5);
-      for (const pt of pieceTypesShuffled) {
-        const candidate: ChessPiece = {
-          type: pt,
-          color: nextColor,
-          letter: targetWord[i].toUpperCase(),
-        };
-        // Temporarily place the piece
-        board[nextPos.row][nextPos.col].piece = candidate;
-        const moves = getPotentialEmptyCaptureSquares(candidate, nextPos, board, previousSquares);
-        // Remove the piece after checking
-        board[nextPos.row][nextPos.col].piece = null;
-        if (moves.length > 0) {
-          nextPiece = candidate;
-          foundPiece = true;
-          break;
+      
+      // Try to use piece frequencies if available, otherwise fall back to random selection
+      if (pieceFrequencies) {
+        // Try multiple times with weighted selection to find a valid piece
+        for (let attempt = 0; attempt < 10; attempt++) {
+          const pt = randomPieceType(pieceFrequencies);
+          const candidate: ChessPiece = {
+            type: pt,
+            color: nextColor,
+            letter: targetWord[i].toUpperCase(),
+          };
+          // Temporarily place the piece
+          board[nextPos.row][nextPos.col].piece = candidate;
+          const moves = getPotentialEmptyCaptureSquares(candidate, nextPos, board, previousSquares);
+          // Remove the piece after checking
+          board[nextPos.row][nextPos.col].piece = null;
+          if (moves.length > 0) {
+            nextPiece = candidate;
+            foundPiece = true;
+            break;
+          }
+        }
+      }
+      
+      // Fall back to original logic if piece frequencies didn't work or weren't provided
+      if (!foundPiece) {
+        const pieceTypesShuffled = PIECE_TYPES.slice().sort(() => Math.random() - 0.5);
+        for (const pt of pieceTypesShuffled) {
+          const candidate: ChessPiece = {
+            type: pt,
+            color: nextColor,
+            letter: targetWord[i].toUpperCase(),
+          };
+          // Temporarily place the piece
+          board[nextPos.row][nextPos.col].piece = candidate;
+          const moves = getPotentialEmptyCaptureSquares(candidate, nextPos, board, previousSquares);
+          // Remove the piece after checking
+          board[nextPos.row][nextPos.col].piece = null;
+          if (moves.length > 0) {
+            nextPiece = candidate;
+            foundPiece = true;
+            break;
+          }
         }
       }
       if (!foundPiece) {
@@ -163,7 +227,7 @@ export async function generateBoard(targetWord: string, extraLetters: number): P
     emptySquares = emptySquares.sort(() => Math.random() - 0.5);
     for (let i = 0; i < Math.min(extraLetters, emptySquares.length); i++) {
       const pos = emptySquares[i];
-      const pieceType = randomPieceType();
+      const pieceType = randomPieceType(pieceFrequencies);
       const color = PIECE_COLORS[Math.floor(Math.random() * 2)];
       const letter = randomWeightedLetter();
       board[pos.row][pos.col].piece = {

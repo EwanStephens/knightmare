@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "MARATHON",
+    "MARA",
+    "RATH",
+    "THON",
+    "AAH",
+    "AHO",
+    "ARA",
+    "HOE",
+    "HON",
+    "MAR"
+  ],
+  "targetPath": [
+    "e3",
+    "e1",
+    "b1",
+    "a2",
+    "c3",
+    "b3",
+    "c2",
+    "b2"
+  ],
+  "legalCaptures": {
+    "b4": 1,
+    "c4": 0,
+    "b3": 1,
+    "c3": 1,
+    "e3": 1,
+    "a2": 2,
+    "b2": 2,
+    "c2": 2,
+    "d2": 0,
+    "a1": 0,
+    "b1": 1,
+    "e1": 2
+  }
+}

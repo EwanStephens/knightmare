@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DRIED",
+    "ANDE",
+    "DRIE",
+    "AND",
+    "RIE"
+  ],
+  "targetPath": [
+    "e1",
+    "d2",
+    "b2",
+    "b4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 1,
+    "d5": 1,
+    "b4": 1,
+    "e3": 1,
+    "b2": 2,
+    "d2": 2,
+    "e1": 1
+  }
+}

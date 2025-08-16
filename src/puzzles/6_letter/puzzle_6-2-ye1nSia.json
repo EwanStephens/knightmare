@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "FLAVOR",
+    "FLAVO",
+    "FLAV",
+    "AVO",
+    "HIA",
+    "LAV"
+  ],
+  "targetPath": [
+    "d5",
+    "e4",
+    "e1",
+    "d3",
+    "a3",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "d5": 1,
+    "e4": 1,
+    "a3": 1,
+    "d3": 3,
+    "b2": 2,
+    "d2": 1,
+    "e1": 1
+  }
+}

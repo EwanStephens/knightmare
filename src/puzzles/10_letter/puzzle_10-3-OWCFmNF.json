@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "DEPRESSION",
+    "DEPRESS",
+    "OREIDE",
+    "DEPR",
+    "EIDE",
+    "ESSE",
+    "IDEO",
+    "ORES",
+    "REID",
+    "RENT"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "c4",
+    "e4",
+    "c3",
+    "d5",
+    "c5",
+    "c2",
+    "d3",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 3,
+    "c5": 2,
+    "d5": 3,
+    "e5": 2,
+    "c4": 0,
+    "d4": 1,
+    "e4": 2,
+    "c3": 4,
+    "d3": 3,
+    "c2": 2,
+    "e2": 2,
+    "a1": 1
+  }
+}

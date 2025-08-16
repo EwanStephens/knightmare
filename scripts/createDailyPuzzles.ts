@@ -1,10 +1,23 @@
+/// <reference types="node" />
+
 import { createLevelWithWordLength } from './create_level';
 import { getNumUnusedWords } from '../src/utils/wordbankManager';
-import fs from 'fs/promises';
-import path from 'path';
+import { PieceFrequencies } from '../src/level_creator/boardGenerator';
+
+const fs = require('fs/promises');
+const path = require('path');
 
 const MAX_TOTAL_LETTERS = 22;
 const MAX_RETRIES = 10;
+
+// Define piece frequencies for different puzzle types
+const LONG_PUZZLE_FREQUENCIES: PieceFrequencies = {
+  pawn: 0.15,
+  knight: 0.25,
+  bishop: 0.15,
+  rook: 0.20,
+  queen: 0.25,
+};
 
 function parseDate(dateStr: string): Date {
   const [year, month, day] = dateStr.split('-').map(Number);
@@ -55,7 +68,11 @@ async function createAndAssignPuzzle(calendar: any, dateStr: string, type: 'shor
       const wordLength = await pickWordLength(options);
       let extraLetters = getExtraLetters(wordLength);
       if (wordLength + extraLetters > MAX_TOTAL_LETTERS) extraLetters = MAX_TOTAL_LETTERS - wordLength;
-      const result = await createLevelWithWordLength(wordLength, extraLetters);
+      
+      // Use weighted piece frequencies for long puzzles
+      const pieceFrequencies = type === 'long' ? LONG_PUZZLE_FREQUENCIES : undefined;
+      
+      const result = await createLevelWithWordLength(wordLength, extraLetters, false, pieceFrequencies);
       if (result.success && result.puzzleId) {
         calendar.dates[dateStr][type] = result.puzzleId;
         calendar.puzzles[String(result.puzzleId)] = { date: dateStr, length: wordLength, type };

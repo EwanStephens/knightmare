@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ASBESTOS",
+    "ASBEST",
+    "ARITE",
+    "RITES",
+    "BEST",
+    "RITE",
+    "SARI",
+    "TITE",
+    "TITS",
+    "ASB"
+  ],
+  "targetPath": [
+    "a1",
+    "c1",
+    "d1",
+    "e1",
+    "e5",
+    "b5",
+    "a5",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "e5": 2,
+    "a4": 1,
+    "d4": 1,
+    "b3": 2,
+    "d3": 1,
+    "b2": 1,
+    "d2": 2,
+    "a1": 2,
+    "c1": 2,
+    "d1": 3,
+    "e1": 2
+  }
+}

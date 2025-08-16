@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SECURE",
+    "CURES",
+    "CURE",
+    "REIM",
+    "CUR",
+    "ECU",
+    "ESE",
+    "REI",
+    "RES",
+    "SEC"
+  ],
+  "targetPath": [
+    "b3",
+    "b1",
+    "a2",
+    "a1",
+    "a5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 0,
+    "c4": 2,
+    "e4": 3,
+    "b3": 1,
+    "a2": 2,
+    "a1": 1,
+    "b1": 2
+  }
+}

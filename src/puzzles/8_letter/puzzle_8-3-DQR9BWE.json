@@ -1,0 +1,102 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ADVANCED",
+    "ADVANCE",
+    "ADV",
+    "ANC",
+    "CEE",
+    "DAD",
+    "NAE"
+  ],
+  "targetPath": [
+    "c4",
+    "b3",
+    "c5",
+    "c3",
+    "b4",
+    "a3",
+    "b2",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 0,
+    "b4": 2,
+    "c4": 2,
+    "a3": 2,
+    "b3": 2,
+    "c3": 2,
+    "d3": 1,
+    "e3": 1,
+    "b2": 2,
+    "d1": 0
+  }
+}

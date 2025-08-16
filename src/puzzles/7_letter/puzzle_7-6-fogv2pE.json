@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "ALLOWED",
+    "ALLOW",
+    "LOWED",
+    "ALLO",
+    "LOWE",
+    "OWED",
+    "ALD",
+    "ALL",
+    "LOW",
+    "OWD"
+  ],
+  "targetPath": [
+    "a1",
+    "b2",
+    "d4",
+    "e5",
+    "c4",
+    "b5",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 0,
+    "c4": 3,
+    "d4": 1,
+    "e4": 0,
+    "a3": 2,
+    "b3": 1,
+    "d3": 0,
+    "b2": 3,
+    "c2": 0,
+    "a1": 1
+  }
+}

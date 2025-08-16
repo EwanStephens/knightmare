@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "FORGE",
+    "FOR",
+    "FOT",
+    "GEO",
+    "ORG",
+    "TOR",
+    "TOT"
+  ],
+  "targetPath": [
+    "e3",
+    "c4",
+    "d4",
+    "e5",
+    "d3"
+  ],
+  "legalCaptures": {
+    "e5": 1,
+    "b4": 1,
+    "c4": 3,
+    "d4": 1,
+    "e4": 1,
+    "d3": 1,
+    "e3": 1,
+    "b2": 0,
+    "c1": 1
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "ALUMINIUM",
+    "ALUMIN",
+    "HILUM",
+    "ALUM",
+    "EILA",
+    "HALL",
+    "HILA",
+    "HILL",
+    "MILA",
+    "MILL"
+  ],
+  "targetPath": [
+    "a2",
+    "c3",
+    "e2",
+    "d4",
+    "c2",
+    "c5",
+    "a5",
+    "e1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 1,
+    "d5": 1,
+    "e5": 0,
+    "a4": 0,
+    "d4": 3,
+    "e4": 2,
+    "a3": 1,
+    "b3": 2,
+    "c3": 3,
+    "d3": 2,
+    "a2": 1,
+    "b2": 4,
+    "c2": 2,
+    "e2": 2,
+    "c1": 2,
+    "e1": 2
+  }
+}

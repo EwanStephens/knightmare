@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "FOREST",
+    "FORES",
+    "FORE",
+    "HORE",
+    "ORES",
+    "REST",
+    "FOR",
+    "HOR",
+    "ORE",
+    "REE"
+  ],
+  "targetPath": [
+    "e3",
+    "c5",
+    "b3",
+    "a2",
+    "c4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 2,
+    "c4": 1,
+    "a3": 0,
+    "b3": 1,
+    "d3": 0,
+    "e3": 2,
+    "a2": 2
+  }
+}

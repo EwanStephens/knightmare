@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "IMPORTANCE",
+    "PORTANCE",
+    "IMPORT",
+    "PORTA",
+    "ANNO",
+    "ONCE",
+    "PEON",
+    "POET",
+    "PORT",
+    "YETA"
+  ],
+  "targetPath": [
+    "a3",
+    "a2",
+    "e2",
+    "e3",
+    "d1",
+    "d4",
+    "b5",
+    "c3",
+    "b3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 1,
+    "d5": 4,
+    "e5": 1,
+    "c4": 2,
+    "d4": 3,
+    "e4": 0,
+    "a3": 1,
+    "b3": 1,
+    "c3": 2,
+    "e3": 2,
+    "a2": 2,
+    "e2": 3,
+    "a1": 1,
+    "b1": 1,
+    "c1": 1,
+    "d1": 1
+  }
+}

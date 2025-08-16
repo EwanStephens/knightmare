@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "TRIVIA",
+    "RIV",
+    "TRI",
+    "VII"
+  ],
+  "targetPath": [
+    "e3",
+    "c1",
+    "a2",
+    "a4",
+    "e4",
+    "e1"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "a4": 2,
+    "e4": 2,
+    "e3": 1,
+    "a2": 2,
+    "c1": 1,
+    "d1": 0,
+    "e1": 0
+  }
+}

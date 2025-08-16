@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "SUFFERED",
+    "SUFFER",
+    "DERE",
+    "FERE",
+    "NEER",
+    "SUFF",
+    "DEF",
+    "DER",
+    "EER",
+    "EFF"
+  ],
+  "targetPath": [
+    "b5",
+    "c4",
+    "c5",
+    "b4",
+    "a3",
+    "b2",
+    "a4",
+    "a2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "d5": 0,
+    "a4": 1,
+    "b4": 2,
+    "c4": 1,
+    "a3": 2,
+    "d3": 1,
+    "a2": 1,
+    "b2": 1,
+    "e2": 2
+  }
+}

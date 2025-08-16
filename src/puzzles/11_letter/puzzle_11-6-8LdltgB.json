@@ -1,0 +1,150 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "RESTRICTION",
+    "RESTRICT",
+    "RESTIO",
+    "STRICT",
+    "CESTA",
+    "CESTI",
+    "RESTR",
+    "STION",
+    "TREST",
+    "AION"
+  ],
+  "targetPath": [
+    "b3",
+    "c4",
+    "a5",
+    "c3",
+    "d5",
+    "e5",
+    "d4",
+    "b5",
+    "b1",
+    "a2",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "d5": 3,
+    "e5": 1,
+    "a4": 2,
+    "c4": 2,
+    "d4": 1,
+    "b3": 1,
+    "c3": 3,
+    "d3": 2,
+    "e3": 2,
+    "a2": 4,
+    "c2": 2,
+    "a1": 1,
+    "b1": 1,
+    "d1": 1,
+    "e1": 1
+  }
+}

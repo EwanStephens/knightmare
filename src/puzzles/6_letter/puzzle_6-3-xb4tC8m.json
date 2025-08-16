@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "BETTER",
+    "BER",
+    "BET",
+    "BRR",
+    "ERR",
+    "TER"
+  ],
+  "targetPath": [
+    "d4",
+    "b3",
+    "d5",
+    "e5",
+    "c5",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 2,
+    "d5": 2,
+    "e5": 2,
+    "a4": 0,
+    "d4": 2,
+    "b3": 2,
+    "e3": 0,
+    "c1": 0
+  }
+}

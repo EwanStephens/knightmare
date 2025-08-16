@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "SINGING",
+    "INGINE",
+    "GING",
+    "GINN",
+    "SING",
+    "GIN",
+    "INC",
+    "ING",
+    "INN",
+    "NIG"
+  ],
+  "targetPath": [
+    "b3",
+    "d1",
+    "d3",
+    "e5",
+    "d4",
+    "e3",
+    "e4"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d5": 0,
+    "e5": 1,
+    "d4": 2,
+    "e4": 0,
+    "b3": 1,
+    "d3": 1,
+    "e3": 4,
+    "e2": 1,
+    "a1": 0,
+    "b1": 0,
+    "d1": 1
+  }
+}

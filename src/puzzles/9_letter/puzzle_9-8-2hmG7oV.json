@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "GENERATED",
+    "GENERATE",
+    "MANAGERS",
+    "TANAGERS",
+    "GERATED",
+    "MANAGED",
+    "MANAGER",
+    "TANAGER",
+    "AMATED",
+    "DETERS"
+  ],
+  "targetPath": [
+    "a1",
+    "b3",
+    "c3",
+    "c2",
+    "d3",
+    "e2",
+    "c1",
+    "a2",
+    "c4"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 3,
+    "e5": 2,
+    "a4": 1,
+    "c4": 0,
+    "d4": 5,
+    "a3": 2,
+    "b3": 4,
+    "c3": 3,
+    "d3": 2,
+    "a2": 0,
+    "c2": 2,
+    "e2": 2,
+    "a1": 2,
+    "b1": 2,
+    "c1": 3,
+    "d1": 0
+  }
+}

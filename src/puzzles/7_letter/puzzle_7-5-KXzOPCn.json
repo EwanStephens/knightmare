@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "WRAPPED",
+    "RAPPED",
+    "RAPPE",
+    "UPPED",
+    "RUED",
+    "UPDO",
+    "WRAP",
+    "APP",
+    "EDO",
+    "EDP"
+  ],
+  "targetPath": [
+    "e1",
+    "e4",
+    "e5",
+    "c4",
+    "b5",
+    "d4",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c5": 0,
+    "d5": 4,
+    "e5": 1,
+    "a4": 2,
+    "b4": 0,
+    "c4": 3,
+    "d4": 2,
+    "e4": 3,
+    "b3": 2,
+    "e1": 2
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "BREAST",
+    "GEAST",
+    "EAST",
+    "AST"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "b2",
+    "a1",
+    "a3",
+    "b4"
+  ],
+  "legalCaptures": {
+    "e5": 1,
+    "b4": 1,
+    "d4": 1,
+    "a3": 1,
+    "b2": 1,
+    "d2": 2,
+    "a1": 2,
+    "b1": 0
+  }
+}

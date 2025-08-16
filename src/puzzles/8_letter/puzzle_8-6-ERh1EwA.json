@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "TEMPORAL",
+    "TEMPORA",
+    "TEMPI",
+    "TEMPO",
+    "EMPT",
+    "TEMP",
+    "ARA",
+    "EMP",
+    "GPM",
+    "MPG"
+  ],
+  "targetPath": [
+    "c1",
+    "e1",
+    "d3",
+    "c4",
+    "c5",
+    "a4",
+    "b3",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "c5": 1,
+    "d5": 1,
+    "a4": 1,
+    "c4": 6,
+    "b3": 0,
+    "d3": 1,
+    "e3": 0,
+    "d2": 1,
+    "a1": 1,
+    "b1": 0,
+    "c1": 3,
+    "e1": 1
+  }
+}

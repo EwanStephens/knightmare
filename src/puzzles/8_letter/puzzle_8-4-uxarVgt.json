@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "PREVIOUS",
+    "TREVIS",
+    "POUT",
+    "PREV",
+    "IOU",
+    "OPT",
+    "OUT",
+    "PRE",
+    "REV",
+    "RPT"
+  ],
+  "targetPath": [
+    "e3",
+    "c1",
+    "a3",
+    "b4",
+    "d5",
+    "d4",
+    "c3",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 3,
+    "e5": 0,
+    "a4": 1,
+    "b4": 2,
+    "d4": 2,
+    "a3": 1,
+    "c3": 2,
+    "d3": 3,
+    "e3": 3,
+    "b1": 2,
+    "c1": 2
+  }
+}

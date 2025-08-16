@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "FLASH",
+    "LASH",
+    "ASH",
+    "LAS",
+    "SHU"
+  ],
+  "targetPath": [
+    "b5",
+    "a3",
+    "c3",
+    "c5",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 1,
+    "d5": 1,
+    "e4": 1,
+    "a3": 1,
+    "c3": 2,
+    "e3": 1,
+    "e1": 1
+  }
+}

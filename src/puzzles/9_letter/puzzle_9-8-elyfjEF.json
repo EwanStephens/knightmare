@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "DIAGNOSIS",
+    "AINEE",
+    "ODIST",
+    "STEIN",
+    "AINE",
+    "DIAG",
+    "DIST",
+    "HIST",
+    "NISI",
+    "NIST"
+  ],
+  "targetPath": [
+    "b2",
+    "d4",
+    "b5",
+    "a4",
+    "a2",
+    "a1",
+    "e5",
+    "c4",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "c5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 2,
+    "c4": 3,
+    "d4": 2,
+    "a2": 4,
+    "b2": 3,
+    "c2": 2,
+    "d2": 2,
+    "e2": 2,
+    "a1": 1,
+    "b1": 1,
+    "c1": 2,
+    "e1": 1
+  }
+}

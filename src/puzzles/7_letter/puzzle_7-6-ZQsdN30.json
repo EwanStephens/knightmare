@@ -1,0 +1,117 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "ELDERLY",
+    "ELDER",
+    "DEE",
+    "DER",
+    "EDH",
+    "EEL",
+    "ELD",
+    "RLY",
+    "TDR"
+  ],
+  "targetPath": [
+    "d5",
+    "c3",
+    "b4",
+    "e4",
+    "e3",
+    "d2",
+    "b1"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "d5": 1,
+    "e5": 0,
+    "a4": 0,
+    "b4": 6,
+    "e4": 2,
+    "c3": 1,
+    "e3": 1,
+    "b2": 2,
+    "d2": 1,
+    "b1": 2,
+    "c1": 1
+  }
+}

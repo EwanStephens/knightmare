@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "OPERATOR",
+    "ORATOR",
+    "ERATO",
+    "OPERA",
+    "ERAT",
+    "PERF",
+    "RATA",
+    "RATO",
+    "TORA",
+    "ARF"
+  ],
+  "targetPath": [
+    "b2",
+    "a3",
+    "b4",
+    "c3",
+    "d1",
+    "e3",
+    "c5",
+    "d3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 0,
+    "b4": 2,
+    "e4": 1,
+    "a3": 1,
+    "c3": 2,
+    "d3": 2,
+    "e3": 3,
+    "b2": 3,
+    "d2": 0,
+    "a1": 1,
+    "d1": 2
+  }
+}

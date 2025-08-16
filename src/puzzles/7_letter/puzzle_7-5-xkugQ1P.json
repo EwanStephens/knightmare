@@ -1,0 +1,110 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "PERFORM",
+    "FORM",
+    "PERF",
+    "ERF",
+    "FOR",
+    "HER",
+    "PEH",
+    "PER",
+    "PIM"
+  ],
+  "targetPath": [
+    "b1",
+    "b2",
+    "a3",
+    "c4",
+    "d2",
+    "e1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c4": 3,
+    "e4": 0,
+    "a3": 1,
+    "c3": 1,
+    "b2": 2,
+    "d2": 1,
+    "e2": 1,
+    "a1": 0,
+    "b1": 2,
+    "d1": 1,
+    "e1": 2
+  }
+}

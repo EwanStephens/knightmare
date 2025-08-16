@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "DISCLAIMER",
+    "DISCLAIM",
+    "CLAIMER",
+    "RECLAIM",
+    "DEICER",
+    "AIMER",
+    "CLAIM",
+    "DEICE",
+    "DISCI",
+    "EIMER"
+  ],
+  "targetPath": [
+    "b4",
+    "e1",
+    "c1",
+    "d3",
+    "e2",
+    "b2",
+    "c4",
+    "b5",
+    "a3",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 2,
+    "c5": 4,
+    "d5": 1,
+    "e5": 1,
+    "b4": 3,
+    "c4": 3,
+    "d4": 5,
+    "a3": 3,
+    "d3": 5,
+    "e3": 2,
+    "a2": 0,
+    "b2": 1,
+    "e2": 3,
+    "b1": 0,
+    "c1": 1,
+    "e1": 2
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ANOTHER",
+    "NOTHER",
+    "OTHER",
+    "THEO",
+    "HEO",
+    "HER",
+    "HET",
+    "NAE",
+    "NOT",
+    "THE"
+  ],
+  "targetPath": [
+    "b5",
+    "b3",
+    "c3",
+    "a1",
+    "c2",
+    "d3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "e5": 0,
+    "c4": 0,
+    "e4": 0,
+    "b3": 4,
+    "c3": 1,
+    "d3": 5,
+    "e3": 2,
+    "c2": 2,
+    "e2": 0,
+    "a1": 1,
+    "b1": 0
+  }
+}

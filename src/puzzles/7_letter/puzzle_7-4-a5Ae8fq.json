@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "TREATED",
+    "TREAT",
+    "ATED",
+    "TATE",
+    "ATE",
+    "EAT",
+    "ETA",
+    "REA",
+    "TAE",
+    "TAT"
+  ],
+  "targetPath": [
+    "e4",
+    "e1",
+    "c3",
+    "b4",
+    "a3",
+    "a5",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 1,
+    "b4": 2,
+    "e4": 2,
+    "a3": 3,
+    "b3": 1,
+    "c3": 1,
+    "a2": 0,
+    "b2": 0,
+    "b1": 0,
+    "e1": 1
+  }
+}

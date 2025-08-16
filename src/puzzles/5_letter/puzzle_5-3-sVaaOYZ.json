@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "PLAIN",
+    "BAIN",
+    "BAIS",
+    "ISBA",
+    "LAIN",
+    "WAIN",
+    "AIN",
+    "AIS",
+    "BAI",
+    "LAI"
+  ],
+  "targetPath": [
+    "c4",
+    "b3",
+    "a4",
+    "b2",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "a4": 1,
+    "c4": 1,
+    "d4": 0,
+    "a3": 1,
+    "b3": 2,
+    "b2": 2
+  }
+}

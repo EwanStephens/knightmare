@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "Q"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "QUESTION",
+    "QUEST",
+    "STION",
+    "QUES",
+    "STUE",
+    "ION",
+    "QUE",
+    "STU",
+    "TUE"
+  ],
+  "targetPath": [
+    "e3",
+    "b3",
+    "a4",
+    "c2",
+    "b4",
+    "a3",
+    "b1",
+    "d2"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 2,
+    "d5": 0,
+    "e5": 1,
+    "a4": 2,
+    "b4": 5,
+    "a3": 1,
+    "b3": 1,
+    "e3": 1,
+    "c2": 3,
+    "d2": 1,
+    "a1": 0,
+    "b1": 2,
+    "c1": 0
+  }
+}

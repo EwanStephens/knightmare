@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "ISSUE",
+    "SSU",
+    "SUE",
+    "SUU"
+  ],
+  "targetPath": [
+    "a3",
+    "e3",
+    "d2",
+    "b1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "a3": 1,
+    "e3": 3,
+    "a2": 0,
+    "d2": 1,
+    "a1": 0,
+    "b1": 1,
+    "e1": 2
+  }
+}

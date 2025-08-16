@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "DIFFERENT",
+    "DIFFEREN",
+    "DIFFER",
+    "RENTED",
+    "FREIT",
+    "OFFER",
+    "RENTE",
+    "DIFF",
+    "DITE",
+    "DOER"
+  ],
+  "targetPath": [
+    "b2",
+    "d2",
+    "e4",
+    "b4",
+    "d3",
+    "e3",
+    "e2",
+    "d1",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 4,
+    "a4": 1,
+    "b4": 1,
+    "e4": 2,
+    "b3": 5,
+    "c3": 3,
+    "d3": 4,
+    "e3": 3,
+    "b2": 2,
+    "d2": 2,
+    "e2": 1,
+    "d1": 2
+  }
+}

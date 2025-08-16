@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "LISTENING",
+    "LISTING",
+    "LISTEN",
+    "LIST",
+    "NING",
+    "STEN",
+    "ENL",
+    "ING",
+    "ISN",
+    "IST"
+  ],
+  "targetPath": [
+    "b2",
+    "c4",
+    "d3",
+    "d2",
+    "e2",
+    "c3",
+    "a2",
+    "b4",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "a4": 0,
+    "b4": 1,
+    "c4": 1,
+    "a3": 1,
+    "c3": 4,
+    "d3": 2,
+    "a2": 2,
+    "b2": 1,
+    "d2": 3,
+    "e2": 1,
+    "a1": 0
+  }
+}

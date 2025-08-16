@@ -1,0 +1,116 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ALCOHOL",
+    "COHOL",
+    "ALCO",
+    "COHO",
+    "AAL",
+    "ALC",
+    "HOL",
+    "OHO"
+  ],
+  "targetPath": [
+    "e2",
+    "b5",
+    "c3",
+    "b2",
+    "b4",
+    "c5",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 1,
+    "a4": 0,
+    "b4": 1,
+    "d4": 1,
+    "c3": 1,
+    "a2": 1,
+    "b2": 1,
+    "c2": 0,
+    "e2": 1,
+    "c1": 1,
+    "d1": 1
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "DISAPPOINTED",
+    "DISAPPOINT",
+    "APPOINTED",
+    "APPOINTE",
+    "APPOINTS",
+    "APPOINT",
+    "POINTED",
+    "DINTED",
+    "POINTE",
+    "POINTS"
+  ],
+  "targetPath": [
+    "a3",
+    "c5",
+    "d5",
+    "a2",
+    "c3",
+    "e1",
+    "a1",
+    "c2",
+    "e3",
+    "e4",
+    "d3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 4,
+    "d5": 2,
+    "a4": 0,
+    "e4": 2,
+    "a3": 4,
+    "c3": 3,
+    "d3": 2,
+    "e3": 3,
+    "a2": 1,
+    "b2": 2,
+    "c2": 3,
+    "e2": 1,
+    "a1": 1,
+    "e1": 1
+  }
+}

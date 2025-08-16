@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "SAVAGE",
+    "AGES",
+    "PESA",
+    "VAGE",
+    "AGE",
+    "AVA",
+    "EVA",
+    "GES",
+    "PES",
+    "SAV"
+  ],
+  "targetPath": [
+    "a4",
+    "c2",
+    "e4",
+    "d5",
+    "b4",
+    "c3"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "a4": 1,
+    "b4": 1,
+    "e4": 2,
+    "c3": 2,
+    "b2": 1,
+    "c2": 2,
+    "e2": 0
+  }
+}
