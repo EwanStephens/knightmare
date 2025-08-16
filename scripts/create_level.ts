@@ -1,12 +1,15 @@
+/// <reference types="node" />
+
 import { getAndUseRandomWord, moveWordBackToUnused } from '../src/utils/wordbankManager';
 import { generateBoard, GeneratedBoardResult, PieceFrequencies } from '../src/level_creator/boardGenerator';
 import { findLongestWords, ValidationResult } from '../src/level_creator/validator';
 import { serializeLevel } from '../src/level_creator/serializer';
-import path from 'path';
-import fs from 'fs/promises';
 import { generatePuzzleId, getPuzzlePathFromId, checkPuzzleIdExists } from '../src/utils/puzzleUtils';
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
+
+const path = require('path');
+const fs = require('fs/promises');
+const yargs = require('yargs');
+const { hideBin } = require('yargs/helpers');
 
 export async function createLevelWithTargetWord(targetWord: string, extraLetters: number, fromWordbank: boolean, testMode = false, pieceFrequencies?: PieceFrequencies) {
   try {

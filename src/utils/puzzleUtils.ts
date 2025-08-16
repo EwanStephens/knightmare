@@ -1,6 +1,8 @@
-import path from 'path';
-import { customAlphabet } from 'nanoid';
-import fs from 'fs/promises';
+/// <reference types="node" />
+
+const path = require('path');
+const { customAlphabet } = require('nanoid');
+const fs = require('fs/promises');
 import { LoadedLevel } from '@/types/level';
 import { createEmptyBoard } from './board';
 import { algebraicToPosition } from './chess';

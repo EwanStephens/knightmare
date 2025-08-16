@@ -1,8 +1,11 @@
+/// <reference types="node" />
+
 import { createLevelWithWordLength } from './create_level';
 import { getNumUnusedWords } from '../src/utils/wordbankManager';
 import { PieceFrequencies } from '../src/level_creator/boardGenerator';
-import fs from 'fs/promises';
-import path from 'path';
+
+const fs = require('fs/promises');
+const path = require('path');
 
 const MAX_TOTAL_LETTERS = 22;
 const MAX_RETRIES = 10;
