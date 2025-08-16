@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Q"
+    }
+  ],
+  "targetWords": [
+    "APPEAR",
+    "RAPPE",
+    "WRAP",
+    "APP",
+    "ARA",
+    "EAR",
+    "RAP"
+  ],
+  "targetPath": [
+    "d1",
+    "c3",
+    "c4",
+    "c2",
+    "d2",
+    "c1"
+  ],
+  "legalCaptures": {
+    "c4": 1,
+    "b3": 1,
+    "c3": 1,
+    "c2": 2,
+    "d2": 1,
+    "a1": 1,
+    "c1": 2,
+    "d1": 1,
+    "e1": 0
+  }
+}

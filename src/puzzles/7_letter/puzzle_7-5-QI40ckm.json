@@ -1,0 +1,109 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "HEADSET",
+    "HEADS",
+    "HEAD",
+    "AET",
+    "ASE",
+    "EAD",
+    "HET",
+    "SET"
+  ],
+  "targetPath": [
+    "d2",
+    "e2",
+    "d3",
+    "e1",
+    "c3",
+    "b2",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c4": 2,
+    "e4": 0,
+    "b3": 0,
+    "c3": 1,
+    "d3": 2,
+    "e3": 1,
+    "b2": 2,
+    "d2": 2,
+    "e2": 1,
+    "e1": 1
+  }
+}

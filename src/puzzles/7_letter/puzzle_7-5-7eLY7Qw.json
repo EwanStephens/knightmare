@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "DISPUTE",
+    "DIETS",
+    "DISTN",
+    "SPUTE",
+    "STEIN",
+    "STEPS",
+    "DIET",
+    "DISP",
+    "DIST",
+    "PSIS"
+  ],
+  "targetPath": [
+    "a1",
+    "b3",
+    "d1",
+    "d5",
+    "a5",
+    "b4",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "a4": 1,
+    "b4": 4,
+    "c4": 4,
+    "e4": 0,
+    "a3": 0,
+    "b3": 4,
+    "e3": 1,
+    "e2": 0,
+    "a1": 1,
+    "d1": 2
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "ABORIGINAL",
+    "EURIPI",
+    "BARIE",
+    "BOLAR",
+    "LABOR",
+    "PINAL",
+    "AGIN",
+    "AHIR",
+    "BARI",
+    "BARU"
+  ],
+  "targetPath": [
+    "d4",
+    "b4",
+    "d3",
+    "e1",
+    "e3",
+    "c5",
+    "b3",
+    "a4",
+    "c2",
+    "a1"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 1,
+    "e5": 1,
+    "a4": 1,
+    "b4": 2,
+    "d4": 5,
+    "a3": 2,
+    "b3": 1,
+    "c3": 1,
+    "d3": 5,
+    "e3": 3,
+    "b2": 3,
+    "c2": 3,
+    "d2": 1,
+    "a1": 0,
+    "d1": 3,
+    "e1": 2
+  }
+}

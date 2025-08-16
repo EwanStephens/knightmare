@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DOWNLOADED",
+    "DOWNLOAD",
+    "LOADED",
+    "DOWN",
+    "FEED",
+    "LOAD",
+    "OLEA",
+    "ADE",
+    "DOW",
+    "EAD"
+  ],
+  "targetPath": [
+    "d1",
+    "d3",
+    "e3",
+    "c1",
+    "b1",
+    "b3",
+    "a3",
+    "c4",
+    "b5",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "e5": 0,
+    "a4": 1,
+    "b4": 3,
+    "c4": 1,
+    "e4": 0,
+    "a3": 1,
+    "b3": 2,
+    "c3": 0,
+    "d3": 2,
+    "e3": 1,
+    "a2": 0,
+    "e2": 1,
+    "a1": 1,
+    "b1": 3,
+    "c1": 4,
+    "d1": 2
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "PROGRAMMING",
+    "GROGRAM",
+    "PROGRAM",
+    "APRON",
+    "PRONG",
+    "GONG",
+    "GRAM",
+    "GROG",
+    "IRON",
+    "OGOR"
+  ],
+  "targetPath": [
+    "d1",
+    "e2",
+    "d4",
+    "b2",
+    "b4",
+    "b1",
+    "a1",
+    "e1",
+    "e5",
+    "d5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 4,
+    "c5": 0,
+    "d5": 1,
+    "e5": 2,
+    "b4": 3,
+    "c4": 3,
+    "d4": 2,
+    "a3": 1,
+    "b2": 4,
+    "d2": 3,
+    "e2": 1,
+    "a1": 3,
+    "b1": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

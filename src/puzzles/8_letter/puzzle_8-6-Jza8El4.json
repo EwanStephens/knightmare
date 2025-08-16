@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DIRECTLY",
+    "DIRECT",
+    "DICT",
+    "DIET",
+    "DINT",
+    "DIRE",
+    "EIRE",
+    "INTL",
+    "RECT",
+    "DIE"
+  ],
+  "targetPath": [
+    "c5",
+    "b3",
+    "a2",
+    "b1",
+    "c2",
+    "c4",
+    "d5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "a4": 3,
+    "c4": 1,
+    "e4": 1,
+    "a3": 0,
+    "b3": 5,
+    "d3": 3,
+    "a2": 1,
+    "b2": 1,
+    "c2": 1,
+    "a1": 1,
+    "b1": 2
+  }
+}

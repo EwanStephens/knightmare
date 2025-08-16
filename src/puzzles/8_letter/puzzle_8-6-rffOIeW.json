@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "HIGHLAND",
+    "DOINA",
+    "HIGH",
+    "HIND",
+    "LAND",
+    "NAOI",
+    "NAOS",
+    "ALD",
+    "ALO",
+    "AND"
+  ],
+  "targetPath": [
+    "e5",
+    "d4",
+    "d3",
+    "a3",
+    "b4",
+    "b5",
+    "c5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "b4": 3,
+    "c4": 4,
+    "d4": 5,
+    "e4": 0,
+    "a3": 2,
+    "d3": 2,
+    "b2": 0,
+    "e2": 1,
+    "e1": 0
+  }
+}

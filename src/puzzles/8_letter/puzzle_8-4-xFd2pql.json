@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "BECOMING",
+    "COMING",
+    "MING",
+    "MIRE",
+    "BEC",
+    "COM",
+    "ECO",
+    "ING",
+    "IRE",
+    "MIN"
+  ],
+  "targetPath": [
+    "c3",
+    "b2",
+    "a3",
+    "c5",
+    "d4",
+    "e3",
+    "d1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "d4": 1,
+    "a3": 2,
+    "c3": 1,
+    "d3": 1,
+    "e3": 2,
+    "b2": 2,
+    "c2": 2,
+    "e2": 2,
+    "b1": 0,
+    "d1": 1
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "GARLIC",
+    "LIARD",
+    "CRAG",
+    "DIAG",
+    "GAIA",
+    "GAIL",
+    "LIAR",
+    "RAIA",
+    "RAIL",
+    "AIL"
+  ],
+  "targetPath": [
+    "e4",
+    "d3",
+    "d2",
+    "c2",
+    "c3",
+    "c1"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "e4": 1,
+    "c3": 3,
+    "d3": 3,
+    "a2": 0,
+    "b2": 1,
+    "c2": 2,
+    "d2": 3,
+    "c1": 1
+  }
+}

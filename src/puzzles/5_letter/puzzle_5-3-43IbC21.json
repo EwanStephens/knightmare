@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "TRUCK",
+    "RUCK",
+    "RTI",
+    "TIS"
+  ],
+  "targetPath": [
+    "c4",
+    "c5",
+    "a5",
+    "a2",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 2,
+    "b4": 1,
+    "c4": 2,
+    "e4": 2,
+    "c3": 0,
+    "e3": 0,
+    "a2": 2
+  }
+}

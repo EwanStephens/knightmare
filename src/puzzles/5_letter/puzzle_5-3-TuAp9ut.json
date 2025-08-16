@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "CUBIC",
+    "CUBI",
+    "CUB",
+    "UBI"
+  ],
+  "targetPath": [
+    "d4",
+    "e2",
+    "d1",
+    "b3",
+    "a2"
+  ],
+  "legalCaptures": {
+    "d4": 2,
+    "b3": 1,
+    "c3": 2,
+    "a2": 0,
+    "b2": 1,
+    "e2": 1,
+    "d1": 2,
+    "e1": 0
+  }
+}

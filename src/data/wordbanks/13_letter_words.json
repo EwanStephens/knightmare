@@ -1,6 +1,5 @@
 {
   "unused_words": [
-    "accessibility",
     "accommodation",
     "accreditation",
     "administrator",
@@ -71,10 +70,11 @@
     "undergraduate",
     "understanding",
     "unfortunately",
-    "vulnerability",
     "determination"
   ],
   "used_words": [
-    "psychological"
+    "psychological",
+    "vulnerability",
+    "accessibility"
   ]
 }

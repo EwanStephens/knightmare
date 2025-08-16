@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "TROPICAL",
+    "TROPIC",
+    "TRICA",
+    "CARN",
+    "CARO",
+    "PIRN",
+    "PIRO",
+    "TROP",
+    "ALD",
+    "ARN"
+  ],
+  "targetPath": [
+    "a3",
+    "c2",
+    "c1",
+    "d1",
+    "e2",
+    "b2",
+    "b1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 1,
+    "a3": 1,
+    "b3": 0,
+    "a2": 1,
+    "b2": 2,
+    "c2": 3,
+    "e2": 1,
+    "b1": 3,
+    "c1": 2,
+    "d1": 1
+  }
+}

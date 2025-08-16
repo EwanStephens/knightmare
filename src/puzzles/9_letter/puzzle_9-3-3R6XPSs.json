@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "CARTRIDGE",
+    "TRIAGE",
+    "CARID",
+    "ARIA",
+    "ARID",
+    "CART",
+    "GRID",
+    "TRID",
+    "ARC",
+    "ART"
+  ],
+  "targetPath": [
+    "e3",
+    "c4",
+    "b4",
+    "d5",
+    "c3",
+    "b1",
+    "e1",
+    "e5",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 3,
+    "e5": 2,
+    "b4": 2,
+    "c4": 2,
+    "b3": 2,
+    "c3": 2,
+    "e3": 3,
+    "c2": 0,
+    "a1": 0,
+    "b1": 2,
+    "e1": 1
+  }
+}

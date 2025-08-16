@@ -1,0 +1,158 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "EXPERIMENTAL",
+    "EXPERIMENT",
+    "RENTED",
+    "ALPEN",
+    "DRENT",
+    "EXALT",
+    "IRENE",
+    "PERIT",
+    "PERLA",
+    "RENTE"
+  ],
+  "targetPath": [
+    "b2",
+    "b4",
+    "b5",
+    "c3",
+    "c2",
+    "d2",
+    "d1",
+    "a4",
+    "a3",
+    "a1",
+    "e5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 4,
+    "c4": 3,
+    "a3": 4,
+    "c3": 3,
+    "e3": 1,
+    "b2": 2,
+    "c2": 4,
+    "d2": 3,
+    "e2": 2,
+    "a1": 2,
+    "b1": 1,
+    "d1": 3,
+    "e1": 0
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "NORTHEAST",
+    "HERONS",
+    "THERON",
+    "HERON",
+    "HOAST",
+    "NORTH",
+    "ROAST",
+    "HERO",
+    "HERT",
+    "HORT"
+  ],
+  "targetPath": [
+    "e3",
+    "c5",
+    "c3",
+    "c2",
+    "b4",
+    "a5",
+    "d5",
+    "e4",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 4,
+    "d5": 1,
+    "a4": 0,
+    "b4": 2,
+    "e4": 2,
+    "c3": 2,
+    "e3": 2,
+    "c2": 2,
+    "d2": 0,
+    "e2": 0,
+    "b1": 2,
+    "c1": 2
+  }
+}

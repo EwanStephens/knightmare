@@ -1,0 +1,108 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "INVOICE",
+    "ENVOI",
+    "VOICE",
+    "CEN",
+    "ENV",
+    "ICE",
+    "INV"
+  ],
+  "targetPath": [
+    "d2",
+    "e3",
+    "c2",
+    "a4",
+    "e4",
+    "c3",
+    "d3"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "e5": 1,
+    "a4": 2,
+    "e4": 2,
+    "c3": 2,
+    "d3": 3,
+    "e3": 1,
+    "b2": 0,
+    "c2": 1,
+    "d2": 2,
+    "e2": 3,
+    "e1": 0
+  }
+}

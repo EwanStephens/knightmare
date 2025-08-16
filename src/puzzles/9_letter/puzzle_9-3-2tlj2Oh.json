@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "Q"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "APPRAISAL",
+    "APPT",
+    "PRAT",
+    "AIS",
+    "APP",
+    "PAR",
+    "PPA",
+    "PPL",
+    "PPR",
+    "PPT"
+  ],
+  "targetPath": [
+    "a2",
+    "a1",
+    "b2",
+    "b1",
+    "b4",
+    "e4",
+    "d5",
+    "e3",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "d5": 1,
+    "e5": 0,
+    "b4": 1,
+    "e4": 1,
+    "e3": 0,
+    "a2": 3,
+    "b2": 3,
+    "c2": 1,
+    "a1": 2,
+    "b1": 2
+  }
+}

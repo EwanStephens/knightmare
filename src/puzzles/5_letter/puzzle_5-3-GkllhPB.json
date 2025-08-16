@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "CLAIM",
+    "AIM",
+    "AMI",
+    "IMA",
+    "LAI",
+    "MAD",
+    "ULA"
+  ],
+  "targetPath": [
+    "a1",
+    "b2",
+    "c1",
+    "e1",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 2,
+    "d5": 0,
+    "a2": 1,
+    "b2": 2,
+    "a1": 1,
+    "c1": 1,
+    "e1": 1
+  }
+}

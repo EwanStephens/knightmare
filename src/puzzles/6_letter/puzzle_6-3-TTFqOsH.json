@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "REMOTE",
+    "REMET",
+    "MOTE",
+    "MOUE",
+    "ERE",
+    "MET",
+    "MOL",
+    "MOT",
+    "MOU",
+    "REM"
+  ],
+  "targetPath": [
+    "c4",
+    "b5",
+    "d3",
+    "e4",
+    "e3",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "e5": 3,
+    "c4": 2,
+    "d4": 1,
+    "e4": 3,
+    "b3": 0,
+    "d3": 2,
+    "e3": 1,
+    "c2": 0
+  }
+}

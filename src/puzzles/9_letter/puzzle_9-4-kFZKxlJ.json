@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DELIVERED",
+    "DELIVER",
+    "LIVERED",
+    "LIVEDO",
+    "DEVEL",
+    "LIVED",
+    "LIVER",
+    "VODER",
+    "DEDO",
+    "DELI"
+  ],
+  "targetPath": [
+    "c3",
+    "c5",
+    "d4",
+    "e3",
+    "d3",
+    "e1",
+    "e4",
+    "b1",
+    "c1"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 2,
+    "d4": 1,
+    "e4": 1,
+    "b3": 2,
+    "c3": 1,
+    "d3": 3,
+    "e3": 2,
+    "b2": 2,
+    "d2": 2,
+    "b1": 2,
+    "c1": 4,
+    "e1": 1
+  }
+}

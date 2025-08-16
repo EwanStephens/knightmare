@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "PASSION",
+    "ASSI",
+    "IONI",
+    "PASI",
+    "PASS",
+    "SION",
+    "ASS",
+    "ION",
+    "ONI",
+    "OSI"
+  ],
+  "targetPath": [
+    "b1",
+    "a2",
+    "b3",
+    "c1",
+    "d3",
+    "c4",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a4": 2,
+    "c4": 1,
+    "e4": 1,
+    "a3": 0,
+    "b3": 2,
+    "d3": 1,
+    "a2": 2,
+    "d2": 0,
+    "e2": 0,
+    "b1": 2,
+    "c1": 3
+  }
+}

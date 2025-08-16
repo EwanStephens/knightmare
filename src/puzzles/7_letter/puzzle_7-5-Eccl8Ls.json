@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "INTERIM",
+    "INTER",
+    "DETI",
+    "TERI",
+    "DER",
+    "DET",
+    "INT",
+    "ONT",
+    "RIM",
+    "RIT"
+  ],
+  "targetPath": [
+    "b2",
+    "d4",
+    "e3",
+    "e1",
+    "a1",
+    "b3",
+    "a2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "c5": 1,
+    "d4": 1,
+    "b3": 2,
+    "e3": 2,
+    "a2": 1,
+    "b2": 2,
+    "c2": 1,
+    "d2": 3,
+    "a1": 1,
+    "e1": 3
+  }
+}

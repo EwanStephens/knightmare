@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "ORDERED",
+    "ORDER",
+    "DERE",
+    "IDEO",
+    "ORDN",
+    "REDE",
+    "RIDE",
+    "DER",
+    "EON",
+    "ERE"
+  ],
+  "targetPath": [
+    "b3",
+    "b4",
+    "a3",
+    "c4",
+    "d3",
+    "e5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "e5": 1,
+    "b4": 1,
+    "c4": 2,
+    "d4": 3,
+    "a3": 2,
+    "b3": 4,
+    "c3": 3,
+    "d3": 3,
+    "b1": 1,
+    "c1": 1
+  }
+}

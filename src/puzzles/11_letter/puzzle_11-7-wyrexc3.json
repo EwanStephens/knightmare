@@ -1,0 +1,157 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "HOSPITALITY",
+    "HOSPITAL",
+    "HOSPITA",
+    "SPITAL",
+    "ALIAS",
+    "ALITY",
+    "APILI",
+    "ITALI",
+    "TALIO",
+    "TAPIT"
+  ],
+  "targetPath": [
+    "b5",
+    "b3",
+    "d4",
+    "e2",
+    "c1",
+    "a1",
+    "c2",
+    "d1",
+    "d3",
+    "c3",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 2,
+    "c5": 2,
+    "d5": 4,
+    "e5": 1,
+    "a4": 1,
+    "d4": 2,
+    "e4": 1,
+    "a3": 0,
+    "b3": 3,
+    "c3": 4,
+    "d3": 4,
+    "e3": 4,
+    "c2": 4,
+    "e2": 2,
+    "a1": 1,
+    "c1": 2,
+    "d1": 3
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "SUPPORT",
+    "APPORT",
+    "PORTO",
+    "FORT",
+    "PORT",
+    "SUPA",
+    "SUPP",
+    "APP",
+    "FOR",
+    "OER"
+  ],
+  "targetPath": [
+    "d2",
+    "e1",
+    "a5",
+    "d5",
+    "d4",
+    "e3",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "e5": 1,
+    "d4": 1,
+    "e4": 1,
+    "d3": 3,
+    "e3": 1,
+    "b2": 2,
+    "c2": 2,
+    "d2": 1,
+    "e2": 2,
+    "a1": 1,
+    "e1": 1
+  }
+}
