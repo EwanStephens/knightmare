@@ -479,6 +479,11 @@
       "short": "6-3-3xfacoI",
       "medium": "7-6-wXZ4vGE",
       "long": "9-8-S8I90Zs"
+    },
+    "2025-12-25": {
+      "short": "6-3-gAUzo6C",
+      "medium": "8-5-wpDsqxv",
+      "long": "9-6-kuUczoY"
     }
   },
   "puzzles": {
@@ -1919,6 +1924,21 @@
     },
     "9-8-S8I90Zs": {
       "date": "2025-08-24",
+      "length": 9,
+      "type": "long"
+    },
+    "6-3-gAUzo6C": {
+      "date": "2025-12-25",
+      "length": 6,
+      "type": "short"
+    },
+    "8-5-wpDsqxv": {
+      "date": "2025-12-25",
+      "length": 8,
+      "type": "medium"
+    },
+    "9-6-kuUczoY": {
+      "date": "2025-12-25",
       "length": 9,
       "type": "long"
     }
