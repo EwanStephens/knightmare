@@ -60,7 +60,6 @@
     "visit",
     "reply",
     "value",
-    "press",
     "learn",
     "print",
     "stock",
@@ -880,7 +879,8 @@
     "smoke",
     "buddy",
     "paste",
-    "thing"
+    "thing",
+    "press"
   ],
   "used_words": [
     "digit",

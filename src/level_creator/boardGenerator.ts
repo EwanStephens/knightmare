@@ -153,22 +153,49 @@ export async function generateBoard(targetWord: string, extraLetters: number, pi
       const nextColor = oppositePieceColor(currentColor);
       let foundPiece = false;
       let nextPiece: ChessPiece | null = null;
-      const pieceTypesShuffled = PIECE_TYPES.slice().sort(() => Math.random() - 0.5);
-      for (const pt of pieceTypesShuffled) {
-        const candidate: ChessPiece = {
-          type: pt,
-          color: nextColor,
-          letter: targetWord[i].toUpperCase(),
-        };
-        // Temporarily place the piece
-        board[nextPos.row][nextPos.col].piece = candidate;
-        const moves = getPotentialEmptyCaptureSquares(candidate, nextPos, board, previousSquares);
-        // Remove the piece after checking
-        board[nextPos.row][nextPos.col].piece = null;
-        if (moves.length > 0) {
-          nextPiece = candidate;
-          foundPiece = true;
-          break;
+      
+      // Try to use piece frequencies if available, otherwise fall back to random selection
+      if (pieceFrequencies) {
+        // Try multiple times with weighted selection to find a valid piece
+        for (let attempt = 0; attempt < 10; attempt++) {
+          const pt = randomPieceType(pieceFrequencies);
+          const candidate: ChessPiece = {
+            type: pt,
+            color: nextColor,
+            letter: targetWord[i].toUpperCase(),
+          };
+          // Temporarily place the piece
+          board[nextPos.row][nextPos.col].piece = candidate;
+          const moves = getPotentialEmptyCaptureSquares(candidate, nextPos, board, previousSquares);
+          // Remove the piece after checking
+          board[nextPos.row][nextPos.col].piece = null;
+          if (moves.length > 0) {
+            nextPiece = candidate;
+            foundPiece = true;
+            break;
+          }
+        }
+      }
+      
+      // Fall back to original logic if piece frequencies didn't work or weren't provided
+      if (!foundPiece) {
+        const pieceTypesShuffled = PIECE_TYPES.slice().sort(() => Math.random() - 0.5);
+        for (const pt of pieceTypesShuffled) {
+          const candidate: ChessPiece = {
+            type: pt,
+            color: nextColor,
+            letter: targetWord[i].toUpperCase(),
+          };
+          // Temporarily place the piece
+          board[nextPos.row][nextPos.col].piece = candidate;
+          const moves = getPotentialEmptyCaptureSquares(candidate, nextPos, board, previousSquares);
+          // Remove the piece after checking
+          board[nextPos.row][nextPos.col].piece = null;
+          if (moves.length > 0) {
+            nextPiece = candidate;
+            foundPiece = true;
+            break;
+          }
         }
       }
       if (!foundPiece) {

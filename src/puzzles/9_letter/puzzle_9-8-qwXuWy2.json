@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "SURPRISED",
+    "SURPRISE",
+    "PRISED",
+    "BRISE",
+    "PRISE",
+    "SEDER",
+    "EDHS",
+    "ERIS",
+    "ISED",
+    "RISE"
+  ],
+  "targetPath": [
+    "c2",
+    "e1",
+    "e4",
+    "d2",
+    "c1",
+    "b2",
+    "a4",
+    "b5",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 2,
+    "d5": 1,
+    "e5": 0,
+    "a4": 1,
+    "b4": 2,
+    "d4": 1,
+    "e4": 2,
+    "b3": 2,
+    "c3": 3,
+    "d3": 1,
+    "b2": 1,
+    "c2": 3,
+    "d2": 1,
+    "c1": 2,
+    "e1": 2
+  }
+}

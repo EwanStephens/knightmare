@@ -828,7 +828,6 @@
     "sticky",
     "stolen",
     "stored",
-    "strain",
     "stream",
     "street",
     "stress",
@@ -888,7 +887,6 @@
     "toilet",
     "tomato",
     "tongue",
-    "toward",
     "trader",
     "trance",
     "trauma",
@@ -978,7 +976,8 @@
     "select",
     "decide",
     "better",
-    "google"
+    "google",
+    "strain"
   ],
   "used_words": [
     "remark",
@@ -1031,6 +1030,7 @@
     "author",
     "ending",
     "cannon",
-    "sunset"
+    "sunset",
+    "toward"
   ]
 }

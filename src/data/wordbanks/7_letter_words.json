@@ -142,7 +142,6 @@
     "chronic",
     "circuit",
     "citizen",
-    "claimed",
     "clarity",
     "classic",
     "cleaner",
@@ -974,6 +973,7 @@
     "ranking",
     "content",
     "diagram",
-    "proceed"
+    "proceed",
+    "claimed"
   ]
 }

@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "MICROWAVE",
+    "CRAVER",
+    "CRAVE",
+    "CRAWM",
+    "MICRA",
+    "MICRO",
+    "RAVER",
+    "WAVER",
+    "AROW",
+    "AVER"
+  ],
+  "targetPath": [
+    "b3",
+    "d2",
+    "b1",
+    "a3",
+    "b5",
+    "d4",
+    "c2",
+    "a1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 1,
+    "c4": 1,
+    "d4": 3,
+    "e4": 2,
+    "a3": 3,
+    "b3": 5,
+    "c3": 2,
+    "a2": 1,
+    "b2": 1,
+    "c2": 3,
+    "d2": 2,
+    "a1": 1,
+    "b1": 2,
+    "c1": 1,
+    "e1": 0
+  }
+}
