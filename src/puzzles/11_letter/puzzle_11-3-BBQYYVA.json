@@ -1,0 +1,129 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CONSULTANCY",
+    "CONSULTA",
+    "CONSULT",
+    "CONSUL",
+    "SULTAN",
+    "CONSY",
+    "COTAN",
+    "NANCY",
+    "NOTAN",
+    "SCOTT"
+  ],
+  "targetPath": [
+    "d4",
+    "d3",
+    "c4",
+    "c5",
+    "b4",
+    "a4",
+    "c3",
+    "b3",
+    "b2",
+    "d1",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 2,
+    "a4": 2,
+    "b4": 2,
+    "c4": 3,
+    "d4": 1,
+    "b3": 3,
+    "c3": 3,
+    "d3": 4,
+    "e3": 2,
+    "b2": 3,
+    "c2": 0,
+    "d1": 3,
+    "e1": 2
+  }
+}

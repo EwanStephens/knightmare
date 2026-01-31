@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "DRAWING",
+    "RAWING",
+    "RAWIN",
+    "DRAW",
+    "RING",
+    "DAW",
+    "ION",
+    "IRA",
+    "ONT",
+    "RAW"
+  ],
+  "targetPath": [
+    "a1",
+    "b2",
+    "b4",
+    "a5",
+    "a2",
+    "e2",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 2,
+    "d5": 0,
+    "b4": 1,
+    "e4": 3,
+    "c3": 1,
+    "d3": 3,
+    "e3": 0,
+    "a2": 3,
+    "b2": 2,
+    "e2": 1,
+    "a1": 1,
+    "b1": 1
+  }
+}

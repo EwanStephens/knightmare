@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "ASSAULT",
+    "ASSAI",
+    "BOSSA",
+    "SAULT",
+    "ALIA",
+    "ALTS",
+    "ASIA",
+    "BOSS",
+    "OSSA",
+    "SAUL"
+  ],
+  "targetPath": [
+    "c3",
+    "c2",
+    "d1",
+    "e3",
+    "e2",
+    "e5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "e5": 2,
+    "c4": 0,
+    "a3": 2,
+    "b3": 2,
+    "c3": 3,
+    "d3": 1,
+    "e3": 2,
+    "c2": 3,
+    "e2": 2,
+    "a1": 1,
+    "d1": 1
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "PROMISED",
+    "PROMISE",
+    "EMIL",
+    "EMIR",
+    "MIRO",
+    "PROM",
+    "ROMP",
+    "SEMI",
+    "SHMO",
+    "DOM"
+  ],
+  "targetPath": [
+    "c4",
+    "e3",
+    "d2",
+    "d4",
+    "c5",
+    "c3",
+    "b5",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 3,
+    "c5": 2,
+    "d5": 1,
+    "a4": 2,
+    "c4": 3,
+    "d4": 4,
+    "a3": 0,
+    "c3": 4,
+    "e3": 1,
+    "a2": 1,
+    "d2": 1,
+    "a1": 0,
+    "b1": 1
+  }
+}

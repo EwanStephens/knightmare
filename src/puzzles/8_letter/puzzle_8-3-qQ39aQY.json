@@ -1,0 +1,100 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "ULTIMATE",
+    "ULTIMA",
+    "MAT",
+    "TIU",
+    "ULT"
+  ],
+  "targetPath": [
+    "e3",
+    "d4",
+    "c3",
+    "e1",
+    "e5",
+    "c4",
+    "d3",
+    "b3"
+  ],
+  "legalCaptures": {
+    "e5": 1,
+    "c4": 1,
+    "d4": 4,
+    "a3": 0,
+    "b3": 0,
+    "c3": 3,
+    "d3": 1,
+    "e3": 1,
+    "a2": 0,
+    "b2": 2,
+    "e1": 2
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "OWNED",
+    "OWED",
+    "DEN",
+    "NED",
+    "OWD",
+    "OWE",
+    "OWN",
+    "OWT",
+    "WED"
+  ],
+  "targetPath": [
+    "b4",
+    "c4",
+    "c2",
+    "d1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "e5": 2,
+    "a4": 0,
+    "b4": 1,
+    "c4": 4,
+    "d4": 1,
+    "c2": 1,
+    "e2": 2,
+    "d1": 2
+  }
+}

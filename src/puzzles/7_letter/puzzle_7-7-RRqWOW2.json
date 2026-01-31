@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "PARTIAL",
+    "APART",
+    "PARTI",
+    "ALOP",
+    "APAR",
+    "ASAP",
+    "PART",
+    "POLT",
+    "SALT",
+    "SAPA"
+  ],
+  "targetPath": [
+    "a2",
+    "a1",
+    "c1",
+    "d2",
+    "c3",
+    "b4",
+    "c2"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 1,
+    "e5": 0,
+    "a4": 2,
+    "b4": 2,
+    "c4": 2,
+    "c3": 1,
+    "e3": 1,
+    "a2": 2,
+    "b2": 2,
+    "c2": 2,
+    "d2": 3,
+    "a1": 2,
+    "c1": 1
+  }
+}

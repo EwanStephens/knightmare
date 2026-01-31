@@ -1,0 +1,73 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "EAGLE",
+    "LEA"
+  ],
+  "targetPath": [
+    "d4",
+    "b5",
+    "c4",
+    "a4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "d5": 0,
+    "a4": 1,
+    "c4": 2,
+    "d4": 1,
+    "a3": 0,
+    "e2": 0
+  }
+}

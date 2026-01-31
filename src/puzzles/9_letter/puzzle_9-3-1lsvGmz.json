@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "PROFESSOR",
+    "PROFESS",
+    "MESSOR",
+    "FESS",
+    "MASS",
+    "MESS",
+    "PROF",
+    "ASS",
+    "ESS",
+    "FEC"
+  ],
+  "targetPath": [
+    "a2",
+    "a5",
+    "b3",
+    "c3",
+    "b2",
+    "c2",
+    "b4",
+    "b5",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 0,
+    "b4": 1,
+    "b3": 1,
+    "c3": 1,
+    "d3": 4,
+    "a2": 1,
+    "b2": 2,
+    "c2": 1,
+    "b1": 0,
+    "c1": 2
+  }
+}

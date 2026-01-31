@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "MOTIVATED",
+    "MOTIVATE",
+    "OVATED",
+    "OVATE",
+    "DEVA",
+    "DEVI",
+    "MADE",
+    "MADO",
+    "MODE",
+    "MOTA"
+  ],
+  "targetPath": [
+    "c3",
+    "d3",
+    "d2",
+    "e4",
+    "d5",
+    "c4",
+    "e5",
+    "c5",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 4,
+    "d5": 2,
+    "e5": 1,
+    "c4": 6,
+    "e4": 1,
+    "a3": 1,
+    "c3": 2,
+    "d3": 4,
+    "e3": 2,
+    "b2": 2,
+    "d2": 2
+  }
+}

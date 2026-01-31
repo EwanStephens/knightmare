@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "PIONEER",
+    "IONE",
+    "NEER",
+    "PION",
+    "TIRE",
+    "EER",
+    "ERE",
+    "ION",
+    "IRE",
+    "NEE"
+  ],
+  "targetPath": [
+    "e3",
+    "d4",
+    "e2",
+    "d3",
+    "c2",
+    "c5",
+    "b3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "a4": 1,
+    "d4": 3,
+    "a3": 2,
+    "b3": 1,
+    "d3": 2,
+    "e3": 1,
+    "b2": 2,
+    "c2": 1,
+    "d2": 0,
+    "e2": 1,
+    "c1": 0,
+    "e1": 0
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "LITERATURE",
+    "LITERS",
+    "LITER",
+    "LITUI",
+    "SLITE",
+    "ERAT",
+    "ERER",
+    "EURE",
+    "LITE",
+    "LITU"
+  ],
+  "targetPath": [
+    "b3",
+    "a3",
+    "e3",
+    "c1",
+    "d1",
+    "a1",
+    "d4",
+    "e4",
+    "c2",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "c5": 2,
+    "d5": 1,
+    "e5": 1,
+    "a4": 1,
+    "b4": 2,
+    "d4": 2,
+    "e4": 2,
+    "a3": 1,
+    "b3": 2,
+    "e3": 3,
+    "a2": 2,
+    "c2": 4,
+    "e2": 3,
+    "a1": 1,
+    "c1": 2,
+    "d1": 1
+  }
+}

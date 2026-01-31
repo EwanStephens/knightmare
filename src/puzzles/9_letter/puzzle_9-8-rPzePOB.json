@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "INDICATED",
+    "INDICATE",
+    "CADET",
+    "INDIC",
+    "INDII",
+    "ACID",
+    "ADET",
+    "CADE",
+    "CAIN",
+    "CATE"
+  ],
+  "targetPath": [
+    "a3",
+    "c5",
+    "e4",
+    "a4",
+    "c2",
+    "c3",
+    "c1",
+    "e3",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 1,
+    "d5": 0,
+    "e5": 1,
+    "a4": 5,
+    "e4": 2,
+    "a3": 1,
+    "c3": 6,
+    "d3": 3,
+    "e3": 3,
+    "a2": 1,
+    "c2": 3,
+    "a1": 1,
+    "b1": 0,
+    "c1": 1,
+    "e1": 2
+  }
+}

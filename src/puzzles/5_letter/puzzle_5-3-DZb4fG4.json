@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "FINAL",
+    "NINA",
+    "ANI",
+    "DIF",
+    "DIN",
+    "EAN",
+    "FIN"
+  ],
+  "targetPath": [
+    "e2",
+    "d3",
+    "c2",
+    "b3",
+    "a2"
+  ],
+  "legalCaptures": {
+    "d4": 1,
+    "b3": 2,
+    "d3": 2,
+    "a2": 0,
+    "c2": 2,
+    "d2": 1,
+    "e2": 1,
+    "b1": 1
+  }
+}

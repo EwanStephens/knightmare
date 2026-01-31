@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "DISORDER",
+    "ORDER",
+    "DIER",
+    "LEIS",
+    "SIDY",
+    "SIER",
+    "TIDY",
+    "TIER",
+    "DIE",
+    "DIS"
+  ],
+  "targetPath": [
+    "a4",
+    "c4",
+    "b5",
+    "d3",
+    "e4",
+    "e3",
+    "b3",
+    "b2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "a4": 1,
+    "c4": 3,
+    "d4": 1,
+    "e4": 2,
+    "b3": 3,
+    "d3": 1,
+    "e3": 1,
+    "b2": 0,
+    "d2": 2,
+    "b1": 0,
+    "c1": 1
+  }
+}

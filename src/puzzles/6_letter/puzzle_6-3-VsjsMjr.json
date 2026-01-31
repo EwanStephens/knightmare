@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "SURVEY",
+    "SURV",
+    "EYR",
+    "SUR",
+    "SYR"
+  ],
+  "targetPath": [
+    "d5",
+    "e5",
+    "d4",
+    "c3",
+    "b4",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d5": 2,
+    "e5": 1,
+    "b4": 1,
+    "d4": 1,
+    "b3": 1,
+    "c3": 2,
+    "b2": 0
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "Z"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "POWERFUL",
+    "POWER",
+    "OWER",
+    "WERF",
+    "ERF",
+    "OWE",
+    "POW",
+    "WER",
+    "ZER"
+  ],
+  "targetPath": [
+    "a4",
+    "a2",
+    "c4",
+    "e2",
+    "e5",
+    "d4",
+    "c2",
+    "b1"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 1,
+    "e5": 1,
+    "a4": 2,
+    "c4": 3,
+    "d4": 1,
+    "a2": 1,
+    "c2": 2,
+    "d2": 3,
+    "e2": 2,
+    "a1": 1,
+    "b1": 0,
+    "d1": 1
+  }
+}

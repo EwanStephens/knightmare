@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "SUITED",
+    "SUITE",
+    "EDIT",
+    "SUIT",
+    "ESU",
+    "SUI",
+    "UIT"
+  ],
+  "targetPath": [
+    "b3",
+    "c2",
+    "d4",
+    "e4",
+    "a4",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "a4": 0,
+    "d4": 1,
+    "e4": 1,
+    "b3": 1,
+    "b2": 2,
+    "c2": 1,
+    "d2": 2,
+    "d1": 1
+  }
+}

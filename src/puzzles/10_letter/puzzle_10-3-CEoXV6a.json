@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "AGGRESSIVE",
+    "AGGRESS",
+    "ESSIVE",
+    "ASSI",
+    "GESS",
+    "GRES",
+    "ASS",
+    "ESS",
+    "GES",
+    "GGR"
+  ],
+  "targetPath": [
+    "e4",
+    "e1",
+    "d3",
+    "c1",
+    "c4",
+    "e5",
+    "b5",
+    "a4",
+    "b2",
+    "a1"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "e5": 3,
+    "a4": 1,
+    "c4": 1,
+    "e4": 2,
+    "b3": 5,
+    "d3": 3,
+    "b2": 2,
+    "d2": 1,
+    "a1": 1,
+    "c1": 2,
+    "d1": 0,
+    "e1": 1
+  }
+}

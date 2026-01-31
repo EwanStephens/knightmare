@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "VIRTUE",
+    "VIRTU",
+    "RIV",
+    "TRI",
+    "TUE"
+  ],
+  "targetPath": [
+    "a4",
+    "b5",
+    "c4",
+    "d5",
+    "e4",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "d5": 2,
+    "a4": 1,
+    "c4": 2,
+    "e4": 1,
+    "a3": 0,
+    "c3": 2,
+    "c2": 0,
+    "e1": 1
+  }
+}

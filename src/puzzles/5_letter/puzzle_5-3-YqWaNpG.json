@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "PULSE",
+    "PULS",
+    "TULA",
+    "PUL",
+    "ULA"
+  ],
+  "targetPath": [
+    "d4",
+    "b3",
+    "c4",
+    "c2",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a4": 0,
+    "c4": 3,
+    "d4": 2,
+    "e4": 0,
+    "a3": 0,
+    "b3": 1,
+    "c2": 1,
+    "d2": 1
+  }
+}

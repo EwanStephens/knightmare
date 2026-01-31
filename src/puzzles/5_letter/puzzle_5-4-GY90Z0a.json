@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "TRICK",
+    "RICK",
+    "RIC",
+    "TRI"
+  ],
+  "targetPath": [
+    "d5",
+    "e4",
+    "e1",
+    "d2",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "d5": 1,
+    "e4": 2,
+    "a3": 0,
+    "c3": 3,
+    "d3": 0,
+    "a2": 0,
+    "d2": 2,
+    "e1": 1
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "J"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "MAJOR",
+    "MAJO",
+    "DLR",
+    "ROM",
+    "RON"
+  ],
+  "targetPath": [
+    "c5",
+    "a3",
+    "b5",
+    "e5",
+    "e3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 1,
+    "e5": 2,
+    "a3": 1,
+    "b3": 3,
+    "e3": 1,
+    "e2": 1,
+    "b1": 1,
+    "d1": 1
+  }
+}

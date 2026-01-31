@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "K"
+    }
+  ],
+  "targetWords": [
+    "SUBSTANCE",
+    "STANK",
+    "SUBST",
+    "BUNA",
+    "NUBS",
+    "STAN",
+    "STAR",
+    "SUBS",
+    "TANH",
+    "TANK"
+  ],
+  "targetPath": [
+    "d4",
+    "d5",
+    "b3",
+    "d1",
+    "e2",
+    "d3",
+    "e4",
+    "a4",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "d5": 2,
+    "e5": 0,
+    "a4": 2,
+    "d4": 4,
+    "e4": 3,
+    "a3": 0,
+    "b3": 3,
+    "d3": 3,
+    "e2": 2,
+    "c1": 1,
+    "d1": 1,
+    "e1": 0
+  }
+}

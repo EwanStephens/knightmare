@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "FILTERING",
+    "INFILTER",
+    "INFITTER",
+    "FILTER",
+    "FITTER",
+    "TILTER",
+    "INFIT",
+    "TRITE",
+    "ERIN",
+    "FILT"
+  ],
+  "targetPath": [
+    "b2",
+    "a4",
+    "a3",
+    "b4",
+    "e4",
+    "c3",
+    "a2",
+    "c1",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "a4": 2,
+    "b4": 3,
+    "e4": 1,
+    "a3": 1,
+    "b3": 3,
+    "c3": 2,
+    "a2": 3,
+    "b2": 1,
+    "e2": 0,
+    "a1": 1,
+    "c1": 2
+  }
+}

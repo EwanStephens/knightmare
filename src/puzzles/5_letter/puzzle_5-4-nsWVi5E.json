@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "WORST",
+    "TROW",
+    "ORS",
+    "ROW",
+    "SRI",
+    "TRI",
+    "TRS"
+  ],
+  "targetPath": [
+    "e1",
+    "d2",
+    "c1",
+    "b1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "a4": 0,
+    "c4": 0,
+    "b3": 1,
+    "d3": 0,
+    "d2": 2,
+    "b1": 2,
+    "c1": 3,
+    "e1": 1
+  }
+}

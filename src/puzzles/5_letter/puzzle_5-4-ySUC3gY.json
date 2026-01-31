@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "J"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "JEWEL",
+    "EWE",
+    "JEW"
+  ],
+  "targetPath": [
+    "c1",
+    "a2",
+    "d5",
+    "e4",
+    "e1"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d5": 2,
+    "e4": 2,
+    "a2": 1,
+    "b2": 1,
+    "c2": 0,
+    "d2": 0,
+    "c1": 1,
+    "e1": 1
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "J"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "JIMMY",
+    "IMMY",
+    "JIM"
+  ],
+  "targetPath": [
+    "d5",
+    "e4",
+    "d2",
+    "c1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 0,
+    "d5": 1,
+    "c4": 0,
+    "e4": 2,
+    "b2": 1,
+    "d2": 1,
+    "a1": 0,
+    "c1": 2
+  }
+}

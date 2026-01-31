@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "ROUTER",
+    "OUTER",
+    "ROUTE",
+    "OUTR",
+    "ROER",
+    "ROUT",
+    "TERR",
+    "WERE",
+    "WETA",
+    "ERE"
+  ],
+  "targetPath": [
+    "d4",
+    "e2",
+    "e3",
+    "b3",
+    "c1",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c4": 2,
+    "d4": 2,
+    "b3": 3,
+    "e3": 2,
+    "c2": 2,
+    "e2": 2,
+    "c1": 1,
+    "d1": 2
+  }
+}

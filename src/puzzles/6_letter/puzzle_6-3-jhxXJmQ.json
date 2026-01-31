@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SIGNED",
+    "SIGN",
+    "SNED",
+    "GIG",
+    "IGN",
+    "NED",
+    "SIG"
+  ],
+  "targetPath": [
+    "b3",
+    "b4",
+    "a3",
+    "b2",
+    "a1",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 0,
+    "e5": 1,
+    "b4": 2,
+    "a3": 2,
+    "b3": 2,
+    "b2": 1,
+    "e2": 2,
+    "a1": 1
+  }
+}

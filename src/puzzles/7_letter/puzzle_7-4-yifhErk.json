@@ -1,0 +1,97 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "EXHIBIT",
+    "BIT",
+    "EXT"
+  ],
+  "targetPath": [
+    "b4",
+    "a3",
+    "a5",
+    "d2",
+    "e3",
+    "e5",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 0,
+    "e5": 2,
+    "b4": 2,
+    "c4": 1,
+    "a3": 3,
+    "b3": 2,
+    "e3": 2,
+    "b2": 0,
+    "d2": 1,
+    "b1": 0
+  }
+}

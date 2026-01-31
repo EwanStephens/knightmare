@@ -1,0 +1,150 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "DIMENSIONAL",
+    "DIMENSION",
+    "IODINS",
+    "LIMENS",
+    "IODAL",
+    "IODID",
+    "IODIN",
+    "LIMED",
+    "LIMEN",
+    "OMENS"
+  ],
+  "targetPath": [
+    "b2",
+    "c2",
+    "b4",
+    "d2",
+    "e1",
+    "e4",
+    "c5",
+    "d3",
+    "c1",
+    "a3",
+    "b1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "d5": 2,
+    "b4": 3,
+    "c4": 1,
+    "d4": 1,
+    "e4": 1,
+    "a3": 1,
+    "b3": 2,
+    "d3": 5,
+    "a2": 0,
+    "b2": 2,
+    "c2": 3,
+    "d2": 3,
+    "b1": 1,
+    "c1": 2,
+    "e1": 1
+  }
+}

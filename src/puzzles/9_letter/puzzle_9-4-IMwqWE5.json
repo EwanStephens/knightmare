@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "DETERMINE",
+    "ERMINEE",
+    "TERMINE",
+    "ARMINE",
+    "DETERM",
+    "ERMINE",
+    "ETERNE",
+    "TERMIN",
+    "ADMIN",
+    "ARETE"
+  ],
+  "targetPath": [
+    "c2",
+    "a2",
+    "b1",
+    "b5",
+    "d5",
+    "d2",
+    "a5",
+    "c4",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "d5": 4,
+    "e5": 0,
+    "c4": 2,
+    "a3": 2,
+    "e3": 3,
+    "a2": 1,
+    "c2": 3,
+    "d2": 4,
+    "b1": 2,
+    "d1": 2,
+    "e1": 0
+  }
+}

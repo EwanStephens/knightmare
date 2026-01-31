@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "CARDIAC",
+    "CANDIL",
+    "CARDIA",
+    "CACAN",
+    "ANDI",
+    "CACA",
+    "CAID",
+    "CAND",
+    "CARD",
+    "CUNA"
+  ],
+  "targetPath": [
+    "b4",
+    "b2",
+    "b1",
+    "c2",
+    "a3",
+    "b5",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "b4": 3,
+    "c4": 3,
+    "d4": 2,
+    "e4": 1,
+    "a3": 3,
+    "c3": 4,
+    "d3": 3,
+    "b2": 2,
+    "c2": 3,
+    "b1": 1
+  }
+}

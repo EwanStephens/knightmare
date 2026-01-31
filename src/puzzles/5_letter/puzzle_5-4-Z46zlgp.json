@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "GONNA",
+    "BAT",
+    "EGO",
+    "GON",
+    "TAB",
+    "TAE"
+  ],
+  "targetPath": [
+    "b4",
+    "b3",
+    "c2",
+    "c1",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 2,
+    "d5": 1,
+    "b4": 2,
+    "b3": 1,
+    "c2": 1,
+    "b1": 0,
+    "c1": 1
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "AIRCRAFT",
+    "CIRCA",
+    "CRAFT",
+    "TRIAC",
+    "AIRA",
+    "CAIC",
+    "CAIR",
+    "CIRC",
+    "CIRL",
+    "CRIC"
+  ],
+  "targetPath": [
+    "e3",
+    "d3",
+    "c3",
+    "d2",
+    "e1",
+    "c2",
+    "b3",
+    "b1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c4": 1,
+    "d4": 2,
+    "b3": 3,
+    "c3": 4,
+    "d3": 3,
+    "e3": 2,
+    "c2": 1,
+    "d2": 3,
+    "b1": 2,
+    "e1": 2
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "RESUME",
+    "MORES",
+    "MORE",
+    "RUME",
+    "SURE",
+    "ESU",
+    "MOR",
+    "RES",
+    "RUM",
+    "SUR"
+  ],
+  "targetPath": [
+    "c2",
+    "a1",
+    "b2",
+    "c1",
+    "c3",
+    "d4"
+  ],
+  "legalCaptures": {
+    "e5": 0,
+    "c4": 1,
+    "d4": 0,
+    "c3": 3,
+    "b2": 2,
+    "c2": 3,
+    "a1": 1,
+    "c1": 1,
+    "e1": 1
+  }
+}

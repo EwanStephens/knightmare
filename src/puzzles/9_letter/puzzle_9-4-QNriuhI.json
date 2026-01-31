@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "ARBITRARY",
+    "AIT",
+    "ARB",
+    "ARU",
+    "ARY",
+    "BIT",
+    "BRA",
+    "HIA",
+    "HIT",
+    "TRA"
+  ],
+  "targetPath": [
+    "a5",
+    "b3",
+    "c5",
+    "c4",
+    "e5",
+    "d5",
+    "b4",
+    "c2",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "b4": 2,
+    "c4": 3,
+    "e4": 2,
+    "a3": 2,
+    "b3": 2,
+    "c3": 0,
+    "c2": 1,
+    "e1": 0
+  }
+}

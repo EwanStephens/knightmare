@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "RANGE",
+    "DEAN",
+    "GEAN",
+    "RANG",
+    "DEA",
+    "DEG",
+    "DIE",
+    "EAN",
+    "RAN"
+  ],
+  "targetPath": [
+    "a4",
+    "b2",
+    "b1",
+    "d2",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a4": 1,
+    "c3": 2,
+    "e3": 1,
+    "a2": 1,
+    "b2": 3,
+    "c2": 0,
+    "d2": 2,
+    "b1": 1,
+    "d1": 1
+  }
+}

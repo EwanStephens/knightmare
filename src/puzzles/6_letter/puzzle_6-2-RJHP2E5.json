@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "CLINIC",
+    "CLIN",
+    "CLI",
+    "LIN"
+  ],
+  "targetPath": [
+    "e2",
+    "d2",
+    "e1",
+    "c2",
+    "b1",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b4": 1,
+    "a2": 2,
+    "c2": 1,
+    "d2": 1,
+    "e2": 1,
+    "b1": 1,
+    "e1": 1
+  }
+}

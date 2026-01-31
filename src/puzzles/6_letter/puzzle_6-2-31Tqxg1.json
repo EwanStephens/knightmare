@@ -1,0 +1,80 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "ACROSS",
+    "CROSS",
+    "ROSS",
+    "CRO",
+    "CSC",
+    "OSC",
+    "ROS",
+    "SCR"
+  ],
+  "targetPath": [
+    "e4",
+    "d3",
+    "d4",
+    "c3",
+    "c2",
+    "b1"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "d4": 1,
+    "e4": 1,
+    "c3": 1,
+    "d3": 3,
+    "a2": 0,
+    "c2": 4,
+    "b1": 0
+  }
+}

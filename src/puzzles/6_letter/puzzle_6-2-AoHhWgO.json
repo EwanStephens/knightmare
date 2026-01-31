@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "CARBON",
+    "CARBO",
+    "YARB",
+    "ARA",
+    "ARB",
+    "BRA",
+    "CAR",
+    "ONY",
+    "YAR"
+  ],
+  "targetPath": [
+    "a5",
+    "c4",
+    "d3",
+    "e4",
+    "b1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "a4": 2,
+    "c4": 1,
+    "e4": 1,
+    "d3": 2,
+    "a2": 2,
+    "e2": 1,
+    "b1": 1
+  }
+}

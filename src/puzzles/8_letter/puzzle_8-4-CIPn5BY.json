@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "THROWING",
+    "ROWING",
+    "THROW",
+    "GROW",
+    "THRO",
+    "GRO",
+    "OTO",
+    "PHR",
+    "POW",
+    "ROW"
+  ],
+  "targetPath": [
+    "e4",
+    "d3",
+    "c3",
+    "c2",
+    "a4",
+    "d1",
+    "a1",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "a4": 1,
+    "b4": 2,
+    "c4": 1,
+    "d4": 1,
+    "e4": 1,
+    "c3": 4,
+    "d3": 1,
+    "c2": 1,
+    "a1": 0,
+    "d1": 1
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "GRAIN",
+    "RAIN",
+    "AIN",
+    "DAG",
+    "GRA",
+    "NIG"
+  ],
+  "targetPath": [
+    "e1",
+    "a5",
+    "b3",
+    "a1",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 1,
+    "e4": 1,
+    "a3": 0,
+    "b3": 2,
+    "a1": 1,
+    "d1": 1,
+    "e1": 1
+  }
+}

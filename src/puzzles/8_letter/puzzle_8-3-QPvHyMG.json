@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "SECURELY",
+    "SECURE",
+    "CURE",
+    "CURN",
+    "RELY",
+    "SECY",
+    "CUR",
+    "CYL",
+    "ECU",
+    "LYM"
+  ],
+  "targetPath": [
+    "d5",
+    "a2",
+    "c3",
+    "b5",
+    "a4",
+    "d4",
+    "e3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c5": 2,
+    "d5": 3,
+    "a4": 3,
+    "d4": 2,
+    "e4": 0,
+    "c3": 3,
+    "e3": 1,
+    "a2": 1,
+    "e2": 1
+  }
+}

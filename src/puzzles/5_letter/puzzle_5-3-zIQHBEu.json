@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "WEIRD",
+    "DRIE",
+    "WEIR",
+    "DEI",
+    "EIR",
+    "RIE",
+    "WEI"
+  ],
+  "targetPath": [
+    "d4",
+    "d3",
+    "c4",
+    "b3",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 0,
+    "a4": 2,
+    "b4": 1,
+    "c4": 2,
+    "d4": 1,
+    "b3": 2,
+    "d3": 1
+  }
+}

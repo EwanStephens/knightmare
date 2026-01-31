@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "ADOPTED",
+    "ADOPT",
+    "DETI",
+    "IODO",
+    "ADO",
+    "DET",
+    "DOP",
+    "ODA",
+    "PTE",
+    "TED"
+  ],
+  "targetPath": [
+    "a1",
+    "b2",
+    "c1",
+    "a3",
+    "c5",
+    "e5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 2,
+    "e4": 1,
+    "a3": 1,
+    "c3": 2,
+    "a2": 0,
+    "b2": 2,
+    "c2": 1,
+    "a1": 1,
+    "c1": 2,
+    "d1": 1
+  }
+}

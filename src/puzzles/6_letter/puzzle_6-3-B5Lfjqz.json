@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "BEYOND",
+    "OBEY",
+    "YOND",
+    "BEY",
+    "OBE",
+    "ONO",
+    "YOB",
+    "YON"
+  ],
+  "targetPath": [
+    "d4",
+    "e3",
+    "c4",
+    "b3",
+    "c1",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c4": 1,
+    "d4": 1,
+    "b3": 3,
+    "e3": 1,
+    "c2": 0,
+    "c1": 2,
+    "d1": 0
+  }
+}

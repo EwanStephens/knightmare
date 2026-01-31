@@ -1,0 +1,79 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "CANVAS",
+    "ASCAN",
+    "SCAN",
+    "AVN",
+    "CAN",
+    "SAV",
+    "VAS"
+  ],
+  "targetPath": [
+    "a1",
+    "e1",
+    "c3",
+    "d4",
+    "c5",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 2,
+    "d4": 2,
+    "a3": 3,
+    "c3": 1,
+    "d3": 0,
+    "a1": 2,
+    "e1": 1
+  }
+}

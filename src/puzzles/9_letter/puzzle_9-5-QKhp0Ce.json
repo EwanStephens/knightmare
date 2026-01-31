@@ -1,0 +1,127 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "DIRECTION",
+    "RECTION",
+    "DIRECT",
+    "RECTI",
+    "DIRE",
+    "ONAN",
+    "RECT",
+    "TERI",
+    "DIR",
+    "ION"
+  ],
+  "targetPath": [
+    "a2",
+    "c4",
+    "d5",
+    "a5",
+    "a3",
+    "b2",
+    "d1",
+    "c2",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "b4": 1,
+    "c4": 1,
+    "d4": 0,
+    "e4": 1,
+    "a3": 1,
+    "c3": 0,
+    "a2": 2,
+    "b2": 1,
+    "c2": 2,
+    "d2": 1,
+    "a1": 1,
+    "d1": 1
+  }
+}

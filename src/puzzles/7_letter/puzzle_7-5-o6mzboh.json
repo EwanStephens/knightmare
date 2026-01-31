@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "BESIDES",
+    "BESIDE",
+    "DISK",
+    "ISIS",
+    "SIDE",
+    "BES",
+    "DIS",
+    "IDE",
+    "KSI",
+    "SID"
+  ],
+  "targetPath": [
+    "a1",
+    "c2",
+    "c5",
+    "d4",
+    "e5",
+    "b2",
+    "e2"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "e5": 1,
+    "a4": 0,
+    "b4": 1,
+    "d4": 2,
+    "e4": 1,
+    "e3": 1,
+    "b2": 0,
+    "c2": 2,
+    "e2": 1,
+    "a1": 1,
+    "d1": 2
+  }
+}

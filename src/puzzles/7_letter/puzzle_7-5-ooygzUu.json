@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    }
+  ],
+  "targetWords": [
+    "WARNING",
+    "ARNI",
+    "NING",
+    "TARR",
+    "WARB",
+    "WARN",
+    "ARB",
+    "ARN",
+    "ARR",
+    "ING"
+  ],
+  "targetPath": [
+    "b1",
+    "c1",
+    "a1",
+    "a5",
+    "e5",
+    "d3",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "e5": 1,
+    "b4": 2,
+    "e4": 1,
+    "d3": 2,
+    "b2": 2,
+    "c2": 2,
+    "d2": 1,
+    "a1": 1,
+    "b1": 1,
+    "c1": 3,
+    "d1": 1
+  }
+}

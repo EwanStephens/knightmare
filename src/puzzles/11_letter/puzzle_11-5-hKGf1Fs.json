@@ -1,0 +1,143 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "Z"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CALCULATION",
+    "CALCI",
+    "CALC",
+    "LATI",
+    "TULA",
+    "ALC",
+    "ATI",
+    "CAL",
+    "CUB",
+    "CUL"
+  ],
+  "targetPath": [
+    "e4",
+    "b1",
+    "d2",
+    "c1",
+    "c5",
+    "b5",
+    "a3",
+    "b3",
+    "a1",
+    "d1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c5": 4,
+    "e5": 0,
+    "a4": 2,
+    "d4": 2,
+    "e4": 1,
+    "a3": 2,
+    "b3": 4,
+    "b2": 2,
+    "d2": 1,
+    "a1": 1,
+    "b1": 2,
+    "c1": 1,
+    "d1": 2,
+    "e1": 0
+  }
+}

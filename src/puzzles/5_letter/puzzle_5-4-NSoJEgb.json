@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "PURSE",
+    "PURS",
+    "MRS",
+    "MRU",
+    "PUR",
+    "URS"
+  ],
+  "targetPath": [
+    "e5",
+    "d3",
+    "d1",
+    "c1",
+    "c5"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 1,
+    "a4": 1,
+    "d3": 2,
+    "e3": 0,
+    "a2": 0,
+    "c1": 2,
+    "d1": 2,
+    "e1": 0
+  }
+}

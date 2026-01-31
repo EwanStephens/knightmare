@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "ORIGINALLY",
+    "ORIGINAL",
+    "RIGINAL",
+    "ORALLY",
+    "ORIGIN",
+    "YOGINI",
+    "GORAL",
+    "INIGO",
+    "RALLY",
+    "RIGOR"
+  ],
+  "targetPath": [
+    "e2",
+    "c4",
+    "a4",
+    "d1",
+    "a1",
+    "c3",
+    "b5",
+    "d5",
+    "a2",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 3,
+    "d5": 0,
+    "e5": 0,
+    "a4": 1,
+    "c4": 4,
+    "a3": 1,
+    "c3": 4,
+    "a2": 2,
+    "d2": 2,
+    "e2": 2,
+    "a1": 2,
+    "d1": 3
+  }
+}

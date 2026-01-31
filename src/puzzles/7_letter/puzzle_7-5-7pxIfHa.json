@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "EMPEROR",
+    "EMPT",
+    "PEES",
+    "REEM",
+    "REES",
+    "EER",
+    "EMP",
+    "PEE",
+    "PER",
+    "PTP"
+  ],
+  "targetPath": [
+    "e1",
+    "e3",
+    "d2",
+    "b1",
+    "b5",
+    "d5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "d5": 1,
+    "c4": 1,
+    "e4": 0,
+    "c3": 1,
+    "d3": 2,
+    "e3": 1,
+    "c2": 0,
+    "d2": 2,
+    "a1": 0,
+    "b1": 2,
+    "e1": 2
+  }
+}

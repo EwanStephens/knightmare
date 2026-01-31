@@ -1,0 +1,127 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "REGISTRAR",
+    "ARIST",
+    "STRAG",
+    "TRAGI",
+    "AREG",
+    "AREN",
+    "ARTS",
+    "ERIS",
+    "GARE",
+    "GIRE"
+  ],
+  "targetPath": [
+    "c4",
+    "d5",
+    "b3",
+    "b5",
+    "e2",
+    "c1",
+    "a2",
+    "c3",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "d5": 2,
+    "e5": 0,
+    "a4": 1,
+    "c4": 2,
+    "e4": 0,
+    "a3": 0,
+    "b3": 2,
+    "c3": 4,
+    "e3": 3,
+    "a2": 2,
+    "e2": 2,
+    "c1": 3
+  }
+}

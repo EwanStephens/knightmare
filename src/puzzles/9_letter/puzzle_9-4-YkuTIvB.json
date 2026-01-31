@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "ADVENTURE",
+    "VENTURED",
+    "DASSENT",
+    "VENTURE",
+    "ADVENT",
+    "ASSENT",
+    "ASSE",
+    "ASST",
+    "ERNE",
+    "REEN"
+  ],
+  "targetPath": [
+    "e4",
+    "d4",
+    "d5",
+    "c4",
+    "b5",
+    "d3",
+    "e5",
+    "a5",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "d5": 1,
+    "e5": 1,
+    "a4": 2,
+    "c4": 2,
+    "d4": 2,
+    "e4": 2,
+    "c3": 2,
+    "d3": 3,
+    "b2": 1,
+    "e2": 1,
+    "e1": 1
+  }
+}

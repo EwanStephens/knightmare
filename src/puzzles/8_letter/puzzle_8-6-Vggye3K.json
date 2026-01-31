@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "INSPIRED",
+    "INSPIRE",
+    "APED",
+    "GIRE",
+    "INSP",
+    "IRED",
+    "PEGS",
+    "SPED",
+    "APE",
+    "INS"
+  ],
+  "targetPath": [
+    "e1",
+    "c3",
+    "e5",
+    "e3",
+    "a3",
+    "b4",
+    "c5",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "c5": 2,
+    "e5": 1,
+    "b4": 2,
+    "c4": 2,
+    "a3": 1,
+    "c3": 3,
+    "e3": 3,
+    "e2": 1,
+    "a1": 0,
+    "b1": 3,
+    "d1": 0,
+    "e1": 1
+  }
+}

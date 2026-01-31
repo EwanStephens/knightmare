@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "GEOLOGY",
+    "OLOGY",
+    "GEOL",
+    "LOGY",
+    "GEO",
+    "GOL",
+    "LOE",
+    "LOG",
+    "TAO",
+    "TLO"
+  ],
+  "targetPath": [
+    "d2",
+    "d1",
+    "a4",
+    "d4",
+    "e5",
+    "e2",
+    "e1"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 2,
+    "e5": 2,
+    "a4": 2,
+    "d4": 1,
+    "d3": 2,
+    "d2": 3,
+    "e2": 3,
+    "a1": 1,
+    "d1": 1,
+    "e1": 1
+  }
+}

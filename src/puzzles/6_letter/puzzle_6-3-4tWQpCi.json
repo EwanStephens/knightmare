@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "HEADED",
+    "HEAD",
+    "ADE",
+    "EAD",
+    "IDE"
+  ],
+  "targetPath": [
+    "b5",
+    "a4",
+    "b4",
+    "e4",
+    "d5",
+    "b3"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 0,
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 3,
+    "e4": 1,
+    "b3": 1,
+    "a2": 0
+  }
+}

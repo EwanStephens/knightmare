@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "MANUAL",
+    "AMU",
+    "MAN",
+    "MUN",
+    "UMU"
+  ],
+  "targetPath": [
+    "e5",
+    "c5",
+    "c4",
+    "e3",
+    "c2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "e5": 3,
+    "c4": 2,
+    "d4": 1,
+    "a3": 0,
+    "e3": 2,
+    "c2": 1,
+    "d1": 1
+  }
+}

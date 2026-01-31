@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "INSPECTOR",
+    "INSPECT",
+    "SPECTOR",
+    "PETTO",
+    "SPECS",
+    "SPECT",
+    "TORTS",
+    "INSP",
+    "ORTS",
+    "OTTO"
+  ],
+  "targetPath": [
+    "b1",
+    "d2",
+    "e3",
+    "d1",
+    "c2",
+    "b2",
+    "d3",
+    "e4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 4,
+    "c5": 1,
+    "a4": 0,
+    "e4": 1,
+    "d3": 2,
+    "e3": 1,
+    "b2": 2,
+    "c2": 4,
+    "d2": 1,
+    "b1": 1,
+    "c1": 1,
+    "d1": 1
+  }
+}

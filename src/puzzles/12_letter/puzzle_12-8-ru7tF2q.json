@@ -1,0 +1,172 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "COMPENSATION",
+    "SATION",
+    "OPENS",
+    "PENTA",
+    "ATIS",
+    "COMP",
+    "COON",
+    "COOP",
+    "EYAS",
+    "HOON"
+  ],
+  "targetPath": [
+    "b1",
+    "d3",
+    "d2",
+    "c3",
+    "b2",
+    "a3",
+    "a5",
+    "c4",
+    "c5",
+    "e5",
+    "d4",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 2,
+    "e5": 2,
+    "c4": 2,
+    "d4": 6,
+    "e4": 2,
+    "a3": 4,
+    "b3": 2,
+    "c3": 2,
+    "d3": 4,
+    "e3": 2,
+    "a2": 1,
+    "b2": 3,
+    "d2": 2,
+    "e2": 3,
+    "a1": 1,
+    "b1": 1,
+    "c1": 2,
+    "d1": 3,
+    "e1": 0
+  }
+}

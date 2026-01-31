@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DESTROY",
+    "STROY",
+    "TROY",
+    "TYEE",
+    "DEE",
+    "DES",
+    "EST",
+    "EYE",
+    "SOY",
+    "STR"
+  ],
+  "targetPath": [
+    "c1",
+    "a3",
+    "b5",
+    "c3",
+    "a1",
+    "d4",
+    "e3"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "d5": 2,
+    "e5": 2,
+    "d4": 1,
+    "a3": 1,
+    "b3": 2,
+    "c3": 1,
+    "e3": 1,
+    "a2": 0,
+    "c2": 1,
+    "d2": 2,
+    "a1": 1,
+    "c1": 3
+  }
+}

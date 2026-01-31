@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ACCEPTANCE",
+    "ACCEPT",
+    "NANCE",
+    "ACCE",
+    "ACCT",
+    "CEPA",
+    "PACE",
+    "ACC",
+    "ACE",
+    "ADC"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "d3",
+    "d1",
+    "c3",
+    "c2",
+    "b1",
+    "a1",
+    "a4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 1,
+    "d4": 4,
+    "e4": 1,
+    "b3": 1,
+    "c3": 2,
+    "d3": 1,
+    "e3": 1,
+    "c2": 2,
+    "a1": 3,
+    "b1": 4,
+    "c1": 2,
+    "d1": 2
+  }
+}

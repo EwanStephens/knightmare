@@ -1,0 +1,135 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "HELICOPTER",
+    "HELICOPT",
+    "CREOLE",
+    "SLEER",
+    "SLEET",
+    "SPEER",
+    "EOLE",
+    "HEER",
+    "LEER",
+    "LEET"
+  ],
+  "targetPath": [
+    "e3",
+    "b3",
+    "c2",
+    "b2",
+    "c1",
+    "a3",
+    "b5",
+    "a5",
+    "c4",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "e5": 0,
+    "c4": 4,
+    "d4": 2,
+    "e4": 0,
+    "a3": 3,
+    "b3": 2,
+    "e3": 1,
+    "b2": 1,
+    "c2": 3,
+    "d2": 2,
+    "a1": 1,
+    "c1": 2,
+    "e1": 0
+  }
+}

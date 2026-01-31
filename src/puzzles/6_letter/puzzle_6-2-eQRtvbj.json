@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DELUXE",
+    "LUXE",
+    "DEL",
+    "LUX"
+  ],
+  "targetPath": [
+    "b5",
+    "c5",
+    "b4",
+    "d5",
+    "e4",
+    "b1"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "d5": 1,
+    "a4": 0,
+    "b4": 1,
+    "e4": 2,
+    "a3": 0,
+    "b1": 1
+  }
+}

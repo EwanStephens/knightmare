@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "SOMEHOW",
+    "DOME",
+    "IODO",
+    "MODO",
+    "SOME",
+    "AME",
+    "COW",
+    "DOM",
+    "HEW",
+    "HOE"
+  ],
+  "targetPath": [
+    "e5",
+    "d3",
+    "c2",
+    "b3",
+    "b4",
+    "c4",
+    "c3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 2,
+    "e5": 2,
+    "a4": 0,
+    "b4": 2,
+    "c4": 3,
+    "d4": 1,
+    "b3": 2,
+    "c3": 0,
+    "d3": 2,
+    "b2": 1,
+    "c2": 2,
+    "d2": 1,
+    "e2": 1
+  }
+}

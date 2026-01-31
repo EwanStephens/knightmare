@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "ARRANGED",
+    "ARRANGE",
+    "RANGED",
+    "RANGE",
+    "GEAN",
+    "GEAR",
+    "RANG",
+    "AGE",
+    "ARR",
+    "EAN"
+  ],
+  "targetPath": [
+    "b1",
+    "d3",
+    "c5",
+    "b4",
+    "d2",
+    "a2",
+    "a5",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 1,
+    "b4": 4,
+    "c4": 2,
+    "d4": 1,
+    "d3": 1,
+    "e3": 0,
+    "a2": 2,
+    "d2": 2,
+    "b1": 2,
+    "c1": 1,
+    "e1": 0
+  }
+}

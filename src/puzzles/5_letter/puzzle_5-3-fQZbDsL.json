@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "OSCAR",
+    "SCAR",
+    "CAR",
+    "OSC"
+  ],
+  "targetPath": [
+    "a2",
+    "c1",
+    "e3",
+    "d4",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "d5": 0,
+    "b4": 0,
+    "d4": 2,
+    "c3": 1,
+    "e3": 1,
+    "a2": 1,
+    "c1": 1
+  }
+}

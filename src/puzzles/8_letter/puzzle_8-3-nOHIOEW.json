@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "OPERATED",
+    "OPERATE",
+    "SPERATE",
+    "DOPER",
+    "ERATO",
+    "OPERA",
+    "RATED",
+    "TOPER",
+    "ATED",
+    "ATOP"
+  ],
+  "targetPath": [
+    "b4",
+    "a5",
+    "a2",
+    "b3",
+    "c2",
+    "c4",
+    "c1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "b4": 2,
+    "c4": 2,
+    "b3": 2,
+    "e3": 0,
+    "a2": 1,
+    "b2": 0,
+    "c2": 1,
+    "c1": 1,
+    "e1": 1
+  }
+}

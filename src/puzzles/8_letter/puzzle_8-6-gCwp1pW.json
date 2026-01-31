@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "EVERYDAY",
+    "EVERY",
+    "EVER",
+    "VEDA",
+    "VERY",
+    "YDAY",
+    "AYE",
+    "DAY",
+    "EVA",
+    "EVE"
+  ],
+  "targetPath": [
+    "d2",
+    "c3",
+    "b2",
+    "e5",
+    "a1",
+    "b3",
+    "c4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "d5": 0,
+    "e5": 0,
+    "a4": 0,
+    "c4": 2,
+    "a3": 1,
+    "b3": 1,
+    "c3": 4,
+    "d3": 1,
+    "b2": 1,
+    "c2": 2,
+    "d2": 1,
+    "a1": 1,
+    "e1": 1
+  }
+}

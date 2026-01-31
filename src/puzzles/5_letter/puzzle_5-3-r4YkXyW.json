@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "K"
+    }
+  ],
+  "targetWords": [
+    "CRACK",
+    "RACK",
+    "ACK",
+    "YRS"
+  ],
+  "targetPath": [
+    "d3",
+    "e5",
+    "c5",
+    "b3",
+    "a2"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 1,
+    "a4": 1,
+    "c4": 1,
+    "a3": 0,
+    "b3": 1,
+    "d3": 1,
+    "a2": 1
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "HOLLOW",
+    "HOLLO",
+    "HOLL",
+    "HOOL",
+    "HOON",
+    "HOL",
+    "HOO",
+    "LOE",
+    "LOO",
+    "LOW"
+  ],
+  "targetPath": [
+    "b3",
+    "c2",
+    "c1",
+    "b2",
+    "c3",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d4": 0,
+    "a3": 1,
+    "b3": 1,
+    "c3": 4,
+    "b2": 1,
+    "c2": 3,
+    "c1": 1
+  }
+}

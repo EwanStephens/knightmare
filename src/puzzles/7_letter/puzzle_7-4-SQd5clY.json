@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "REALTOR",
+    "TORTE",
+    "ALEE",
+    "ALTO",
+    "REAL",
+    "TELT",
+    "TORI",
+    "TORT",
+    "TRIT",
+    "ALE"
+  ],
+  "targetPath": [
+    "d3",
+    "e4",
+    "d5",
+    "b5",
+    "a4",
+    "a2",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 2,
+    "d5": 2,
+    "a4": 2,
+    "c4": 4,
+    "d4": 0,
+    "e4": 2,
+    "d3": 2,
+    "a2": 3,
+    "d2": 2,
+    "c1": 2
+  }
+}

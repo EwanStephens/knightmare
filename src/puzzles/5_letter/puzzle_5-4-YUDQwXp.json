@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "LOCAL",
+    "LOCA",
+    "CAL",
+    "COL",
+    "LOC",
+    "OCA"
+  ],
+  "targetPath": [
+    "a3",
+    "b2",
+    "d4",
+    "e3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "c4": 0,
+    "d4": 2,
+    "a3": 1,
+    "e3": 1,
+    "b2": 2,
+    "c2": 2,
+    "e2": 0,
+    "b1": 1,
+    "e1": 0
+  }
+}

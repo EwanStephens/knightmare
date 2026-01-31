@@ -1,0 +1,101 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ATTITUDE",
+    "TIED",
+    "ATT",
+    "ITD",
+    "TIE",
+    "TIT"
+  ],
+  "targetPath": [
+    "b4",
+    "d3",
+    "d1",
+    "c1",
+    "c5",
+    "a3",
+    "a4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "a4": 1,
+    "b4": 1,
+    "a3": 2,
+    "d3": 1,
+    "e3": 1,
+    "b1": 0,
+    "c1": 2,
+    "d1": 2,
+    "e1": 1
+  }
+}

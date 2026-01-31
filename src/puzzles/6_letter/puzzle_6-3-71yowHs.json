@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "HOSTEL",
+    "HOST",
+    "SOH",
+    "TEL"
+  ],
+  "targetPath": [
+    "e5",
+    "d4",
+    "c5",
+    "b4",
+    "a5",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "c5": 2,
+    "e5": 1,
+    "b4": 2,
+    "d4": 2,
+    "b3": 0,
+    "a2": 0,
+    "d1": 1
+  }
+}

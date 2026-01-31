@@ -1,0 +1,143 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "SUBSTANTIAL",
+    "SUBSTANTIA",
+    "SUBSTANT",
+    "STANDS",
+    "ABUSE",
+    "ENTIA",
+    "SENTI",
+    "STAND",
+    "SUBST",
+    "TABUS"
+  ],
+  "targetPath": [
+    "a1",
+    "e5",
+    "d5",
+    "c4",
+    "d3",
+    "a3",
+    "b4",
+    "b5",
+    "c5",
+    "e3",
+    "d1"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "d5": 2,
+    "e5": 2,
+    "b4": 4,
+    "c4": 2,
+    "a3": 1,
+    "d3": 3,
+    "e3": 3,
+    "a2": 1,
+    "c2": 1,
+    "d2": 2,
+    "a1": 3,
+    "b1": 3,
+    "d1": 2,
+    "e1": 1
+  }
+}

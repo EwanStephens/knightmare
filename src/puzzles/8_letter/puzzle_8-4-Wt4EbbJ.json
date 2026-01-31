@@ -1,0 +1,110 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "J"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "JUDGMENT",
+    "FENT",
+    "MENT",
+    "RENT",
+    "FEN",
+    "JUD",
+    "MEN",
+    "REN"
+  ],
+  "targetPath": [
+    "a3",
+    "b3",
+    "c4",
+    "d3",
+    "e5",
+    "d4",
+    "b5",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "d5": 1,
+    "e5": 1,
+    "c4": 2,
+    "d4": 1,
+    "e4": 1,
+    "a3": 1,
+    "b3": 1,
+    "c3": 1,
+    "d3": 2,
+    "e3": 0
+  }
+}

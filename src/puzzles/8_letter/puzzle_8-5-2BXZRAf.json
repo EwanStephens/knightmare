@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "SPORTING",
+    "SPORT",
+    "TINGS",
+    "SPOR",
+    "TING",
+    "EPA",
+    "ORA",
+    "ORT",
+    "RTI",
+    "TIN"
+  ],
+  "targetPath": [
+    "a4",
+    "a5",
+    "a3",
+    "c2",
+    "b2",
+    "e5",
+    "a1",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 1,
+    "e4": 1,
+    "a3": 1,
+    "b3": 1,
+    "b2": 1,
+    "c2": 2,
+    "d2": 0,
+    "e2": 2,
+    "a1": 2
+  }
+}

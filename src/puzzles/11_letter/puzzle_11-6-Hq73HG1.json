@@ -1,0 +1,150 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "CONVERTIBLE",
+    "ICONVERT",
+    "LCONVERT",
+    "CONVERT",
+    "INVERT",
+    "TANIER",
+    "TINIER",
+    "CONIA",
+    "ICONV",
+    "TANIA"
+  ],
+  "targetPath": [
+    "c3",
+    "d1",
+    "c1",
+    "a1",
+    "b3",
+    "b5",
+    "c4",
+    "d2",
+    "a5",
+    "d5",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "d5": 2,
+    "a4": 1,
+    "c4": 2,
+    "d4": 4,
+    "e4": 0,
+    "b3": 3,
+    "c3": 3,
+    "e3": 2,
+    "b2": 3,
+    "c2": 4,
+    "d2": 4,
+    "a1": 1,
+    "c1": 5,
+    "d1": 2,
+    "e1": 2
+  }
+}

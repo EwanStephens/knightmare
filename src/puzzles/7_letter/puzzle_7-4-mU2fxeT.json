@@ -1,0 +1,102 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "SURGERY",
+    "SURGER",
+    "SURGE",
+    "GERY",
+    "SURG",
+    "ERR",
+    "GER",
+    "SUR"
+  ],
+  "targetPath": [
+    "e4",
+    "d2",
+    "e3",
+    "e5",
+    "c4",
+    "d3",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "d5": 0,
+    "e5": 1,
+    "c4": 1,
+    "e4": 1,
+    "c3": 2,
+    "d3": 2,
+    "e3": 2,
+    "d2": 2,
+    "a1": 0,
+    "b1": 0
+  }
+}

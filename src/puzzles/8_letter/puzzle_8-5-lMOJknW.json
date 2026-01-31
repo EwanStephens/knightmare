@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "ANIMATED",
+    "ANIMATE",
+    "ANIMA",
+    "FATED",
+    "HATED",
+    "MATED",
+    "ANIM",
+    "ATED",
+    "ATEN",
+    "FATE"
+  ],
+  "targetPath": [
+    "c4",
+    "d4",
+    "a1",
+    "b3",
+    "a4",
+    "c5",
+    "e4",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "c5": 2,
+    "a4": 1,
+    "c4": 3,
+    "d4": 1,
+    "e4": 3,
+    "b3": 2,
+    "d3": 2,
+    "a2": 0,
+    "a1": 1,
+    "c1": 0,
+    "e1": 0
+  }
+}

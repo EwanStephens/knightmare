@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Z"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "UTILIZE",
+    "LITE",
+    "LITI",
+    "LITU",
+    "LIZA",
+    "UTIL",
+    "III",
+    "ITA",
+    "LIT",
+    "LIZ"
+  ],
+  "targetPath": [
+    "e2",
+    "a2",
+    "d5",
+    "a5",
+    "b4",
+    "d3",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 2,
+    "e5": 0,
+    "b4": 2,
+    "d4": 4,
+    "e4": 0,
+    "a3": 0,
+    "d3": 3,
+    "a2": 4,
+    "e2": 1,
+    "b1": 0
+  }
+}

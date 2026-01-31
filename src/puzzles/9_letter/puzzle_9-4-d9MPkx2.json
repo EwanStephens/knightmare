@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "PASSENGER",
+    "PASSEN",
+    "EASER",
+    "PASSE",
+    "ASSE",
+    "EASE",
+    "ESSE",
+    "GESS",
+    "PASE",
+    "PASS"
+  ],
+  "targetPath": [
+    "b3",
+    "a4",
+    "a3",
+    "b4",
+    "c5",
+    "e4",
+    "c2",
+    "b2",
+    "c1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 2,
+    "a4": 1,
+    "b4": 2,
+    "e4": 1,
+    "a3": 2,
+    "b3": 1,
+    "b2": 2,
+    "c2": 2,
+    "a1": 2,
+    "c1": 3,
+    "e1": 1
+  }
+}

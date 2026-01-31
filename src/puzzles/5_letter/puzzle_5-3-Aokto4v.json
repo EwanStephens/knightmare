@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SHARE",
+    "ERSH",
+    "HARE",
+    "HERS",
+    "SHER",
+    "ARE",
+    "ARS",
+    "ERS",
+    "HEP",
+    "HER"
+  ],
+  "targetPath": [
+    "c4",
+    "d3",
+    "e2",
+    "a2",
+    "b1"
+  ],
+  "legalCaptures": {
+    "a4": 0,
+    "b4": 0,
+    "c4": 2,
+    "d3": 3,
+    "a2": 2,
+    "e2": 1,
+    "a1": 0,
+    "b1": 3
+  }
+}

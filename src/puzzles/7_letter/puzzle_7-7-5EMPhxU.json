@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "SUPPOSE",
+    "SUPPOS",
+    "POSE",
+    "SUES",
+    "SUPP",
+    "OSE",
+    "POS",
+    "SIE",
+    "SIR",
+    "SUE"
+  ],
+  "targetPath": [
+    "b4",
+    "b3",
+    "a2",
+    "b1",
+    "c1",
+    "c2",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "d5": 2,
+    "a4": 1,
+    "b4": 3,
+    "e4": 3,
+    "b3": 3,
+    "d3": 1,
+    "e3": 0,
+    "a2": 1,
+    "c2": 1,
+    "b1": 1,
+    "c1": 2,
+    "e1": 0
+  }
+}

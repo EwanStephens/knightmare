@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "LONGER",
+    "LONGE",
+    "GEOM",
+    "LONG",
+    "EOM",
+    "GEO",
+    "MOE"
+  ],
+  "targetPath": [
+    "d2",
+    "c2",
+    "d1",
+    "e2",
+    "e3",
+    "c1"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "b4": 2,
+    "b3": 0,
+    "e3": 1,
+    "c2": 1,
+    "d2": 3,
+    "e2": 3,
+    "c1": 0,
+    "d1": 2
+  }
+}

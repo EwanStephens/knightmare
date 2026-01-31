@@ -1,0 +1,127 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "J"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "PROJECTOR",
+    "PROJECT",
+    "PROO",
+    "ROOP",
+    "ROOT",
+    "CPO",
+    "ERR",
+    "JEE",
+    "JEN",
+    "JER"
+  ],
+  "targetPath": [
+    "a2",
+    "c3",
+    "b1",
+    "b4",
+    "c5",
+    "a3",
+    "d3",
+    "c1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 4,
+    "d5": 1,
+    "e5": 2,
+    "b4": 1,
+    "a3": 1,
+    "c3": 3,
+    "d3": 2,
+    "a2": 3,
+    "c2": 2,
+    "e2": 0,
+    "b1": 3,
+    "c1": 3
+  }
+}

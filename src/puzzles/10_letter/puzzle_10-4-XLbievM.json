@@ -1,0 +1,128 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    }
+  ],
+  "targetWords": [
+    "INCREDIBLE",
+    "CREDIBLE",
+    "INEDIBLE",
+    "EDIBLE",
+    "BINI",
+    "CREE",
+    "INCR",
+    "BIN",
+    "CRE",
+    "DER"
+  ],
+  "targetPath": [
+    "b1",
+    "c1",
+    "c4",
+    "a3",
+    "a1",
+    "d4",
+    "d2",
+    "e1",
+    "b4",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 2,
+    "d5": 1,
+    "b4": 3,
+    "c4": 2,
+    "d4": 3,
+    "e4": 0,
+    "a3": 1,
+    "d2": 2,
+    "a1": 2,
+    "b1": 2,
+    "c1": 3,
+    "e1": 1
+  }
+}

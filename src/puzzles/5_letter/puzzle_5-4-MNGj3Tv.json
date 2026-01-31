@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "SHARP",
+    "HARP",
+    "PHAR",
+    "GAR",
+    "PPH",
+    "RAH",
+    "SHA"
+  ],
+  "targetPath": [
+    "d3",
+    "c1",
+    "b2",
+    "e5",
+    "a1"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "e5": 1,
+    "a4": 1,
+    "d3": 3,
+    "a2": 0,
+    "b2": 2,
+    "c2": 1,
+    "a1": 2,
+    "c1": 1
+  }
+}

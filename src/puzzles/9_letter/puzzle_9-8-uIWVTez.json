@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    }
+  ],
+  "targetWords": [
+    "POLITICAL",
+    "POLITIC",
+    "ALEPOT",
+    "CEILE",
+    "POLIT",
+    "ALEE",
+    "ALOE",
+    "ALOP",
+    "CEIL",
+    "EILA"
+  ],
+  "targetPath": [
+    "c2",
+    "a2",
+    "a1",
+    "c1",
+    "d2",
+    "e2",
+    "d1",
+    "b3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "c5": 3,
+    "d5": 1,
+    "a4": 2,
+    "c4": 2,
+    "b3": 2,
+    "d3": 1,
+    "e3": 1,
+    "a2": 3,
+    "c2": 3,
+    "d2": 1,
+    "e2": 2,
+    "a1": 2,
+    "c1": 1,
+    "d1": 1,
+    "e1": 1
+  }
+}

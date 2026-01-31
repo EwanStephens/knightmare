@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "DIRECT",
+    "DIRE",
+    "RECT",
+    "DIR",
+    "IRE",
+    "REC"
+  ],
+  "targetPath": [
+    "d5",
+    "d3",
+    "c5",
+    "a4",
+    "c4",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 2,
+    "d5": 1,
+    "a4": 1,
+    "c4": 1,
+    "c3": 0,
+    "d3": 1,
+    "a2": 0,
+    "a1": 0
+  }
+}

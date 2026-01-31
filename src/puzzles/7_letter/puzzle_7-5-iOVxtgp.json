@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "K"
+    }
+  ],
+  "targetWords": [
+    "HEADING",
+    "ADIN",
+    "DING",
+    "DIRK",
+    "EADI",
+    "HEAD",
+    "HEIN",
+    "HEIR",
+    "INGA",
+    "KEID"
+  ],
+  "targetPath": [
+    "c1",
+    "b2",
+    "a4",
+    "c3",
+    "d3",
+    "e2",
+    "d4"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "a4": 2,
+    "d4": 1,
+    "b3": 1,
+    "c3": 4,
+    "d3": 3,
+    "b2": 3,
+    "c2": 0,
+    "d2": 3,
+    "e2": 2,
+    "c1": 2,
+    "d1": 2
+  }
+}

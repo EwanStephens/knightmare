@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "HOLOCAUST",
+    "WHOLL",
+    "CAUS",
+    "HOLS",
+    "HOLW",
+    "LOCA",
+    "AUS",
+    "CST",
+    "HOL",
+    "LOC"
+  ],
+  "targetPath": [
+    "b1",
+    "e1",
+    "d2",
+    "d4",
+    "b5",
+    "a3",
+    "b4",
+    "c3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "d5": 1,
+    "b4": 2,
+    "d4": 1,
+    "a3": 1,
+    "c3": 3,
+    "b2": 0,
+    "c2": 2,
+    "d2": 4,
+    "a1": 0,
+    "b1": 4,
+    "e1": 1
+  }
+}

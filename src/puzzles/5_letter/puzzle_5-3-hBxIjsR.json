@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "GENRE",
+    "EER",
+    "GEN",
+    "NEG",
+    "REE"
+  ],
+  "targetPath": [
+    "a2",
+    "b1",
+    "c2",
+    "c1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a3": 1,
+    "a2": 1,
+    "b2": 2,
+    "c2": 2,
+    "a1": 0,
+    "b1": 2,
+    "c1": 1,
+    "e1": 0
+  }
+}

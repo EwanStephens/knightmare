@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "TOLERANCE",
+    "LANCE",
+    "RANCE",
+    "TOLAN",
+    "TOTER",
+    "ERAL",
+    "LOTE",
+    "REAL",
+    "REAR",
+    "TERA"
+  ],
+  "targetPath": [
+    "b2",
+    "a1",
+    "a2",
+    "d2",
+    "c4",
+    "a4",
+    "b3",
+    "d1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "a4": 4,
+    "c4": 1,
+    "b3": 2,
+    "a2": 2,
+    "b2": 2,
+    "d2": 2,
+    "e2": 0,
+    "a1": 3,
+    "c1": 3,
+    "d1": 1
+  }
+}

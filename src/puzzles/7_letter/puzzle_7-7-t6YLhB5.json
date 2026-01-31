@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "FORMING",
+    "FORMIN",
+    "FORST",
+    "FOIN",
+    "FORM",
+    "INRO",
+    "INTL",
+    "MING",
+    "MINT",
+    "NING"
+  ],
+  "targetPath": [
+    "c4",
+    "b4",
+    "b2",
+    "a2",
+    "a3",
+    "b1",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "a4": 1,
+    "b4": 4,
+    "c4": 1,
+    "a3": 1,
+    "c3": 1,
+    "e3": 1,
+    "a2": 3,
+    "b2": 4,
+    "d2": 3,
+    "a1": 2,
+    "b1": 3,
+    "c1": 2,
+    "e1": 1
+  }
+}

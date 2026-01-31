@@ -1,0 +1,79 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "GIVING",
+    "GIVIN",
+    "IVIN",
+    "AVG",
+    "ING",
+    "IVA",
+    "VIN"
+  ],
+  "targetPath": [
+    "a5",
+    "e5",
+    "c4",
+    "c1",
+    "a2",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "e5": 1,
+    "a4": 0,
+    "c4": 3,
+    "e4": 1,
+    "a2": 1,
+    "b2": 0,
+    "c1": 1
+  }
+}

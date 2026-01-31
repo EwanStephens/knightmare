@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "CONSULTANT",
+    "CONSULTA",
+    "CONSULT",
+    "CONSUL",
+    "CONST",
+    "CONS",
+    "CONT",
+    "LUST",
+    "NATT",
+    "ULNA"
+  ],
+  "targetPath": [
+    "d3",
+    "d4",
+    "b5",
+    "c5",
+    "d5",
+    "c4",
+    "c2",
+    "a4",
+    "e4",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 4,
+    "c5": 2,
+    "d5": 4,
+    "e5": 0,
+    "a4": 1,
+    "c4": 4,
+    "d4": 3,
+    "e4": 2,
+    "d3": 2,
+    "b2": 0,
+    "c2": 1,
+    "d2": 0,
+    "e2": 2,
+    "b1": 1,
+    "c1": 0,
+    "e1": 1
+  }
+}

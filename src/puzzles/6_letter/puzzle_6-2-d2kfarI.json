@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ENGAGE",
+    "GAGE",
+    "AGE",
+    "ENG",
+    "GAG"
+  ],
+  "targetPath": [
+    "b2",
+    "a4",
+    "b3",
+    "c4",
+    "d3",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "a4": 1,
+    "c4": 2,
+    "e4": 1,
+    "b3": 2,
+    "d3": 2,
+    "b2": 2
+  }
+}

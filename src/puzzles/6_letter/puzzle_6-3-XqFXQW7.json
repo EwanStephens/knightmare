@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "CURSOR",
+    "TOURS",
+    "CURS",
+    "OURS",
+    "SOUR",
+    "TOUR",
+    "CUR",
+    "OUR",
+    "ROS",
+    "ROT"
+  ],
+  "targetPath": [
+    "a3",
+    "b4",
+    "a4",
+    "b5",
+    "c4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "d5": 1,
+    "a4": 1,
+    "b4": 2,
+    "c4": 4,
+    "d4": 1,
+    "a3": 1,
+    "c2": 0
+  }
+}

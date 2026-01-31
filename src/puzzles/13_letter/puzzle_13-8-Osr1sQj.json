@@ -1,0 +1,180 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "COMPATIBILITY",
+    "LABILITY",
+    "ABILITY",
+    "BALITI",
+    "ALIBI",
+    "ALITY",
+    "BILIO",
+    "PIBAL",
+    "UPLIT",
+    "ALIT"
+  ],
+  "targetPath": [
+    "e5",
+    "b5",
+    "b2",
+    "a1",
+    "b1",
+    "c1",
+    "a2",
+    "c4",
+    "a4",
+    "d4",
+    "d3",
+    "e4",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "e5": 2,
+    "a4": 2,
+    "c4": 2,
+    "d4": 1,
+    "e4": 3,
+    "a3": 2,
+    "c3": 4,
+    "d3": 2,
+    "e3": 1,
+    "a2": 1,
+    "b2": 2,
+    "c2": 4,
+    "d2": 6,
+    "e2": 2,
+    "a1": 3,
+    "b1": 2,
+    "c1": 3,
+    "d1": 0,
+    "e1": 0
+  }
+}

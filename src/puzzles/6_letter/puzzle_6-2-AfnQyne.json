@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "EXCEPT",
+    "CEP",
+    "PTA"
+  ],
+  "targetPath": [
+    "d3",
+    "e3",
+    "e1",
+    "d2",
+    "c1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "d5": 1,
+    "d3": 2,
+    "e3": 2,
+    "a2": 1,
+    "d2": 2,
+    "c1": 1,
+    "e1": 1
+  }
+}

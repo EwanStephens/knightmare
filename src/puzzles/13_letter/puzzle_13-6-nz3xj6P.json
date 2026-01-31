@@ -1,0 +1,159 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "DISTINGUISHED",
+    "DISTINGUISH",
+    "DISTINGU",
+    "SHEDER",
+    "SINGED",
+    "TINGED",
+    "TINGIS",
+    "GIRNS",
+    "HEDER",
+    "ISING"
+  ],
+  "targetPath": [
+    "b1",
+    "c3",
+    "c1",
+    "a1",
+    "a5",
+    "b3",
+    "d4",
+    "b2",
+    "b4",
+    "b5",
+    "c5",
+    "e5",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 3,
+    "c5": 3,
+    "e5": 2,
+    "b4": 4,
+    "c4": 1,
+    "d4": 3,
+    "b3": 4,
+    "c3": 2,
+    "d3": 2,
+    "b2": 1,
+    "d2": 2,
+    "e2": 2,
+    "a1": 2,
+    "b1": 2,
+    "c1": 2,
+    "d1": 3,
+    "e1": 1
+  }
+}

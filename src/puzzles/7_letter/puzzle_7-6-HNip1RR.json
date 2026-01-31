@@ -1,0 +1,115 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Q"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "PUTTING",
+    "PUTTI",
+    "PUTT",
+    "ING",
+    "INT",
+    "PUT",
+    "TNG"
+  ],
+  "targetPath": [
+    "b4",
+    "a4",
+    "b2",
+    "c3",
+    "a1",
+    "a2",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "d5": 2,
+    "a4": 1,
+    "b4": 2,
+    "c3": 4,
+    "d3": 0,
+    "e3": 1,
+    "a2": 3,
+    "b2": 2,
+    "d2": 0,
+    "a1": 1,
+    "e1": 0
+  }
+}

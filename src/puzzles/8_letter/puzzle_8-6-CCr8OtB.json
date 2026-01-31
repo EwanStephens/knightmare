@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DIRECTOR",
+    "DIRECT",
+    "HECTOR",
+    "RECTOR",
+    "HECTE",
+    "RECTO",
+    "REHOE",
+    "CIRE",
+    "DICT",
+    "DIRE"
+  ],
+  "targetPath": [
+    "d1",
+    "b2",
+    "e5",
+    "c4",
+    "a3",
+    "b4",
+    "e4",
+    "c2"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d5": 1,
+    "e5": 1,
+    "a4": 0,
+    "b4": 1,
+    "c4": 3,
+    "e4": 2,
+    "a3": 3,
+    "b3": 3,
+    "e3": 1,
+    "b2": 2,
+    "c2": 3,
+    "b1": 1,
+    "d1": 1
+  }
+}

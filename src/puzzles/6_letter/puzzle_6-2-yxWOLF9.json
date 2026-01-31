@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "SKIING",
+    "ING",
+    "SKI"
+  ],
+  "targetPath": [
+    "b1",
+    "b5",
+    "c3",
+    "d2",
+    "e3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "d5": 1,
+    "e5": 0,
+    "a4": 0,
+    "c3": 1,
+    "e3": 1,
+    "d2": 2,
+    "b1": 1
+  }
+}

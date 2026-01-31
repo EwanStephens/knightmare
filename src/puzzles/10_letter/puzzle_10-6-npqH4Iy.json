@@ -1,0 +1,142 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "MOTIVATION",
+    "OVATION",
+    "ATOM",
+    "HOTI",
+    "HOVA",
+    "IONI",
+    "MOTA",
+    "OHIO",
+    "ONTO",
+    "HIT"
+  ],
+  "targetPath": [
+    "e1",
+    "d2",
+    "c1",
+    "b2",
+    "c3",
+    "d4",
+    "e3",
+    "a3",
+    "b1",
+    "a1"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 1,
+    "a4": 0,
+    "c4": 3,
+    "d4": 2,
+    "e4": 1,
+    "a3": 2,
+    "c3": 1,
+    "e3": 3,
+    "b2": 2,
+    "d2": 4,
+    "e2": 0,
+    "a1": 1,
+    "b1": 2,
+    "c1": 2,
+    "e1": 1
+  }
+}

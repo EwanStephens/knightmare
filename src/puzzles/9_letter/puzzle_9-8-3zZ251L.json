@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "PROCEDURE",
+    "MURED",
+    "PRONE",
+    "REMAP",
+    "RUDER",
+    "CERO",
+    "DERK",
+    "DERO",
+    "DUMA",
+    "DURE"
+  ],
+  "targetPath": [
+    "e3",
+    "c2",
+    "a1",
+    "a3",
+    "c4",
+    "c5",
+    "d5",
+    "e5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 5,
+    "d5": 3,
+    "e5": 2,
+    "a4": 1,
+    "b4": 2,
+    "c4": 2,
+    "e4": 2,
+    "a3": 2,
+    "e3": 1,
+    "c2": 3,
+    "d2": 3,
+    "e2": 1,
+    "a1": 2,
+    "b1": 2,
+    "c1": 1,
+    "d1": 0
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Z"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "ANALYZED",
+    "ANALYZE",
+    "ANAL",
+    "PANT",
+    "ANA",
+    "ANT",
+    "APA",
+    "APT",
+    "IAN",
+    "PAN"
+  ],
+  "targetPath": [
+    "e3",
+    "c4",
+    "d3",
+    "b5",
+    "a4",
+    "b4",
+    "a3",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "a4": 3,
+    "b4": 1,
+    "c4": 2,
+    "e4": 1,
+    "a3": 0,
+    "b3": 3,
+    "d3": 2,
+    "e3": 2,
+    "d1": 3,
+    "e1": 0
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "EFFECTIVENESS",
+    "EFFECTIVE",
+    "EFFECT",
+    "ELOGE",
+    "RECTI",
+    "EFFS",
+    "ELON",
+    "GENE",
+    "LONE",
+    "OLEA"
+  ],
+  "targetPath": [
+    "b1",
+    "a2",
+    "c2",
+    "e2",
+    "c3",
+    "e1",
+    "e5",
+    "a1",
+    "a5",
+    "b5",
+    "c4",
+    "c1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "b5": 1,
+    "c5": 2,
+    "d5": 1,
+    "e5": 1,
+    "b4": 3,
+    "c4": 2,
+    "b3": 1,
+    "c3": 3,
+    "d3": 0,
+    "a2": 2,
+    "c2": 3,
+    "e2": 1,
+    "a1": 2,
+    "b1": 1,
+    "c1": 1,
+    "d1": 1,
+    "e1": 1
+  }
+}

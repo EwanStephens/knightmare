@@ -1,0 +1,167 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "SIMULTANEOUSLY",
+    "SIMULTANEOUS",
+    "NATUS",
+    "SIMUL",
+    "MULT",
+    "NAIM",
+    "NATU",
+    "TANE",
+    "TUNS",
+    "AIM"
+  ],
+  "targetPath": [
+    "b3",
+    "c2",
+    "b2",
+    "a1",
+    "e5",
+    "e1",
+    "d2",
+    "d1",
+    "b1",
+    "d3",
+    "b4",
+    "a5",
+    "b5",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c5": 0,
+    "d5": 1,
+    "e5": 2,
+    "a4": 3,
+    "b4": 3,
+    "c4": 2,
+    "a3": 2,
+    "b3": 2,
+    "d3": 4,
+    "a2": 0,
+    "b2": 2,
+    "c2": 3,
+    "d2": 4,
+    "a1": 1,
+    "b1": 1,
+    "d1": 2,
+    "e1": 1
+  }
+}

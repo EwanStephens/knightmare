@@ -1,0 +1,74 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "VOICE",
+    "ICE",
+    "VOW"
+  ],
+  "targetPath": [
+    "b3",
+    "d2",
+    "a2",
+    "c1",
+    "a1"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "b4": 0,
+    "d4": 0,
+    "b3": 2,
+    "a2": 2,
+    "d2": 2,
+    "a1": 1,
+    "c1": 1
+  }
+}

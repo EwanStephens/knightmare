@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "TRAGEDY",
+    "RAGED",
+    "RAGES",
+    "AGED",
+    "AGES",
+    "RAGE",
+    "TRAG",
+    "AGE",
+    "DAG",
+    "DAK"
+  ],
+  "targetPath": [
+    "e5",
+    "a5",
+    "c4",
+    "c1",
+    "d2",
+    "b2",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 3,
+    "a4": 1,
+    "b4": 0,
+    "c4": 2,
+    "d4": 1,
+    "b2": 2,
+    "d2": 4,
+    "a1": 0,
+    "c1": 1,
+    "e1": 1
+  }
+}

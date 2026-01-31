@@ -1,0 +1,150 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "CONVERGENCE",
+    "CONVERGE",
+    "VERGENCE",
+    "ERGON",
+    "TERGA",
+    "VERGE",
+    "CONV",
+    "ERGO",
+    "EVER",
+    "RGEN"
+  ],
+  "targetPath": [
+    "a5",
+    "d5",
+    "b3",
+    "b2",
+    "d3",
+    "e4",
+    "c3",
+    "d1",
+    "e3",
+    "d4",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 1,
+    "e5": 0,
+    "d4": 2,
+    "e4": 1,
+    "b3": 2,
+    "c3": 4,
+    "d3": 1,
+    "e3": 1,
+    "a2": 0,
+    "b2": 1,
+    "c2": 2,
+    "d2": 1,
+    "e2": 0,
+    "c1": 1,
+    "d1": 2,
+    "e1": 2
+  }
+}

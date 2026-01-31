@@ -1,0 +1,98 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "BUILDER",
+    "BUILD",
+    "DER",
+    "ILE"
+  ],
+  "targetPath": [
+    "a3",
+    "b2",
+    "c3",
+    "e1",
+    "b1",
+    "e4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 0,
+    "d5": 1,
+    "d4": 0,
+    "e4": 1,
+    "a3": 1,
+    "c3": 4,
+    "b2": 2,
+    "a1": 0,
+    "b1": 1,
+    "e1": 2
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "HAVING",
+    "VINS",
+    "HAV",
+    "ING",
+    "INS",
+    "VIN"
+  ],
+  "targetPath": [
+    "e5",
+    "a1",
+    "b3",
+    "c4",
+    "d3",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "d5": 0,
+    "e5": 1,
+    "c4": 2,
+    "e4": 0,
+    "b3": 1,
+    "d3": 2,
+    "a1": 1
+  }
+}

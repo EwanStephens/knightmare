@@ -1,0 +1,110 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "SERVICE",
+    "SERVO",
+    "SERV",
+    "VICE",
+    "VOCE",
+    "SEI",
+    "SER",
+    "VIC",
+    "VOC"
+  ],
+  "targetPath": [
+    "e4",
+    "d2",
+    "e1",
+    "c2",
+    "c1",
+    "d1",
+    "a4"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "a4": 0,
+    "e4": 2,
+    "a3": 0,
+    "c3": 1,
+    "e3": 0,
+    "c2": 2,
+    "d2": 2,
+    "b1": 1,
+    "c1": 2,
+    "d1": 0,
+    "e1": 1
+  }
+}

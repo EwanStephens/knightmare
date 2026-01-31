@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "ALEXANDER",
+    "LEERY",
+    "ALEE",
+    "ALEX",
+    "ANDE",
+    "DERN",
+    "EERY",
+    "LEER",
+    "RYAL",
+    "ALE"
+  ],
+  "targetPath": [
+    "d3",
+    "e1",
+    "c2",
+    "a3",
+    "a1",
+    "b3",
+    "d4",
+    "e3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 3,
+    "e5": 1,
+    "c4": 2,
+    "d4": 2,
+    "a3": 1,
+    "b3": 3,
+    "d3": 2,
+    "e3": 2,
+    "c2": 3,
+    "a1": 1,
+    "e1": 2
+  }
+}

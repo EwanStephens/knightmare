@@ -1,0 +1,129 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "CONSIDERING",
+    "CONSIDER",
+    "CRINION",
+    "CRINID",
+    "ONSIDE",
+    "RINCON",
+    "SIDING",
+    "CRINE",
+    "INION",
+    "CONS"
+  ],
+  "targetPath": [
+    "d1",
+    "a4",
+    "e4",
+    "c5",
+    "b5",
+    "d3",
+    "e1",
+    "c1",
+    "b2",
+    "b1",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "c5": 1,
+    "a4": 5,
+    "e4": 1,
+    "d3": 2,
+    "a2": 1,
+    "b2": 1,
+    "d2": 1,
+    "a1": 1,
+    "b1": 3,
+    "c1": 3,
+    "d1": 2,
+    "e1": 0
+  }
+}

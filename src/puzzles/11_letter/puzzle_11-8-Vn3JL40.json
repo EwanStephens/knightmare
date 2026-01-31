@@ -1,0 +1,164 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "PHOTOGRAPHS",
+    "PHOTOGRAPH",
+    "PHOTOG",
+    "GRAPH",
+    "PHOTO",
+    "PHOT",
+    "SOAP",
+    "SOHO",
+    "APH",
+    "GRA"
+  ],
+  "targetPath": [
+    "e2",
+    "b2",
+    "d3",
+    "e4",
+    "d5",
+    "b3",
+    "a2",
+    "c3",
+    "b4",
+    "a5",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "d5": 2,
+    "e5": 0,
+    "a4": 1,
+    "b4": 1,
+    "d4": 0,
+    "e4": 2,
+    "a3": 0,
+    "b3": 1,
+    "c3": 4,
+    "d3": 1,
+    "e3": 4,
+    "a2": 1,
+    "b2": 2,
+    "e2": 3,
+    "a1": 2,
+    "c1": 5,
+    "d1": 1,
+    "e1": 0
+  }
+}

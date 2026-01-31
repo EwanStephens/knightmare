@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "V"
+    }
+  ],
+  "targetWords": [
+    "VIRTUALLY",
+    "VIRTUAL",
+    "VIRTU",
+    "VIRL",
+    "ALL",
+    "TUA",
+    "TUI",
+    "UTU"
+  ],
+  "targetPath": [
+    "e1",
+    "d2",
+    "c4",
+    "e5",
+    "a5",
+    "c3",
+    "d4",
+    "e3",
+    "c1"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "e5": 3,
+    "c4": 4,
+    "d4": 2,
+    "e4": 0,
+    "a3": 0,
+    "c3": 1,
+    "e3": 1,
+    "d2": 2,
+    "a1": 1,
+    "c1": 4,
+    "e1": 1
+  }
+}

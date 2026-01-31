@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ASSIGN",
+    "SIGNA",
+    "ASSI",
+    "SIGN",
+    "ASS",
+    "IGN",
+    "SIG",
+    "SSI"
+  ],
+  "targetPath": [
+    "e3",
+    "c4",
+    "c5",
+    "b4",
+    "d5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 1,
+    "d5": 2,
+    "b4": 1,
+    "c4": 1,
+    "e4": 1,
+    "e3": 1,
+    "e2": 0,
+    "a1": 0
+  }
+}

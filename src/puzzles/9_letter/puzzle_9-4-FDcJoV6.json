@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "LIVESTOCK",
+    "LIVEST",
+    "OLIVES",
+    "ESTOC",
+    "LIVES",
+    "OLIVE",
+    "STOCK",
+    "LIVE",
+    "NEST",
+    "SOLI"
+  ],
+  "targetPath": [
+    "a1",
+    "b2",
+    "c1",
+    "d2",
+    "b3",
+    "c4",
+    "d3",
+    "e4",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a4": 1,
+    "c4": 2,
+    "d4": 0,
+    "e4": 2,
+    "b3": 2,
+    "d3": 2,
+    "e3": 1,
+    "b2": 2,
+    "d2": 1,
+    "a1": 1,
+    "b1": 2,
+    "c1": 2,
+    "d1": 1
+  }
+}

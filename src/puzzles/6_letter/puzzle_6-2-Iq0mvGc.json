@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "CHAPEL",
+    "CHAPE",
+    "CHAP",
+    "APE",
+    "CHA",
+    "CHE",
+    "HAP",
+    "HEL",
+    "RHA",
+    "RHE"
+  ],
+  "targetPath": [
+    "d5",
+    "c3",
+    "c1",
+    "a3",
+    "b4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "b4": 1,
+    "a3": 2,
+    "b3": 1,
+    "c3": 2,
+    "d3": 1,
+    "b1": 2,
+    "c1": 1
+  }
+}

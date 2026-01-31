@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "VALID",
+    "LIRA",
+    "VALI",
+    "IRA",
+    "IVA",
+    "LID",
+    "LIR",
+    "LIV",
+    "VAL"
+  ],
+  "targetPath": [
+    "b5",
+    "a4",
+    "c3",
+    "b2",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "e5": 0,
+    "a4": 1,
+    "d4": 0,
+    "c3": 1,
+    "b2": 3,
+    "e2": 2,
+    "a1": 2,
+    "e1": 2
+  }
+}

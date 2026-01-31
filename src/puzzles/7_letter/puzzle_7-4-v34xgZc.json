@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Q"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "DEPOSIT",
+    "DEPOT",
+    "POSIT",
+    "DESI",
+    "EDIT",
+    "EPOS",
+    "DEP",
+    "DES",
+    "DET",
+    "ITO"
+  ],
+  "targetPath": [
+    "b2",
+    "c3",
+    "d2",
+    "d5",
+    "e4",
+    "e5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 1,
+    "c4": 1,
+    "e4": 1,
+    "b3": 2,
+    "c3": 3,
+    "b2": 1,
+    "d2": 1,
+    "a1": 0
+  }
+}

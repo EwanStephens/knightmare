@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "FOOTBALL",
+    "LOBAL",
+    "BOOD",
+    "BOOL",
+    "BOOT",
+    "FALL",
+    "FOOD",
+    "FOOL",
+    "FOOT",
+    "LOOD"
+  ],
+  "targetPath": [
+    "d1",
+    "c3",
+    "b2",
+    "d4",
+    "d2",
+    "e3",
+    "e1",
+    "a1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "c5": 0,
+    "d5": 1,
+    "d4": 2,
+    "b3": 1,
+    "c3": 2,
+    "e3": 1,
+    "a2": 1,
+    "b2": 3,
+    "d2": 2,
+    "a1": 0,
+    "d1": 2,
+    "e1": 1
+  }
+}

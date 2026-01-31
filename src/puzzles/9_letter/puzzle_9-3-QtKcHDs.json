@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "RIVERSIDE",
+    "RIVERS",
+    "SIVERS",
+    "VERSED",
+    "RIVER",
+    "SIVER",
+    "VERSE",
+    "DESI",
+    "ERSE",
+    "IDES"
+  ],
+  "targetPath": [
+    "e3",
+    "c3",
+    "b1",
+    "a3",
+    "c4",
+    "e4",
+    "d2",
+    "b3",
+    "c5"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "b4": 2,
+    "c4": 2,
+    "e4": 2,
+    "a3": 2,
+    "b3": 2,
+    "c3": 1,
+    "e3": 3,
+    "b2": 0,
+    "d2": 2,
+    "b1": 2,
+    "e1": 0
+  }
+}

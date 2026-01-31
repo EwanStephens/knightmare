@@ -1,0 +1,74 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    }
+  ],
+  "targetWords": [
+    "CABIN",
+    "BIN",
+    "CAB"
+  ],
+  "targetPath": [
+    "a4",
+    "c2",
+    "d1",
+    "e3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a4": 1,
+    "c4": 0,
+    "e3": 1,
+    "c2": 2,
+    "e2": 0,
+    "a1": 1,
+    "c1": 1,
+    "d1": 1
+  }
+}

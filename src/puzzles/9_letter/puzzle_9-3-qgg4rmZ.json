@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SECONDARY",
+    "SECONDAR",
+    "SECOND",
+    "COND",
+    "ECON",
+    "EYES",
+    "OARY",
+    "OYES",
+    "RYES",
+    "ARY"
+  ],
+  "targetPath": [
+    "a1",
+    "a4",
+    "c2",
+    "c4",
+    "c1",
+    "e3",
+    "e4",
+    "d5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d5": 1,
+    "a4": 5,
+    "b4": 2,
+    "c4": 3,
+    "e4": 1,
+    "e3": 2,
+    "c2": 1,
+    "a1": 1,
+    "c1": 1,
+    "e1": 2
+  }
+}

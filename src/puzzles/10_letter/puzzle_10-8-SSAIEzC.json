@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ADDRESSING",
+    "ADDRESS",
+    "DRAGEES",
+    "CLEDGE",
+    "DAISED",
+    "DAISEE",
+    "DRAGEE",
+    "LEDGER",
+    "LEDGES",
+    "RAISED"
+  ],
+  "targetPath": [
+    "c4",
+    "d5",
+    "b3",
+    "b4",
+    "b1",
+    "d1",
+    "c3",
+    "c5",
+    "a5",
+    "a2"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "c5": 2,
+    "d5": 2,
+    "e5": 0,
+    "b4": 2,
+    "c4": 4,
+    "d4": 2,
+    "e4": 4,
+    "b3": 3,
+    "c3": 4,
+    "e3": 2,
+    "a2": 3,
+    "c2": 4,
+    "d2": 4,
+    "e2": 1,
+    "b1": 3,
+    "d1": 2,
+    "e1": 1
+  }
+}

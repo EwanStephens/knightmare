@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "SEASON",
+    "SEAS",
+    "SONS",
+    "ONS",
+    "SEA",
+    "SON"
+  ],
+  "targetPath": [
+    "e3",
+    "c1",
+    "a2",
+    "a5",
+    "e5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "e5": 1,
+    "b4": 0,
+    "d4": 1,
+    "e3": 2,
+    "a2": 1,
+    "c1": 1,
+    "e1": 1
+  }
+}

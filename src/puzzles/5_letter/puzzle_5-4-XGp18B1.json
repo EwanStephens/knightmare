@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "PUPPY",
+    "OPP",
+    "PUP",
+    "PUT",
+    "TUP"
+  ],
+  "targetPath": [
+    "e2",
+    "c3",
+    "d5",
+    "e4",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "d5": 1,
+    "e5": 0,
+    "e4": 4,
+    "c3": 3,
+    "c2": 2,
+    "d2": 4,
+    "e2": 1,
+    "d1": 1
+  }
+}

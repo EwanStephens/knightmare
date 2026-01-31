@@ -1,0 +1,79 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "EXPECT",
+    "CAPE",
+    "ACT",
+    "APE",
+    "APX",
+    "CAP",
+    "EXP"
+  ],
+  "targetPath": [
+    "e1",
+    "b4",
+    "a5",
+    "c5",
+    "d3",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 1,
+    "b4": 1,
+    "c4": 1,
+    "b3": 1,
+    "d3": 2,
+    "c2": 1,
+    "e1": 1
+  }
+}

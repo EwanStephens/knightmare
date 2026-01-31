@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "REVEALED",
+    "REVEAL",
+    "VEALED",
+    "CREED",
+    "CREEL",
+    "ALEE",
+    "CREA",
+    "CREE",
+    "DREE",
+    "EVEA"
+  ],
+  "targetPath": [
+    "c4",
+    "a3",
+    "c2",
+    "d2",
+    "b1",
+    "c3",
+    "e4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "e5": 1,
+    "c4": 3,
+    "e4": 3,
+    "a3": 3,
+    "c3": 3,
+    "a2": 0,
+    "c2": 3,
+    "d2": 3,
+    "b1": 3,
+    "d1": 0
+  }
+}
