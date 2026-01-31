@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "RESISTANT",
+    "RESIST",
+    "STANE",
+    "TAISE",
+    "TANTI",
+    "ARES",
+    "NAIS",
+    "SARE",
+    "SART",
+    "STAN"
+  ],
+  "targetPath": [
+    "c4",
+    "b2",
+    "a1",
+    "c3",
+    "d1",
+    "e3",
+    "d2",
+    "e2",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 1,
+    "c4": 3,
+    "c3": 1,
+    "e3": 1,
+    "b2": 1,
+    "c2": 1,
+    "d2": 3,
+    "e2": 1,
+    "a1": 3,
+    "b1": 0,
+    "d1": 3
+  }
+}

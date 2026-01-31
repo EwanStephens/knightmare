@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "X"
+    }
+  ],
+  "targetWords": [
+    "HANDLING",
+    "LINGE",
+    "HAND",
+    "INDN",
+    "LIND",
+    "LING",
+    "AND",
+    "HAE",
+    "HAN",
+    "IND"
+  ],
+  "targetPath": [
+    "d1",
+    "e2",
+    "d4",
+    "e5",
+    "e4",
+    "d5",
+    "a5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 3,
+    "e5": 1,
+    "b4": 1,
+    "d4": 1,
+    "e4": 1,
+    "c3": 1,
+    "e3": 1,
+    "c2": 1,
+    "e2": 2,
+    "c1": 0,
+    "d1": 2,
+    "e1": 1
+  }
+}

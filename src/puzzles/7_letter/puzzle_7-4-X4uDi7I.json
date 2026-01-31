@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "Q"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "INQUIRE",
+    "PURINE",
+    "INURE",
+    "PURIN",
+    "URINE",
+    "NINE",
+    "PURE",
+    "PURI",
+    "RINE",
+    "IRE"
+  ],
+  "targetPath": [
+    "c3",
+    "d4",
+    "e4",
+    "a4",
+    "c2",
+    "e1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "a4": 1,
+    "d4": 3,
+    "e4": 2,
+    "c3": 2,
+    "d3": 0,
+    "a2": 0,
+    "c2": 2,
+    "d2": 1,
+    "d1": 1,
+    "e1": 2
+  }
+}

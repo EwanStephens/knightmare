@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "MOMENTUM",
+    "AMENTUM",
+    "MANENT",
+    "MENTUM",
+    "MOMENT",
+    "AMENT",
+    "AMEN",
+    "ENAM",
+    "ENOL",
+    "MANE"
+  ],
+  "targetPath": [
+    "c3",
+    "b4",
+    "d5",
+    "c4",
+    "d4",
+    "b2",
+    "b3",
+    "c1"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 1,
+    "e5": 0,
+    "b4": 2,
+    "c4": 2,
+    "d4": 3,
+    "b3": 2,
+    "c3": 5,
+    "d3": 3,
+    "a2": 1,
+    "b2": 3,
+    "e2": 1,
+    "c1": 0
+  }
+}

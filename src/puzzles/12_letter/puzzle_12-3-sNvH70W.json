@@ -1,0 +1,137 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "PARTICULARLY",
+    "ARTICULARLY",
+    "PARTICULAR",
+    "ARTICULAR",
+    "ARTIC",
+    "LARRY",
+    "PARTI",
+    "TICUL",
+    "PARL",
+    "PART"
+  ],
+  "targetPath": [
+    "a2",
+    "b1",
+    "c2",
+    "d1",
+    "b2",
+    "b4",
+    "a4",
+    "c4",
+    "e4",
+    "c5",
+    "b5",
+    "d3"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "c5": 1,
+    "e5": 0,
+    "a4": 1,
+    "b4": 3,
+    "c4": 2,
+    "e4": 1,
+    "a3": 2,
+    "d3": 1,
+    "e3": 1,
+    "a2": 2,
+    "b2": 2,
+    "c2": 4,
+    "b1": 2,
+    "d1": 1
+  }
+}

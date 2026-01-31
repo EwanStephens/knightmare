@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "J"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "JERRY",
+    "ERD",
+    "ERR",
+    "JER",
+    "PYR"
+  ],
+  "targetPath": [
+    "b2",
+    "c1",
+    "d3",
+    "b5",
+    "a4"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "e5": 0,
+    "a4": 2,
+    "a3": 2,
+    "d3": 2,
+    "b2": 2,
+    "c2": 2,
+    "a1": 0,
+    "c1": 1
+  }
+}

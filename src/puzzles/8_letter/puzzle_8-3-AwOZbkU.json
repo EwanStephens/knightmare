@@ -1,0 +1,103 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "PRACTICE",
+    "PRACTIC",
+    "ACNE",
+    "TICE",
+    "ACT",
+    "CIT",
+    "ICE",
+    "TIC"
+  ],
+  "targetPath": [
+    "a4",
+    "b3",
+    "a3",
+    "b2",
+    "a1",
+    "c1",
+    "d1",
+    "d5"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "d5": 0,
+    "e5": 1,
+    "a4": 1,
+    "c4": 2,
+    "a3": 1,
+    "b3": 3,
+    "b2": 3,
+    "a1": 1,
+    "c1": 2,
+    "d1": 3
+  }
+}

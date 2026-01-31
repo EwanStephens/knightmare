@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "COSTA",
+    "COST",
+    "COS",
+    "SOC",
+    "STA"
+  ],
+  "targetPath": [
+    "a4",
+    "a3",
+    "a1",
+    "c1",
+    "b3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "a4": 1,
+    "a3": 3,
+    "b3": 0,
+    "e3": 0,
+    "d2": 0,
+    "a1": 2,
+    "c1": 1
+  }
+}

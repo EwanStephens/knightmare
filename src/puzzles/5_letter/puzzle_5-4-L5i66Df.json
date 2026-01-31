@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "FLOOR",
+    "FLOP",
+    "ROOP",
+    "FLO",
+    "LOO",
+    "LOP",
+    "ORT",
+    "ROO"
+  ],
+  "targetPath": [
+    "d2",
+    "b2",
+    "c1",
+    "a1",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 0,
+    "d5": 1,
+    "a4": 0,
+    "a3": 2,
+    "b2": 1,
+    "d2": 2,
+    "a1": 2,
+    "c1": 2
+  }
+}

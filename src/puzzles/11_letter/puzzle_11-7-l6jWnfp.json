@@ -1,0 +1,157 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "PROGRESSIVE",
+    "PROGRESS",
+    "OGRESS",
+    "OGRES",
+    "GRES",
+    "OGRE",
+    "PMSG",
+    "PROG",
+    "PROS",
+    "EOS"
+  ],
+  "targetPath": [
+    "e3",
+    "a3",
+    "b2",
+    "b4",
+    "c2",
+    "c1",
+    "d2",
+    "a2",
+    "b1",
+    "e4",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d5": 1,
+    "e5": 0,
+    "a4": 0,
+    "b4": 2,
+    "e4": 4,
+    "a3": 1,
+    "e3": 3,
+    "a2": 1,
+    "b2": 2,
+    "c2": 3,
+    "d2": 4,
+    "a1": 1,
+    "b1": 2,
+    "c1": 2,
+    "d1": 2,
+    "e1": 2
+  }
+}

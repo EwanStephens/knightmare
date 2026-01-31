@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "BLADE",
+    "BLAD",
+    "LADE",
+    "LAD"
+  ],
+  "targetPath": [
+    "e3",
+    "c1",
+    "a2",
+    "b1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "a3": 0,
+    "b3": 0,
+    "e3": 2,
+    "a2": 1,
+    "b2": 0,
+    "b1": 2,
+    "c1": 2,
+    "e1": 0
+  }
+}

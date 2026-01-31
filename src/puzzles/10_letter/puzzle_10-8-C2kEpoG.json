@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "ASSOCIATED",
+    "ASSOCIATE",
+    "ASSOCIE",
+    "ASHOT",
+    "ASSOC",
+    "ASSOT",
+    "COLET",
+    "SHOLE",
+    "SHOTE",
+    "AILE"
+  ],
+  "targetPath": [
+    "e4",
+    "b1",
+    "c3",
+    "b4",
+    "b2",
+    "a1",
+    "d1",
+    "e2",
+    "d4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 3,
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "b4": 5,
+    "c4": 2,
+    "d4": 3,
+    "e4": 4,
+    "a3": 1,
+    "c3": 1,
+    "b2": 3,
+    "d2": 1,
+    "e2": 2,
+    "a1": 2,
+    "b1": 3,
+    "d1": 1,
+    "e1": 1
+  }
+}

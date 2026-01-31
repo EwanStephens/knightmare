@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "EXCERPT",
+    "EXCERP",
+    "EXIT",
+    "TIER",
+    "DIT",
+    "DIX",
+    "ERD",
+    "EXR",
+    "PIT",
+    "PIX"
+  ],
+  "targetPath": [
+    "a1",
+    "c2",
+    "b1",
+    "b5",
+    "a4",
+    "c3",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 2,
+    "d5": 0,
+    "a4": 2,
+    "c4": 1,
+    "d4": 4,
+    "c3": 4,
+    "d3": 2,
+    "c2": 4,
+    "d2": 1,
+    "e2": 0,
+    "a1": 1,
+    "b1": 2,
+    "d1": 1
+  }
+}

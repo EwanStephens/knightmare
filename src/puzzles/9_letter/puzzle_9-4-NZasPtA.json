@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "INTRODUCE",
+    "INTROD",
+    "UNTROD",
+    "INTRO",
+    "TRUCE",
+    "CUNT",
+    "DINT",
+    "DUCE",
+    "DUCI",
+    "DUNT"
+  ],
+  "targetPath": [
+    "b1",
+    "a2",
+    "c1",
+    "c3",
+    "e5",
+    "b2",
+    "b3",
+    "c4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "d5": 2,
+    "e5": 1,
+    "c4": 3,
+    "e4": 2,
+    "b3": 3,
+    "c3": 4,
+    "d3": 2,
+    "a2": 1,
+    "b2": 3,
+    "e2": 1,
+    "b1": 2,
+    "c1": 3,
+    "d1": 1
+  }
+}

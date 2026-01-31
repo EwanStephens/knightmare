@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "DIRECTORY",
+    "DIRECTOR",
+    "DIRECT",
+    "EDICT",
+    "ANDI",
+    "DICT",
+    "DIRE",
+    "IRED",
+    "REAL",
+    "TORY"
+  ],
+  "targetPath": [
+    "d1",
+    "c2",
+    "b1",
+    "c1",
+    "c4",
+    "b5",
+    "a4",
+    "a2",
+    "b4"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 1,
+    "c4": 1,
+    "e3": 2,
+    "a2": 1,
+    "c2": 4,
+    "e2": 2,
+    "b1": 1,
+    "c1": 3,
+    "d1": 2
+  }
+}

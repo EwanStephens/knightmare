@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "WHEEL",
+    "ELLE",
+    "WHEE",
+    "EEL",
+    "ELL",
+    "LEE",
+    "LES",
+    "LWO",
+    "OWL"
+  ],
+  "targetPath": [
+    "b4",
+    "d2",
+    "a5",
+    "b5",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "c5": 1,
+    "b4": 3,
+    "a3": 3,
+    "d3": 1,
+    "d2": 1,
+    "e2": 0,
+    "a1": 0
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "DRYER",
+    "DRY",
+    "RYE",
+    "YER"
+  ],
+  "targetPath": [
+    "c5",
+    "d3",
+    "c1",
+    "a3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 1,
+    "d5": 0,
+    "c4": 1,
+    "a3": 1,
+    "d3": 2,
+    "c2": 0,
+    "c1": 1
+  }
+}

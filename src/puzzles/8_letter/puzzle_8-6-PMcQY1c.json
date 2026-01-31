@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "PRODUCER",
+    "PRODUCE",
+    "PRORE",
+    "CERO",
+    "DORI",
+    "DUCE",
+    "ERIE",
+    "HIRE",
+    "HIRO",
+    "ORED"
+  ],
+  "targetPath": [
+    "e5",
+    "c5",
+    "b4",
+    "b5",
+    "e2",
+    "e1",
+    "b1",
+    "b3"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "e5": 2,
+    "b4": 2,
+    "a3": 2,
+    "b3": 4,
+    "c3": 4,
+    "e3": 3,
+    "a2": 0,
+    "c2": 0,
+    "d2": 1,
+    "e2": 3,
+    "b1": 2,
+    "e1": 2
+  }
+}

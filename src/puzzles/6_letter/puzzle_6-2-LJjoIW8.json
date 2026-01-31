@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "CARING",
+    "RING",
+    "CAR",
+    "ING",
+    "RIN"
+  ],
+  "targetPath": [
+    "b2",
+    "c1",
+    "d2",
+    "e1",
+    "e3",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a4": 0,
+    "c4": 0,
+    "b3": 0,
+    "e3": 2,
+    "b2": 1,
+    "d2": 2,
+    "c1": 2,
+    "e1": 1
+  }
+}

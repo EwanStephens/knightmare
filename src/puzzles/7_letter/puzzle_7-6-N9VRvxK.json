@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "EDITING",
+    "DITING",
+    "DETIN",
+    "STING",
+    "DETI",
+    "DITA",
+    "EDIT",
+    "SNIT",
+    "TING",
+    "DET"
+  ],
+  "targetPath": [
+    "b1",
+    "a1",
+    "a2",
+    "c3",
+    "c1",
+    "d2",
+    "e1"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d5": 1,
+    "e4": 2,
+    "a3": 0,
+    "c3": 3,
+    "d3": 1,
+    "a2": 1,
+    "b2": 1,
+    "d2": 2,
+    "a1": 2,
+    "b1": 2,
+    "c1": 2,
+    "e1": 1
+  }
+}

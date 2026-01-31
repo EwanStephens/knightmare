@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "FANTASTIC",
+    "FANTAST",
+    "ANTAS",
+    "ANTA",
+    "FANT",
+    "ANT",
+    "AST",
+    "FAN",
+    "SIC",
+    "TAA"
+  ],
+  "targetPath": [
+    "a1",
+    "c2",
+    "d1",
+    "e3",
+    "d2",
+    "d5",
+    "c3",
+    "b4",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "d5": 1,
+    "b4": 1,
+    "a3": 1,
+    "c3": 1,
+    "e3": 1,
+    "b2": 0,
+    "c2": 1,
+    "d2": 4,
+    "a1": 1,
+    "c1": 0,
+    "d1": 1,
+    "e1": 1
+  }
+}

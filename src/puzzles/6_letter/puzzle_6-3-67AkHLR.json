@@ -1,0 +1,87 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "HIDDEN",
+    "HYDE",
+    "DEI",
+    "DEN",
+    "END",
+    "HID",
+    "HYD",
+    "NEI"
+  ],
+  "targetPath": [
+    "e2",
+    "b5",
+    "b3",
+    "c5",
+    "a4",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 2,
+    "a4": 2,
+    "d4": 2,
+    "a3": 2,
+    "b3": 1,
+    "b2": 1,
+    "e2": 1,
+    "e1": 0
+  }
+}

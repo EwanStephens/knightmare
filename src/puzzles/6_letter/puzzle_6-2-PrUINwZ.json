@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "ASSUME",
+    "SAUM",
+    "ASS",
+    "AUM",
+    "EAU",
+    "SAH",
+    "SAU",
+    "SSU",
+    "SUM"
+  ],
+  "targetPath": [
+    "d3",
+    "c1",
+    "a2",
+    "b2",
+    "a3",
+    "e3"
+  ],
+  "legalCaptures": {
+    "a3": 0,
+    "d3": 3,
+    "e3": 1,
+    "a2": 1,
+    "b2": 2,
+    "a1": 1,
+    "c1": 2,
+    "e1": 0
+  }
+}

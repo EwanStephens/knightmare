@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "MOROCCO",
+    "CROOL",
+    "MOOLA",
+    "MOROC",
+    "CROC",
+    "MOOL",
+    "MORO",
+    "ROOL",
+    "ALC",
+    "CRL"
+  ],
+  "targetPath": [
+    "b1",
+    "e4",
+    "a4",
+    "c5",
+    "a3",
+    "a5",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "e5": 1,
+    "a4": 2,
+    "e4": 2,
+    "a3": 0,
+    "b3": 1,
+    "c3": 2,
+    "b2": 1,
+    "d2": 1,
+    "b1": 1,
+    "c1": 0,
+    "d1": 1,
+    "e1": 1
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "TOURISM",
+    "CURFS",
+    "CURF",
+    "CURT",
+    "FOUR",
+    "FRIS",
+    "IRIS",
+    "SURF",
+    "SURG",
+    "TOUR"
+  ],
+  "targetPath": [
+    "a2",
+    "a3",
+    "b4",
+    "c2",
+    "d2",
+    "c4",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "a4": 3,
+    "b4": 1,
+    "c4": 2,
+    "a3": 1,
+    "c3": 4,
+    "d3": 2,
+    "e3": 0,
+    "a2": 3,
+    "b2": 2,
+    "c2": 3,
+    "d2": 1,
+    "c1": 0
+  }
+}

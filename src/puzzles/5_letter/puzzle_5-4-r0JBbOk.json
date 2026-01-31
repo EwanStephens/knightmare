@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "LOGIC",
+    "GILO",
+    "LOCI",
+    "SOAP",
+    "TAOS",
+    "CIG",
+    "GIL",
+    "LOA",
+    "LOC",
+    "LOG"
+  ],
+  "targetPath": [
+    "e4",
+    "c3",
+    "a5",
+    "e5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "e5": 3,
+    "d4": 1,
+    "e4": 1,
+    "c3": 4,
+    "b2": 2,
+    "d2": 2,
+    "b1": 1,
+    "c1": 0
+  }
+}

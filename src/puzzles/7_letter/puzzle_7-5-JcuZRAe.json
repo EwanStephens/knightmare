@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "CHASSIS",
+    "CHAISE",
+    "ASSIS",
+    "CHAIS",
+    "CHASS",
+    "IIASA",
+    "ASSI",
+    "CHAI",
+    "AHA",
+    "AIS"
+  ],
+  "targetPath": [
+    "c1",
+    "d3",
+    "d4",
+    "c5",
+    "e5",
+    "c3",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 3,
+    "e5": 0,
+    "c4": 1,
+    "d4": 2,
+    "e4": 2,
+    "b3": 2,
+    "c3": 2,
+    "d3": 1,
+    "b2": 1,
+    "c1": 1,
+    "e1": 2
+  }
+}

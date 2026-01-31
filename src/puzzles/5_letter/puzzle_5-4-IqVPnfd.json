@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SOLAR",
+    "ARLE",
+    "SOLA",
+    "LAR",
+    "LOU",
+    "OLA",
+    "RLE",
+    "SOL"
+  ],
+  "targetPath": [
+    "e3",
+    "e5",
+    "b5",
+    "b1",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "e5": 2,
+    "a3": 1,
+    "d3": 2,
+    "e3": 2,
+    "d2": 1,
+    "b1": 1,
+    "d1": 0
+  }
+}

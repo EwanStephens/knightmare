@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "NATURE",
+    "NATU",
+    "NAT",
+    "TUR",
+    "URE"
+  ],
+  "targetPath": [
+    "c4",
+    "a5",
+    "a2",
+    "b1",
+    "a1",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "c4": 1,
+    "d4": 0,
+    "d3": 0,
+    "a2": 1,
+    "e2": 1,
+    "a1": 1,
+    "b1": 1
+  }
+}

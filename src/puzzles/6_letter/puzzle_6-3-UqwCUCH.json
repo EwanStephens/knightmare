@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "TUNING",
+    "NING",
+    "TING",
+    "ING",
+    "TIN",
+    "TUN",
+    "UNI"
+  ],
+  "targetPath": [
+    "d3",
+    "e1",
+    "a5",
+    "c5",
+    "d4",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 1,
+    "e5": 1,
+    "d4": 2,
+    "d3": 3,
+    "b2": 1,
+    "b1": 2,
+    "c1": 0,
+    "e1": 1
+  }
+}

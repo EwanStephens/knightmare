@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "CONTEST",
+    "CONTES",
+    "TESTON",
+    "CONTE",
+    "ESTOC",
+    "CONT",
+    "COTS",
+    "STOG",
+    "TEST",
+    "COG"
+  ],
+  "targetPath": [
+    "a2",
+    "b3",
+    "c2",
+    "d1",
+    "e2",
+    "e4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "d5": 2,
+    "a4": 0,
+    "d4": 0,
+    "e4": 1,
+    "b3": 4,
+    "c3": 0,
+    "a2": 1,
+    "c2": 1,
+    "e2": 1,
+    "d1": 2
+  }
+}

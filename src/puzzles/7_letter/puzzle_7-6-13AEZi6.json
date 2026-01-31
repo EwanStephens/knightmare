@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "SEATING",
+    "STING",
+    "EARN",
+    "NEAR",
+    "NEAT",
+    "SEAR",
+    "SEAT",
+    "TILS",
+    "ATI",
+    "EAR"
+  ],
+  "targetPath": [
+    "c3",
+    "d5",
+    "a5",
+    "a4",
+    "b3",
+    "e3",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "c4": 1,
+    "a3": 1,
+    "b3": 3,
+    "c3": 2,
+    "e3": 2,
+    "c2": 1,
+    "a1": 1,
+    "c1": 1,
+    "d1": 1
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "CHRISTIAN",
+    "ARECHE",
+    "CHRIST",
+    "DECANE",
+    "DECANT",
+    "PARISH",
+    "RECANE",
+    "RECANT",
+    "SECANT",
+    "ARISE"
+  ],
+  "targetPath": [
+    "b4",
+    "e4",
+    "c2",
+    "c1",
+    "d2",
+    "e3",
+    "d1",
+    "b3",
+    "a3"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 1,
+    "e5": 0,
+    "b4": 2,
+    "e4": 2,
+    "a3": 2,
+    "b3": 5,
+    "c3": 1,
+    "e3": 3,
+    "c2": 2,
+    "d2": 4,
+    "e2": 2,
+    "a1": 0,
+    "b1": 1,
+    "c1": 1,
+    "d1": 0,
+    "e1": 2
+  }
+}

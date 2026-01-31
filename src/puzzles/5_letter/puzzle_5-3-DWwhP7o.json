@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    }
+  ],
+  "targetWords": [
+    "FOCAL",
+    "CAI",
+    "CAL",
+    "CAT",
+    "OCA"
+  ],
+  "targetPath": [
+    "c1",
+    "a1",
+    "c3",
+    "b3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "e4": 0,
+    "a3": 0,
+    "b3": 4,
+    "c3": 2,
+    "a2": 0,
+    "a1": 1,
+    "c1": 1
+  }
+}

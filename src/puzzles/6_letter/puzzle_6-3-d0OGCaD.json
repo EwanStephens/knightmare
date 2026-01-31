@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "BESIDE",
+    "DEBE",
+    "DESI",
+    "SIDE",
+    "BED",
+    "BES",
+    "BHD",
+    "DEB",
+    "DEN",
+    "DES"
+  ],
+  "targetPath": [
+    "b4",
+    "d3",
+    "e3",
+    "c5",
+    "c1",
+    "a3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "a4": 1,
+    "b4": 2,
+    "a3": 3,
+    "d3": 2,
+    "e3": 2,
+    "a2": 1,
+    "e2": 2,
+    "c1": 1
+  }
+}

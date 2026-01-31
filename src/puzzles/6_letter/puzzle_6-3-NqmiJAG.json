@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "VISION",
+    "SION",
+    "ION",
+    "OII",
+    "VII",
+    "VIS"
+  ],
+  "targetPath": [
+    "d2",
+    "c1",
+    "e2",
+    "d4",
+    "c4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c4": 3,
+    "d4": 2,
+    "a3": 0,
+    "d3": 0,
+    "c2": 1,
+    "d2": 2,
+    "e2": 2,
+    "c1": 2
+  }
+}

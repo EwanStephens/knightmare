@@ -1,0 +1,143 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    }
+  ],
+  "targetWords": [
+    "PROBABILITY",
+    "ABILITY",
+    "ORALITY",
+    "PROBITY",
+    "ABORAL",
+    "PROBAL",
+    "PROBIT",
+    "ALITY",
+    "BORAL",
+    "RABAL"
+  ],
+  "targetPath": [
+    "a3",
+    "c2",
+    "c3",
+    "c4",
+    "d3",
+    "e1",
+    "e3",
+    "e5",
+    "d4",
+    "c5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "c5": 2,
+    "d5": 1,
+    "e5": 1,
+    "b4": 3,
+    "c4": 5,
+    "d4": 2,
+    "a3": 2,
+    "c3": 2,
+    "d3": 3,
+    "e3": 2,
+    "c2": 4,
+    "d2": 1,
+    "b1": 2,
+    "e1": 3
+  }
+}

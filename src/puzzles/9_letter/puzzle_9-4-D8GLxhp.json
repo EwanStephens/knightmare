@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "ENCLOSURE",
+    "CLOSURE",
+    "CLOS",
+    "CREE",
+    "ENCL",
+    "LURE",
+    "SURE",
+    "CLO",
+    "CRE",
+    "CRU"
+  ],
+  "targetPath": [
+    "b1",
+    "d2",
+    "b3",
+    "a5",
+    "a2",
+    "c4",
+    "b5",
+    "d4",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 1,
+    "d5": 0,
+    "e5": 1,
+    "c4": 2,
+    "d4": 3,
+    "b3": 3,
+    "d3": 0,
+    "a2": 1,
+    "c2": 2,
+    "d2": 2,
+    "b1": 1,
+    "e1": 2
+  }
+}

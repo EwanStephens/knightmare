@@ -1,0 +1,144 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "KINDERGARTEN",
+    "KINDER",
+    "RINDE",
+    "TERGA",
+    "GAEN",
+    "INDE",
+    "KIND",
+    "NEIN",
+    "RIND",
+    "AER"
+  ],
+  "targetPath": [
+    "b1",
+    "d3",
+    "c1",
+    "b3",
+    "a3",
+    "c4",
+    "b5",
+    "d4",
+    "d1",
+    "a4",
+    "e4",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "c5": 0,
+    "d5": 3,
+    "a4": 2,
+    "c4": 2,
+    "d4": 3,
+    "e4": 3,
+    "a3": 1,
+    "b3": 4,
+    "c3": 1,
+    "d3": 1,
+    "b1": 2,
+    "c1": 2,
+    "d1": 3,
+    "e1": 2
+  }
+}

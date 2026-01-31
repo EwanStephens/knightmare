@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "CROSSING",
+    "DOSSING",
+    "CROSS",
+    "SSING",
+    "DOSS",
+    "ROSS",
+    "SING",
+    "CRO",
+    "DOS",
+    "ING"
+  ],
+  "targetPath": [
+    "e5",
+    "d4",
+    "c4",
+    "b3",
+    "c1",
+    "b2",
+    "e2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "c4": 1,
+    "d4": 4,
+    "e4": 1,
+    "b3": 2,
+    "e3": 0,
+    "b2": 3,
+    "e2": 1,
+    "b1": 0,
+    "c1": 1,
+    "d1": 2
+  }
+}

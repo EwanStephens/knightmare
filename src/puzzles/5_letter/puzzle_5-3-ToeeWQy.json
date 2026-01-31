@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "PRIDE",
+    "PSID",
+    "PSI",
+    "SIR"
+  ],
+  "targetPath": [
+    "d3",
+    "c1",
+    "c4",
+    "e2",
+    "d4"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "e5": 0,
+    "c4": 2,
+    "d4": 0,
+    "d3": 2,
+    "e2": 1,
+    "a1": 0,
+    "c1": 2
+  }
+}

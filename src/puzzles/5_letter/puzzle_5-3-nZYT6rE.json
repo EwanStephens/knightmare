@@ -1,0 +1,74 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    }
+  ],
+  "targetWords": [
+    "OFFER",
+    "FER",
+    "OFF"
+  ],
+  "targetPath": [
+    "a1",
+    "b2",
+    "c1",
+    "c5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 0,
+    "b4": 0,
+    "b3": 0,
+    "a2": 1,
+    "b2": 2,
+    "a1": 1,
+    "c1": 1
+  }
+}

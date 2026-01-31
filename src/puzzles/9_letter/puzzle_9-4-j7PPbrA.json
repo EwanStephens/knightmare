@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "ATTENDING",
+    "GRATTEN",
+    "TEARING",
+    "TENDING",
+    "ATTEND",
+    "EARING",
+    "ENDING",
+    "ENRING",
+    "RATTEN",
+    "TARING"
+  ],
+  "targetPath": [
+    "b1",
+    "a1",
+    "c3",
+    "a3",
+    "b5",
+    "d5",
+    "c4",
+    "a5",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 3,
+    "d5": 1,
+    "e5": 0,
+    "a4": 3,
+    "b4": 5,
+    "c4": 3,
+    "d4": 0,
+    "e4": 1,
+    "a3": 3,
+    "c3": 1,
+    "a1": 2,
+    "b1": 3
+  }
+}

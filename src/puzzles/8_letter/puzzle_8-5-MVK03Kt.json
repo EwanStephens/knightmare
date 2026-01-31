@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    }
+  ],
+  "targetWords": [
+    "STAFFING",
+    "AFFING",
+    "STAFFS",
+    "STAFF",
+    "AFF",
+    "FFA",
+    "FIN",
+    "IFF",
+    "IFS",
+    "ING"
+  ],
+  "targetPath": [
+    "b5",
+    "e2",
+    "d2",
+    "e1",
+    "a1",
+    "a2",
+    "d5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "d5": 1,
+    "e4": 2,
+    "c3": 0,
+    "e3": 1,
+    "a2": 3,
+    "b2": 0,
+    "c2": 0,
+    "d2": 1,
+    "e2": 1,
+    "a1": 3,
+    "e1": 2
+  }
+}

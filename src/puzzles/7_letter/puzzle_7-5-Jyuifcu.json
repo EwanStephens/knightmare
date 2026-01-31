@@ -1,0 +1,110 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "AGAINST",
+    "GAINST",
+    "AGAIN",
+    "GAINS",
+    "GAIN",
+    "INST",
+    "AGA",
+    "INS",
+    "TEA"
+  ],
+  "targetPath": [
+    "e2",
+    "c3",
+    "d4",
+    "b2",
+    "a1",
+    "b3",
+    "a4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "e5": 0,
+    "a4": 3,
+    "c4": 1,
+    "d4": 1,
+    "e4": 0,
+    "b3": 1,
+    "c3": 1,
+    "b2": 2,
+    "e2": 1,
+    "a1": 1,
+    "c1": 1
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "HERBS",
+    "HERB",
+    "HERE",
+    "HERT",
+    "ERE",
+    "HER",
+    "REH"
+  ],
+  "targetPath": [
+    "b1",
+    "c1",
+    "a3",
+    "e3",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 0,
+    "d5": 0,
+    "d4": 3,
+    "a3": 4,
+    "e3": 1,
+    "a1": 0,
+    "b1": 2,
+    "c1": 2
+  }
+}

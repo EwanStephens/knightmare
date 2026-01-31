@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "NAKED",
+    "AKED",
+    "NAKE",
+    "AKE",
+    "NAK"
+  ],
+  "targetPath": [
+    "a1",
+    "b3",
+    "a2",
+    "d5",
+    "e4"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 1,
+    "d5": 1,
+    "e4": 1,
+    "b3": 2,
+    "a2": 2,
+    "c2": 0,
+    "a1": 1,
+    "b1": 0
+  }
+}

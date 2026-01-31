@@ -1,0 +1,152 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CONSIDERATION",
+    "SIDERATION",
+    "CONSIDER",
+    "DERATION",
+    "ONSIDE",
+    "DERAT",
+    "SIDER",
+    "CONS",
+    "CONT",
+    "DION"
+  ],
+  "targetPath": [
+    "a4",
+    "c2",
+    "a2",
+    "d2",
+    "e3",
+    "d5",
+    "b4",
+    "a3",
+    "c5",
+    "d4",
+    "e2",
+    "d1",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 1,
+    "d5": 3,
+    "a4": 2,
+    "b4": 1,
+    "c4": 1,
+    "d4": 2,
+    "a3": 1,
+    "c3": 2,
+    "d3": 2,
+    "e3": 4,
+    "a2": 2,
+    "c2": 2,
+    "d2": 5,
+    "e2": 1,
+    "d1": 2,
+    "e1": 1
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "PRESENTLY",
+    "PRESENT",
+    "RESENT",
+    "PRESE",
+    "PRES",
+    "SENT",
+    "ESE",
+    "ESP",
+    "PRE",
+    "REN"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "b5",
+    "c3",
+    "e4",
+    "d2",
+    "b4",
+    "a5",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "e5": 3,
+    "b4": 1,
+    "d4": 2,
+    "e4": 2,
+    "a3": 0,
+    "b3": 1,
+    "c3": 2,
+    "b2": 3,
+    "d2": 1,
+    "e1": 1
+  }
+}

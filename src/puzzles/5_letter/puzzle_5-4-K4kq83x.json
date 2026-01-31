@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "AMBER",
+    "AMBA",
+    "AMBE",
+    "AMB",
+    "BER"
+  ],
+  "targetPath": [
+    "c4",
+    "e2",
+    "e5",
+    "b2",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "c5": 0,
+    "e5": 3,
+    "c4": 1,
+    "a3": 0,
+    "b2": 1,
+    "d2": 0,
+    "e2": 2,
+    "a1": 1
+  }
+}

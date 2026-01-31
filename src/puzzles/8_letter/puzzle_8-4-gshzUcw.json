@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "STRUGGLE",
+    "RUGGLE",
+    "RULES",
+    "RULE",
+    "RUSA",
+    "RUSE",
+    "RUST",
+    "TRUG",
+    "ARU",
+    "EST"
+  ],
+  "targetPath": [
+    "d5",
+    "e5",
+    "d3",
+    "d2",
+    "a5",
+    "e1",
+    "e2",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 1,
+    "d5": 3,
+    "e5": 1,
+    "a4": 0,
+    "c4": 2,
+    "d3": 1,
+    "c2": 1,
+    "d2": 3,
+    "e2": 0,
+    "c1": 2,
+    "e1": 1
+  }
+}

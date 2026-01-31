@@ -1,9 +1,10 @@
 {
   "unused_words": [
-    "troubleshooting",
-    "internationally",
-    "confidentiality",
-    "instrumentation"
+    "internationally"
   ],
-  "used_words": []
+  "used_words": [
+    "instrumentation",
+    "troubleshooting",
+    "confidentiality"
+  ]
 }

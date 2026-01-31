@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "LIBERAL",
+    "LIBERA",
+    "ERASE",
+    "LASER",
+    "LIBEL",
+    "LIBER",
+    "LILES",
+    "RASER",
+    "SERAL",
+    "BESA"
+  ],
+  "targetPath": [
+    "a3",
+    "b5",
+    "d4",
+    "b2",
+    "a1",
+    "b3",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "a4": 2,
+    "b4": 0,
+    "d4": 1,
+    "a3": 2,
+    "b3": 2,
+    "d3": 1,
+    "b2": 4,
+    "c2": 3,
+    "a1": 1,
+    "b1": 1
+  }
+}

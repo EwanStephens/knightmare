@@ -1,0 +1,79 @@
+{
+  "pieces": [
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DIVIDE",
+    "DIVID",
+    "DIVI",
+    "VIDE",
+    "DID",
+    "DIV",
+    "IDE"
+  ],
+  "targetPath": [
+    "b3",
+    "a2",
+    "a3",
+    "c1",
+    "d2",
+    "e1"
+  ],
+  "legalCaptures": {
+    "a3": 1,
+    "b3": 1,
+    "a2": 3,
+    "d2": 2,
+    "e2": 1,
+    "a1": 2,
+    "c1": 1,
+    "e1": 1
+  }
+}

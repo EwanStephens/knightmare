@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "DUPLICATE",
+    "PLICATE",
+    "DUPLA",
+    "PLATE",
+    "PLICA",
+    "CATE",
+    "LATE",
+    "PLAT",
+    "TECA",
+    "UPLA"
+  ],
+  "targetPath": [
+    "d4",
+    "d1",
+    "e1",
+    "c2",
+    "e2",
+    "b5",
+    "b3",
+    "a4",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "c5": 0,
+    "a4": 2,
+    "d4": 2,
+    "a3": 1,
+    "b3": 1,
+    "b2": 0,
+    "c2": 3,
+    "e2": 2,
+    "c1": 0,
+    "d1": 2,
+    "e1": 1
+  }
+}

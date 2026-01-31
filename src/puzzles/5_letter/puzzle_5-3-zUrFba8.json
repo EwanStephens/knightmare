@@ -1,0 +1,74 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    }
+  ],
+  "targetWords": [
+    "MERGE",
+    "ERG",
+    "MER"
+  ],
+  "targetPath": [
+    "e4",
+    "c5",
+    "c4",
+    "b3",
+    "a2"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "e5": 1,
+    "a4": 1,
+    "c4": 1,
+    "e4": 2,
+    "b3": 3,
+    "a2": 0,
+    "d2": 0
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "MODERATE",
+    "DERATE",
+    "DERAT",
+    "ERATO",
+    "MODER",
+    "DATE",
+    "DATO",
+    "DERO",
+    "DORA",
+    "ERAT"
+  ],
+  "targetPath": [
+    "a4",
+    "c2",
+    "d2",
+    "e1",
+    "e2",
+    "e3",
+    "d4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "a4": 2,
+    "b4": 3,
+    "c4": 1,
+    "d4": 2,
+    "e4": 1,
+    "e3": 1,
+    "c2": 1,
+    "d2": 4,
+    "e2": 2,
+    "b1": 1,
+    "e1": 2
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "COMFORT",
+    "COMR",
+    "FORT",
+    "COM",
+    "FOR",
+    "OHM",
+    "ORT",
+    "TOM"
+  ],
+  "targetPath": [
+    "a2",
+    "c1",
+    "b2",
+    "b1",
+    "a1",
+    "c2",
+    "d3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d4": 4,
+    "e4": 0,
+    "d3": 1,
+    "a2": 1,
+    "b2": 2,
+    "c2": 1,
+    "e2": 1,
+    "a1": 1,
+    "b1": 2,
+    "c1": 1
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "FIBER",
+    "AHI",
+    "BER",
+    "CRE",
+    "DHA",
+    "FIB",
+    "HAF"
+  ],
+  "targetPath": [
+    "e3",
+    "c4",
+    "b3",
+    "a2",
+    "d2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "c4": 1,
+    "d4": 2,
+    "b3": 1,
+    "e3": 1,
+    "a2": 1,
+    "d2": 2,
+    "e1": 1
+  }
+}

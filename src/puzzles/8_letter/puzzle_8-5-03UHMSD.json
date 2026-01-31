@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "PRODUCED",
+    "PRODUCE",
+    "DERO",
+    "DORI",
+    "DORP",
+    "DUCE",
+    "EDUC",
+    "PROD",
+    "RITE",
+    "DER"
+  ],
+  "targetPath": [
+    "a4",
+    "b5",
+    "c5",
+    "c3",
+    "a3",
+    "a2",
+    "b1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "c5": 2,
+    "d5": 1,
+    "a4": 1,
+    "e4": 0,
+    "a3": 2,
+    "c3": 2,
+    "a2": 1,
+    "b2": 2,
+    "c2": 4,
+    "e2": 2,
+    "b1": 2,
+    "c1": 1
+  }
+}

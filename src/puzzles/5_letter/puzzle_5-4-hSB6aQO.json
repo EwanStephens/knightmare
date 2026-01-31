@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "VINYL",
+    "ETON",
+    "TONY",
+    "VINY",
+    "LYN",
+    "ONY",
+    "TOL",
+    "TON",
+    "VIN",
+    "VOL"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "c4",
+    "d3",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "e5": 1,
+    "c4": 1,
+    "d4": 3,
+    "c3": 2,
+    "d3": 1,
+    "a2": 1,
+    "b2": 2,
+    "c1": 1
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    }
+  ],
+  "targetWords": [
+    "BACKUP",
+    "BACK",
+    "ABE",
+    "ACK",
+    "BAC",
+    "BAE",
+    "BAW",
+    "CAB",
+    "CAW"
+  ],
+  "targetPath": [
+    "b1",
+    "b2",
+    "e5",
+    "e3",
+    "d5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "d5": 1,
+    "e5": 2,
+    "c4": 0,
+    "a3": 0,
+    "e3": 1,
+    "a2": 0,
+    "b2": 4,
+    "b1": 1
+  }
+}

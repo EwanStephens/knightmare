@@ -1,0 +1,103 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "MODIFIED",
+    "MODIF",
+    "FIED",
+    "MODI",
+    "DIF",
+    "FID",
+    "FIE",
+    "MOD"
+  ],
+  "targetPath": [
+    "e1",
+    "c2",
+    "c3",
+    "b4",
+    "d5",
+    "e3",
+    "e5",
+    "e2"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d5": 2,
+    "e5": 1,
+    "b4": 1,
+    "b3": 1,
+    "c3": 1,
+    "e3": 2,
+    "c2": 1,
+    "e2": 1,
+    "c1": 0,
+    "e1": 1
+  }
+}

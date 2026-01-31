@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "TOMATO",
+    "ATOM",
+    "DATO",
+    "TOMA",
+    "DAT",
+    "IDA",
+    "ODA",
+    "TAD",
+    "TAT",
+    "TOM"
+  ],
+  "targetPath": [
+    "c4",
+    "a4",
+    "b5",
+    "d3",
+    "e4",
+    "c2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "a4": 1,
+    "c4": 2,
+    "e4": 1,
+    "c3": 1,
+    "d3": 3,
+    "e3": 2,
+    "c2": 1,
+    "c1": 1
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "REPLIED",
+    "PERE",
+    "REPL",
+    "ERE",
+    "PED",
+    "PEE",
+    "PER",
+    "RED",
+    "REI",
+    "REP"
+  ],
+  "targetPath": [
+    "c1",
+    "d1",
+    "d2",
+    "e1",
+    "b1",
+    "c2",
+    "b3"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "e5": 1,
+    "a4": 1,
+    "c4": 0,
+    "b3": 1,
+    "c2": 2,
+    "d2": 3,
+    "b1": 1,
+    "c1": 2,
+    "d1": 2,
+    "e1": 0
+  }
+}

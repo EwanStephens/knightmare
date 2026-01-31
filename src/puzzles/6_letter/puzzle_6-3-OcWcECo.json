@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "F"
+    }
+  ],
+  "targetWords": [
+    "BELIEF",
+    "BELIE",
+    "LIEF",
+    "BEL",
+    "ELI",
+    "ILE",
+    "LIE"
+  ],
+  "targetPath": [
+    "e2",
+    "c3",
+    "b4",
+    "a3",
+    "a4",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a4": 1,
+    "b4": 2,
+    "c4": 0,
+    "d4": 0,
+    "e4": 1,
+    "a3": 2,
+    "c3": 1,
+    "e2": 2,
+    "d1": 0
+  }
+}

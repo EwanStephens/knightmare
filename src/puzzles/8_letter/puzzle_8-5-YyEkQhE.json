@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "VARIANCE",
+    "ARIAN",
+    "FIANT",
+    "VARIA",
+    "ARIA",
+    "TARI",
+    "VARI",
+    "EAN",
+    "IAN",
+    "RIA"
+  ],
+  "targetPath": [
+    "e3",
+    "d2",
+    "c4",
+    "b3",
+    "b5",
+    "c3",
+    "c5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "a4": 1,
+    "c4": 1,
+    "d4": 2,
+    "e4": 1,
+    "b3": 1,
+    "c3": 3,
+    "e3": 1,
+    "b2": 1,
+    "c2": 2,
+    "d2": 1,
+    "c1": 2
+  }
+}

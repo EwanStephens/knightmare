@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "EXAMINED",
+    "EXAMINE",
+    "AMINE",
+    "MINED",
+    "TEXAN",
+    "AMIN",
+    "ATED",
+    "ATEN",
+    "ENED",
+    "EXAM"
+  ],
+  "targetPath": [
+    "e4",
+    "d4",
+    "b3",
+    "a3",
+    "c4",
+    "d3",
+    "e2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "b4": 0,
+    "c4": 1,
+    "d4": 2,
+    "e4": 2,
+    "a3": 1,
+    "b3": 2,
+    "c3": 2,
+    "d3": 1,
+    "b2": 2,
+    "e2": 2,
+    "d1": 0
+  }
+}

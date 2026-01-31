@@ -1,0 +1,150 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "OUTSTANDING",
+    "OUTSTANDS",
+    "OUTSTAND",
+    "ANDINE",
+    "ANDING",
+    "GLOUTS",
+    "OUTSET",
+    "GLOAT",
+    "GLOUT",
+    "LOUTS"
+  ],
+  "targetPath": [
+    "c4",
+    "a2",
+    "b1",
+    "d2",
+    "d3",
+    "b5",
+    "b2",
+    "a3",
+    "c5",
+    "e4",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 4,
+    "c5": 1,
+    "d5": 1,
+    "e5": 2,
+    "c4": 3,
+    "d4": 0,
+    "e4": 3,
+    "a3": 4,
+    "d3": 2,
+    "a2": 1,
+    "b2": 1,
+    "c2": 2,
+    "d2": 3,
+    "b1": 2,
+    "c1": 3,
+    "e1": 2
+  }
+}

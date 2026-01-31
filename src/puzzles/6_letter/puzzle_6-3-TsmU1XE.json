@@ -1,0 +1,85 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "TRIBAL",
+    "TRIB",
+    "IBA",
+    "ILA",
+    "RIB",
+    "TRI"
+  ],
+  "targetPath": [
+    "e2",
+    "c4",
+    "b5",
+    "d5",
+    "a5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "d5": 1,
+    "a4": 0,
+    "b4": 1,
+    "c4": 1,
+    "c3": 1,
+    "e3": 0,
+    "e2": 1
+  }
+}

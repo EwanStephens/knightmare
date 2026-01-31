@@ -1,0 +1,101 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "WEBSTER",
+    "STER",
+    "WEBS",
+    "ERD",
+    "EWE",
+    "TER",
+    "WEB"
+  ],
+  "targetPath": [
+    "d4",
+    "e2",
+    "d1",
+    "d5",
+    "c3",
+    "a4",
+    "b3"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 1,
+    "a4": 1,
+    "c4": 0,
+    "d4": 1,
+    "e4": 1,
+    "b3": 2,
+    "c3": 3,
+    "e2": 1,
+    "d1": 2,
+    "e1": 0
+  }
+}

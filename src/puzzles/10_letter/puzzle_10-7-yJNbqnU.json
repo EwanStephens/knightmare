@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "COMMISSION",
+    "MISSION",
+    "COMMIS",
+    "CION",
+    "COMA",
+    "COMM",
+    "COOM",
+    "MACO",
+    "MISS",
+    "SION"
+  ],
+  "targetPath": [
+    "c4",
+    "c5",
+    "d4",
+    "e4",
+    "d2",
+    "e2",
+    "d1",
+    "c2",
+    "b2",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "a4": 2,
+    "b4": 2,
+    "c4": 2,
+    "d4": 2,
+    "e4": 1,
+    "b3": 2,
+    "d3": 1,
+    "e3": 1,
+    "b2": 2,
+    "c2": 4,
+    "d2": 3,
+    "e2": 1,
+    "b1": 0,
+    "c1": 1,
+    "d1": 2
+  }
+}

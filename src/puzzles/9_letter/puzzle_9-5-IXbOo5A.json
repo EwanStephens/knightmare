@@ -1,0 +1,127 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "AUTHORITY",
+    "AUTHOR",
+    "TORAH",
+    "AUTH",
+    "CITY",
+    "HORA",
+    "RATO",
+    "THOR",
+    "TORA",
+    "TORI"
+  ],
+  "targetPath": [
+    "a5",
+    "a1",
+    "b2",
+    "c3",
+    "d3",
+    "e3",
+    "e5",
+    "d4",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 4,
+    "e5": 1,
+    "b4": 0,
+    "c4": 4,
+    "d4": 2,
+    "b3": 0,
+    "c3": 2,
+    "d3": 3,
+    "e3": 3,
+    "b2": 1,
+    "e2": 3,
+    "a1": 2,
+    "c1": 0
+  }
+}

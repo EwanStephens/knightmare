@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "HAPPINESS",
+    "SPINES",
+    "PINES",
+    "SPINE",
+    "SPISE",
+    "NESS",
+    "PINE",
+    "PISE",
+    "PISS",
+    "SPIN"
+  ],
+  "targetPath": [
+    "a3",
+    "a1",
+    "c1",
+    "c3",
+    "e2",
+    "e1",
+    "d3",
+    "e5",
+    "c4"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "e5": 2,
+    "b4": 1,
+    "c4": 1,
+    "d4": 1,
+    "a3": 2,
+    "c3": 1,
+    "d3": 2,
+    "e2": 2,
+    "a1": 2,
+    "c1": 3,
+    "e1": 1
+  }
+}

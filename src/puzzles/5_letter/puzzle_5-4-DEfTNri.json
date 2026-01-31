@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "FENCE",
+    "ENC",
+    "FEN",
+    "NEF"
+  ],
+  "targetPath": [
+    "c3",
+    "d4",
+    "e3",
+    "c1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "b5": 3,
+    "c5": 0,
+    "d4": 3,
+    "c3": 3,
+    "e3": 2,
+    "e2": 0,
+    "a1": 0,
+    "b1": 0,
+    "c1": 1
+  }
+}

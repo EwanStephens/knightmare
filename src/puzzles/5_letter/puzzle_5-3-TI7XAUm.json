@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    }
+  ],
+  "targetWords": [
+    "TUNER",
+    "TUNE",
+    "TER",
+    "TUN"
+  ],
+  "targetPath": [
+    "d4",
+    "e3",
+    "d5",
+    "c3",
+    "b2"
+  ],
+  "legalCaptures": {
+    "d5": 2,
+    "b4": 1,
+    "d4": 2,
+    "c3": 1,
+    "e3": 1,
+    "b2": 1,
+    "d2": 1,
+    "e1": 1
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "RAILWAY",
+    "WARLY",
+    "HAIL",
+    "RAIL",
+    "WARL",
+    "YARL",
+    "AIL",
+    "ARA",
+    "LOE",
+    "RAH"
+  ],
+  "targetPath": [
+    "d5",
+    "b4",
+    "b5",
+    "c3",
+    "e5",
+    "d3",
+    "e3"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 2,
+    "d5": 2,
+    "e5": 1,
+    "a4": 1,
+    "b4": 2,
+    "c3": 3,
+    "d3": 2,
+    "e3": 1,
+    "e2": 1,
+    "a1": 0,
+    "b1": 1,
+    "e1": 1
+  }
+}

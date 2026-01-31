@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "ELECTED",
+    "ELECTO",
+    "ELECT",
+    "ELEC",
+    "LECT",
+    "CRL",
+    "CTE",
+    "CTO",
+    "RCT",
+    "RLE"
+  ],
+  "targetPath": [
+    "c4",
+    "a5",
+    "b3",
+    "a2",
+    "d2",
+    "e4",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "e5": 0,
+    "b4": 0,
+    "c4": 1,
+    "d4": 1,
+    "e4": 2,
+    "a3": 2,
+    "b3": 1,
+    "c3": 0,
+    "a2": 2,
+    "d2": 2,
+    "b1": 0
+  }
+}

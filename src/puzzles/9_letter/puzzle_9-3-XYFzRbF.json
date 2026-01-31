@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Z"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "K"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "K"
+    }
+  ],
+  "targetWords": [
+    "BREAKDOWN",
+    "BREAK",
+    "BREW",
+    "DOAB",
+    "DOWN",
+    "ODEA",
+    "REAK",
+    "WEAK",
+    "BDE",
+    "DEA"
+  ],
+  "targetPath": [
+    "c3",
+    "d2",
+    "c2",
+    "a1",
+    "d1",
+    "b2",
+    "a2",
+    "a3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "b4": 2,
+    "c4": 1,
+    "a3": 3,
+    "c3": 4,
+    "d3": 1,
+    "a2": 3,
+    "b2": 3,
+    "c2": 2,
+    "d2": 2,
+    "a1": 2,
+    "d1": 1
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "MOVIE",
+    "AVIE",
+    "AVO",
+    "OVA",
+    "VIE"
+  ],
+  "targetPath": [
+    "c5",
+    "a5",
+    "b4",
+    "b2",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 3,
+    "e5": 1,
+    "b4": 4,
+    "c4": 0,
+    "a3": 1,
+    "b2": 1,
+    "b1": 0,
+    "e1": 1
+  }
+}

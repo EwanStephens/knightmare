@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "COMPLAINT",
+    "COMPLAIN",
+    "PLAINT",
+    "PINTA",
+    "PINTO",
+    "PLAIN",
+    "AINT",
+    "COMP",
+    "INTA",
+    "INTO"
+  ],
+  "targetPath": [
+    "d2",
+    "b1",
+    "a2",
+    "d5",
+    "e3",
+    "d4",
+    "c3",
+    "b4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "d5": 2,
+    "e5": 0,
+    "b4": 2,
+    "d4": 2,
+    "c3": 2,
+    "d3": 2,
+    "e3": 1,
+    "a2": 2,
+    "d2": 1,
+    "b1": 3,
+    "c1": 2,
+    "e1": 1
+  }
+}

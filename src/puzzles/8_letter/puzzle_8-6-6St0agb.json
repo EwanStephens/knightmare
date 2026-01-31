@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "EMBEDDED",
+    "BEEDI",
+    "EMBED",
+    "DEME",
+    "MEDE",
+    "NEED",
+    "NEEM",
+    "BEE",
+    "CDF",
+    "DEM"
+  ],
+  "targetPath": [
+    "c3",
+    "c1",
+    "c4",
+    "a5",
+    "d2",
+    "d1",
+    "a1",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 3,
+    "c5": 1,
+    "c4": 1,
+    "b3": 5,
+    "c3": 2,
+    "d3": 0,
+    "e3": 1,
+    "a2": 1,
+    "b2": 1,
+    "d2": 2,
+    "a1": 1,
+    "c1": 4,
+    "d1": 1
+  }
+}

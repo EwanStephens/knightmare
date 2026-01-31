@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "K"
+    }
+  ],
+  "targetWords": [
+    "RECEPTION",
+    "EREPTION",
+    "RECEPT",
+    "EREPT",
+    "BION",
+    "NONE",
+    "OBIT",
+    "REIT",
+    "RENO",
+    "REPT"
+  ],
+  "targetPath": [
+    "e2",
+    "d1",
+    "b3",
+    "c4",
+    "c1",
+    "d2",
+    "e4",
+    "c5",
+    "a4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 0,
+    "c5": 3,
+    "d5": 1,
+    "e5": 1,
+    "a4": 1,
+    "b4": 2,
+    "c4": 3,
+    "e4": 2,
+    "b3": 1,
+    "e3": 0,
+    "a2": 0,
+    "d2": 2,
+    "e2": 2,
+    "c1": 1,
+    "d1": 2,
+    "e1": 0
+  }
+}

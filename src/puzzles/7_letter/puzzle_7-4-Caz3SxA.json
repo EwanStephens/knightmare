@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "LISTING",
+    "STING",
+    "INST",
+    "LIST",
+    "ING",
+    "INS",
+    "IST",
+    "ITS",
+    "LIS",
+    "OPE"
+  ],
+  "targetPath": [
+    "a2",
+    "a3",
+    "b4",
+    "d2",
+    "a5",
+    "c4",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 0,
+    "b4": 2,
+    "c4": 3,
+    "a3": 1,
+    "a2": 2,
+    "b2": 1,
+    "c2": 1,
+    "d2": 2,
+    "b1": 1,
+    "e1": 1
+  }
+}

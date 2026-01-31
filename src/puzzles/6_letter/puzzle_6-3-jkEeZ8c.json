@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "COUPLE",
+    "COUP",
+    "PLEW",
+    "COW",
+    "CSW",
+    "GUP",
+    "LEW"
+  ],
+  "targetPath": [
+    "d5",
+    "e5",
+    "d3",
+    "c2",
+    "b3",
+    "a2"
+  ],
+  "legalCaptures": {
+    "d5": 2,
+    "e5": 2,
+    "c4": 0,
+    "e4": 1,
+    "b3": 2,
+    "d3": 1,
+    "a2": 1,
+    "c2": 2,
+    "e1": 1
+  }
+}

@@ -1,27 +1,11 @@
 {
   "unused_words": [
-    "accountability",
-    "acknowledgment",
-    "administration",
-    "administrative",
     "cardiovascular",
     "constitutional",
-    "correspondence",
     "discrimination",
     "identification",
-    "implementation",
-    "organizational",
-    "pharmaceutical",
-    "recommendation",
-    "reconstruction",
-    "rehabilitation",
-    "representation",
     "representative",
-    "responsibility",
-    "simultaneously",
-    "sustainability",
-    "transformation",
-    "transportation"
+    "sustainability"
   ],
   "used_words": [
     "infrastructure",
@@ -31,6 +15,22 @@
     "multiplication",
     "interpretation",
     "classification",
-    "authentication"
+    "authentication",
+    "accountability",
+    "recommendation",
+    "representation",
+    "acknowledgment",
+    "organizational",
+    "rehabilitation",
+    "pharmaceutical",
+    "transportation",
+    "responsibility",
+    "reconstruction",
+    "transformation",
+    "correspondence",
+    "implementation",
+    "simultaneously",
+    "administrative",
+    "administration"
   ]
 }

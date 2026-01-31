@@ -1,0 +1,135 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "LITIGATION",
+    "LITATION",
+    "LIPIN",
+    "PINNA",
+    "ATIP",
+    "LITI",
+    "PION",
+    "TIPI",
+    "ATI",
+    "FIP"
+  ],
+  "targetPath": [
+    "e2",
+    "b2",
+    "d3",
+    "c5",
+    "a3",
+    "c1",
+    "a1",
+    "b3",
+    "a2",
+    "c3"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 2,
+    "e5": 0,
+    "c4": 3,
+    "d4": 1,
+    "a3": 2,
+    "b3": 2,
+    "c3": 1,
+    "d3": 3,
+    "e3": 4,
+    "a2": 2,
+    "b2": 2,
+    "e2": 2,
+    "a1": 1,
+    "c1": 1
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "CLEARING",
+    "EARING",
+    "RINGER",
+    "CLEAR",
+    "EARLE",
+    "INGER",
+    "RINGE",
+    "ARLE",
+    "EARL",
+    "GEAR"
+  ],
+  "targetPath": [
+    "d1",
+    "b3",
+    "a2",
+    "b4",
+    "a3",
+    "a4",
+    "b2",
+    "e2"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "e5": 0,
+    "a4": 1,
+    "b4": 1,
+    "c4": 6,
+    "e4": 1,
+    "a3": 2,
+    "b3": 1,
+    "a2": 2,
+    "b2": 4,
+    "e2": 2,
+    "b1": 1,
+    "c1": 0,
+    "d1": 2
+  }
+}

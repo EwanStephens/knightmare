@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "GAMBLING",
+    "AMBLING",
+    "BLIN",
+    "GAMB",
+    "LINE",
+    "LING",
+    "AMB",
+    "AMT",
+    "GAM",
+    "ING"
+  ],
+  "targetPath": [
+    "d4",
+    "e3",
+    "e1",
+    "e4",
+    "e5",
+    "c4",
+    "c1",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "e5": 2,
+    "a4": 3,
+    "b4": 1,
+    "c4": 2,
+    "d4": 1,
+    "e4": 2,
+    "b3": 1,
+    "d3": 3,
+    "e3": 1,
+    "c1": 2,
+    "e1": 2
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    }
+  ],
+  "targetWords": [
+    "RECEIVING",
+    "AVIE",
+    "IVIN",
+    "VIER",
+    "VINS",
+    "ERE",
+    "INS",
+    "REC",
+    "REG",
+    "VIE"
+  ],
+  "targetPath": [
+    "c4",
+    "a4",
+    "d1",
+    "a1",
+    "e5",
+    "d3",
+    "e2",
+    "e3",
+    "a3"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d5": 1,
+    "e5": 1,
+    "a4": 3,
+    "c4": 1,
+    "a3": 0,
+    "d3": 1,
+    "e3": 3,
+    "a2": 1,
+    "e2": 3,
+    "a1": 2,
+    "d1": 2
+  }
+}

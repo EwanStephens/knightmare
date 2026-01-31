@@ -1,0 +1,114 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "J"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    }
+  ],
+  "targetWords": [
+    "JUSTIFY",
+    "JUST",
+    "JUS",
+    "SOU",
+    "TIU",
+    "UST"
+  ],
+  "targetPath": [
+    "c2",
+    "e4",
+    "e5",
+    "d5",
+    "c4",
+    "e3",
+    "d4"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "e5": 2,
+    "b4": 3,
+    "c4": 2,
+    "d4": 0,
+    "e4": 3,
+    "b3": 2,
+    "c3": 1,
+    "e3": 1,
+    "c2": 1,
+    "d2": 1,
+    "e2": 1,
+    "c1": 1
+  }
+}

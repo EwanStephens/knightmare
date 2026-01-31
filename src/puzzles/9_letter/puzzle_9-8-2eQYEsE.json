@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "PRACTICAL",
+    "PRACTICE",
+    "PRACTIC",
+    "ARNICA",
+    "TICAL",
+    "ARNI",
+    "TICE",
+    "ACT",
+    "ALG",
+    "ARE"
+  ],
+  "targetPath": [
+    "d3",
+    "b5",
+    "a4",
+    "d1",
+    "c3",
+    "a3",
+    "b1",
+    "a2",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 5,
+    "c5": 1,
+    "e5": 1,
+    "a4": 2,
+    "b4": 2,
+    "a3": 1,
+    "c3": 2,
+    "d3": 2,
+    "a2": 2,
+    "b2": 3,
+    "e2": 1,
+    "a1": 0,
+    "b1": 4,
+    "c1": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

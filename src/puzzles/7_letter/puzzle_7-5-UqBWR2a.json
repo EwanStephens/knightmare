@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "REFLECT",
+    "FLECT",
+    "LECT",
+    "REEL",
+    "REFL",
+    "EEL",
+    "EFL",
+    "LEG",
+    "REE",
+    "REF"
+  ],
+  "targetPath": [
+    "a2",
+    "b3",
+    "d1",
+    "b2",
+    "a3",
+    "b4",
+    "e1"
+  ],
+  "legalCaptures": {
+    "b4": 2,
+    "d4": 0,
+    "e4": 1,
+    "a3": 2,
+    "b3": 3,
+    "d3": 2,
+    "a2": 1,
+    "b2": 1,
+    "e2": 3,
+    "c1": 0,
+    "d1": 1,
+    "e1": 2
+  }
+}

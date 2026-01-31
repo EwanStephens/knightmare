@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "EXTENSION",
+    "TENSION",
+    "LATENS",
+    "TOLANE",
+    "ATONE",
+    "EETEN",
+    "ELATE",
+    "EXTOL",
+    "LATEN",
+    "LATON"
+  ],
+  "targetPath": [
+    "a3",
+    "c5",
+    "c4",
+    "b3",
+    "a2",
+    "a1",
+    "e5",
+    "d3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "c5": 3,
+    "d5": 3,
+    "e5": 1,
+    "a4": 0,
+    "c4": 5,
+    "e4": 3,
+    "a3": 4,
+    "b3": 4,
+    "d3": 2,
+    "e3": 4,
+    "a2": 1,
+    "c2": 1,
+    "a1": 1,
+    "b1": 1,
+    "c1": 2,
+    "d1": 1,
+    "e1": 1
+  }
+}

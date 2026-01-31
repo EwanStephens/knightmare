@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "INTRODUCED",
+    "INTRODUCE",
+    "INTRODUCT",
+    "CENTRO",
+    "INTROD",
+    "EDUCT",
+    "INTRO",
+    "NUDIE",
+    "CEDI",
+    "CENT"
+  ],
+  "targetPath": [
+    "b5",
+    "b4",
+    "d5",
+    "e3",
+    "e5",
+    "e2",
+    "d1",
+    "b1",
+    "b2",
+    "c3"
+  ],
+  "legalCaptures": {
+    "b5": 4,
+    "c5": 0,
+    "d5": 3,
+    "e5": 2,
+    "a4": 2,
+    "b4": 2,
+    "d4": 1,
+    "a3": 2,
+    "c3": 4,
+    "d3": 2,
+    "e3": 1,
+    "a2": 2,
+    "b2": 6,
+    "e2": 1,
+    "a1": 0,
+    "b1": 3,
+    "d1": 4
+  }
+}

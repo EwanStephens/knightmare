@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "INDICATOR",
+    "INDICATE",
+    "INDICE",
+    "INDICO",
+    "ACOIN",
+    "INDIC",
+    "CATE",
+    "COIN",
+    "COTE",
+    "IOTA"
+  ],
+  "targetPath": [
+    "a3",
+    "c1",
+    "e1",
+    "a1",
+    "b3",
+    "c4",
+    "c3",
+    "b4",
+    "d2"
+  ],
+  "legalCaptures": {
+    "b4": 3,
+    "c4": 2,
+    "e4": 0,
+    "a3": 3,
+    "b3": 3,
+    "c3": 5,
+    "e3": 0,
+    "c2": 1,
+    "d2": 2,
+    "e2": 0,
+    "a1": 1,
+    "c1": 1,
+    "e1": 2
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "COMBO",
+    "COMB",
+    "BOT",
+    "COM",
+    "ECO"
+  ],
+  "targetPath": [
+    "c3",
+    "b4",
+    "e1",
+    "d3",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a4": 0,
+    "b4": 1,
+    "b3": 0,
+    "c3": 1,
+    "d3": 1,
+    "e2": 1,
+    "a1": 1,
+    "c1": 1,
+    "e1": 1
+  }
+}

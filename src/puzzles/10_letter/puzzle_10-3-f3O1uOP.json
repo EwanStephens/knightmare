@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "COMMENTARY",
+    "COMMENT",
+    "MENTARY",
+    "MENTOR",
+    "COMME",
+    "MENTA",
+    "OTARY",
+    "COMM",
+    "COTO",
+    "MENT"
+  ],
+  "targetPath": [
+    "a1",
+    "c2",
+    "d1",
+    "b2",
+    "b3",
+    "e3",
+    "c4",
+    "d2",
+    "b4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 0,
+    "b4": 2,
+    "c4": 4,
+    "e4": 0,
+    "b3": 3,
+    "e3": 2,
+    "b2": 1,
+    "c2": 3,
+    "d2": 2,
+    "a1": 1,
+    "d1": 2,
+    "e1": 0
+  }
+}

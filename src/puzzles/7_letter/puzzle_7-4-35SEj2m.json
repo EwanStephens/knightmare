@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "BEDROOM",
+    "DROOB",
+    "ORBED",
+    "BEDE",
+    "ROED",
+    "BED",
+    "BOM",
+    "CDR",
+    "OBE",
+    "ORB"
+  ],
+  "targetPath": [
+    "d1",
+    "d5",
+    "c4",
+    "c2",
+    "e4",
+    "b1",
+    "e1"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "d5": 2,
+    "b4": 0,
+    "c4": 2,
+    "e4": 2,
+    "e3": 1,
+    "c2": 3,
+    "e2": 2,
+    "b1": 1,
+    "d1": 2,
+    "e1": 1
+  }
+}

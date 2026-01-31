@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "COUNTY",
+    "COUNT",
+    "COUE",
+    "YUN"
+  ],
+  "targetPath": [
+    "c3",
+    "a2",
+    "b4",
+    "b5",
+    "b2",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 0,
+    "d5": 1,
+    "b4": 3,
+    "a3": 2,
+    "c3": 2,
+    "a2": 2,
+    "b2": 1,
+    "d2": 0
+  }
+}

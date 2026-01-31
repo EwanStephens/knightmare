@@ -1,0 +1,79 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "GENEVA",
+    "EVEN",
+    "GENE",
+    "NEVE",
+    "EVA",
+    "EVE",
+    "GEN"
+  ],
+  "targetPath": [
+    "e2",
+    "b5",
+    "a4",
+    "c5",
+    "d4",
+    "c2"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "e5": 0,
+    "a4": 1,
+    "b4": 0,
+    "d4": 2,
+    "c2": 0,
+    "e2": 1
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "HARMFUL",
+    "ARMFUL",
+    "HAEN",
+    "HARM",
+    "ARM",
+    "EAR",
+    "EAT",
+    "HAE",
+    "HAL",
+    "HAT"
+  ],
+  "targetPath": [
+    "d3",
+    "b2",
+    "a1",
+    "d4",
+    "e3",
+    "c5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "b4": 1,
+    "d4": 1,
+    "e4": 2,
+    "a3": 0,
+    "d3": 2,
+    "e3": 1,
+    "b2": 4,
+    "c2": 2,
+    "e2": 0,
+    "a1": 1
+  }
+}

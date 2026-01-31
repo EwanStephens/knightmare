@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "ACADEMIC",
+    "ACAD",
+    "CACA",
+    "CADE",
+    "DEMI",
+    "IDEM",
+    "MIDE",
+    "TADE",
+    "ADA",
+    "ADE"
+  ],
+  "targetPath": [
+    "d4",
+    "e4",
+    "d3",
+    "c4",
+    "b3",
+    "a4",
+    "b5",
+    "e2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 2,
+    "d5": 0,
+    "a4": 2,
+    "b4": 1,
+    "c4": 2,
+    "d4": 3,
+    "e4": 1,
+    "b3": 2,
+    "d3": 2,
+    "e3": 2,
+    "b2": 0,
+    "e2": 1,
+    "c1": 1
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "W"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "DESIGNING",
+    "SIGNING",
+    "DESIGN",
+    "DESC",
+    "DESI",
+    "IDEO",
+    "IDES",
+    "INDE",
+    "ISED",
+    "NING"
+  ],
+  "targetPath": [
+    "e3",
+    "d2",
+    "c2",
+    "d3",
+    "b5",
+    "a3",
+    "b2",
+    "d4",
+    "a1"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 0,
+    "d5": 2,
+    "a4": 1,
+    "d4": 2,
+    "a3": 1,
+    "b3": 1,
+    "d3": 4,
+    "e3": 2,
+    "b2": 2,
+    "c2": 3,
+    "d2": 3,
+    "a1": 0,
+    "e1": 0
+  }
+}

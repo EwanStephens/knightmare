@@ -1,0 +1,118 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DEFINED",
+    "DEFINE",
+    "FINED",
+    "LEDEN",
+    "DEFI",
+    "EDEN",
+    "ENID",
+    "FINE",
+    "LEDE",
+    "DEF"
+  ],
+  "targetPath": [
+    "d3",
+    "c5",
+    "b3",
+    "c2",
+    "d2",
+    "e1",
+    "b4"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 3,
+    "b4": 2,
+    "e4": 1,
+    "a3": 1,
+    "b3": 2,
+    "d3": 2,
+    "e3": 1,
+    "a2": 1,
+    "c2": 2,
+    "d2": 2,
+    "c1": 1,
+    "e1": 1
+  }
+}

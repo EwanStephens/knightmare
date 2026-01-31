@@ -1,0 +1,79 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "REMOVE",
+    "EMOVE",
+    "MOVE",
+    "HEM",
+    "MOO",
+    "REH",
+    "REM"
+  ],
+  "targetPath": [
+    "c1",
+    "e2",
+    "c2",
+    "b4",
+    "d4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "e5": 2,
+    "a4": 1,
+    "b4": 2,
+    "d4": 2,
+    "c2": 1,
+    "e2": 2,
+    "c1": 1
+  }
+}

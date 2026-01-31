@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "RADICAL",
+    "CAL",
+    "LCA",
+    "RAD"
+  ],
+  "targetPath": [
+    "b5",
+    "b3",
+    "a2",
+    "a3",
+    "c1",
+    "c3",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 3,
+    "e5": 0,
+    "a3": 2,
+    "b3": 1,
+    "c3": 1,
+    "d3": 2,
+    "a2": 1,
+    "d2": 0,
+    "e2": 0,
+    "c1": 2,
+    "e1": 3
+  }
+}

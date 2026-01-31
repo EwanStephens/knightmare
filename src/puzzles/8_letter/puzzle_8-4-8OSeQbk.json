@@ -1,0 +1,112 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d1",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "ACCESSED",
+    "ACCESS",
+    "CESSED",
+    "ESSEDA",
+    "ESSED",
+    "ACCE",
+    "CEES",
+    "CESS",
+    "ESSE",
+    "SSED"
+  ],
+  "targetPath": [
+    "c4",
+    "e5",
+    "d3",
+    "e2",
+    "b2",
+    "d1",
+    "e3",
+    "d5"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "d5": 1,
+    "e5": 2,
+    "b4": 1,
+    "c4": 1,
+    "b3": 1,
+    "d3": 1,
+    "e3": 2,
+    "b2": 1,
+    "e2": 3,
+    "a1": 1,
+    "d1": 2
+  }
+}

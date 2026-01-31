@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "HEREIN",
+    "HEIN",
+    "HERE",
+    "REIN",
+    "ERE",
+    "HEI",
+    "HER",
+    "REI",
+    "RIN"
+  ],
+  "targetPath": [
+    "a3",
+    "b4",
+    "b5",
+    "d4",
+    "b3",
+    "c4"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "e5": 0,
+    "b4": 3,
+    "c4": 0,
+    "d4": 2,
+    "a3": 1,
+    "b3": 1,
+    "e3": 1,
+    "a2": 0
+  }
+}

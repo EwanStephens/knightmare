@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "PATENT",
+    "PATEN",
+    "ATEN",
+    "ATTN",
+    "PATE",
+    "PATT",
+    "TAPE",
+    "APE",
+    "ATE",
+    "ATT"
+  ],
+  "targetPath": [
+    "d4",
+    "b4",
+    "b5",
+    "b3",
+    "d1",
+    "e2"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "c5": 1,
+    "d5": 0,
+    "b4": 2,
+    "d4": 2,
+    "a3": 0,
+    "b3": 1,
+    "e2": 2,
+    "d1": 2
+  }
+}

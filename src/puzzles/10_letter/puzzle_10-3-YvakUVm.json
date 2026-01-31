@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "X"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "X"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "EXPIRATION",
+    "RATION",
+    "SATION",
+    "ARIOI",
+    "ARION",
+    "RATIO",
+    "SITAR",
+    "ERAT",
+    "EXON",
+    "PION"
+  ],
+  "targetPath": [
+    "d4",
+    "c3",
+    "e3",
+    "e4",
+    "d5",
+    "c4",
+    "a2",
+    "b1",
+    "c2",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "d5": 2,
+    "e5": 0,
+    "c4": 3,
+    "d4": 1,
+    "e4": 2,
+    "c3": 2,
+    "e3": 2,
+    "a2": 2,
+    "b2": 0,
+    "c2": 4,
+    "d2": 3,
+    "b1": 2
+  }
+}

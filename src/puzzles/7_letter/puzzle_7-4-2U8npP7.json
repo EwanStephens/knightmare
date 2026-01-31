@@ -1,0 +1,103 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "TROUBLE",
+    "ROUBLE",
+    "PUBL",
+    "ROUB",
+    "BUR",
+    "OUR",
+    "PUB",
+    "PUR",
+    "URO"
+  ],
+  "targetPath": [
+    "a1",
+    "b3",
+    "a2",
+    "c3",
+    "b5",
+    "a3",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 2,
+    "c4": 2,
+    "e4": 0,
+    "a3": 1,
+    "b3": 1,
+    "c3": 3,
+    "a2": 1,
+    "b2": 0,
+    "d2": 1,
+    "a1": 1
+  }
+}

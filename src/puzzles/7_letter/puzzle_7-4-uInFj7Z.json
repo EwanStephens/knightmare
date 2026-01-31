@@ -1,0 +1,104 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "DEVIANT",
+    "ANRE",
+    "DEVI",
+    "SEAN",
+    "ANT",
+    "DET",
+    "DEV",
+    "EAN",
+    "IAN",
+    "SEA"
+  ],
+  "targetPath": [
+    "e2",
+    "b2",
+    "a1",
+    "d4",
+    "e3",
+    "b3",
+    "a3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 1,
+    "d4": 1,
+    "a3": 0,
+    "b3": 3,
+    "e3": 1,
+    "b2": 2,
+    "e2": 1,
+    "a1": 1,
+    "b1": 2,
+    "c1": 1
+  }
+}

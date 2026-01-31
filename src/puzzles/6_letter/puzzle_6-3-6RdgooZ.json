@@ -1,0 +1,89 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "SECRET",
+    "SECRE",
+    "ARSE",
+    "SECT",
+    "AAH",
+    "ARS",
+    "CRS",
+    "CTS",
+    "ETH",
+    "HAS"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "d5",
+    "e4",
+    "a4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "d5": 3,
+    "e5": 1,
+    "a4": 1,
+    "d4": 2,
+    "e4": 1,
+    "c3": 1,
+    "a1": 1,
+    "b1": 3
+  }
+}

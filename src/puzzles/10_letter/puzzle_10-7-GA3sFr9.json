@@ -1,0 +1,149 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "a4",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "Y"
+    }
+  ],
+  "targetWords": [
+    "REPOSITORY",
+    "REPOSITOR",
+    "REPOSIT",
+    "REPOT",
+    "ROTOR",
+    "TOPOS",
+    "EPOS",
+    "POSY",
+    "POTE",
+    "ROSY"
+  ],
+  "targetPath": [
+    "d2",
+    "b3",
+    "a4",
+    "c3",
+    "b1",
+    "a2",
+    "d5",
+    "a5",
+    "b4",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "d5": 3,
+    "e5": 0,
+    "a4": 1,
+    "b4": 2,
+    "d4": 1,
+    "e4": 4,
+    "a3": 2,
+    "b3": 1,
+    "c3": 3,
+    "d3": 3,
+    "e3": 0,
+    "a2": 3,
+    "b2": 0,
+    "d2": 2,
+    "b1": 2,
+    "e1": 1
+  }
+}

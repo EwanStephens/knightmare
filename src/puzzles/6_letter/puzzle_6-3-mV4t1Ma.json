@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SPOUSE",
+    "NOUS",
+    "POUR",
+    "ESP",
+    "ESU",
+    "NOU",
+    "OUR",
+    "SUR",
+    "USE"
+  ],
+  "targetPath": [
+    "d5",
+    "e4",
+    "c3",
+    "e2",
+    "c2",
+    "d3"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "e5": 1,
+    "e4": 1,
+    "c3": 2,
+    "d3": 1,
+    "e3": 0,
+    "c2": 2,
+    "e2": 2,
+    "e1": 0
+  }
+}

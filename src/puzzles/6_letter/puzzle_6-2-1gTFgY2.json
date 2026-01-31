@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "TRANCE",
+    "TRAN",
+    "ANC",
+    "RTE",
+    "TRA"
+  ],
+  "targetPath": [
+    "c3",
+    "c2",
+    "c5",
+    "a4",
+    "b5",
+    "a3"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "c5": 1,
+    "a4": 1,
+    "e4": 0,
+    "a3": 0,
+    "c3": 2,
+    "c2": 2,
+    "b1": 0
+  }
+}

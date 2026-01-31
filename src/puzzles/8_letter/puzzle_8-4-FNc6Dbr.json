@@ -1,0 +1,110 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CHARGING",
+    "ARGIN",
+    "ARGH",
+    "CHAR",
+    "ARG",
+    "CHA",
+    "CHN",
+    "GIN"
+  ],
+  "targetPath": [
+    "e3",
+    "d2",
+    "c3",
+    "b1",
+    "c2",
+    "c1",
+    "e1",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "d5": 2,
+    "a4": 0,
+    "b4": 0,
+    "c4": 1,
+    "c3": 1,
+    "e3": 1,
+    "c2": 3,
+    "d2": 3,
+    "b1": 1,
+    "c1": 2,
+    "e1": 1
+  }
+}

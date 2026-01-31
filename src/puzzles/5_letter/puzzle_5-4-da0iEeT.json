@@ -1,0 +1,83 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "K"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "TRACK",
+    "RACK",
+    "TRAC",
+    "ACK",
+    "TRA"
+  ],
+  "targetPath": [
+    "b3",
+    "a1",
+    "b2",
+    "e5",
+    "b5"
+  ],
+  "legalCaptures": {
+    "b5": 1,
+    "e5": 1,
+    "a3": 0,
+    "b3": 1,
+    "e3": 1,
+    "a2": 1,
+    "b2": 2,
+    "a1": 1,
+    "e1": 0
+  }
+}

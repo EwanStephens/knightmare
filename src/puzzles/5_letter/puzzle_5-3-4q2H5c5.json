@@ -1,0 +1,76 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "IDEAL",
+    "DEAL",
+    "IDEA",
+    "DEA",
+    "IDE"
+  ],
+  "targetPath": [
+    "a3",
+    "b4",
+    "d2",
+    "e1",
+    "c2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b4": 2,
+    "a3": 1,
+    "b2": 0,
+    "c2": 0,
+    "d2": 2,
+    "a1": 0,
+    "e1": 1
+  }
+}

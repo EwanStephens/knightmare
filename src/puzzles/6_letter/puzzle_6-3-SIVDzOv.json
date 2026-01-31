@@ -1,0 +1,84 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "PIERCE",
+    "PIER",
+    "ERE",
+    "PIE",
+    "REG"
+  ],
+  "targetPath": [
+    "b2",
+    "b3",
+    "b1",
+    "a3",
+    "c2",
+    "d1"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 2,
+    "b4": 0,
+    "a3": 3,
+    "b3": 1,
+    "b2": 1,
+    "c2": 2,
+    "b1": 1,
+    "d1": 1
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "rook",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "APPROVAL",
+    "APPRO",
+    "LOVAT",
+    "VALOR",
+    "VOLAR",
+    "ALAP",
+    "ALAR",
+    "APPT",
+    "LAPP",
+    "LARI"
+  ],
+  "targetPath": [
+    "b2",
+    "c2",
+    "b3",
+    "a1",
+    "a5",
+    "e5",
+    "e4",
+    "c3"
+  ],
+  "legalCaptures": {
+    "a5": 3,
+    "e5": 2,
+    "d4": 1,
+    "e4": 2,
+    "b3": 2,
+    "c3": 4,
+    "d3": 1,
+    "b2": 3,
+    "c2": 1,
+    "d2": 0,
+    "e2": 0,
+    "a1": 2,
+    "e1": 2
+  }
+}

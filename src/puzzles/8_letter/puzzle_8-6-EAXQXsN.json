@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "ENSEMBLE",
+    "BLASE",
+    "BLAST",
+    "ALEE",
+    "BLAE",
+    "BLAS",
+    "BLEE",
+    "ENSE",
+    "LAEN",
+    "LASE"
+  ],
+  "targetPath": [
+    "b2",
+    "d3",
+    "c2",
+    "a3",
+    "c1",
+    "a2",
+    "b3",
+    "b1"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 0,
+    "a4": 1,
+    "d4": 0,
+    "a3": 1,
+    "b3": 5,
+    "c3": 3,
+    "d3": 1,
+    "a2": 1,
+    "b2": 2,
+    "c2": 2,
+    "e2": 1,
+    "b1": 3,
+    "c1": 3
+  }
+}

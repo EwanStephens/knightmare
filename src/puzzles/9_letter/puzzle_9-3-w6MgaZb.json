@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "c2",
+      "type": "queen",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "SUGGESTED",
+    "SUGGEST",
+    "GESTED",
+    "GESTE",
+    "GESS",
+    "GEST",
+    "SUGG",
+    "DOP",
+    "EDO",
+    "ESS"
+  ],
+  "targetPath": [
+    "c2",
+    "b2",
+    "c1",
+    "c3",
+    "e1",
+    "d3",
+    "e2",
+    "e5",
+    "d4"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 1,
+    "e5": 1,
+    "c4": 2,
+    "d4": 1,
+    "c3": 5,
+    "d3": 2,
+    "b2": 1,
+    "c2": 3,
+    "e2": 2,
+    "c1": 1,
+    "e1": 1
+  }
+}

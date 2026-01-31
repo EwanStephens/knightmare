@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "STRONG",
+    "RONG",
+    "TRON",
+    "ENG",
+    "RON",
+    "STR",
+    "TNG"
+  ],
+  "targetPath": [
+    "e4",
+    "c3",
+    "d4",
+    "d5",
+    "b4",
+    "b1"
+  ],
+  "legalCaptures": {
+    "d5": 1,
+    "a4": 1,
+    "b4": 2,
+    "d4": 1,
+    "e4": 1,
+    "a3": 0,
+    "c3": 2,
+    "c2": 2,
+    "b1": 0
+  }
+}

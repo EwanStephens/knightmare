@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b3",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "a1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    }
+  ],
+  "targetWords": [
+    "GUINEA",
+    "INGA",
+    "ING",
+    "NEA",
+    "REA"
+  ],
+  "targetPath": [
+    "c1",
+    "e3",
+    "d4",
+    "b3",
+    "a1",
+    "b2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "d4": 2,
+    "b3": 3,
+    "e3": 2,
+    "b2": 0,
+    "a1": 1,
+    "c1": 2
+  }
+}

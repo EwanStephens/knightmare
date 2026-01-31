@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Z"
+    }
+  ],
+  "targetWords": [
+    "TIMELY",
+    "TIME",
+    "LEI",
+    "LET",
+    "MEL",
+    "MET",
+    "TIM"
+  ],
+  "targetPath": [
+    "e3",
+    "d5",
+    "e4",
+    "d4",
+    "c5",
+    "b4"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "d5": 1,
+    "a4": 0,
+    "b4": 1,
+    "d4": 4,
+    "e4": 2,
+    "c3": 0,
+    "e3": 1,
+    "a2": 0
+  }
+}

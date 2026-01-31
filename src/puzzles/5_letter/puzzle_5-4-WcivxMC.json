@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "M"
+    }
+  ],
+  "targetWords": [
+    "VILLA",
+    "VILL",
+    "ILL",
+    "VIL"
+  ],
+  "targetPath": [
+    "c4",
+    "c1",
+    "a2",
+    "b1",
+    "b4"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b4": 0,
+    "c4": 1,
+    "d4": 0,
+    "e3": 0,
+    "a2": 1,
+    "b1": 1,
+    "c1": 1,
+    "d1": 0
+  }
+}

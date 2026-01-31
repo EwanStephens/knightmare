@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "CANADA",
+    "CANED",
+    "EDANA",
+    "CANA",
+    "CANE",
+    "DADA",
+    "DANA",
+    "DANE",
+    "NADA",
+    "ADA"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "e3",
+    "d3",
+    "b3",
+    "a3"
+  ],
+  "legalCaptures": {
+    "e5": 2,
+    "d4": 1,
+    "a3": 0,
+    "b3": 2,
+    "d3": 3,
+    "e3": 3,
+    "c2": 1,
+    "c1": 1
+  }
+}

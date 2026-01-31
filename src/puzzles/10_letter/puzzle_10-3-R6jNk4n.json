@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "e3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "EMPLOYMENT",
+    "PLOYMENT",
+    "EMPLOY",
+    "TOYMEN",
+    "EMPT",
+    "LOYN",
+    "MENT",
+    "MOOP",
+    "PLOY",
+    "TOOP"
+  ],
+  "targetPath": [
+    "e4",
+    "d3",
+    "c1",
+    "a3",
+    "a2",
+    "c3",
+    "d4",
+    "e2",
+    "e3",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "d4": 1,
+    "e4": 1,
+    "a3": 3,
+    "c3": 2,
+    "d3": 2,
+    "e3": 1,
+    "a2": 1,
+    "d2": 4,
+    "e2": 2,
+    "c1": 2,
+    "d1": 2,
+    "e1": 3
+  }
+}

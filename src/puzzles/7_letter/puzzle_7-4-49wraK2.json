@@ -1,0 +1,102 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "FORTUNE",
+    "FORT",
+    "FOR",
+    "ORT",
+    "RUN",
+    "RUT",
+    "TUN",
+    "UTI"
+  ],
+  "targetPath": [
+    "c2",
+    "b3",
+    "a2",
+    "d5",
+    "e3",
+    "d1",
+    "a4"
+  ],
+  "legalCaptures": {
+    "c5": 1,
+    "d5": 2,
+    "a4": 0,
+    "e4": 3,
+    "b3": 2,
+    "c3": 0,
+    "e3": 2,
+    "a2": 1,
+    "c2": 1,
+    "c1": 1,
+    "d1": 1
+  }
+}

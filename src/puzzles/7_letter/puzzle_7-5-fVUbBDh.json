@@ -1,0 +1,111 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "c5",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "E"
+    }
+  ],
+  "targetWords": [
+    "NEAREST",
+    "SPEAR",
+    "ARES",
+    "NEAR",
+    "PEAR",
+    "STEP",
+    "TEAR",
+    "ARE",
+    "EAR",
+    "NEA"
+  ],
+  "targetPath": [
+    "d2",
+    "e1",
+    "d3",
+    "e4",
+    "e3",
+    "c1",
+    "d1"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 1,
+    "d5": 1,
+    "e4": 1,
+    "d3": 1,
+    "e3": 1,
+    "a2": 1,
+    "c2": 1,
+    "d2": 2,
+    "c1": 2,
+    "d1": 2,
+    "e1": 2
+  }
+}

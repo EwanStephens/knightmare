@@ -1,0 +1,73 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "a3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "TRULY",
+    "RULY"
+  ],
+  "targetPath": [
+    "d2",
+    "c3",
+    "b4",
+    "a2",
+    "b3"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b4": 1,
+    "a3": 0,
+    "b3": 1,
+    "c3": 1,
+    "a2": 1,
+    "d2": 1,
+    "e2": 0
+  }
+}

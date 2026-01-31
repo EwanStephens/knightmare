@@ -1,0 +1,81 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "U"
+    },
+    {
+      "position": "a1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "P"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "PUNCH",
+    "PUN",
+    "UNC"
+  ],
+  "targetPath": [
+    "a1",
+    "d4",
+    "c5",
+    "a5",
+    "e5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 1,
+    "e5": 0,
+    "a4": 0,
+    "b4": 0,
+    "d4": 2,
+    "a1": 1,
+    "d1": 0,
+    "e1": 0
+  }
+}

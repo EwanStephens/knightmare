@@ -1,0 +1,119 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "FORMERLY",
+    "FORMER",
+    "FORME",
+    "ORMER",
+    "FORM",
+    "MERL",
+    "FOR",
+    "FOT",
+    "MER",
+    "RLY"
+  ],
+  "targetPath": [
+    "d4",
+    "e5",
+    "b5",
+    "b2",
+    "a3",
+    "b1",
+    "d3",
+    "d2"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "e5": 3,
+    "c4": 0,
+    "d4": 2,
+    "e4": 0,
+    "a3": 1,
+    "c3": 1,
+    "d3": 2,
+    "e3": 1,
+    "b2": 2,
+    "d2": 0,
+    "e2": 2,
+    "b1": 1
+  }
+}

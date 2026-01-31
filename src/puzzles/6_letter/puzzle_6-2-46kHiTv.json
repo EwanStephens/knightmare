@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "Y"
+    },
+    {
+      "position": "e5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "d2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    }
+  ],
+  "targetWords": [
+    "NEEDED",
+    "NEED",
+    "NED",
+    "NEE",
+    "YED"
+  ],
+  "targetPath": [
+    "d3",
+    "d4",
+    "d2",
+    "b1",
+    "a3",
+    "a4"
+  ],
+  "legalCaptures": {
+    "c5": 2,
+    "e5": 0,
+    "a4": 0,
+    "d4": 2,
+    "a3": 1,
+    "d3": 1,
+    "d2": 1,
+    "b1": 2
+  }
+}

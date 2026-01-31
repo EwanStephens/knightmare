@@ -1,0 +1,121 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    }
+  ],
+  "targetWords": [
+    "METABOLISM",
+    "BOLITA",
+    "BOLIS",
+    "OBOLI",
+    "SATEM",
+    "ITEM",
+    "LIME",
+    "LIMO",
+    "LISA",
+    "LISS"
+  ],
+  "targetPath": [
+    "c5",
+    "d4",
+    "d3",
+    "a3",
+    "a2",
+    "b4",
+    "a5",
+    "c4",
+    "c1",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "a4": 0,
+    "b4": 2,
+    "c4": 4,
+    "d4": 2,
+    "a3": 2,
+    "d3": 3,
+    "a2": 1,
+    "d2": 2,
+    "a1": 1,
+    "b1": 1,
+    "c1": 4
+  }
+}

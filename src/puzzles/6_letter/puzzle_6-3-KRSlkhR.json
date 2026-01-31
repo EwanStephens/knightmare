@@ -1,0 +1,86 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "b2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "black",
+      "letter": "W"
+    },
+    {
+      "position": "d1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "MUSCLE",
+    "MUSCA",
+    "ACLE",
+    "CLEM",
+    "EMUS",
+    "EMU",
+    "MUS"
+  ],
+  "targetPath": [
+    "a5",
+    "a2",
+    "b1",
+    "c2",
+    "d3",
+    "c5"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 1,
+    "d3": 3,
+    "a2": 1,
+    "b2": 0,
+    "c2": 3,
+    "b1": 2,
+    "c1": 0,
+    "d1": 1
+  }
+}

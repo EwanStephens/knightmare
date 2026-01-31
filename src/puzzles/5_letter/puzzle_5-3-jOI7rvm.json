@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "rook",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "G"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "DOING",
+    "DOS",
+    "ING",
+    "IOS"
+  ],
+  "targetPath": [
+    "c3",
+    "b5",
+    "b1",
+    "e1",
+    "d2"
+  ],
+  "legalCaptures": {
+    "b5": 2,
+    "d5": 0,
+    "c4": 0,
+    "a3": 2,
+    "c3": 1,
+    "d2": 1,
+    "b1": 2,
+    "e1": 1
+  }
+}

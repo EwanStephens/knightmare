@@ -1,0 +1,120 @@
+{
+  "pieces": [
+    {
+      "position": "e5",
+      "type": "queen",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "a4",
+      "type": "queen",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "c3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "rook",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "DESCRIBED",
+    "DESCRIBE",
+    "ESCRIBED",
+    "ESCRIBE",
+    "BERI",
+    "DEBE",
+    "DESC",
+    "ERRS",
+    "IRED",
+    "RIBE"
+  ],
+  "targetPath": [
+    "e2",
+    "c3",
+    "e3",
+    "e5",
+    "b2",
+    "b1",
+    "b3",
+    "a2",
+    "a3"
+  ],
+  "legalCaptures": {
+    "e5": 1,
+    "a4": 0,
+    "b4": 1,
+    "a3": 0,
+    "b3": 2,
+    "c3": 2,
+    "e3": 2,
+    "a2": 4,
+    "b2": 3,
+    "c2": 4,
+    "e2": 1,
+    "a1": 2,
+    "b1": 2
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "rook",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "c5",
+      "type": "queen",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "d5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "pawn",
+      "color": "black",
+      "letter": "H"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c3",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d2",
+      "type": "bishop",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "queen",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "c1",
+      "type": "queen",
+      "color": "black",
+      "letter": "A"
+    }
+  ],
+  "targetWords": [
+    "PHYSICIAN",
+    "PHYSIC",
+    "ANSI",
+    "NAYS",
+    "PHYS",
+    "ANS",
+    "AYE",
+    "AYS",
+    "CIA",
+    "HYE"
+  ],
+  "targetPath": [
+    "c5",
+    "d4",
+    "c3",
+    "e3",
+    "d5",
+    "e4",
+    "b1",
+    "c1",
+    "d2"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "c5": 2,
+    "d5": 1,
+    "a4": 0,
+    "d4": 1,
+    "e4": 2,
+    "c3": 4,
+    "e3": 1,
+    "d2": 2,
+    "a1": 0,
+    "b1": 2,
+    "c1": 3
+  }
+}

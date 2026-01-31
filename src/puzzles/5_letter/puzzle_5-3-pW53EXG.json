@@ -1,0 +1,78 @@
+{
+  "pieces": [
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d4",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "c3",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "a1",
+      "type": "queen",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "W"
+    }
+  ],
+  "targetWords": [
+    "WATTS",
+    "TWAT",
+    "WATT",
+    "ATT",
+    "SAT",
+    "TWA",
+    "WAT"
+  ],
+  "targetPath": [
+    "e1",
+    "d2",
+    "c3",
+    "a1",
+    "d4"
+  ],
+  "legalCaptures": {
+    "c5": 0,
+    "d4": 2,
+    "e4": 0,
+    "c3": 2,
+    "d2": 1,
+    "e2": 0,
+    "a1": 2,
+    "e1": 1
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "a3",
+      "type": "rook",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "rook",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "c2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "b1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "e1",
+      "type": "rook",
+      "color": "black",
+      "letter": "N"
+    }
+  ],
+  "targetWords": [
+    "CATERING",
+    "CATING",
+    "CERING",
+    "ATING",
+    "CATER",
+    "CERIN",
+    "CETIN",
+    "TATER",
+    "CATE",
+    "CETI"
+  ],
+  "targetPath": [
+    "a2",
+    "c2",
+    "b3",
+    "a3",
+    "a5",
+    "b4",
+    "e1",
+    "b1"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "e5": 0,
+    "b4": 2,
+    "a3": 3,
+    "b3": 3,
+    "d3": 1,
+    "a2": 2,
+    "c2": 2,
+    "b1": 1,
+    "e1": 2
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "b5",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "c5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "a4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "c4",
+      "type": "queen",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "d4",
+      "type": "knight",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "a3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "Y"
+    },
+    {
+      "position": "e3",
+      "type": "queen",
+      "color": "black",
+      "letter": "B"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e2",
+      "type": "bishop",
+      "color": "black",
+      "letter": "R"
+    },
+    {
+      "position": "b1",
+      "type": "rook",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "c1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "white",
+      "letter": "U"
+    }
+  ],
+  "targetWords": [
+    "MONETARY",
+    "BARYTE",
+    "EMONY",
+    "ANET",
+    "BANE",
+    "IONE",
+    "META",
+    "MONE",
+    "MONY",
+    "NEMO"
+  ],
+  "targetPath": [
+    "a5",
+    "a4",
+    "b5",
+    "b4",
+    "c5",
+    "d4",
+    "e2",
+    "c4"
+  ],
+  "legalCaptures": {
+    "a5": 2,
+    "b5": 3,
+    "c5": 2,
+    "a4": 1,
+    "b4": 2,
+    "c4": 3,
+    "d4": 2,
+    "a3": 1,
+    "e3": 3,
+    "b2": 2,
+    "e2": 1,
+    "b1": 1,
+    "c1": 1,
+    "e1": 0
+  }
+}

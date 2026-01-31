@@ -1,0 +1,116 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "queen",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "e5",
+      "type": "bishop",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "b4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e4",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "V"
+    },
+    {
+      "position": "b2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "e2",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "e1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    }
+  ],
+  "targetWords": [
+    "DEVOTED",
+    "DEVOTE",
+    "DEVOT",
+    "VOTED",
+    "VOTE",
+    "DEV",
+    "EVE",
+    "TED"
+  ],
+  "targetPath": [
+    "e4",
+    "d2",
+    "c3",
+    "b2",
+    "a3",
+    "c4",
+    "b5"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "b5": 0,
+    "e5": 1,
+    "b4": 3,
+    "c4": 1,
+    "e4": 1,
+    "a3": 2,
+    "c3": 2,
+    "b2": 2,
+    "d2": 1,
+    "e2": 1,
+    "b1": 2,
+    "e1": 1
+  }
+}

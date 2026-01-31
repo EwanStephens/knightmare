@@ -1,0 +1,148 @@
+{
+  "pieces": [
+    {
+      "position": "b5",
+      "type": "pawn",
+      "color": "white",
+      "letter": "V"
+    },
+    {
+      "position": "c5",
+      "type": "knight",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "a4",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c4",
+      "type": "rook",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "d4",
+      "type": "queen",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a3",
+      "type": "knight",
+      "color": "black",
+      "letter": "L"
+    },
+    {
+      "position": "b3",
+      "type": "queen",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "white",
+      "letter": "P"
+    },
+    {
+      "position": "e3",
+      "type": "knight",
+      "color": "white",
+      "letter": "R"
+    },
+    {
+      "position": "a2",
+      "type": "queen",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "c2",
+      "type": "knight",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "e2",
+      "type": "queen",
+      "color": "black",
+      "letter": "E"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "white",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "T"
+    }
+  ],
+  "targetWords": [
+    "PUBLISHER",
+    "PUBLISH",
+    "EBLIS",
+    "SPURT",
+    "PUBL",
+    "SHUL",
+    "SPUR",
+    "HUB",
+    "HUH",
+    "HUI"
+  ],
+  "targetPath": [
+    "d3",
+    "b3",
+    "c2",
+    "a3",
+    "c4",
+    "c1",
+    "a2",
+    "e2",
+    "e3"
+  ],
+  "legalCaptures": {
+    "b5": 0,
+    "c5": 1,
+    "d5": 0,
+    "a4": 1,
+    "c4": 0,
+    "d4": 0,
+    "a3": 4,
+    "b3": 7,
+    "d3": 2,
+    "e3": 1,
+    "a2": 2,
+    "c2": 1,
+    "e2": 3,
+    "a1": 1,
+    "b1": 0,
+    "c1": 2,
+    "d1": 1
+  }
+}

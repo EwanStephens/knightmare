@@ -1,0 +1,77 @@
+{
+  "pieces": [
+    {
+      "position": "b4",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "e4",
+      "type": "queen",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "d3",
+      "type": "pawn",
+      "color": "white",
+      "letter": "B"
+    },
+    {
+      "position": "a2",
+      "type": "knight",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d2",
+      "type": "queen",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "b1",
+      "type": "pawn",
+      "color": "white",
+      "letter": "O"
+    }
+  ],
+  "targetWords": [
+    "GIBSON",
+    "AGIB",
+    "GIBS",
+    "GIB",
+    "IGN"
+  ],
+  "targetPath": [
+    "b2",
+    "d2",
+    "d3",
+    "e4",
+    "b1",
+    "a2"
+  ],
+  "legalCaptures": {
+    "b4": 1,
+    "e4": 2,
+    "c3": 1,
+    "d3": 1,
+    "a2": 1,
+    "b2": 3,
+    "d2": 2,
+    "b1": 1
+  }
+}

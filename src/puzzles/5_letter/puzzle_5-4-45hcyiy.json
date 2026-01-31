@@ -1,0 +1,82 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "knight",
+      "color": "black",
+      "letter": "D"
+    },
+    {
+      "position": "b5",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d5",
+      "type": "queen",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "e4",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "d3",
+      "type": "rook",
+      "color": "black",
+      "letter": "C"
+    },
+    {
+      "position": "b2",
+      "type": "knight",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "c2",
+      "type": "rook",
+      "color": "white",
+      "letter": "H"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "U"
+    },
+    {
+      "position": "e1",
+      "type": "queen",
+      "color": "white",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "COULD",
+    "COUL",
+    "COO",
+    "ECO"
+  ],
+  "targetPath": [
+    "d3",
+    "d5",
+    "d2",
+    "e1",
+    "a5"
+  ],
+  "legalCaptures": {
+    "a5": 0,
+    "b5": 0,
+    "d5": 2,
+    "e4": 1,
+    "d3": 1,
+    "b2": 0,
+    "c2": 2,
+    "d2": 1,
+    "e1": 1
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "pieces": [
+    {
+      "position": "a5",
+      "type": "pawn",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "c5",
+      "type": "rook",
+      "color": "black",
+      "letter": "S"
+    },
+    {
+      "position": "d5",
+      "type": "knight",
+      "color": "white",
+      "letter": "N"
+    },
+    {
+      "position": "e5",
+      "type": "knight",
+      "color": "white",
+      "letter": "O"
+    },
+    {
+      "position": "b4",
+      "type": "rook",
+      "color": "white",
+      "letter": "T"
+    },
+    {
+      "position": "d4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "I"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "S"
+    },
+    {
+      "position": "c3",
+      "type": "knight",
+      "color": "white",
+      "letter": "G"
+    },
+    {
+      "position": "d3",
+      "type": "queen",
+      "color": "black",
+      "letter": "N"
+    },
+    {
+      "position": "e3",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a2",
+      "type": "rook",
+      "color": "black",
+      "letter": "O"
+    },
+    {
+      "position": "d2",
+      "type": "rook",
+      "color": "white",
+      "letter": "A"
+    },
+    {
+      "position": "e2",
+      "type": "rook",
+      "color": "white",
+      "letter": "L"
+    },
+    {
+      "position": "a1",
+      "type": "rook",
+      "color": "white",
+      "letter": "C"
+    },
+    {
+      "position": "b1",
+      "type": "knight",
+      "color": "black",
+      "letter": "T"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d1",
+      "type": "bishop",
+      "color": "black",
+      "letter": "L"
+    }
+  ],
+  "targetWords": [
+    "ALLOCATION",
+    "OCTANE",
+    "COALS",
+    "GOALS",
+    "OCTAL",
+    "OCTAN",
+    "TANGO",
+    "ALLO",
+    "ALSO",
+    "ANGO"
+  ],
+  "targetPath": [
+    "d2",
+    "d1",
+    "e2",
+    "a2",
+    "a1",
+    "a5",
+    "b4",
+    "d4",
+    "e5",
+    "d3"
+  ],
+  "legalCaptures": {
+    "a5": 1,
+    "c5": 2,
+    "d5": 0,
+    "e5": 1,
+    "b4": 1,
+    "d4": 3,
+    "e4": 0,
+    "b3": 2,
+    "c3": 3,
+    "d3": 5,
+    "e3": 1,
+    "a2": 2,
+    "d2": 3,
+    "e2": 0,
+    "a1": 2,
+    "b1": 2,
+    "c1": 2,
+    "d1": 2
+  }
+}

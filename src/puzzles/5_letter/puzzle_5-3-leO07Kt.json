@@ -1,0 +1,75 @@
+{
+  "pieces": [
+    {
+      "position": "d5",
+      "type": "rook",
+      "color": "white",
+      "letter": "M"
+    },
+    {
+      "position": "c4",
+      "type": "bishop",
+      "color": "black",
+      "letter": "A"
+    },
+    {
+      "position": "e4",
+      "type": "pawn",
+      "color": "white",
+      "letter": "F"
+    },
+    {
+      "position": "d3",
+      "type": "bishop",
+      "color": "white",
+      "letter": "E"
+    },
+    {
+      "position": "b2",
+      "type": "queen",
+      "color": "white",
+      "letter": "D"
+    },
+    {
+      "position": "d2",
+      "type": "pawn",
+      "color": "black",
+      "letter": "M"
+    },
+    {
+      "position": "a1",
+      "type": "knight",
+      "color": "black",
+      "letter": "F"
+    },
+    {
+      "position": "c1",
+      "type": "knight",
+      "color": "black",
+      "letter": "R"
+    }
+  ],
+  "targetWords": [
+    "DREAM",
+    "REAM",
+    "EAM",
+    "REA"
+  ],
+  "targetPath": [
+    "b2",
+    "c1",
+    "d3",
+    "c4",
+    "d5"
+  ],
+  "legalCaptures": {
+    "d5": 0,
+    "c4": 2,
+    "e4": 0,
+    "d3": 1,
+    "b2": 3,
+    "d2": 0,
+    "a1": 0,
+    "c1": 1
+  }
+}
