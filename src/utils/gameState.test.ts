@@ -120,4 +120,11 @@ if (typeof window === 'undefined') {
   testShareTextGeneration();
 }
 
-export { testShareTextGeneration }; 
+describe('generateShareText', () => {
+  it('uses the puzzle date regardless of timezone', () => {
+    const text = generateShareText('2026-11-01', {}, mockGlobalStats);
+    expect(text.split('\n')[0]).toBe('SpellCheck November 1st, 2026:');
+  });
+});
+
+export { testShareTextGeneration };
