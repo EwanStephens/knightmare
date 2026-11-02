@@ -250,12 +250,13 @@ export const generateShareText = (
   dailyResults: DailyResults, 
   overrideGlobalStats?: GlobalStats
 ): string => {
-  const date = new Date(dateString);
+  // Read the YYYY-MM-DD parts directly, as new Date(dateString) parses as UTC and can shift the day
+  const [year, month, day] = dateString.split('-').map(Number);
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
-  const formattedDate = `${monthNames[date.getMonth()]} ${date.getDate()}${getOrdinalSuffix(date.getDate())}, ${date.getFullYear()}`;
+  const formattedDate = `${monthNames[month - 1]} ${day}${getOrdinalSuffix(day)}, ${year}`;
   // Get global stats to include streak
   const globalStats = overrideGlobalStats || getGlobalStats();
   const streak = globalStats.currentStreak;
