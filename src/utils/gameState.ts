@@ -188,33 +188,42 @@ export const setGlobalStats = (stats: GlobalStats): void => {
   localStorage.setItem(GLOBAL_STATS_KEY, JSON.stringify(stats));
 };
 
-export const updateStreakForDate = (dateString: string): void => {
-  const stats = getGlobalStats();
-  const today = new Date(dateString).toDateString();
-  const lastPlayDate = stats.lastPlayDate ? new Date(stats.lastPlayDate).toDateString() : null;
-  if (lastPlayDate === today) {
-    // Already played today, no changes needed
+// How long after midnight a player can still finish the previous day's puzzle and keep their streak
+const STREAK_GRACE_PERIOD_MS = 2 * 60 * 60 * 1000;
+
+// Format a Date as a local-time YYYY-MM-DD string, matching the calendar's date keys
+const toLocalDateString = (date: Date): string => date.toLocaleDateString('en-CA');
+
+// Get the YYYY-MM-DD string for the day before a YYYY-MM-DD string
+// (pure calendar arithmetic, so it is unaffected by the user's timezone)
+const getPreviousDateString = (dateString: string): string => {
+  const [year, month, day] = dateString.split('-').map(Number);
+  return new Date(Date.UTC(year, month - 1, day - 1)).toISOString().slice(0, 10);
+};
+
+// A daily puzzle only counts towards the streak on its own day, or within the grace period after midnight
+const isStreakEligibleDate = (dateString: string, now: Date): boolean =>
+  dateString === toLocalDateString(now) ||
+  dateString === toLocalDateString(new Date(now.getTime() - STREAK_GRACE_PERIOD_MS));
+
+export const updateStreakForDate = (dateString: string, now: Date = new Date()): void => {
+  if (!isStreakEligibleDate(dateString, now)) {
+    // Archive puzzle (e.g. an old tab left open), doesn't affect the streak
     return;
   }
-  if (!lastPlayDate) {
-    // First time playing
-    stats.daysPlayed = 1;
-    stats.currentStreak = 1;
-    stats.maxStreak = Math.max(stats.maxStreak, 1);
-  } else {
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayString = yesterday.toDateString();
-    if (lastPlayDate === yesterdayString) {
-      // Played yesterday, continue streak
-      stats.currentStreak += 1;
-      stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak);
-    } else {
-      // Streak broken, start new streak
-      stats.currentStreak = 1;
-    }
-    stats.daysPlayed += 1;
+  const stats = getGlobalStats();
+  const { lastPlayDate } = stats;
+  if (lastPlayDate && dateString <= lastPlayDate) {
+    // Already counted this day or a later one, never move lastPlayDate backwards
+    return;
   }
+  if (lastPlayDate === getPreviousDateString(dateString)) {
+    stats.currentStreak += 1;
+  } else {
+    stats.currentStreak = 1;
+  }
+  stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak);
+  stats.daysPlayed += 1;
   stats.lastPlayDate = dateString;
   setGlobalStats(stats);
 };
